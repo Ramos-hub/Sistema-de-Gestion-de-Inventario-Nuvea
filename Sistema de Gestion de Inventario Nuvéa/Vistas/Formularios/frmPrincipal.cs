@@ -48,7 +48,7 @@ namespace Vistas.Formularios
             abrirForm(new frmFacturacion());
         }
 
-        private void btn_Inventario_Click(object sender, EventArgs e)
+        public void btn_Inventario_Click(object sender, EventArgs e)
         {
             abrirForm(new frmInventario());
         }

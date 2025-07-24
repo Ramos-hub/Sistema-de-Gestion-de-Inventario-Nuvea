@@ -32,8 +32,8 @@
             this.lblProveedor = new System.Windows.Forms.Label();
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
             this.txtProveedor = new System.Windows.Forms.TextBox();
-            this.dgbProveedores = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgbProveedores)).BeginInit();
+            this.dgvProveedores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProveedores
@@ -77,14 +77,14 @@
             this.txtProveedor.Size = new System.Drawing.Size(153, 20);
             this.txtProveedor.TabIndex = 14;
             // 
-            // dgbProveedores
+            // dgvProveedores
             // 
-            this.dgbProveedores.BackgroundColor = System.Drawing.Color.White;
-            this.dgbProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbProveedores.Location = new System.Drawing.Point(12, 181);
-            this.dgbProveedores.Name = "dgbProveedores";
-            this.dgbProveedores.Size = new System.Drawing.Size(776, 257);
-            this.dgbProveedores.TabIndex = 15;
+            this.dgvProveedores.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedores.Location = new System.Drawing.Point(12, 181);
+            this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.Size = new System.Drawing.Size(776, 257);
+            this.dgvProveedores.TabIndex = 15;
             // 
             // frmProveedores
             // 
@@ -92,14 +92,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgbProveedores);
+            this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.btnAgregarProveedor);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.lblProveedores);
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
-            ((System.ComponentModel.ISupportInitialize)(this.dgbProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +110,6 @@
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Button btnAgregarProveedor;
         private System.Windows.Forms.TextBox txtProveedor;
-        private System.Windows.Forms.DataGridView dgbProveedores;
+        private System.Windows.Forms.DataGridView dgvProveedores;
     }
 }

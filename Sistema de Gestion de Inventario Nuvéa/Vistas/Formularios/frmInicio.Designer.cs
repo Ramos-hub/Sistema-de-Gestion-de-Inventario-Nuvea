@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbInicio = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBienvenidos = new System.Windows.Forms.Label();
             this.pnlTotalProductos = new System.Windows.Forms.Panel();
@@ -49,30 +50,41 @@
             this.btnIrInventario = new System.Windows.Forms.Button();
             this.btnAgregarProductosIndex = new System.Windows.Forms.Button();
             this.gbProductosBajoStock = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProductosBajoStock = new System.Windows.Forms.DataGridView();
             this.gbInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTotalProductos.SuspendLayout();
             this.pnlVentasDiarias.SuspendLayout();
             this.pnlCategorias.SuspendLayout();
             this.pnlProveedores.SuspendLayout();
             this.gbAccesoRapido.SuspendLayout();
             this.gbProductosBajoStock.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosBajoStock)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInicio
             // 
             this.gbInicio.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.gbInicio.Controls.Add(this.pictureBox1);
             this.gbInicio.Controls.Add(this.label1);
             this.gbInicio.Controls.Add(this.lblBienvenidos);
-            this.gbInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbInicio.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInicio.Location = new System.Drawing.Point(0, 0);
             this.gbInicio.Name = "gbInicio";
-            this.gbInicio.Size = new System.Drawing.Size(800, 138);
+            this.gbInicio.Size = new System.Drawing.Size(800, 146);
             this.gbInicio.TabIndex = 4;
             this.gbInicio.TabStop = false;
             this.gbInicio.Text = "Inicio";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
+            this.pictureBox1.Location = new System.Drawing.Point(536, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -251,6 +263,7 @@
             this.btnIrInventario.TabIndex = 1;
             this.btnIrInventario.Text = "Ir a Inventario";
             this.btnIrInventario.UseVisualStyleBackColor = true;
+            this.btnIrInventario.Click += new System.EventHandler(this.btnIrInventario_Click);
             // 
             // btnAgregarProductosIndex
             // 
@@ -264,7 +277,7 @@
             // 
             // gbProductosBajoStock
             // 
-            this.gbProductosBajoStock.Controls.Add(this.dataGridView1);
+            this.gbProductosBajoStock.Controls.Add(this.dgvProductosBajoStock);
             this.gbProductosBajoStock.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbProductosBajoStock.Location = new System.Drawing.Point(472, 280);
             this.gbProductosBajoStock.Name = "gbProductosBajoStock";
@@ -273,20 +286,20 @@
             this.gbProductosBajoStock.TabStop = false;
             this.gbProductosBajoStock.Text = "Productos Bajo Stock";
             // 
-            // dataGridView1
+            // dgvProductosBajoStock
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(267, 118);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProductosBajoStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductosBajoStock.Location = new System.Drawing.Point(15, 28);
+            this.dgvProductosBajoStock.Name = "dgvProductosBajoStock";
+            this.dgvProductosBajoStock.Size = new System.Drawing.Size(267, 118);
+            this.dgvProductosBajoStock.TabIndex = 0;
             // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(202)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 463);
             this.Controls.Add(this.gbProductosBajoStock);
             this.Controls.Add(this.gbAccesoRapido);
             this.Controls.Add(this.pnlVentasDiarias);
@@ -294,11 +307,12 @@
             this.Controls.Add(this.pnlProveedores);
             this.Controls.Add(this.pnlTotalProductos);
             this.Controls.Add(this.gbInicio);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+           
             this.Name = "frmIndex";
             this.Text = "frmIndex";
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTotalProductos.ResumeLayout(false);
             this.pnlTotalProductos.PerformLayout();
             this.pnlVentasDiarias.ResumeLayout(false);
@@ -309,7 +323,7 @@
             this.pnlProveedores.PerformLayout();
             this.gbAccesoRapido.ResumeLayout(false);
             this.gbProductosBajoStock.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosBajoStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,6 +350,7 @@
         private System.Windows.Forms.Button btnVerProveedores;
         private System.Windows.Forms.Button btnIrInventario;
         private System.Windows.Forms.Button btnAgregarProductosIndex;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProductosBajoStock;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

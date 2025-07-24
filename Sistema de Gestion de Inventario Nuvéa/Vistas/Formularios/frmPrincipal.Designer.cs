@@ -215,8 +215,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlBotonesMenu;
         private System.Windows.Forms.Button btnGanancias;
         private System.Windows.Forms.Button btnInventarioHistorial;
@@ -227,6 +225,7 @@
         private System.Windows.Forms.Label lblLogoFacturacion;
         private System.Windows.Forms.Panel pnlPerfilInventario;
         private System.Windows.Forms.Button btnPerfilInventario;
-        private System.Windows.Forms.Panel pnlCentral;
+        private System.Windows.Forms.Panel pnlMenu;
+        public System.Windows.Forms.Panel pnlCentral;
     }
 }
