@@ -52,17 +52,47 @@
     <Compile Include="Formularios\frmFacturacion.Designer.cs">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmGanacias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGanacias.Designer.cs">
+      <DependentUpon>frmGanacias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHistorialFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmHistorialFacturas.Designer.cs">
+      <DependentUpon>frmHistorialFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmRegistrarse.cs">
       <SubType>Form</SubType>
@@ -75,11 +105,23 @@
     <EmbeddedResource Include="Formularios\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHistorialFacturas.resx">
+      <DependentUpon>frmHistorialFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRegistrarse.resx">
       <DependentUpon>frmRegistrarse.cs</DependentUpon>
@@ -92,6 +134,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,6 +154,30 @@
       <Project>{869fd04f-c9bf-449f-ac77-d885ed9d992e}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_picture_user_icon_153847.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-symbol_icon-icons.com_73598.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_hamburger_burger_icon_176431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_61518.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904677-add-addition-calculate-charge-create-new-plus_122527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_615181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_icon_128873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.Nuvéa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,5 +16,9 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbLogoLogin = new System.Windows.Forms.PictureBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -37,16 +36,9 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.pbLogoLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbLogoLogin
-            // 
-            this.pbLogoLogin.Location = new System.Drawing.Point(293, 12);
-            this.pbLogoLogin.Name = "pbLogoLogin";
-            this.pbLogoLogin.Size = new System.Drawing.Size(203, 91);
-            this.pbLogoLogin.TabIndex = 0;
-            this.pbLogoLogin.TabStop = false;
             // 
             // lblIniciarSesion
             // 
@@ -90,6 +82,7 @@
             this.btnIniciarSesion.TabIndex = 4;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // btnOlvidasteContraseña
             // 
@@ -127,6 +120,17 @@
             this.btnRegistrarse.TabIndex = 9;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
+            // 
+            // pbLogoLogin
+            // 
+            this.pbLogoLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLogoLogin.Image = global::Vistas.Properties.Resources.Logo_Nuvéa;
+            this.pbLogoLogin.Location = new System.Drawing.Point(293, 3);
+            this.pbLogoLogin.Name = "pbLogoLogin";
+            this.pbLogoLogin.Size = new System.Drawing.Size(212, 110);
+            this.pbLogoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoLogin.TabIndex = 0;
+            this.pbLogoLogin.TabStop = false;
             // 
             // frmLogin
             // 

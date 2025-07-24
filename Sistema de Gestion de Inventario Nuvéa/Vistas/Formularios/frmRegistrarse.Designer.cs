@@ -124,6 +124,8 @@
             // 
             // btnTienesCuenta
             // 
+            this.btnTienesCuenta.FlatAppearance.BorderSize = 0;
+            this.btnTienesCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTienesCuenta.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTienesCuenta.Location = new System.Drawing.Point(260, 387);
             this.btnTienesCuenta.Name = "btnTienesCuenta";
@@ -134,6 +136,8 @@
             // 
             // btnRegistroLogin
             // 
+            this.btnRegistroLogin.FlatAppearance.BorderSize = 0;
+            this.btnRegistroLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroLogin.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroLogin.Location = new System.Drawing.Point(458, 387);
             this.btnRegistroLogin.Name = "btnRegistroLogin";
