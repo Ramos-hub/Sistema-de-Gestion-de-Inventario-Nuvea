@@ -9,8 +9,8 @@ namespace Modelo.Conexion
 {
     public class ConexionDB
     {
-        private static string servidor = "LAPTOP-QV3OA50B";
-        private static string basededatos = "Nuvéa";
+        private static string servidor = "DESKTOP-NRIRATE\\SQLEXPRESS";
+        private static string basededatos = "Nuvea";
 
         public static SqlConnection Conectar()
         {

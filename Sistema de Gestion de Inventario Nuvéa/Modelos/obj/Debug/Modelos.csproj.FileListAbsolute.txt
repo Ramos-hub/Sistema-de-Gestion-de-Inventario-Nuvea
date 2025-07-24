@@ -10,3 +10,9 @@ C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema 
 C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
 C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.dll
 C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.pdb
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\Modelos.dll
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\Modelos.pdb
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.dll
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.pdb

@@ -34,7 +34,7 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnOlvidasteContraseña = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.pbLogoLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
@@ -95,6 +95,7 @@
             this.btnOlvidasteContraseña.TabIndex = 6;
             this.btnOlvidasteContraseña.Text = "¿Olvidaste tu Contraseña?";
             this.btnOlvidasteContraseña.UseVisualStyleBackColor = true;
+            this.btnOlvidasteContraseña.Click += new System.EventHandler(this.btnOlvidasteContraseña_Click);
             // 
             // txtUsuario
             // 
@@ -103,12 +104,12 @@
             this.txtUsuario.Size = new System.Drawing.Size(292, 20);
             this.txtUsuario.TabIndex = 7;
             // 
-            // txtContraseña
+            // txtClave
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(249, 261);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(292, 20);
-            this.txtContraseña.TabIndex = 8;
+            this.txtClave.Location = new System.Drawing.Point(249, 261);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(292, 20);
+            this.txtClave.TabIndex = 8;
             // 
             // btnRegistrarse
             // 
@@ -120,6 +121,7 @@
             this.btnRegistrarse.TabIndex = 9;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // pbLogoLogin
             // 
@@ -138,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnRegistrarse);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnOlvidasteContraseña);
             this.Controls.Add(this.btnIniciarSesion);
@@ -163,7 +165,7 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnOlvidasteContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnRegistrarse;
     }
 }
