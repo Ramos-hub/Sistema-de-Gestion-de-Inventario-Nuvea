@@ -96,8 +96,10 @@ create table Producto(
 idProducto int identity (1,1) primary key,
 nombreProduc varchar(40),
 fechaIngreso date, 
+--bit solo almacena 0, 1
 estado bit, 
 cantidadStock int,
+--un comando que permite guardar informacion de valores entero muy grandes
 codigoBarras bigint,
 precioProduc decimal (5,2),
 idCategoria int,
