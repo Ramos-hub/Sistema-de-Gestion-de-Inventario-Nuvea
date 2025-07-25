@@ -60,14 +60,13 @@ namespace Vistas.Formularios
             private void CargarProductosBajoStock()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consulta = @"SELECT nombreProduc as Producto, fechaIngreso, estado, cantidadStock as Stock
-                            FROM Producto 
-                            WHERE cantidadStock < 3";
+            string consulta = @"select nombreProduc as Producto, fechaIngreso, estado, cantidadStock as Stock
+                            from Producto 
+                            where cantidadStock < 3";
             SqlDataAdapter adap = new SqlDataAdapter(consulta, conexion);
             DataTable tabla = new DataTable();
             adap.Fill(tabla);
             dgvProductosBajoStock.DataSource = tabla;
-
             conexion.Close();
 
         }

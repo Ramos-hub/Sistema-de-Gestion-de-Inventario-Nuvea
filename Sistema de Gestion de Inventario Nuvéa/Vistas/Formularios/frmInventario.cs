@@ -29,19 +29,14 @@ namespace Vistas.Formularios
         private void CargarProductos()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consulta = @"SELECT 
-                                P.nombreProduc as Producto, 
-                                P.fechaIngreso, 
-                                P.cantidadStock as Stock, 
-                                P.codigoBarras, 
-                                P.precioProduc as Precio, 
-                                C.nombreCat AS categoria
-                            FROM Producto P
-                            INNER JOIN Categoria C ON P.idCategoria = C.idCategoria";
+            string consulta = @"select P.nombreProduc as Producto, P.fechaIngreso, P.cantidadStock as Stock,
+            P.codigoBarras, P.precioProduc as Precio, C.nombreCat as categoria
+            from Producto P
+            inner join Categoria C on P.idCategoria = C.idCategoria";
 
-            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+            SqlDataAdapter adap = new SqlDataAdapter(consulta, conexion);
             DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
+            adap.Fill(tabla);
             dgvInventario.DataSource = tabla;
             dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -80,9 +75,9 @@ namespace Vistas.Formularios
                 return;
             }
             SqlConnection conexion = ConexionDB.Conectar();
-            string consulta = @"INSERT INTO Producto 
+            string consulta = @"insert into Producto 
                             (nombreProduc, fechaIngreso, estado, cantidadStock, codigoBarras, precioProduc, idCategoria, idProveedor)
-                            VALUES 
+                            values
                             (@nombre, @fechaIngreso, @estado, @cantidadStock, @codigoBarras, @precio, @idCategoria, @idProveedor)";
 
             SqlCommand cmd = new SqlCommand(consulta, conexion);
@@ -94,7 +89,6 @@ namespace Vistas.Formularios
             cmd.Parameters.AddWithValue("@precio", Convert.ToDecimal(txtPrecioProduc.Text));
             cmd.Parameters.AddWithValue("@idCategoria", Convert.ToInt32(cmbCategoriaProduc.SelectedValue));
             cmd.Parameters.AddWithValue("@idProveedor", Convert.ToInt32(cmbProveedor.SelectedValue));
-
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Producto agregado correctamente.");

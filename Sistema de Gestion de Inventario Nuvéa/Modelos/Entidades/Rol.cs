@@ -20,7 +20,7 @@ namespace Modelos.Entidades
         public static DataTable chargeRol()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consultaQuery = "select idRol, nombreRol";
+            string consultaQuery = "select idRol, nombreRol from Rol";
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
             DataTable tablaVirtual = new DataTable();
             add.Fill(tablaVirtual);

@@ -156,3 +156,8 @@ select*from Compra
 select*from Factura
 select*from detalleFactura
 select*from Cliente
+
+select P.nombreProduc as Producto, P.fechaIngreso, P.cantidadStock as Stock, P.codigoBarras, P.precioProduc as Precio, C.nombreCat AS categoria
+from Producto P
+inner join Categoria C ON P.idCategoria = C.idCategoria 
+

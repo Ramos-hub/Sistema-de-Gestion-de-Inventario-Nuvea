@@ -34,7 +34,7 @@ namespace Modelos.Entidades
         public static DataTable chargeProducto()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consultaQuery = "select idProducto, nombreProduc, fechaIngreso, estado, cantidadStock, codigoBarras, precioProduc, idCategoria, idProveedor";
+            string consultaQuery = "select idProducto, nombreProduc, fechaIngreso, estado, cantidadStock, codigoBarras, precioProduc, idCategoria, idProveedor From Producto";
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
             DataTable tablaVirtual = new DataTable();
             add.Fill(tablaVirtual);

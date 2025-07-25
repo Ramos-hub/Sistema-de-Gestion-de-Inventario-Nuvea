@@ -26,7 +26,7 @@ namespace Modelos.Entidades
         public static DataTable chargeProveedor()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consultaQuery = "select nombreProveedor, nombreTrabajador, telefono, direccion";
+            string consultaQuery = "select nombreProveedor, nombreTrabajador, telefono, direccion from Proveedor";
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
             DataTable tablaVirtual = new DataTable();
             add.Fill(tablaVirtual);

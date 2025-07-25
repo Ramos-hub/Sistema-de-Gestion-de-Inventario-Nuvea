@@ -28,7 +28,7 @@ namespace Modelos.Entidades
         public static DataTable chargeCliente()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consultaQuery = "select idCliente, nombreCliente, dui, telefono, correo, fechaRegistro";
+            string consultaQuery = "select idCliente, nombreCliente, dui, telefono, correo, fechaRegistro FROM Cliente";
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
             DataTable tablaVirtual = new DataTable();
             add.Fill(tablaVirtual);

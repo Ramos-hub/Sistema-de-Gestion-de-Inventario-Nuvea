@@ -22,11 +22,13 @@ namespace Vistas.Formularios
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            //Creamos variables para los textBox
             string usuario = txtUsuario.Text;
             string clave = txtClave.Text;
                 SqlConnection conexion = ConexionDB.Conectar();
-                {
-                    string consultaQuery = "select * from Usuario where nombre = @usuario and clave = @clave";
+            //Aqui llamamos el metodo conectar 
+            {
+                string consultaQuery = "select * from Usuario where nombre = @usuario and clave = @clave";
                     SqlCommand cmd = new SqlCommand(consultaQuery, conexion);
                     cmd.Parameters.AddWithValue("@usuario", usuario);
                     cmd.Parameters.AddWithValue("@clave", clave);

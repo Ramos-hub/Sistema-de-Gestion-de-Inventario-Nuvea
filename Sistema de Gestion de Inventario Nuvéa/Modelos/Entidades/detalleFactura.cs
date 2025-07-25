@@ -22,7 +22,7 @@ namespace Modelos.Entidades
         public static DataTable chargeDetaleFactura()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consultaQuery = "select idDetalleFactura, cantidadProduc, subTotal";
+            string consultaQuery = "select idDetalleFactura, cantidadProduc, subTotal FROM detalleFactura";
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
             DataTable tablaVirtual = new DataTable();
             add.Fill(tablaVirtual);
