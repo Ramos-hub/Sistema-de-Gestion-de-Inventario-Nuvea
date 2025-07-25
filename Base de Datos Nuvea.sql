@@ -65,31 +65,30 @@ go
 create table Cliente(
 idCliente int identity (1,1) primary key,
 nombreCliente varchar (40),
-dui int unique,
+dui char(10)unique,
 telefono varchar (8),
 correo varchar (50),
 fechaRegistro date
 );
 go
-insert into Cliente values('Andrea Gómez', 01234567, '70112211', 'andrea.gomez@email.com', '2024-01-10'),
-('Carlos Méndez', 11223344, '70112212', 'carlos.mendez@email.com', '2024-01-12'),('María Torres', 22334455, '70112213', 'maria.torres@email.com', '2024-01-15'),
-('Javier López', 33445566, '70112214', 'javier.lopez@email.com', '2024-01-17'),('Daniela Rodríguez', 44556677, '70112215', 'daniela.rodriguez@email.com', '2024-01-19'),
-('Fernando Díaz', 55667788, '70112216', 'fernando.diaz@email.com', '2024-01-21'),('Sofía Morales', 66778899, '70112217', 'sofia.morales@email.com', '2024-01-25'),
-('Luis Pérez', 77889900, '70112218', 'luis.perez@email.com', '2024-01-27'),('Gabriela Cruz', 88990011, '70112219', 'gabriela.cruz@email.com', '2024-01-30'),
-('Alejandro Reyes', 99001122, '70112220', 'alejandro.reyes@email.com', '2024-02-01'),('Camila Romero', 10111213, '70112221', 'camila.romero@email.com', '2024-02-04'),
-('Andrés Vásquez', 11121314, '70112222', 'andres.vasquez@email.com', '2024-02-06'),('Patricia Herrera', 12131415, '70112223', 'patricia.herrera@email.com', '2024-02-08'),
-('Diego Sánchez', 13141516, '70112224', 'diego.sanchez@email.com', '2024-02-10'),('Valentina Castillo', 14151617, '70112225', 'valentina.castillo@email.com', '2024-02-12');
+insert into Cliente values ('Carla Gómez', '01234567-0', '78451236', 'carla.gomez@gmail.com', '2025-07-01'),
+('Luis Martínez', '12345678-1', '76549812', 'luis.martinez@hotmail.com', '2025-07-02'),('Ana Morales', '23456789-2', '70124587', 'ana.morales@yahoo.com', '2025-07-03'),
+('Carlos Pérez', '34567890-3', '74581236', 'carlos.perez@outlook.com', '2025-07-04'),('María López', '45678901-4', '79041235', 'maria.lopez@gmail.com', '2025-07-05'),
+('Jorge Sánchez', '56789012-5', '72894567', 'jorge.sanchez@gmail.com', '2025-07-06'),('Valeria Castro', '67890123-6', '75236418', 'valeria.castro@hotmail.com', '2025-07-07'),
+('Diego Reyes', '78901234-7', '76549872', 'diego.reyes@gmail.com', '2025-07-08'),('Fernanda Cruz', '89012345-8', '71234569', 'fernanda.cruz@yahoo.com', '2025-07-09'),
+('Samuel Rivera', '90123456-9', '70198436', 'samuel.rivera@hotmail.com', '2025-07-10'),('Andrea Ramos', '11223344-0', '78912345', 'andrea.ramos@gmail.com', '2025-07-11'),
+('Gabriel Molina', '22334455-1', '78324567', 'gabriel.molina@hotmail.com', '2025-07-12'),('Sofía Herrera', '33445566-2', '76458921', 'sofia.herrera@gmail.com', '2025-07-13'),
+('Ricardo Torres', '44556677-3', '79235418', 'ricardo.torres@yahoo.com', '2025-07-14'),('Camila Aguirre', '55667788-4', '70019823', 'camila.aguirre@outlook.com', '2025-07-15');
 go
 
-Create table detalleFactura (
-idDetalleFactura int identity (1,1) primary key,
-cantidadProduc int,
-subTotal varchar(50)
+create table Factura(
+idFactura int identity (1,1) primary key,
+idDetalleFactura int
 );
 go
-insert into detalleFactura values (2, '$19.98'),(1, '$7.99'),(5, '$45.50'),(3, '$22.80'),
-(4, '$35.60'),(6, '$60.00'),(2, '$15.40'),(8, '$72.00'),(3, '$29.97'),(1, '$9.99'),(7, '$55.65'),(2, '$18.00'),
-(4, '$40.00'),(5, '$47.50'),(1, '$12.99');
+insert into Factura values (1),(2),(3),(4),(5),(6),(7),
+(8),(9),(10),(11),(12),(13),(14),(15);
+
 go
 
 create table Producto(
@@ -108,26 +107,14 @@ foreign key (idProveedor) references Proveedor (idProveedor),
 foreign key (idCategoria) references Categoria (idCategoria)
 );
 go
-insert into Producto values ('Crema Hidratante', '2024-02-15', 1, 50, 100000000001, 9.99, 1, 1),('Perfume Rosa', '2024-03-10', 1, 30, 100000000002, 14.50, 2, 2),
-('Jabón Natural', '2024-01-25', 1, 80, 100000000003, 3.99, 3, 3),('Shampoo Brillo', '2024-04-01', 1, 40, 100000000004, 6.75, 4, 4),
-('Base Maquillaje', '2024-03-20', 1, 25, 100000000005, 11.99, 5, 5),('Aceite Esencial', '2024-05-05', 1, 15, 100000000006, 13.50, 6, 6),
+insert into Producto values ('Crema Hidratante', '2024-02-15', 1, 2, 100000000001, 9.99, 1, 1),  ('Perfume Rosa', '2024-03-10', 1, 1, 100000000002, 14.50, 2, 2),     
+('Jabón Natural', '2024-01-25', 1, 80, 100000000003, 3.99, 3, 3),('Shampoo Brillo', '2024-04-01', 1, 0, 100000000004, 6.75, 4, 4),    
+('Base Maquillaje', '2024-03-20', 1, 25, 100000000005, 11.99, 5, 5),('Aceite Esencial', '2024-05-05', 1, 1, 100000000006, 13.50, 6, 6),  
 ('Desodorante Aloe', '2024-04-10', 1, 35, 100000000007, 5.75, 7, 7),('Loción Floral', '2024-02-28', 1, 20, 100000000008, 12.00, 8, 8),
 ('Exfoliante Suave', '2024-01-10', 1, 60, 100000000009, 7.25, 9, 9),('Suero Antiedad', '2024-03-18', 1, 18, 100000000010, 15.80, 10, 10),
 ('Mascarilla Arcilla', '2024-02-08', 1, 22, 100000000011, 8.90, 11, 11),('Protector Solar', '2024-05-15', 1, 27, 100000000012, 10.00, 12, 12),
 ('Tónico Facial', '2024-04-25', 1, 33, 100000000013, 6.45, 13, 13),('Balsamo Labial', '2024-01-30', 1, 45, 100000000014, 5.99, 14, 14),
 ('Esmalte Coral', '2024-03-05', 1, 38, 100000000015, 4.50, 15, 15);
-go
-
-create table Factura(
-idFactura int identity (1,1) primary key,
-idDetalleFactura int,
-idUsuario int,
-foreign key(idUsuario) references Usuario (idUsuario),
-foreign key (idDetalleFactura) references detalleFactura (idDetalleFactura)
-);
-go
-insert into Factura values (1, 1),(2, 2),(3, 3),(4, 4),(5, 5),(6, 6),(7, 7),
-(8, 8),(9, 9),(10, 10),(11, 11),(12, 12),(13, 13),(14, 14),(15, 15);
 go
 
 Create table Compra(
@@ -136,16 +123,29 @@ idUsuario int,
 idProducto int,
 idFactura int,
 idCliente int,
+total decimal (10,2),
 foreign key (idUsuario) references Usuario (idUsuario),
 foreign key(idProducto) references Producto (idProducto),
 foreign key (idFactura) references Factura (idFactura),
 foreign key (idCliente) references Cliente (idCliente)
 );
 go
-insert into Compra values (1, 1, 1, 1),(2, 2, 2, 2),(3, 3, 3, 3),(4, 4, 4, 4),(5, 5, 5, 5),
-(6, 6, 6, 6),(7, 7, 7, 7),(8, 8, 8, 8),(9, 9, 9, 9),(10, 10, 10, 10),(11, 11, 11, 11),(12, 12, 12, 12),(13, 13, 13, 13),
-(14, 14, 14, 14),(15, 15, 15, 15);
+insert into Compra values (1, 1, 1, 1, 12.3),(2, 2, 2, 2, 100.13),(3, 3, 3, 3, 34.50),(4, 4, 4, 4, 20.15),(5, 5, 5, 5, 35.00),
+(6, 6, 6, 6, 29.97),(7, 7, 7, 7, 35.60),(8, 8, 8, 8, 12.99),(9, 9, 9, 9, 10.80),(10, 10, 10, 10, 7.50),(11, 11, 11, 11, 15.25),(12, 12, 12, 12, 40.75),(13, 13, 13, 13, 50.50),
+(14, 14, 14, 14, 7.99),(15, 15, 15, 15, 9.99);
 go
+
+Create table detalleFactura (
+idDetalleFactura int identity (1,1) primary key,
+idCompra int,
+idProducto int,
+foreign key (idCompra) references Compra (idCompra),
+foreign key (idProducto) references Producto (idProducto)
+);
+go
+insert into detalleFactura values (1, 1),(2, 2),(3, 3),(4, 4),
+(5, 5),(6, 6),(7, 7),(8, 8),(9, 9),(10, 10),(11, 11),(12, 12),
+(13, 13),(14, 14),(15, 15);
 
 select*from Rol
 select*from Usuario

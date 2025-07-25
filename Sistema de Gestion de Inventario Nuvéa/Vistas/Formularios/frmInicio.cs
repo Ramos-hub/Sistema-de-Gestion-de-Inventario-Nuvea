@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo.Conexion;
 using Vistas.Formularios;
 
 namespace Vistas.Formularios
@@ -16,6 +18,11 @@ namespace Vistas.Formularios
         public frmIndex()
         {
             InitializeComponent();
+            this.Load += new EventHandler(frmInicio_Load);
+        }
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+            CargarProductosBajoStock();
         }
         private Form activarForm = null;
         //Metodo que me permitira activar los formularios
@@ -47,6 +54,21 @@ namespace Vistas.Formularios
             fi.StartPosition = FormStartPosition.CenterScreen;
             fi.Show();
            
+
+        }
+
+            private void CargarProductosBajoStock()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            string consulta = @"SELECT nombreProduc as Producto, fechaIngreso, estado, cantidadStock as Stock
+                            FROM Producto 
+                            WHERE cantidadStock < 3";
+            SqlDataAdapter adap = new SqlDataAdapter(consulta, conexion);
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dgvProductosBajoStock.DataSource = tabla;
+
+            conexion.Close();
 
         }
     }

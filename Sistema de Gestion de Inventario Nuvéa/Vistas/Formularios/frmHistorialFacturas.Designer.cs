@@ -30,13 +30,13 @@
         {
             this.lblHistorialFacturas = new System.Windows.Forms.Label();
             this.pnlFiltrosHistorialFacturas = new System.Windows.Forms.Panel();
-            this.lblRangoFacturas = new System.Windows.Forms.Label();
-            this.lblEstadoHistorial = new System.Windows.Forms.Label();
-            this.lblClienteHistorial = new System.Windows.Forms.Label();
-            this.txtClienteHistorial = new System.Windows.Forms.TextBox();
-            this.cbEstadoHistorial = new System.Windows.Forms.ComboBox();
-            this.dtpRangoFactu = new System.Windows.Forms.DateTimePicker();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
+            this.dtpRangoFactu = new System.Windows.Forms.DateTimePicker();
+            this.cbEstadoHistorial = new System.Windows.Forms.ComboBox();
+            this.txtClienteHistorial = new System.Windows.Forms.TextBox();
+            this.lblClienteHistorial = new System.Windows.Forms.Label();
+            this.lblEstadoHistorial = new System.Windows.Forms.Label();
+            this.lblRangoFacturas = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlFiltrosHistorialFacturas.SuspendLayout();
@@ -71,61 +71,6 @@
             this.pnlFiltrosHistorialFacturas.Size = new System.Drawing.Size(800, 102);
             this.pnlFiltrosHistorialFacturas.TabIndex = 1;
             // 
-            // lblRangoFacturas
-            // 
-            this.lblRangoFacturas.AutoSize = true;
-            this.lblRangoFacturas.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRangoFacturas.Location = new System.Drawing.Point(24, 12);
-            this.lblRangoFacturas.Name = "lblRangoFacturas";
-            this.lblRangoFacturas.Size = new System.Drawing.Size(111, 17);
-            this.lblRangoFacturas.TabIndex = 0;
-            this.lblRangoFacturas.Text = "Rango de Fechas";
-            // 
-            // lblEstadoHistorial
-            // 
-            this.lblEstadoHistorial.AutoSize = true;
-            this.lblEstadoHistorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoHistorial.Location = new System.Drawing.Point(253, 12);
-            this.lblEstadoHistorial.Name = "lblEstadoHistorial";
-            this.lblEstadoHistorial.Size = new System.Drawing.Size(49, 17);
-            this.lblEstadoHistorial.TabIndex = 1;
-            this.lblEstadoHistorial.Text = "Estado";
-            // 
-            // lblClienteHistorial
-            // 
-            this.lblClienteHistorial.AutoSize = true;
-            this.lblClienteHistorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClienteHistorial.Location = new System.Drawing.Point(439, 12);
-            this.lblClienteHistorial.Name = "lblClienteHistorial";
-            this.lblClienteHistorial.Size = new System.Drawing.Size(51, 17);
-            this.lblClienteHistorial.TabIndex = 2;
-            this.lblClienteHistorial.Text = "Cliente";
-            // 
-            // txtClienteHistorial
-            // 
-            this.txtClienteHistorial.Location = new System.Drawing.Point(429, 52);
-            this.txtClienteHistorial.Name = "txtClienteHistorial";
-            this.txtClienteHistorial.Size = new System.Drawing.Size(141, 20);
-            this.txtClienteHistorial.TabIndex = 4;
-            // 
-            // cbEstadoHistorial
-            // 
-            this.cbEstadoHistorial.FormattingEnabled = true;
-            this.cbEstadoHistorial.Items.AddRange(new object[] {
-            "Pagada ",
-            "Pendiente"});
-            this.cbEstadoHistorial.Location = new System.Drawing.Point(241, 51);
-            this.cbEstadoHistorial.Name = "cbEstadoHistorial";
-            this.cbEstadoHistorial.Size = new System.Drawing.Size(141, 21);
-            this.cbEstadoHistorial.TabIndex = 5;
-            // 
-            // dtpRangoFactu
-            // 
-            this.dtpRangoFactu.Location = new System.Drawing.Point(12, 52);
-            this.dtpRangoFactu.Name = "dtpRangoFactu";
-            this.dtpRangoFactu.Size = new System.Drawing.Size(200, 20);
-            this.dtpRangoFactu.TabIndex = 6;
-            // 
             // btnAplicarFiltros
             // 
             this.btnAplicarFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(99)))), ((int)(((byte)(184)))));
@@ -139,6 +84,61 @@
             this.btnAplicarFiltros.TabIndex = 7;
             this.btnAplicarFiltros.Text = "Aplicar Filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
+            // 
+            // dtpRangoFactu
+            // 
+            this.dtpRangoFactu.Location = new System.Drawing.Point(12, 52);
+            this.dtpRangoFactu.Name = "dtpRangoFactu";
+            this.dtpRangoFactu.Size = new System.Drawing.Size(200, 20);
+            this.dtpRangoFactu.TabIndex = 6;
+            // 
+            // cbEstadoHistorial
+            // 
+            this.cbEstadoHistorial.FormattingEnabled = true;
+            this.cbEstadoHistorial.Items.AddRange(new object[] {
+            "Pagada ",
+            "Pendiente"});
+            this.cbEstadoHistorial.Location = new System.Drawing.Point(241, 51);
+            this.cbEstadoHistorial.Name = "cbEstadoHistorial";
+            this.cbEstadoHistorial.Size = new System.Drawing.Size(141, 21);
+            this.cbEstadoHistorial.TabIndex = 5;
+            // 
+            // txtClienteHistorial
+            // 
+            this.txtClienteHistorial.Location = new System.Drawing.Point(429, 52);
+            this.txtClienteHistorial.Name = "txtClienteHistorial";
+            this.txtClienteHistorial.Size = new System.Drawing.Size(141, 20);
+            this.txtClienteHistorial.TabIndex = 4;
+            // 
+            // lblClienteHistorial
+            // 
+            this.lblClienteHistorial.AutoSize = true;
+            this.lblClienteHistorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClienteHistorial.Location = new System.Drawing.Point(439, 12);
+            this.lblClienteHistorial.Name = "lblClienteHistorial";
+            this.lblClienteHistorial.Size = new System.Drawing.Size(51, 17);
+            this.lblClienteHistorial.TabIndex = 2;
+            this.lblClienteHistorial.Text = "Cliente";
+            // 
+            // lblEstadoHistorial
+            // 
+            this.lblEstadoHistorial.AutoSize = true;
+            this.lblEstadoHistorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoHistorial.Location = new System.Drawing.Point(253, 12);
+            this.lblEstadoHistorial.Name = "lblEstadoHistorial";
+            this.lblEstadoHistorial.Size = new System.Drawing.Size(49, 17);
+            this.lblEstadoHistorial.TabIndex = 1;
+            this.lblEstadoHistorial.Text = "Estado";
+            // 
+            // lblRangoFacturas
+            // 
+            this.lblRangoFacturas.AutoSize = true;
+            this.lblRangoFacturas.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRangoFacturas.Location = new System.Drawing.Point(24, 12);
+            this.lblRangoFacturas.Name = "lblRangoFacturas";
+            this.lblRangoFacturas.Size = new System.Drawing.Size(111, 17);
+            this.lblRangoFacturas.TabIndex = 0;
+            this.lblRangoFacturas.Text = "Rango de Fechas";
             // 
             // panel1
             // 

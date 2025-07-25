@@ -30,35 +30,50 @@
         {
             this.pblInfoInventario = new System.Windows.Forms.Panel();
             this.pnlProductos = new System.Windows.Forms.Panel();
-            this.pbProductos = new System.Windows.Forms.PictureBox();
             this.lblProductos = new System.Windows.Forms.Label();
             this.lblResultado_Productos = new System.Windows.Forms.Label();
             this.pnlUsuarios = new System.Windows.Forms.Panel();
             this.lblResultado_Usuarios = new System.Windows.Forms.Label();
             this.lblUsuarios = new System.Windows.Forms.Label();
-            this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.pnlVentas = new System.Windows.Forms.Panel();
             this.lblResultado_Ventas = new System.Windows.Forms.Label();
-            this.pbVentas = new System.Windows.Forms.PictureBox();
             this.lblVentas = new System.Windows.Forms.Label();
             this.btnAgregar_Inventario = new System.Windows.Forms.Button();
             this.btnEditar_Inventario = new System.Windows.Forms.Button();
             this.btnEliminar_Inventario = new System.Windows.Forms.Button();
+            this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbAgregar = new System.Windows.Forms.PictureBox();
-            this.dgvInvemtario = new System.Windows.Forms.DataGridView();
+            this.pbProductos = new System.Windows.Forms.PictureBox();
+            this.pbUsuarios = new System.Windows.Forms.PictureBox();
+            this.pbVentas = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbProveedor = new System.Windows.Forms.ComboBox();
+            this.cmbCategoriaProduc = new System.Windows.Forms.ComboBox();
+            this.nudCantidadStock = new System.Windows.Forms.NumericUpDown();
+            this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
+            this.txtPrecioProduc = new System.Windows.Forms.TextBox();
+            this.txtCodigoBarras = new System.Windows.Forms.TextBox();
+            this.txtNombreProduc = new System.Windows.Forms.TextBox();
             this.pblInfoInventario.SuspendLayout();
             this.pnlProductos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
             this.pnlUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
             this.pnlVentas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInvemtario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).BeginInit();
             this.SuspendLayout();
             // 
             // pblInfoInventario
@@ -71,7 +86,7 @@
             this.pblInfoInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pblInfoInventario.Location = new System.Drawing.Point(0, 0);
             this.pblInfoInventario.Name = "pblInfoInventario";
-            this.pblInfoInventario.Size = new System.Drawing.Size(800, 166);
+            this.pblInfoInventario.Size = new System.Drawing.Size(1114, 166);
             this.pblInfoInventario.TabIndex = 10;
             // 
             // pnlProductos
@@ -85,19 +100,6 @@
             this.pnlProductos.Name = "pnlProductos";
             this.pnlProductos.Size = new System.Drawing.Size(173, 93);
             this.pnlProductos.TabIndex = 2;
-            // 
-            // pbProductos
-            // 
-            this.pbProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pbProductos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbProductos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbProductos.Image = global::Vistas.Properties.Resources.menu_hamburger_burger_icon_176431;
-            this.pbProductos.Location = new System.Drawing.Point(0, 0);
-            this.pbProductos.Name = "pbProductos";
-            this.pbProductos.Size = new System.Drawing.Size(70, 91);
-            this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProductos.TabIndex = 0;
-            this.pbProductos.TabStop = false;
             // 
             // lblProductos
             // 
@@ -147,19 +149,6 @@
             this.lblUsuarios.TabIndex = 1;
             this.lblUsuarios.Text = "Usuarios";
             // 
-            // pbUsuarios
-            // 
-            this.pbUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pbUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbUsuarios.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
-            this.pbUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.pbUsuarios.Name = "pbUsuarios";
-            this.pbUsuarios.Size = new System.Drawing.Size(72, 91);
-            this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsuarios.TabIndex = 0;
-            this.pbUsuarios.TabStop = false;
-            // 
             // pnlVentas
             // 
             this.pnlVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -180,19 +169,6 @@
             this.lblResultado_Ventas.Size = new System.Drawing.Size(78, 16);
             this.lblResultado_Ventas.TabIndex = 6;
             this.lblResultado_Ventas.Text = "Resultado";
-            // 
-            // pbVentas
-            // 
-            this.pbVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbVentas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbVentas.Image = global::Vistas.Properties.Resources.dollar_symbol_icon_icons_com_73598;
-            this.pbVentas.Location = new System.Drawing.Point(0, 0);
-            this.pbVentas.Name = "pbVentas";
-            this.pbVentas.Size = new System.Drawing.Size(70, 91);
-            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbVentas.TabIndex = 0;
-            this.pbVentas.TabStop = false;
             // 
             // lblVentas
             // 
@@ -215,6 +191,7 @@
             this.btnAgregar_Inventario.Text = "Agregar";
             this.btnAgregar_Inventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar_Inventario.UseVisualStyleBackColor = false;
+            this.btnAgregar_Inventario.Click += new System.EventHandler(this.btnAgregar_Inventario_Click);
             // 
             // btnEditar_Inventario
             // 
@@ -241,6 +218,19 @@
             this.btnEliminar_Inventario.Text = "Eliminar";
             this.btnEliminar_Inventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar_Inventario.UseVisualStyleBackColor = false;
+            // 
+            // dgvInventario
+            // 
+            this.dgvInventario.AllowUserToAddRows = false;
+            this.dgvInventario.AllowUserToDeleteRows = false;
+            this.dgvInventario.BackgroundColor = System.Drawing.Color.White;
+            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventario.Location = new System.Drawing.Point(12, 202);
+            this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.ReadOnly = true;
+            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInventario.Size = new System.Drawing.Size(776, 294);
+            this.dgvInventario.TabIndex = 18;
             // 
             // pbEliminar
             // 
@@ -278,22 +268,180 @@
             this.pbAgregar.TabIndex = 15;
             this.pbAgregar.TabStop = false;
             // 
-            // dgvInvemtario
+            // pbProductos
             // 
-            this.dgvInvemtario.BackgroundColor = System.Drawing.Color.White;
-            this.dgvInvemtario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInvemtario.Location = new System.Drawing.Point(12, 202);
-            this.dgvInvemtario.Name = "dgvInvemtario";
-            this.dgvInvemtario.Size = new System.Drawing.Size(776, 294);
-            this.dgvInvemtario.TabIndex = 18;
+            this.pbProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pbProductos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbProductos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbProductos.Image = global::Vistas.Properties.Resources.menu_hamburger_burger_icon_176431;
+            this.pbProductos.Location = new System.Drawing.Point(0, 0);
+            this.pbProductos.Name = "pbProductos";
+            this.pbProductos.Size = new System.Drawing.Size(70, 91);
+            this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProductos.TabIndex = 0;
+            this.pbProductos.TabStop = false;
+            // 
+            // pbUsuarios
+            // 
+            this.pbUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pbUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbUsuarios.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
+            this.pbUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.pbUsuarios.Name = "pbUsuarios";
+            this.pbUsuarios.Size = new System.Drawing.Size(72, 91);
+            this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuarios.TabIndex = 0;
+            this.pbUsuarios.TabStop = false;
+            // 
+            // pbVentas
+            // 
+            this.pbVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbVentas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbVentas.Image = global::Vistas.Properties.Resources.dollar_symbol_icon_icons_com_73598;
+            this.pbVentas.Location = new System.Drawing.Point(0, 0);
+            this.pbVentas.Name = "pbVentas";
+            this.pbVentas.Size = new System.Drawing.Size(70, 91);
+            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVentas.TabIndex = 0;
+            this.pbVentas.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(809, 365);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Fecha de Ingreso";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(985, 257);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Proveedor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(985, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Categoria del producto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(809, 308);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 13);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Cantidad de Produtos en Stock";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(809, 257);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Precio del producto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(985, 202);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Codigo de barras";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(809, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Ingrese el nombre del producto";
+            // 
+            // cmbProveedor
+            // 
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(984, 273);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Size = new System.Drawing.Size(121, 21);
+            this.cmbProveedor.TabIndex = 25;
+            // 
+            // cmbCategoriaProduc
+            // 
+            this.cmbCategoriaProduc.FormattingEnabled = true;
+            this.cmbCategoriaProduc.Location = new System.Drawing.Point(984, 324);
+            this.cmbCategoriaProduc.Name = "cmbCategoriaProduc";
+            this.cmbCategoriaProduc.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoriaProduc.TabIndex = 24;
+            // 
+            // nudCantidadStock
+            // 
+            this.nudCantidadStock.Location = new System.Drawing.Point(812, 324);
+            this.nudCantidadStock.Name = "nudCantidadStock";
+            this.nudCantidadStock.Size = new System.Drawing.Size(120, 20);
+            this.nudCantidadStock.TabIndex = 23;
+            // 
+            // dtpFechaIngreso
+            // 
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(812, 381);
+            this.dtpFechaIngreso.Name = "dtpFechaIngreso";
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaIngreso.TabIndex = 22;
+            // 
+            // txtPrecioProduc
+            // 
+            this.txtPrecioProduc.Location = new System.Drawing.Point(812, 273);
+            this.txtPrecioProduc.Name = "txtPrecioProduc";
+            this.txtPrecioProduc.Size = new System.Drawing.Size(126, 20);
+            this.txtPrecioProduc.TabIndex = 21;
+            // 
+            // txtCodigoBarras
+            // 
+            this.txtCodigoBarras.Location = new System.Drawing.Point(984, 218);
+            this.txtCodigoBarras.Name = "txtCodigoBarras";
+            this.txtCodigoBarras.Size = new System.Drawing.Size(118, 20);
+            this.txtCodigoBarras.TabIndex = 20;
+            // 
+            // txtNombreProduc
+            // 
+            this.txtNombreProduc.Location = new System.Drawing.Point(812, 218);
+            this.txtNombreProduc.Name = "txtNombreProduc";
+            this.txtNombreProduc.Size = new System.Drawing.Size(123, 20);
+            this.txtNombreProduc.TabIndex = 19;
             // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(202)))));
-            this.ClientSize = new System.Drawing.Size(800, 560);
-            this.Controls.Add(this.dgvInvemtario);
+            this.ClientSize = new System.Drawing.Size(1114, 560);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbProveedor);
+            this.Controls.Add(this.cmbCategoriaProduc);
+            this.Controls.Add(this.nudCantidadStock);
+            this.Controls.Add(this.dtpFechaIngreso);
+            this.Controls.Add(this.txtPrecioProduc);
+            this.Controls.Add(this.txtCodigoBarras);
+            this.Controls.Add(this.txtNombreProduc);
+            this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.pbEliminar);
             this.Controls.Add(this.pbEditar);
             this.Controls.Add(this.pbAgregar);
@@ -303,21 +451,24 @@
             this.Controls.Add(this.btnEliminar_Inventario);
             this.Name = "frmInventario";
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             this.pblInfoInventario.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
             this.pnlProductos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).EndInit();
             this.pnlUsuarios.ResumeLayout(false);
             this.pnlUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
             this.pnlVentas.ResumeLayout(false);
             this.pnlVentas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInvemtario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -341,6 +492,20 @@
         private System.Windows.Forms.Label lblUsuarios;
         private System.Windows.Forms.Label lblResultado_Ventas;
         private System.Windows.Forms.Label lblVentas;
-        private System.Windows.Forms.DataGridView dgvInvemtario;
+        private System.Windows.Forms.DataGridView dgvInventario;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbProveedor;
+        private System.Windows.Forms.ComboBox cmbCategoriaProduc;
+        private System.Windows.Forms.NumericUpDown nudCantidadStock;
+        private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
+        private System.Windows.Forms.TextBox txtPrecioProduc;
+        private System.Windows.Forms.TextBox txtCodigoBarras;
+        private System.Windows.Forms.TextBox txtNombreProduc;
     }
 }

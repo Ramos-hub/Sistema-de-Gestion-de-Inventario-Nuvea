@@ -71,7 +71,7 @@
             this.gbInicio.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInicio.Location = new System.Drawing.Point(0, 0);
             this.gbInicio.Name = "gbInicio";
-            this.gbInicio.Size = new System.Drawing.Size(800, 146);
+            this.gbInicio.Size = new System.Drawing.Size(838, 146);
             this.gbInicio.TabIndex = 4;
             this.gbInicio.TabStop = false;
             this.gbInicio.Text = "Inicio";
@@ -79,7 +79,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
-            this.pictureBox1.Location = new System.Drawing.Point(536, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(654, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -279,19 +279,23 @@
             // 
             this.gbProductosBajoStock.Controls.Add(this.dgvProductosBajoStock);
             this.gbProductosBajoStock.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProductosBajoStock.Location = new System.Drawing.Point(472, 280);
+            this.gbProductosBajoStock.Location = new System.Drawing.Point(348, 280);
             this.gbProductosBajoStock.Name = "gbProductosBajoStock";
-            this.gbProductosBajoStock.Size = new System.Drawing.Size(288, 158);
+            this.gbProductosBajoStock.Size = new System.Drawing.Size(452, 187);
             this.gbProductosBajoStock.TabIndex = 8;
             this.gbProductosBajoStock.TabStop = false;
             this.gbProductosBajoStock.Text = "Productos Bajo Stock";
             // 
             // dgvProductosBajoStock
             // 
+            this.dgvProductosBajoStock.AllowUserToAddRows = false;
+            this.dgvProductosBajoStock.AllowUserToDeleteRows = false;
             this.dgvProductosBajoStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductosBajoStock.Location = new System.Drawing.Point(15, 28);
+            this.dgvProductosBajoStock.Location = new System.Drawing.Point(6, 28);
             this.dgvProductosBajoStock.Name = "dgvProductosBajoStock";
-            this.dgvProductosBajoStock.Size = new System.Drawing.Size(267, 118);
+            this.dgvProductosBajoStock.ReadOnly = true;
+            this.dgvProductosBajoStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductosBajoStock.Size = new System.Drawing.Size(440, 153);
             this.dgvProductosBajoStock.TabIndex = 0;
             // 
             // frmIndex
@@ -299,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(202)))));
-            this.ClientSize = new System.Drawing.Size(800, 463);
+            this.ClientSize = new System.Drawing.Size(845, 526);
             this.Controls.Add(this.gbProductosBajoStock);
             this.Controls.Add(this.gbAccesoRapido);
             this.Controls.Add(this.pnlVentasDiarias);
@@ -307,7 +311,6 @@
             this.Controls.Add(this.pnlProveedores);
             this.Controls.Add(this.pnlTotalProductos);
             this.Controls.Add(this.gbInicio);
-           
             this.Name = "frmIndex";
             this.Text = "frmIndex";
             this.gbInicio.ResumeLayout(false);
