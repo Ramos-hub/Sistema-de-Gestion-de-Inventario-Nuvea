@@ -9,7 +9,7 @@ nombreRol varchar(25)
 go
 insert into Rol values ('Administrador'),('Usuario'),('Usuario'),
 ('Usuario'),('Usuario'),('Usuario'),
-('Usuario'),('Usuario'),('Administrador'),
+('Usuario'),('Usuario'),('Usuario'),
 ('Usuario'),('Usuario'),('Usuario'),
 ('Usuario'),('Usuario'),('Usuario');
 go
@@ -81,16 +81,6 @@ insert into Cliente values ('Carla Gómez', '01234567-0', '78451236', 'carla.gome
 ('Ricardo Torres', '44556677-3', '79235418', 'ricardo.torres@yahoo.com', '2025-07-14'),('Camila Aguirre', '55667788-4', '70019823', 'camila.aguirre@outlook.com', '2025-07-15');
 go
 
-create table Factura(
-idFactura int identity (1,1) primary key,
-idDetalleFactura int
-);
-go
-insert into Factura values (1),(2),(3),(4),(5),(6),(7),
-(8),(9),(10),(11),(12),(13),(14),(15);
-
-go
-
 create table Producto(
 idProducto int identity (1,1) primary key,
 nombreProduc varchar(40),
@@ -121,18 +111,16 @@ Create table Compra(
 idCompra int identity (1,1) primary key,
 idUsuario int,
 idProducto int,
-idFactura int,
 idCliente int,
 total decimal (10,2),
 foreign key (idUsuario) references Usuario (idUsuario),
 foreign key(idProducto) references Producto (idProducto),
-foreign key (idFactura) references Factura (idFactura),
 foreign key (idCliente) references Cliente (idCliente)
 );
 go
-insert into Compra values (1, 1, 1, 1, 12.3),(2, 2, 2, 2, 100.13),(3, 3, 3, 3, 34.50),(4, 4, 4, 4, 20.15),(5, 5, 5, 5, 35.00),
-(6, 6, 6, 6, 29.97),(7, 7, 7, 7, 35.60),(8, 8, 8, 8, 12.99),(9, 9, 9, 9, 10.80),(10, 10, 10, 10, 7.50),(11, 11, 11, 11, 15.25),(12, 12, 12, 12, 40.75),(13, 13, 13, 13, 50.50),
-(14, 14, 14, 14, 7.99),(15, 15, 15, 15, 9.99);
+insert into Compra values (1, 1, 1, 12.3),(2, 2, 2, 100.13),(3, 3, 3, 34.50),(4, 4, 4, 20.15),(5, 5, 5, 35.00),
+(6, 6, 6, 29.97),(7, 7, 7, 35.60),(8, 8, 8, 12.99),(9, 9, 9, 10.80),(10, 10, 10, 7.50),(11, 11, 11, 15.25),(12, 12, 12, 40.75),(13, 13, 13, 50.50),
+(14, 14, 14, 7.99),(15, 15, 15, 9.99);
 go
 
 Create table detalleFactura (
@@ -153,11 +141,10 @@ select*from Producto
 select*from Proveedor
 select*from Categoria
 select*from Compra
-select*from Factura
 select*from detalleFactura
 select*from Cliente
 
 select P.nombreProduc as Producto, P.fechaIngreso, P.cantidadStock as Stock, P.codigoBarras, P.precioProduc as Precio, C.nombreCat AS categoria
 from Producto P
-inner join Categoria C ON P.idCategoria = C.idCategoria 
+inner join Categoria C ON P.idCategoria = C.idCategoria
 

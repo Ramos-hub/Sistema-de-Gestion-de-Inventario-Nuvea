@@ -36,6 +36,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pbLogoLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             this.SuspendLayout();
@@ -53,20 +54,20 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(265, 158);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(47, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(56, 19);
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(265, 231);
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(265, 232);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(66, 16);
+            this.lblContraseña.Size = new System.Drawing.Size(79, 19);
             this.lblContraseña.TabIndex = 3;
             this.lblContraseña.Text = "Contraseña";
             // 
@@ -74,7 +75,7 @@
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(316, 294);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(321, 309);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(0);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Padding = new System.Windows.Forms.Padding(1);
@@ -89,7 +90,7 @@
             this.btnOlvidasteContraseña.FlatAppearance.BorderSize = 0;
             this.btnOlvidasteContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOlvidasteContraseña.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOlvidasteContraseña.Location = new System.Drawing.Point(339, 413);
+            this.btnOlvidasteContraseña.Location = new System.Drawing.Point(353, 418);
             this.btnOlvidasteContraseña.Name = "btnOlvidasteContraseña";
             this.btnOlvidasteContraseña.Size = new System.Drawing.Size(116, 20);
             this.btnOlvidasteContraseña.TabIndex = 6;
@@ -115,9 +116,9 @@
             // 
             this.btnRegistrarse.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.Location = new System.Drawing.Point(316, 357);
+            this.btnRegistrarse.Location = new System.Drawing.Point(321, 367);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(167, 50);
+            this.btnRegistrarse.Size = new System.Drawing.Size(167, 45);
             this.btnRegistrarse.TabIndex = 9;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
@@ -167,5 +168,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

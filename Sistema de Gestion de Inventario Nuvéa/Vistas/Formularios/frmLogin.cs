@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.Conexion;
+using Vistas.Formularios;
 
 
 namespace Vistas.Formularios
@@ -63,3 +64,6 @@ namespace Vistas.Formularios
         }
     }
 }
+//frmInventario fi = new frmInventario();
+//fi.StartPosition = FormStartPosition.CenterScreen;
+//fi.Show();

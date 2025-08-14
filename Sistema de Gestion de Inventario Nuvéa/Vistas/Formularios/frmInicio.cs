@@ -49,11 +49,11 @@ namespace Vistas.Formularios
 
         private void btnIrInventario_Click(object sender, EventArgs e)
         {
-          
-           frmInventario fi = new frmInventario();
-            fi.StartPosition = FormStartPosition.CenterScreen;
-            fi.Show();
-           
+
+            frmInventario verInv = new frmInventario();
+            verInv.Show();
+            this.Hide();
+
 
         }
 

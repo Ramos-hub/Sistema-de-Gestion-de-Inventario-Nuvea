@@ -17,7 +17,7 @@ namespace Modelos.Entidades
         public int IdRol { get => idRol; set => idRol = value; }
         public string NombreRol { get => nombreRol; set => nombreRol = value; }
 
-        public static DataTable chargeRol()
+        public static DataTable validarRol()
         {
             SqlConnection conexion = ConexionDB.Conectar();
             string consultaQuery = "select idRol, nombreRol from Rol";
