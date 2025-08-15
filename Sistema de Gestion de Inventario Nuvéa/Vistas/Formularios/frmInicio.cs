@@ -70,5 +70,10 @@ namespace Vistas.Formularios
             conexion.Close();
 
         }
+
+        private void frmIndex_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

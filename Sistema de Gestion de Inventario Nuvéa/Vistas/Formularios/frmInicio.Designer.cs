@@ -314,6 +314,7 @@
             this.Name = "frmIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmIndex";
+            this.Load += new System.EventHandler(this.frmIndex_Load);
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
