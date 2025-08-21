@@ -13,16 +13,18 @@ namespace Modelos.Entidades
     {
         private int idDetalleFactura;
         private int cantidadProduc;
-        private string subTotal;
+        private int idCompra;
+        private int idProducto;
 
         public int IdDetalleFactura { get => idDetalleFactura; set => idDetalleFactura = value; }
         public int CantidadProduc { get => cantidadProduc; set => cantidadProduc = value; }
-        public string SubTotal { get => subTotal; set => subTotal = value; }
+        public int IdCompra { get => idCompra; set => idCompra = value; }
+        public int IdProducto { get => idProducto; set => idProducto = value; }
 
         public static DataTable chargeDetaleFactura()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consultaQuery = "select idDetalleFactura, cantidadProduc, subTotal FROM detalleFactura";
+            string consultaQuery = "select idDetalleFactura, cantidadProduc, idCompra, idProducto FROM detalleFactura";
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
             DataTable tablaVirtual = new DataTable();
             add.Fill(tablaVirtual);

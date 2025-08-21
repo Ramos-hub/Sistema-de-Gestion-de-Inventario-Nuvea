@@ -48,9 +48,9 @@
             this.lblResultadoTotalEmpleados = new System.Windows.Forms.Label();
             this.lblTotalProductos = new System.Windows.Forms.Label();
             this.gbInicioEmpleados = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBienvenidosEmpleados = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbProductosBajoStockEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosBajoStockEmpleado)).BeginInit();
             this.gbAccesoRapidoEmpleados.SuspendLayout();
@@ -128,7 +128,6 @@
             this.btnIrInventarioEmpleado.TabIndex = 1;
             this.btnIrInventarioEmpleado.Text = "Ir a Inventario";
             this.btnIrInventarioEmpleado.UseVisualStyleBackColor = true;
-            this.btnIrInventarioEmpleado.Click += new System.EventHandler(this.btnIrInventario_Click);
             // 
             // btnAgregarProductosIndexEmpleado
             // 
@@ -265,7 +264,16 @@
             this.gbInicioEmpleados.TabIndex = 9;
             this.gbInicioEmpleados.TabStop = false;
             this.gbInicioEmpleados.Text = "Inicio";
-            this.gbInicioEmpleados.Enter += new System.EventHandler(this.gbInicio_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
+            this.pictureBox1.Location = new System.Drawing.Point(654, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -288,16 +296,6 @@
             this.lblBienvenidosEmpleados.Size = new System.Drawing.Size(223, 28);
             this.lblBienvenidosEmpleados.TabIndex = 0;
             this.lblBienvenidosEmpleados.Text = "Bienvenidos a Nuvéa";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
-            this.pictureBox1.Location = new System.Drawing.Point(654, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // frmIndexEmpleado
             // 

@@ -82,3 +82,6 @@ C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema 
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmFacturaEmpleado.resources
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmIndexEmpleado.resources
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmInventarioEmpleado.resources
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmFacturaEmpleado.resources
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmIndexEmpleado.resources
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmInventarioEmpleado.resources

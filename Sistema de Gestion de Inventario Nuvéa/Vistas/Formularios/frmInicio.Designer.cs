@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblBienvenidos = new System.Windows.Forms.Label();
             this.pnlTotalProductos = new System.Windows.Forms.Panel();
-            this.lblResultadoTotal = new System.Windows.Forms.Label();
+            this.lbltotalResultadosIni = new System.Windows.Forms.Label();
             this.lblTotalProductos = new System.Windows.Forms.Label();
             this.pnlVentasDiarias = new System.Windows.Forms.Panel();
-            this.lblResultadoVentas = new System.Windows.Forms.Label();
+            this.lblResultadoVentasIni = new System.Windows.Forms.Label();
             this.lblVentasHoy = new System.Windows.Forms.Label();
             this.pnlCategorias = new System.Windows.Forms.Panel();
-            this.lblCategorias = new System.Windows.Forms.Label();
+            this.lblCategoriasIni = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlProveedores = new System.Windows.Forms.Panel();
             this.lblTotalProveedores = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             // 
             // pnlTotalProductos
             // 
-            this.pnlTotalProductos.Controls.Add(this.lblResultadoTotal);
+            this.pnlTotalProductos.Controls.Add(this.lbltotalResultadosIni);
             this.pnlTotalProductos.Controls.Add(this.lblTotalProductos);
             this.pnlTotalProductos.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlTotalProductos.Location = new System.Drawing.Point(50, 165);
@@ -118,14 +118,14 @@
             this.pnlTotalProductos.Size = new System.Drawing.Size(144, 66);
             this.pnlTotalProductos.TabIndex = 5;
             // 
-            // lblResultadoTotal
+            // lbltotalResultadosIni
             // 
-            this.lblResultadoTotal.AutoSize = true;
-            this.lblResultadoTotal.Location = new System.Drawing.Point(67, 43);
-            this.lblResultadoTotal.Name = "lblResultadoTotal";
-            this.lblResultadoTotal.Size = new System.Drawing.Size(59, 16);
-            this.lblResultadoTotal.TabIndex = 4;
-            this.lblResultadoTotal.Text = "Resultado";
+            this.lbltotalResultadosIni.AutoSize = true;
+            this.lbltotalResultadosIni.Location = new System.Drawing.Point(67, 43);
+            this.lbltotalResultadosIni.Name = "lbltotalResultadosIni";
+            this.lbltotalResultadosIni.Size = new System.Drawing.Size(59, 16);
+            this.lbltotalResultadosIni.TabIndex = 4;
+            this.lbltotalResultadosIni.Text = "Resultado";
             // 
             // lblTotalProductos
             // 
@@ -138,7 +138,7 @@
             // 
             // pnlVentasDiarias
             // 
-            this.pnlVentasDiarias.Controls.Add(this.lblResultadoVentas);
+            this.pnlVentasDiarias.Controls.Add(this.lblResultadoVentasIni);
             this.pnlVentasDiarias.Controls.Add(this.lblVentasHoy);
             this.pnlVentasDiarias.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlVentasDiarias.Location = new System.Drawing.Point(237, 165);
@@ -146,14 +146,14 @@
             this.pnlVentasDiarias.Size = new System.Drawing.Size(144, 66);
             this.pnlVentasDiarias.TabIndex = 6;
             // 
-            // lblResultadoVentas
+            // lblResultadoVentasIni
             // 
-            this.lblResultadoVentas.AutoSize = true;
-            this.lblResultadoVentas.Location = new System.Drawing.Point(82, 43);
-            this.lblResultadoVentas.Name = "lblResultadoVentas";
-            this.lblResultadoVentas.Size = new System.Drawing.Size(59, 16);
-            this.lblResultadoVentas.TabIndex = 3;
-            this.lblResultadoVentas.Text = "Resultado";
+            this.lblResultadoVentasIni.AutoSize = true;
+            this.lblResultadoVentasIni.Location = new System.Drawing.Point(82, 43);
+            this.lblResultadoVentasIni.Name = "lblResultadoVentasIni";
+            this.lblResultadoVentasIni.Size = new System.Drawing.Size(59, 16);
+            this.lblResultadoVentasIni.TabIndex = 3;
+            this.lblResultadoVentasIni.Text = "Resultado";
             // 
             // lblVentasHoy
             // 
@@ -166,7 +166,7 @@
             // 
             // pnlCategorias
             // 
-            this.pnlCategorias.Controls.Add(this.lblCategorias);
+            this.pnlCategorias.Controls.Add(this.lblCategoriasIni);
             this.pnlCategorias.Controls.Add(this.label3);
             this.pnlCategorias.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlCategorias.Location = new System.Drawing.Point(434, 165);
@@ -174,14 +174,14 @@
             this.pnlCategorias.Size = new System.Drawing.Size(144, 66);
             this.pnlCategorias.TabIndex = 6;
             // 
-            // lblCategorias
+            // lblCategoriasIni
             // 
-            this.lblCategorias.AutoSize = true;
-            this.lblCategorias.Location = new System.Drawing.Point(84, 43);
-            this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(59, 16);
-            this.lblCategorias.TabIndex = 5;
-            this.lblCategorias.Text = "Resultado";
+            this.lblCategoriasIni.AutoSize = true;
+            this.lblCategoriasIni.Location = new System.Drawing.Point(84, 43);
+            this.lblCategoriasIni.Name = "lblCategoriasIni";
+            this.lblCategoriasIni.Size = new System.Drawing.Size(59, 16);
+            this.lblCategoriasIni.TabIndex = 5;
+            this.lblCategoriasIni.Text = "Resultado";
             // 
             // label3
             // 
@@ -314,7 +314,6 @@
             this.Name = "frmIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmIndex";
-            this.Load += new System.EventHandler(this.frmIndex_Load);
             this.gbInicio.ResumeLayout(false);
             this.gbInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -341,11 +340,11 @@
         private System.Windows.Forms.Panel pnlVentasDiarias;
         private System.Windows.Forms.Panel pnlCategorias;
         private System.Windows.Forms.Panel pnlProveedores;
-        private System.Windows.Forms.Label lblResultadoTotal;
+        private System.Windows.Forms.Label lbltotalResultadosIni;
         private System.Windows.Forms.Label lblTotalProductos;
-        private System.Windows.Forms.Label lblResultadoVentas;
+        private System.Windows.Forms.Label lblResultadoVentasIni;
         private System.Windows.Forms.Label lblVentasHoy;
-        private System.Windows.Forms.Label lblCategorias;
+        private System.Windows.Forms.Label lblCategoriasIni;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotalProveedores;
         private System.Windows.Forms.Label label5;

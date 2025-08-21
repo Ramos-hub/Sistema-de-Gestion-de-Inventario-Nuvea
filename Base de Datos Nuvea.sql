@@ -125,15 +125,19 @@ go
 
 Create table detalleFactura (
 idDetalleFactura int identity (1,1) primary key,
+subtotal decimal(10,2),
+cantidadProduct int,
 idCompra int,
 idProducto int,
 foreign key (idCompra) references Compra (idCompra),
 foreign key (idProducto) references Producto (idProducto)
 );
 go
-insert into detalleFactura values (1, 1),(2, 2),(3, 3),(4, 4),
-(5, 5),(6, 6),(7, 7),(8, 8),(9, 9),(10, 10),(11, 11),(12, 12),
-(13, 13),(14, 14),(15, 15);
+insert into detallefactura (subtotal, cantidadproduct, idcompra, idproducto) values(19.98, 2, 1, 1),
+(14.50, 1, 2, 2),(11.97, 3, 3, 3),(27.00, 4, 4, 4),(23.98, 2, 5, 5),(27.00, 2, 6, 6),
+(5.75, 1, 7, 7),(24.00, 2, 8, 8),(21.75, 3, 9, 9),(31.60, 2, 10, 10),(8.90, 1, 11, 11),
+(30.00, 3, 12, 12),(19.35, 3, 13, 13),(23.96, 4, 14, 14),(9.00, 2, 15, 15);
+
 
 select*from Rol
 select*from Usuario
@@ -144,7 +148,5 @@ select*from Compra
 select*from detalleFactura
 select*from Cliente
 
-select P.nombreProduc as Producto, P.fechaIngreso, P.cantidadStock as Stock, P.codigoBarras, P.precioProduc as Precio, C.nombreCat AS categoria
-from Producto P
-inner join Categoria C ON P.idCategoria = C.idCategoria
-
+SELECT ISNULL(SUM(subtotal), 0) AS total_vendido
+FROM detalleFactura;
