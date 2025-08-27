@@ -32,5 +32,6 @@ namespace Modelos.Entidades
             add.Fill(tablaVirtual);
             return tablaVirtual;
         }
+
     }
 }

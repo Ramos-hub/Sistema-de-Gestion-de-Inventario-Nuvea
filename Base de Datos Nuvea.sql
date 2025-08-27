@@ -150,3 +150,13 @@ select*from Cliente
 
 SELECT ISNULL(SUM(subtotal), 0) AS total_vendido
 FROM detalleFactura;
+
+create view vw_Inventario as select P.nombreProduc as Producto, nombreProveedor as Proveedor, P.fechaIngreso, P.cantidadStock as Stock,
+            P.codigoBarras, P.precioProduc as Precio, C.nombreCat as categoria
+            from Producto P
+            inner join Categoria C on P.idCategoria = C.idCategoria
+            inner join Proveedor R on P.idProveedor = R.idProveedor
+
+select *from vw_Inventario
+
+update Productos set nombreProduc= 

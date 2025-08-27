@@ -25,10 +25,11 @@ namespace Vistas.Formularios
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            CargarProductosBajoStock();
+            CargarlblProductosBajoStock();
             CargarlblTotalProductos();
             CargarlblTotalVentas();
             CargarlblCategoriasIni();
+            CargarlblProveedoresIni();
         }
         private Form activarForm = null;
         //Metodo que me permitira activar los formularios
@@ -63,7 +64,7 @@ namespace Vistas.Formularios
 
         }
 
-        private void CargarProductosBajoStock()
+        private void CargarlblProductosBajoStock()
         {
             SqlConnection conexion = ConexionDB.Conectar();
             string consulta = @"select nombreProduc as Producto, fechaIngreso, estado, cantidadStock as Stock
@@ -141,6 +142,26 @@ namespace Vistas.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error al obtener total categorias: " + ex.Message);
+            }
+        
+        }
+        private void CargarlblProveedoresIni()
+        {
+            try
+            {
+                SqlConnection conexion = ConexionDB.Conectar();
+                {
+                    string consulta = "select count(*) from Proveedor";
+                    SqlCommand cmd = new SqlCommand(consulta, conexion);
+                    {
+                        int totalprove = Convert.ToInt32(cmd.ExecuteScalar());
+                        lblTotalProveedores.Text = totalprove.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener el total de proveedores: " + ex.Message);
             }
         
         }

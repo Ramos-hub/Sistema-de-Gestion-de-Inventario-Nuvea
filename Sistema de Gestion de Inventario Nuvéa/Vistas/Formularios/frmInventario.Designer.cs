@@ -244,6 +244,7 @@
             this.btnEditar_Inventario.Text = "Editar";
             this.btnEditar_Inventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar_Inventario.UseVisualStyleBackColor = false;
+            this.btnEditar_Inventario.Click += new System.EventHandler(this.btnEditar_Inventario_Click);
             // 
             // btnEliminar_Inventario
             // 
@@ -452,6 +453,7 @@
             this.Name = "frmInventario";
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);
+            this.DoubleClick += new System.EventHandler(this.frmInventario_DoubleClick);
             this.pblInfoInventario.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
             this.pnlProductos.PerformLayout();

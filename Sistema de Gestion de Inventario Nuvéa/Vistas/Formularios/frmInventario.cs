@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.Conexion;
+using Modelos.Entidades;
 
 namespace Vistas.Formularios
 {
@@ -29,10 +30,7 @@ namespace Vistas.Formularios
         private void CargarProductos()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string consulta = @"select P.nombreProduc as Producto, P.fechaIngreso, P.cantidadStock as Stock,
-            P.codigoBarras, P.precioProduc as Precio, C.nombreCat as categoria
-            from Producto P
-            inner join Categoria C on P.idCategoria = C.idCategoria";
+            string consulta = @"select *from vw_Inventario";
 
             SqlDataAdapter adap = new SqlDataAdapter(consulta, conexion);
             DataTable tabla = new DataTable();
@@ -103,5 +101,50 @@ namespace Vistas.Formularios
 
             conexion.Close();
         }
+
+        private void btnEditar_Inventario_Click(object sender, EventArgs e)
+        {
+            Producto p = new Producto();
+            p.NombreProduc = txtNombreProduc.Text;
+            p.FechaIngreso = dtpFechaIngreso.Value;
+            p.CantidadStock = Convert.ToInt32(nudCantidadStock.Value);
+            p.CodigoBarras = Convert.ToInt64(txtCodigoBarras.Text);
+            p.PrecioProduc = Convert.ToDecimal(txtPrecioProduc.Text);
+            p.IdCategoria = Convert.ToInt32(cmbCategoriaProduc.SelectedValue);
+            p.IdProveedor = Convert.ToInt32(cmbProveedor.SelectedValue);
+
+            if (p.ActualizarDatosInventario())
+            {
+                CargarProductos();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error", "Error");
+            }
+        }
+
+        private void frmInventario_DoubleClick(object sender, EventArgs e)
+        {
+
+            if (dgvInventario.CurrentRow == null) return;
+
+            txtNombreProduc.Text = dgvInventario.CurrentRow.Cells["Producto"].Value?.ToString();
+            if (dgvInventario.CurrentRow.Cells["FechaIngreso"].Value != DBNull.Value)
+                dtpFechaIngreso.Value = Convert.ToDateTime(dgvInventario.CurrentRow.Cells["FechaIngreso"].Value);
+            if (dgvInventario.CurrentRow.Cells["Stock"].Value != DBNull.Value)
+                nudCantidadStock.Value = Convert.ToDecimal(dgvInventario.CurrentRow.Cells["Stock"].Value);
+
+            txtCodigoBarras.Text = dgvInventario.CurrentRow.Cells["CodigoBarras"].Value?.ToString();
+            txtPrecioProduc.Text = dgvInventario.CurrentRow.Cells["Precio"].Value?.ToString();
+
+            // Ajusta los combos por ID si tu vista/consulta trae las columnas idCategoria e idProveedor
+            if (dgvInventario.CurrentRow.Cells["idCategoria"] != null)
+                cmbCategoriaProduc.SelectedValue = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idCategoria"].Value);
+            if (dgvInventario.CurrentRow.Cells["idProveedor"] != null)
+                cmbProveedor.SelectedValue = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProveedor"].Value);
+
+
+        }
     }
 }
+    
