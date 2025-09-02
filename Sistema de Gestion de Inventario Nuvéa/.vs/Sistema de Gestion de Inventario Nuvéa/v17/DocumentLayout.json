@@ -3,27 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\modelos\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\modelos\\entidades\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmfacturaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\modelos\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\modelos\\entidades\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmfacturaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmfacturaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -31,7 +31,7 @@
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,8 +46,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -56,45 +60,40 @@
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInventario.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInventario.cs",
               "RelativeToolTip": "Vistas\\Formularios\\frmInventario.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAwwIQAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAAAO4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T03:23:58.252Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Proveedor.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\Proveedor.cs",
               "RelativeDocumentMoniker": "Modelos\\Entidades\\Proveedor.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\Proveedor.cs",
               "RelativeToolTip": "Modelos\\Entidades\\Proveedor.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA5wCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-27T00:37:41.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\Producto.cs",
               "RelativeDocumentMoniker": "Modelos\\Entidades\\Producto.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\Producto.cs",
               "RelativeToolTip": "Modelos\\Entidades\\Producto.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA5wC4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAYwEUAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T23:06:35.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "frmInventario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInventario.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInventario.cs",
@@ -113,8 +112,7 @@
               "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmFacturaEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vistas\\Formularios\\frmFacturaEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T03:05:55.808Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-08-26T03:05:55.808Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmProveedores.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vistas\\Formularios\\frmProveedores.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T03:06:23.518Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-08-26T03:06:23.518Z"
             },
             {
               "$type": "Document",
@@ -138,8 +135,7 @@
               "RelativeToolTip": "Modelos\\Conexion\\Conexion.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T04:39:24.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T04:39:24.347Z"
             },
             {
               "$type": "Document",
@@ -150,8 +146,7 @@
               "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T04:02:12.542Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-08-18T04:02:12.542Z"
             },
             {
               "$type": "Document",
@@ -163,8 +158,7 @@
               "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAAwKYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:53:50.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T15:53:50.624Z"
             }
           ]
         }

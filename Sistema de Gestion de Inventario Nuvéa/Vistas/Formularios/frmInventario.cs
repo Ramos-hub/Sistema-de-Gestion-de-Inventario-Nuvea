@@ -19,6 +19,8 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
             this.Load += frmInventario_Load;
+            this.dgvInventario.CellClick += dgvInventario_CellDoubleClick;
+
         }
 
         private void frmInventario_Load(object sender, EventArgs e)
@@ -37,6 +39,8 @@ namespace Vistas.Formularios
             adap.Fill(tabla);
             dgvInventario.DataSource = tabla;
             dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (var col in new[] { "idProducto", "idCategoria", "idProveedor" })
+                if (dgvInventario.Columns.Contains(col)) dgvInventario.Columns[col].Visible = false;
 
             conexion.Close();
         }
@@ -64,7 +68,6 @@ namespace Vistas.Formularios
             conexion.Close();
      
         }
-
         private void btnAgregar_Inventario_Click(object sender, EventArgs e)
         {
             if (cmbProveedor.SelectedValue == null || cmbCategoriaProduc.SelectedValue == null)
@@ -102,49 +105,136 @@ namespace Vistas.Formularios
             conexion.Close();
         }
 
+        private void dgvInventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvInventario.CurrentRow == null) return;
+            var r = dgvInventario.CurrentRow;
+
+            txtNombreProduc.Text = r.Cells["Producto"].Value?.ToString();
+            dtpFechaIngreso.Value = Convert.ToDateTime(r.Cells["FechaIngreso"].Value);
+            nudCantidadStock.Value = Convert.ToDecimal(r.Cells["Stock"].Value);
+            txtCodigoBarras.Text = r.Cells["codigoBarras"].Value?.ToString();
+            txtPrecioProduc.Text = r.Cells["Precio"].Value?.ToString();
+
+            // Selección por ID (vista debe traer estas columnas)
+            if (r.Cells["idCategoria"]?.Value != DBNull.Value)
+                cmbCategoriaProduc.SelectedValue = Convert.ToInt32(r.Cells["idCategoria"].Value);
+            if (r.Cells["idProveedor"]?.Value != DBNull.Value)
+                cmbProveedor.SelectedValue = Convert.ToInt32(r.Cells["idProveedor"].Value);
+        }
+        private bool TryLeerProductoDesdeUI(out Producto p, out string error)
+        {
+            p = null;
+            error = "";
+
+            if (dgvInventario.CurrentRow == null)
+            { error = "Selecciona un producto de la lista."; return false; }
+
+            if (string.IsNullOrWhiteSpace(txtNombreProduc.Text))
+            { error = "El nombre del producto es obligatorio."; return false; }
+
+            if (!long.TryParse(txtCodigoBarras.Text.Trim(), out long cod))
+            { error = "Código de barras inválido (solo números)."; return false; }
+
+            if (!decimal.TryParse(txtPrecioProduc.Text.Trim(), out decimal precio))
+            { error = "Precio inválido. Usa 12,50 o 12.50"; return false; }
+
+            if (cmbCategoriaProduc.SelectedValue == null || cmbProveedor.SelectedValue == null)
+            { error = "Selecciona categoría y proveedor."; return false; }
+
+            p = new Producto
+            {
+                IdProducto = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProducto"].Value),
+                NombreProduc = txtNombreProduc.Text.Trim(),
+                FechaIngreso = dtpFechaIngreso.Value,
+                Estado = true, // o tu lógica
+                CantidadStock = (int)nudCantidadStock.Value,
+                CodigoBarras = cod,
+                PrecioProduc = precio,
+                IdCategoria = Convert.ToInt32(cmbCategoriaProduc.SelectedValue),
+                IdProveedor = Convert.ToInt32(cmbProveedor.SelectedValue)
+            };
+
+            return true;
+        }
+
         private void btnEditar_Inventario_Click(object sender, EventArgs e)
         {
-            Producto p = new Producto();
-            p.NombreProduc = txtNombreProduc.Text;
-            p.FechaIngreso = dtpFechaIngreso.Value;
-            p.CantidadStock = Convert.ToInt32(nudCantidadStock.Value);
-            p.CodigoBarras = Convert.ToInt64(txtCodigoBarras.Text);
-            p.PrecioProduc = Convert.ToDecimal(txtPrecioProduc.Text);
-            p.IdCategoria = Convert.ToInt32(cmbCategoriaProduc.SelectedValue);
-            p.IdProveedor = Convert.ToInt32(cmbProveedor.SelectedValue);
+            try
+            {
+                if (!TryLeerProductoDesdeUI(out var p, out var error))
+                {
+                    MessageBox.Show(error, "Validación");
+                    return;
+                }
 
-            if (p.ActualizarDatosInventario())
-            {
+                var ok = p.ActualizarDatosInventario();
+
+                // recarga SIEMPRE para ver los cambios
                 CargarProductos();
+
+                MessageBox.Show("Producto actualizado.");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error", "Error");
+                MessageBox.Show("Error al actualizar: " + ex.Message);
             }
         }
 
-        private void frmInventario_DoubleClick(object sender, EventArgs e)
+        private void btnEliminar_Inventario_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dgvInventario.CurrentRow == null)
+                {
+                    MessageBox.Show("Selecciona un producto de la lista.");
+                    return;
+                }
 
-            if (dgvInventario.CurrentRow == null) return;
+                var nombre = dgvInventario.CurrentRow.Cells["Producto"]?.Value?.ToString();
+                var respuesta = MessageBox.Show(
+                    $"¿Seguro que deseas eliminar el producto:\n\n{nombre}?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-            txtNombreProduc.Text = dgvInventario.CurrentRow.Cells["Producto"].Value?.ToString();
-            if (dgvInventario.CurrentRow.Cells["FechaIngreso"].Value != DBNull.Value)
-                dtpFechaIngreso.Value = Convert.ToDateTime(dgvInventario.CurrentRow.Cells["FechaIngreso"].Value);
-            if (dgvInventario.CurrentRow.Cells["Stock"].Value != DBNull.Value)
-                nudCantidadStock.Value = Convert.ToDecimal(dgvInventario.CurrentRow.Cells["Stock"].Value);
+                if (respuesta != DialogResult.Yes) return;
 
-            txtCodigoBarras.Text = dgvInventario.CurrentRow.Cells["CodigoBarras"].Value?.ToString();
-            txtPrecioProduc.Text = dgvInventario.CurrentRow.Cells["Precio"].Value?.ToString();
+                int id = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProducto"].Value);
 
-            // Ajusta los combos por ID si tu vista/consulta trae las columnas idCategoria e idProveedor
-            if (dgvInventario.CurrentRow.Cells["idCategoria"] != null)
-                cmbCategoriaProduc.SelectedValue = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idCategoria"].Value);
-            if (dgvInventario.CurrentRow.Cells["idProveedor"] != null)
-                cmbProveedor.SelectedValue = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProveedor"].Value);
+                var p = new Modelos.Entidades.Producto { IdProducto = id };
 
+                bool ok = false;
+                try
+                {
+                    ok = p.Eliminar();
+                }
+                catch (SqlException ex) when (ex.Number == 547) // violación de FK
+                {
+                    MessageBox.Show(
+                        "No se puede eliminar el producto porque está relacionado con otras tablas (por ejemplo, compras o detalle de factura).",
+                        "Operación no permitida",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
 
+                if (ok)
+                {
+                    MessageBox.Show("Producto eliminado correctamente.");
+                    CargarProductos(); // refresca el grid
+                }
+                else
+                {
+                    MessageBox.Show("No se eliminó ninguna fila (verifica el idProducto).");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
     }
 }
+
     

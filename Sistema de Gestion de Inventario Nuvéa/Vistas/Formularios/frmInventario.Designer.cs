@@ -230,7 +230,6 @@
             this.btnAgregar_Inventario.Text = "Agregar";
             this.btnAgregar_Inventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar_Inventario.UseVisualStyleBackColor = false;
-            this.btnAgregar_Inventario.Click += new System.EventHandler(this.btnAgregar_Inventario_Click);
             // 
             // btnEditar_Inventario
             // 
@@ -258,6 +257,7 @@
             this.btnEliminar_Inventario.Text = "Eliminar";
             this.btnEliminar_Inventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar_Inventario.UseVisualStyleBackColor = false;
+            this.btnEliminar_Inventario.Click += new System.EventHandler(this.btnEliminar_Inventario_Click);
             // 
             // dgvInventario
             // 
@@ -453,7 +453,6 @@
             this.Name = "frmInventario";
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);
-            this.DoubleClick += new System.EventHandler(this.frmInventario_DoubleClick);
             this.pblInfoInventario.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
             this.pnlProductos.PerformLayout();

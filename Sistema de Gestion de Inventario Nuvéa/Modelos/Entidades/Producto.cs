@@ -43,33 +43,38 @@ namespace Modelos.Entidades
         }
         public bool ActualizarDatosInventario()
         {
-            using (SqlConnection cn = ConexionDB.Conectar())
-            {
-                string sql = @"
-                UPDATE Producto SET 
-                    nombreProduc  = @Producto,
-                    fechaIngreso  = @fechaIngreso,
-                    cantidadStock = @stock,
-                    codigoBarras  = @codigoBarras,
-                    precioProduc  = @precio,
-                    idCategoria   = @idCat,
-                    idProveedor   = @idProv
-                WHERE idProducto = @id;";
-
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
+            SqlConnection conexion = ConexionDB.Conectar();
+            using (var cmd = new SqlCommand("sp_producto_actualizar", conexion))
                 {
-                    cmd.Parameters.AddWithValue("@Producto", NombreProduc);
-                    cmd.Parameters.AddWithValue("@fechaIngreso", FechaIngreso);
-                    cmd.Parameters.AddWithValue("@stock", CantidadStock);
-                    cmd.Parameters.AddWithValue("@codigoBarras", CodigoBarras);
-                    cmd.Parameters.AddWithValue("@precio", PrecioProduc);
-                    cmd.Parameters.AddWithValue("@idCat", IdCategoria);
-                    cmd.Parameters.AddWithValue("@idProv", IdProveedor);
-                    cmd.Parameters.AddWithValue("@id", IdProducto);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    return cmd.ExecuteNonQuery() > 0;
-                }
+                    cmd.Parameters.AddWithValue("@idProducto", IdProducto);
+                    cmd.Parameters.AddWithValue("@nombreProduc", NombreProduc);
+                    cmd.Parameters.AddWithValue("@fechaIngreso", FechaIngreso);
+                    cmd.Parameters.AddWithValue("@estado", Estado ? 1 : 0);
+                    cmd.Parameters.AddWithValue("@cantidadStock", CantidadStock);
+                    cmd.Parameters.AddWithValue("@codigoBarras", CodigoBarras);
+                    cmd.Parameters.AddWithValue("@precioProduc", PrecioProduc);
+                    cmd.Parameters.AddWithValue("@idCategoria", IdCategoria);
+                    cmd.Parameters.AddWithValue("@idProveedor", IdProveedor);
+
+                var filas = Convert.ToInt32(cmd.ExecuteScalar());
+                return filas > 0;
             }
+        }
+        public bool Eliminar()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+                using (var cmd = new SqlCommand("sp_producto_eliminar", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@idProducto", IdProducto);
+
+                    // leemos @@ROWCOUNT que devuelve el SP
+                    var res = cmd.ExecuteScalar();
+                    int filas = (res == null || res == DBNull.Value) ? 0 : Convert.ToInt32(res);
+                    return filas > 0;
+                }
         }
     }
 }
