@@ -103,6 +103,7 @@
             this.txtRegistrarseContra.Name = "txtRegistrarseContra";
             this.txtRegistrarseContra.Size = new System.Drawing.Size(284, 20);
             this.txtRegistrarseContra.TabIndex = 19;
+            this.txtRegistrarseContra.UseSystemPasswordChar = true;
             // 
             // lblContraseña
             // 

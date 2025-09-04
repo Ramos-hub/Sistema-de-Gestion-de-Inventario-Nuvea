@@ -146,7 +146,7 @@ namespace Vistas.Formularios
                 IdProducto = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProducto"].Value),
                 NombreProduc = txtNombreProduc.Text.Trim(),
                 FechaIngreso = dtpFechaIngreso.Value,
-                Estado = true, // o tu lógica
+                Estado = true, 
                 CantidadStock = (int)nudCantidadStock.Value,
                 CodigoBarras = cod,
                 PrecioProduc = precio,
@@ -186,27 +186,41 @@ namespace Vistas.Formularios
 
         private void btnEliminar_Inventario_Click(object sender, EventArgs e)
         {
+            if (dgvInventario.CurrentRow == null)
+            { MessageBox.Show("Selecciona un producto."); return; }
+
+            object val = dgvInventario.CurrentRow.Cells["idProducto"].Value;
+            if (val == null || !int.TryParse(val.ToString(), out int id))
+            { MessageBox.Show("No se pudo obtener el idProducto."); return; }
+
+            var r = MessageBox.Show("¿Eliminar este producto?", "Confirmar",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r != DialogResult.Yes) return;
+
             try
             {
-                if (dgvInventario.CurrentRow == null)
+                using (var cn = ConexionDB.Conectar())
                 {
-                    MessageBox.Show("Selecciona un producto de la lista.");
-                    return;
+                    try
+                    {
+                        using (var cmd = new SqlCommand("DELETE FROM Producto WHERE idProducto=@id", cn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", id);
+                            int filas = cmd.ExecuteNonQuery();
+                            MessageBox.Show(filas == 1 ? "Producto eliminado." : "No se pudo eliminar.");
+                        }
+                    }
+                    catch (SqlException ex) when (ex.Number == 547) 
+                    {
+                        using (var up = new SqlCommand("UPDATE Producto SET estado=0 WHERE idProducto=@id", cn))
+                        {
+                            up.Parameters.AddWithValue("@id", id);
+                            int filas = up.ExecuteNonQuery();
+                            MessageBox.Show(filas == 1 ? "Producto Eliminado" : "No se pudo desactivar.");
+                        }
+                    }
                 }
-
-                int id = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProducto"].Value);
-                Producto p = new Producto { IdProducto = id };
-
-                if (p.Eliminar())
-                {
-                    MessageBox.Show("Producto eliminado correctamente.");
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo eliminar.");
-                }
-
-                CargarProductos();
+                CargarProductos(); 
             }
             catch (Exception ex)
             {

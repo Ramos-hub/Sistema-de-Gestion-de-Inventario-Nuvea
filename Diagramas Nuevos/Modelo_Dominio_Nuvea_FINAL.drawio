@@ -1,0 +1,70 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Modelo de Dominio Consolidado" id="0">
+    <mxGraphModel dx="341" dy="458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="10" value="&lt;b&gt;Producto&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="280" width="220" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-105" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;idProducto&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nombre&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;categoria&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;cantidadStock&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;precioVenta&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;codigoBarras&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;fechaIngreso&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;estado&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="10" vertex="1">
+          <mxGeometry x="10" y="50" width="130" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="&lt;b&gt;Categoría&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="70" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-106" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;idCategoria&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nombre&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;cantidaProductoCategoria&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="11" vertex="1">
+          <mxGeometry x="10" y="50" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="&lt;b&gt;Proveedor&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="50" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-107" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;idProveedor&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nombre&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;telefono&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;direccion&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;categoria&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;tipoProveedor&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="12" vertex="1">
+          <mxGeometry x="20" y="50" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="&lt;b&gt;Inventario&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="320" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-108" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;idMovimiento&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;categoria&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;fecha&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;cantidad&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;precio&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="13" vertex="1">
+          <mxGeometry x="20" y="50" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;Factura&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="790" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-110" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;idFactura&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;fechaEmision&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;montoTotal&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;ivaAplicado&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;estado&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="14" vertex="1">
+          <mxGeometry x="10" y="50" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="&lt;b&gt;DetalleFactura&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="760" width="220" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-109" value="&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;id_Factura&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;id_Usuario&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;subTotal&lt;/span&gt;&lt;/div&gt;&lt;div&gt;cantidad&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;precioUnitario&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="15" vertex="1">
+          <mxGeometry x="10" y="50" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="&lt;b&gt;Usuario&lt;/b&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=swimlane;startSize=30;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="770" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="XPn13lQ-lRafPJo5zuw5-111" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;idUsuario&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nombre&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;contraseña&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;telefono&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;direccion&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="16" vertex="1">
+          <mxGeometry x="20" y="50" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="100" value="pertenece a" style="endArrow=block;html=1;" parent="1" source="10" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="101" value="suministrado por" style="endArrow=block;html=1;" parent="1" source="11" target="12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="102" value="afecta" style="endArrow=block;html=1;" parent="1" source="10" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="103" value="generada por" style="endArrow=block;html=1;" parent="1" source="14" target="16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="104" value="contiene" style="endArrow=block;html=1;" parent="1" source="14" target="15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="105" value="genera" style="endArrow=block;html=1;" parent="1" source="15" target="10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

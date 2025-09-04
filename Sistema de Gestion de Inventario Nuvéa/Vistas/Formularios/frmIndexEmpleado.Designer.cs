@@ -39,7 +39,7 @@
             this.lblResultadoVentasEmpleados = new System.Windows.Forms.Label();
             this.lblVentasHoy = new System.Windows.Forms.Label();
             this.pnlCategoriasEmpleados = new System.Windows.Forms.Panel();
-            this.lblCategorias = new System.Windows.Forms.Label();
+            this.lblCategoriasEmpleado = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlProveedoresEmpleados = new System.Windows.Forms.Panel();
             this.lblTotalProveedoresEmpleado = new System.Windows.Forms.Label();
@@ -128,6 +128,7 @@
             this.btnIrInventarioEmpleado.TabIndex = 1;
             this.btnIrInventarioEmpleado.Text = "Ir a Inventario";
             this.btnIrInventarioEmpleado.UseVisualStyleBackColor = true;
+            this.btnIrInventarioEmpleado.Click += new System.EventHandler(this.btnIrInventarioEmpleado_Click);
             // 
             // btnAgregarProductosIndexEmpleado
             // 
@@ -169,7 +170,7 @@
             // 
             // pnlCategoriasEmpleados
             // 
-            this.pnlCategoriasEmpleados.Controls.Add(this.lblCategorias);
+            this.pnlCategoriasEmpleados.Controls.Add(this.lblCategoriasEmpleado);
             this.pnlCategoriasEmpleados.Controls.Add(this.label3);
             this.pnlCategoriasEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlCategoriasEmpleados.Location = new System.Drawing.Point(415, 157);
@@ -177,14 +178,14 @@
             this.pnlCategoriasEmpleados.Size = new System.Drawing.Size(144, 66);
             this.pnlCategoriasEmpleados.TabIndex = 12;
             // 
-            // lblCategorias
+            // lblCategoriasEmpleado
             // 
-            this.lblCategorias.AutoSize = true;
-            this.lblCategorias.Location = new System.Drawing.Point(84, 43);
-            this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(59, 16);
-            this.lblCategorias.TabIndex = 5;
-            this.lblCategorias.Text = "Resultado";
+            this.lblCategoriasEmpleado.AutoSize = true;
+            this.lblCategoriasEmpleado.Location = new System.Drawing.Point(84, 43);
+            this.lblCategoriasEmpleado.Name = "lblCategoriasEmpleado";
+            this.lblCategoriasEmpleado.Size = new System.Drawing.Size(59, 16);
+            this.lblCategoriasEmpleado.TabIndex = 5;
+            this.lblCategoriasEmpleado.Text = "Resultado";
             // 
             // label3
             // 
@@ -311,6 +312,7 @@
             this.Controls.Add(this.gbInicioEmpleados);
             this.Name = "frmIndexEmpleado";
             this.Text = "frmIndexEmpleado";
+            this.Load += new System.EventHandler(this.frmIndexEmpleado_Load);
             this.gbProductosBajoStockEmpleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosBajoStockEmpleado)).EndInit();
             this.gbAccesoRapidoEmpleados.ResumeLayout(false);
@@ -342,7 +344,7 @@
         private System.Windows.Forms.Label lblResultadoVentasEmpleados;
         private System.Windows.Forms.Label lblVentasHoy;
         private System.Windows.Forms.Panel pnlCategoriasEmpleados;
-        private System.Windows.Forms.Label lblCategorias;
+        private System.Windows.Forms.Label lblCategoriasEmpleado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlProveedoresEmpleados;
         private System.Windows.Forms.Label lblTotalProveedoresEmpleado;

@@ -30,24 +30,18 @@
         {
             this.pblInfoInventario = new System.Windows.Forms.Panel();
             this.pnlProductos = new System.Windows.Forms.Panel();
-            this.pbProductos = new System.Windows.Forms.PictureBox();
             this.lblProductos = new System.Windows.Forms.Label();
             this.lblResultado_Productos = new System.Windows.Forms.Label();
             this.pnlUsuarios = new System.Windows.Forms.Panel();
             this.lblResultado_Usuarios = new System.Windows.Forms.Label();
             this.lblUsuarios = new System.Windows.Forms.Label();
-            this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.pnlVentas = new System.Windows.Forms.Panel();
             this.lblResultado_Ventas = new System.Windows.Forms.Label();
-            this.pbVentas = new System.Windows.Forms.PictureBox();
             this.lblVentas = new System.Windows.Forms.Label();
             this.btnAgregar_Inventario = new System.Windows.Forms.Button();
             this.btnEditar_Inventario = new System.Windows.Forms.Button();
             this.btnEliminar_Inventario = new System.Windows.Forms.Button();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.pbEliminar = new System.Windows.Forms.PictureBox();
-            this.pbEditar = new System.Windows.Forms.PictureBox();
-            this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,19 +58,25 @@
             this.txtNombreProduc = new System.Windows.Forms.TextBox();
             this.btnLimpiarInven = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbEliminar = new System.Windows.Forms.PictureBox();
+            this.pbEditar = new System.Windows.Forms.PictureBox();
+            this.pbAgregar = new System.Windows.Forms.PictureBox();
+            this.pbProductos = new System.Windows.Forms.PictureBox();
+            this.pbUsuarios = new System.Windows.Forms.PictureBox();
+            this.pbVentas = new System.Windows.Forms.PictureBox();
             this.pblInfoInventario.SuspendLayout();
             this.pnlProductos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
             this.pnlUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
             this.pnlVentas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // pblInfoInventario
@@ -103,19 +103,6 @@
             this.pnlProductos.Name = "pnlProductos";
             this.pnlProductos.Size = new System.Drawing.Size(173, 93);
             this.pnlProductos.TabIndex = 2;
-            // 
-            // pbProductos
-            // 
-            this.pbProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pbProductos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbProductos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbProductos.Image = global::Vistas.Properties.Resources.menu_hamburger_burger_icon_176431;
-            this.pbProductos.Location = new System.Drawing.Point(0, 0);
-            this.pbProductos.Name = "pbProductos";
-            this.pbProductos.Size = new System.Drawing.Size(70, 91);
-            this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProductos.TabIndex = 0;
-            this.pbProductos.TabStop = false;
             // 
             // lblProductos
             // 
@@ -165,19 +152,6 @@
             this.lblUsuarios.TabIndex = 1;
             this.lblUsuarios.Text = "Usuarios";
             // 
-            // pbUsuarios
-            // 
-            this.pbUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pbUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbUsuarios.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
-            this.pbUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.pbUsuarios.Name = "pbUsuarios";
-            this.pbUsuarios.Size = new System.Drawing.Size(72, 91);
-            this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsuarios.TabIndex = 0;
-            this.pbUsuarios.TabStop = false;
-            // 
             // pnlVentas
             // 
             this.pnlVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -198,19 +172,6 @@
             this.lblResultado_Ventas.Size = new System.Drawing.Size(78, 16);
             this.lblResultado_Ventas.TabIndex = 6;
             this.lblResultado_Ventas.Text = "Resultado";
-            // 
-            // pbVentas
-            // 
-            this.pbVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbVentas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbVentas.Image = global::Vistas.Properties.Resources.dollar_symbol_icon_icons_com_73598;
-            this.pbVentas.Location = new System.Drawing.Point(0, 0);
-            this.pbVentas.Name = "pbVentas";
-            this.pbVentas.Size = new System.Drawing.Size(70, 91);
-            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbVentas.TabIndex = 0;
-            this.pbVentas.TabStop = false;
             // 
             // lblVentas
             // 
@@ -269,48 +230,12 @@
             this.dgvInventario.AllowUserToDeleteRows = false;
             this.dgvInventario.BackgroundColor = System.Drawing.Color.White;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Location = new System.Drawing.Point(12, 202);
+            this.dgvInventario.Location = new System.Drawing.Point(-28, 192);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(776, 294);
             this.dgvInventario.TabIndex = 18;
-            // 
-            // pbEliminar
-            // 
-            this.pbEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEliminar.Image = global::Vistas.Properties.Resources.seo_social_web_network_internet_262_icon_icons1;
-            this.pbEliminar.Location = new System.Drawing.Point(730, 522);
-            this.pbEliminar.Name = "pbEliminar";
-            this.pbEliminar.Size = new System.Drawing.Size(34, 26);
-            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEliminar.TabIndex = 17;
-            this.pbEliminar.TabStop = false;
-            // 
-            // pbEditar
-            // 
-            this.pbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pbEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEditar.Image = global::Vistas.Properties.Resources.edit_icon_128873;
-            this.pbEditar.Location = new System.Drawing.Point(607, 522);
-            this.pbEditar.Name = "pbEditar";
-            this.pbEditar.Size = new System.Drawing.Size(34, 26);
-            this.pbEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEditar.TabIndex = 16;
-            this.pbEditar.TabStop = false;
-            // 
-            // pbAgregar
-            // 
-            this.pbAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAgregar.Image = global::Vistas.Properties.Resources._1904677_add_addition_calculate_charge_create_new_plus_122527;
-            this.pbAgregar.Location = new System.Drawing.Point(475, 522);
-            this.pbAgregar.Name = "pbAgregar";
-            this.pbAgregar.Size = new System.Drawing.Size(34, 26);
-            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAgregar.TabIndex = 15;
-            this.pbAgregar.TabStop = false;
             // 
             // label7
             // 
@@ -437,7 +362,6 @@
             this.btnLimpiarInven.Text = "Limpiar";
             this.btnLimpiarInven.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiarInven.UseVisualStyleBackColor = false;
-
             // 
             // pictureBox1
             // 
@@ -446,6 +370,81 @@
             this.pictureBox1.Size = new System.Drawing.Size(51, 21);
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
+            // 
+            // pbEliminar
+            // 
+            this.pbEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbEliminar.Image = global::Vistas.Properties.Resources.seo_social_web_network_internet_262_icon_icons1;
+            this.pbEliminar.Location = new System.Drawing.Point(730, 522);
+            this.pbEliminar.Name = "pbEliminar";
+            this.pbEliminar.Size = new System.Drawing.Size(34, 26);
+            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEliminar.TabIndex = 17;
+            this.pbEliminar.TabStop = false;
+            // 
+            // pbEditar
+            // 
+            this.pbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pbEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbEditar.Image = global::Vistas.Properties.Resources.edit_icon_128873;
+            this.pbEditar.Location = new System.Drawing.Point(607, 522);
+            this.pbEditar.Name = "pbEditar";
+            this.pbEditar.Size = new System.Drawing.Size(34, 26);
+            this.pbEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEditar.TabIndex = 16;
+            this.pbEditar.TabStop = false;
+            // 
+            // pbAgregar
+            // 
+            this.pbAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbAgregar.Image = global::Vistas.Properties.Resources._1904677_add_addition_calculate_charge_create_new_plus_122527;
+            this.pbAgregar.Location = new System.Drawing.Point(475, 522);
+            this.pbAgregar.Name = "pbAgregar";
+            this.pbAgregar.Size = new System.Drawing.Size(34, 26);
+            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAgregar.TabIndex = 15;
+            this.pbAgregar.TabStop = false;
+            // 
+            // pbProductos
+            // 
+            this.pbProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pbProductos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbProductos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbProductos.Image = global::Vistas.Properties.Resources.menu_hamburger_burger_icon_176431;
+            this.pbProductos.Location = new System.Drawing.Point(0, 0);
+            this.pbProductos.Name = "pbProductos";
+            this.pbProductos.Size = new System.Drawing.Size(70, 91);
+            this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProductos.TabIndex = 0;
+            this.pbProductos.TabStop = false;
+            // 
+            // pbUsuarios
+            // 
+            this.pbUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pbUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbUsuarios.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
+            this.pbUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.pbUsuarios.Name = "pbUsuarios";
+            this.pbUsuarios.Size = new System.Drawing.Size(72, 91);
+            this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuarios.TabIndex = 0;
+            this.pbUsuarios.TabStop = false;
+            // 
+            // pbVentas
+            // 
+            this.pbVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbVentas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbVentas.Image = global::Vistas.Properties.Resources.dollar_symbol_icon_icons_com_73598;
+            this.pbVentas.Location = new System.Drawing.Point(0, 0);
+            this.pbVentas.Name = "pbVentas";
+            this.pbVentas.Size = new System.Drawing.Size(70, 91);
+            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVentas.TabIndex = 0;
+            this.pbVentas.TabStop = false;
             // 
             // frmInventario
             // 
@@ -483,19 +482,19 @@
             this.pblInfoInventario.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
             this.pnlProductos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).EndInit();
             this.pnlUsuarios.ResumeLayout(false);
             this.pnlUsuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
             this.pnlVentas.ResumeLayout(false);
             this.pnlVentas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

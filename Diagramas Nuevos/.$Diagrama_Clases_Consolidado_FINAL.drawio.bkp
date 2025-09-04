@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Clases Consolidado - Nuvéa">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1"
+     connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Clase Producto -->
+        <mxCell id="10" value="&lt;&lt;Clase&gt;&gt;&lt;br&gt;&lt;b&gt;Producto&lt;/b&gt;&lt;hr&gt;- idProducto: int&lt;br&gt;- nombre: string&lt;br&gt;- categoria: string&lt;br&gt;- precio: float&lt;br&gt;- cantidad: int&lt;br&gt;- estado: string&lt;hr&gt;+ agregarProducto(): void&lt;br&gt;+ eliminarProducto(): void" style="swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="240" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Clase Proveedor -->
+        <mxCell id="11" value="&lt;&lt;Clase&gt;&gt;&lt;br&gt;&lt;b&gt;Proveedor&lt;/b&gt;&lt;hr&gt;- idProveedor: int&lt;br&gt;- nombre: string&lt;br&gt;- telefono: string&lt;br&gt;- direccion: string&lt;hr&gt;+ registrar(): void&lt;br&gt;+ modificar(): void" style="swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="240" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Clase Factura -->
+        <mxCell id="12" value="&lt;&lt;Clase&gt;&gt;&lt;br&gt;&lt;b&gt;Factura&lt;/b&gt;&lt;hr&gt;- idFactura: int&lt;br&gt;- fecha: date&lt;br&gt;- total: float&lt;hr&gt;+ generarFactura(): void" style="swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="240" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Clase DetalleFactura -->
+        <mxCell id="13" value="&lt;&lt;Clase&gt;&gt;&lt;br&gt;&lt;b&gt;DetalleFactura&lt;/b&gt;&lt;hr&gt;- idDetalle: int&lt;br&gt;- cantidad: int&lt;br&gt;- subtotal: float&lt;hr&gt;+ agregarLinea(): void" style="swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="240" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Clase Usuario -->
+        <mxCell id="14" value="&lt;&lt;Clase&gt;&gt;&lt;br&gt;&lt;b&gt;Usuario&lt;/b&gt;&lt;hr&gt;- idUsuario: int&lt;br&gt;- nombre: string&lt;br&gt;- rol: string&lt;br&gt;- contraseña: string&lt;hr&gt;+ iniciarSesion(): void&lt;br&gt;+ cerrarSesion(): void" style="swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="240" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Relaciones -->
+        <mxCell id="100" style="endArrow=block;html=1;" value="" edge="1" parent="1" source="10" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="101" style="endArrow=block;html=1;" value="" edge="1" parent="1" source="12" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="102" style="endArrow=block;html=1;" value="" edge="1" parent="1" source="13" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="103" style="endArrow=block;html=1;" value="" edge="1" parent="1" source="12" target="14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

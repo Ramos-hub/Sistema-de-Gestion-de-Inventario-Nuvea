@@ -183,3 +183,4 @@ inner join dbo.Cliente  c on c.idCliente  = df.idCliente
 inner join dbo.Producto p on p.idProducto = df.idProducto;
 go
     select *from vw_facturas_simple
+

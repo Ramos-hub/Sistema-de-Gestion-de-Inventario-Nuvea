@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.Conexion;
+using Modelos.Entidades;
 
 namespace Vistas.Formularios
 {
@@ -17,6 +18,7 @@ namespace Vistas.Formularios
         public frmRegistrarse()
         {
             InitializeComponent();
+            string claveHash = Rol.EncriptarContra(txtRegistrarseContra.Text);
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -51,7 +53,31 @@ namespace Vistas.Formularios
             }
               conexion.Close();
             }
+
+            string usuarioEncri = txtNombreUsuarioRegis.Text.Trim();
+            string correoEncri = txtCorreoRegis.Text.Trim();
+            string claveEncri = txtRegistrarseContra.Text; 
+
+
+            string hash = Seguridad.CrearHash(clave);
+
+            string sql = "INSERT INTO Usuario (idRol, nombre, clave, correo, telefono) " +
+                         "VALUES (@rol, @nombre, @clave, @correo, @tel)";
+
+            using (SqlConnection cn = ConexionDB.Conectar())
+            using (SqlCommand cmd = new SqlCommand(sql, cn))
+            {
+                cmd.Parameters.AddWithValue("@rol", 2);           
+                cmd.Parameters.AddWithValue("@nombre", usuario);
+                cmd.Parameters.AddWithValue("@clave", hash);
+                cmd.Parameters.AddWithValue("@correo", correo);     
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Cuenta creada.");
+            this.Close();
         }
+        
 
         private void btnVolver_Click(object sender, EventArgs e)
         {

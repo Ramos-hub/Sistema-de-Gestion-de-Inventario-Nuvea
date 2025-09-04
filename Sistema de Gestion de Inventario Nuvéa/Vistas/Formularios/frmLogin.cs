@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.Conexion;
+using Modelos.Entidades;
 using Vistas.Formularios;
 
 
@@ -20,33 +21,82 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
-
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            //Creamos variables para los textBox
-            string usuario = txtUsuario.Text;
-            string clave = txtClave.Text;
-                SqlConnection conexion = ConexionDB.Conectar();
-            //Aqui llamamos el metodo conectar 
+           
+            string usuario = txtUsuario.Text.Trim();
+            string clave = txtClave.Text; 
+
+            string sql = @"
+        SELECT u.clave, r.nombreRol
+        FROM Usuario u
+        INNER JOIN Rol r ON u.idRol = r.idRol
+        WHERE u.nombre = @usuario;
+    ";
+
+            try
             {
-                string consultaQuery = "select * from Usuario where nombre = @usuario and clave = @clave";
-                    SqlCommand cmd = new SqlCommand(consultaQuery, conexion);
+                using (SqlConnection cn = ConexionDB.Conectar())
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                {
                     cmd.Parameters.AddWithValue("@usuario", usuario);
-                    cmd.Parameters.AddWithValue("@clave", clave);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+
+                    using (SqlDataReader rd = cmd.ExecuteReader())
                     {
-                        MessageBox.Show("¡Bienvenido al sistema Nuvéa!");
-                        new frmPrincipal().Show();
+                        if (!rd.Read())
+                        {
+                            MessageBox.Show("Usuario o contraseña incorrectos");
+                            return;
+                        }
+
+                        string claveBD = rd.GetString(0).Trim();
+                        string rol = rd.GetString(1);
+
+                        bool ok;
+                        if (Seguridad.EsBcrypt(claveBD))
+                        {
+                            ok = BCrypt.Net.BCrypt.Verify(clave, claveBD);
+                        }
+                        else
+                        {
+                           
+                            ok = (clave == claveBD);
+                            if (ok)
+                            {
+                                rd.Close();
+                                string nuevoHash = Seguridad.CrearHash(clave);
+                                using (var upd = new SqlCommand(
+                                    "UPDATE Usuario SET clave=@c WHERE nombre=@u", cn))
+                                {
+                                    upd.Parameters.AddWithValue("@c", nuevoHash);
+                                    upd.Parameters.AddWithValue("@u", usuario);
+                                    upd.ExecuteNonQuery();
+                                }
+                            }
+                        }
+
+                        if (!ok)
+                        {
+                            MessageBox.Show("Usuario o contraseña incorrectos");
+                            return;
+                        }
+
+                        
+                        MessageBox.Show("Bienvenido al Sistema ❤️", "Bienvenido",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        
+                        if (rol == "Administrador") new frmPrincipal().Show();
+                        else new frmIndexEmpleado().Show();
+
                         this.Hide();
                     }
-                    else
-                    {
-                        MessageBox.Show("Usuario o Contraseña incorrectos.");
-                    }
-                    reader.Close();
-                    conexion.Close();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en login: " + ex.Message);
+            }
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
@@ -62,6 +112,7 @@ namespace Vistas.Formularios
             olviContra.Show();
             this.Hide();
         }
+
     }
 }
 //frmInventario fi = new frmInventario();

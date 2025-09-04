@@ -36,7 +36,6 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnRegistrarse = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pbLogoLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +110,7 @@
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(292, 20);
             this.txtClave.TabIndex = 8;
+            this.txtClave.UseSystemPasswordChar = true;
             // 
             // btnRegistrarse
             // 
@@ -168,6 +168,5 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnRegistrarse;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
