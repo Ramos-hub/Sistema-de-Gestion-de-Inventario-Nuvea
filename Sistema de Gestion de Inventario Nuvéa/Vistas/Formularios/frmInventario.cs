@@ -259,12 +259,12 @@ namespace Vistas.Formularios
         {
             txtNombreProduc.Clear();
             dtpFechaIngreso.Value = DateTime.Today;
-            nudCantidadStock.Value = 0;
+            nudCantidadStock.Value = nudCantidadStock.Minimum;
             txtCodigoBarras.Clear();
             txtPrecioProduc.Clear();
 
-            if (cmbCategoriaProduc.Items.Count > 0) cmbCategoriaProduc.SelectedIndex = 0;
-            if (cmbProveedor.Items.Count > 0) cmbProveedor.SelectedIndex = 0;
+            cmbCategoriaProduc.SelectedIndex = -1;
+            cmbProveedor.SelectedIndex = -1;   
 
             txtNombreProduc.Focus();
         }

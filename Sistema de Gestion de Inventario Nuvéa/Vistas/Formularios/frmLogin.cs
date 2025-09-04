@@ -20,6 +20,9 @@ namespace Vistas.Formularios
         public frmLogin()
         {
             InitializeComponent();
+
+            txtClave.ShortcutsEnabled = false;
+            txtUsuario.ShortcutsEnabled = false;
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -82,12 +85,12 @@ namespace Vistas.Formularios
                         }
 
                         
-                        MessageBox.Show("Bienvenido al Sistema ❤️", "Bienvenido",
+                        MessageBox.Show("Bienvenido al Sistema ❤", "Bienvenido",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         
                         if (rol == "Administrador") new frmPrincipal().Show();
-                        else new frmIndexEmpleado().Show();
+                        else new frmPrincipalEmpleado().Show();
 
                         this.Hide();
                     }

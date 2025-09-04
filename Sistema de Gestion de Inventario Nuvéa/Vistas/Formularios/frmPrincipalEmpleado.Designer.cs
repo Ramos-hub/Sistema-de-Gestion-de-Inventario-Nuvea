@@ -121,7 +121,7 @@
             this.btnFacturacionEmpleado.Name = "btnFacturacionEmpleado";
             this.btnFacturacionEmpleado.Size = new System.Drawing.Size(138, 29);
             this.btnFacturacionEmpleado.TabIndex = 1;
-            this.btnFacturacionEmpleado.Text = "Facturación";
+            this.btnFacturacionEmpleado.Text = "Historial Facturas";
             this.btnFacturacionEmpleado.UseVisualStyleBackColor = false;
             this.btnFacturacionEmpleado.Click += new System.EventHandler(this.btnFacturacionEmpleado_Click);
             // 

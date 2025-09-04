@@ -32,6 +32,16 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblResultado6 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblResultado4 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblResultado3 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblResultado2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblResultado1 = new System.Windows.Forms.Label();
+            this.lblCategoria1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,16 +56,8 @@
             this.lblResultadoDiarias = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblCategoria1 = new System.Windows.Forms.Label();
-            this.lblResultado1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblResultado2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblResultado3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblResultado4 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblResultado6 = new System.Windows.Forms.Label();
+            this.dgvDetalle = new System.Windows.Forms.DataGridView();
+            this.dgvGananacias = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -63,6 +65,8 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGananacias)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,7 +88,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.dgvGananacias);
+            this.panel6.Controls.Add(this.dgvDetalle);
             this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.label3);
             this.panel6.Location = new System.Drawing.Point(439, 246);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(348, 276);
@@ -94,7 +101,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 11);
+            this.label4.Location = new System.Drawing.Point(81, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 21);
             this.label4.TabIndex = 2;
@@ -114,18 +121,117 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.lblResultado1);
             this.panel5.Controls.Add(this.lblCategoria1);
-            this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Location = new System.Drawing.Point(49, 246);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(348, 276);
             this.panel5.TabIndex = 3;
             // 
+            // lblResultado6
+            // 
+            this.lblResultado6.AutoSize = true;
+            this.lblResultado6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado6.Location = new System.Drawing.Point(232, 237);
+            this.lblResultado6.Name = "lblResultado6";
+            this.lblResultado6.Size = new System.Drawing.Size(69, 17);
+            this.lblResultado6.TabIndex = 11;
+            this.lblResultado6.Text = "Resultado";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(25, 237);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(95, 17);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "Jabón de Cara";
+            // 
+            // lblResultado4
+            // 
+            this.lblResultado4.AutoSize = true;
+            this.lblResultado4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado4.Location = new System.Drawing.Point(232, 209);
+            this.lblResultado4.Name = "lblResultado4";
+            this.lblResultado4.Size = new System.Drawing.Size(69, 17);
+            this.lblResultado4.TabIndex = 9;
+            this.lblResultado4.Text = "Resultado";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(25, 209);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 17);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Cosmetico";
+            // 
+            // lblResultado3
+            // 
+            this.lblResultado3.AutoSize = true;
+            this.lblResultado3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado3.Location = new System.Drawing.Point(232, 177);
+            this.lblResultado3.Name = "lblResultado3";
+            this.lblResultado3.Size = new System.Drawing.Size(69, 17);
+            this.lblResultado3.TabIndex = 7;
+            this.lblResultado3.Text = "Resultado";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(25, 177);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 17);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Perfume";
+            // 
+            // lblResultado2
+            // 
+            this.lblResultado2.AutoSize = true;
+            this.lblResultado2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado2.Location = new System.Drawing.Point(232, 145);
+            this.lblResultado2.Name = "lblResultado2";
+            this.lblResultado2.Size = new System.Drawing.Size(69, 17);
+            this.lblResultado2.TabIndex = 5;
+            this.lblResultado2.Text = "Resultado";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(25, 145);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 17);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Jabón";
+            // 
+            // lblResultado1
+            // 
+            this.lblResultado1.AutoSize = true;
+            this.lblResultado1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado1.Location = new System.Drawing.Point(232, 111);
+            this.lblResultado1.Name = "lblResultado1";
+            this.lblResultado1.Size = new System.Drawing.Size(69, 17);
+            this.lblResultado1.TabIndex = 3;
+            this.lblResultado1.Text = "Resultado";
+            // 
+            // lblCategoria1
+            // 
+            this.lblCategoria1.AutoSize = true;
+            this.lblCategoria1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria1.Location = new System.Drawing.Point(25, 111);
+            this.lblCategoria1.Name = "lblCategoria1";
+            this.lblCategoria1.Size = new System.Drawing.Size(47, 17);
+            this.lblCategoria1.TabIndex = 2;
+            this.lblCategoria1.Text = "Crema";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 11);
+            this.label3.Location = new System.Drawing.Point(72, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 21);
             this.label3.TabIndex = 1;
@@ -271,105 +377,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ganancias";
             // 
-            // lblCategoria1
+            // dgvDetalle
             // 
-            this.lblCategoria1.AutoSize = true;
-            this.lblCategoria1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria1.Location = new System.Drawing.Point(25, 111);
-            this.lblCategoria1.Name = "lblCategoria1";
-            this.lblCategoria1.Size = new System.Drawing.Size(47, 17);
-            this.lblCategoria1.TabIndex = 2;
-            this.lblCategoria1.Text = "Crema";
+            this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalle.Location = new System.Drawing.Point(17, 35);
+            this.dgvDetalle.Name = "dgvDetalle";
+            this.dgvDetalle.Size = new System.Drawing.Size(310, 93);
+            this.dgvDetalle.TabIndex = 3;
             // 
-            // lblResultado1
+            // dgvGananacias
             // 
-            this.lblResultado1.AutoSize = true;
-            this.lblResultado1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado1.Location = new System.Drawing.Point(232, 111);
-            this.lblResultado1.Name = "lblResultado1";
-            this.lblResultado1.Size = new System.Drawing.Size(69, 17);
-            this.lblResultado1.TabIndex = 3;
-            this.lblResultado1.Text = "Resultado";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(25, 145);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 17);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Jabón";
-            // 
-            // lblResultado2
-            // 
-            this.lblResultado2.AutoSize = true;
-            this.lblResultado2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado2.Location = new System.Drawing.Point(232, 145);
-            this.lblResultado2.Name = "lblResultado2";
-            this.lblResultado2.Size = new System.Drawing.Size(69, 17);
-            this.lblResultado2.TabIndex = 5;
-            this.lblResultado2.Text = "Resultado";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(25, 177);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 17);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Perfume";
-            // 
-            // lblResultado3
-            // 
-            this.lblResultado3.AutoSize = true;
-            this.lblResultado3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado3.Location = new System.Drawing.Point(232, 177);
-            this.lblResultado3.Name = "lblResultado3";
-            this.lblResultado3.Size = new System.Drawing.Size(69, 17);
-            this.lblResultado3.TabIndex = 7;
-            this.lblResultado3.Text = "Resultado";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(25, 209);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 17);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "Cosmetico";
-            // 
-            // lblResultado4
-            // 
-            this.lblResultado4.AutoSize = true;
-            this.lblResultado4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado4.Location = new System.Drawing.Point(232, 209);
-            this.lblResultado4.Name = "lblResultado4";
-            this.lblResultado4.Size = new System.Drawing.Size(69, 17);
-            this.lblResultado4.TabIndex = 9;
-            this.lblResultado4.Text = "Resultado";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(25, 237);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 17);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Jabón de Cara";
-            // 
-            // lblResultado6
-            // 
-            this.lblResultado6.AutoSize = true;
-            this.lblResultado6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado6.Location = new System.Drawing.Point(232, 237);
-            this.lblResultado6.Name = "lblResultado6";
-            this.lblResultado6.Size = new System.Drawing.Size(69, 17);
-            this.lblResultado6.TabIndex = 11;
-            this.lblResultado6.Text = "Resultado";
+            this.dgvGananacias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGananacias.Location = new System.Drawing.Point(18, 155);
+            this.dgvGananacias.Name = "dgvGananacias";
+            this.dgvGananacias.Size = new System.Drawing.Size(310, 99);
+            this.dgvGananacias.TabIndex = 4;
             // 
             // frmGanacias
             // 
@@ -393,6 +415,8 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGananacias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,5 +451,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblResultado1;
         private System.Windows.Forms.Label lblCategoria1;
+        private System.Windows.Forms.DataGridView dgvDetalle;
+        private System.Windows.Forms.DataGridView dgvGananacias;
     }
 }

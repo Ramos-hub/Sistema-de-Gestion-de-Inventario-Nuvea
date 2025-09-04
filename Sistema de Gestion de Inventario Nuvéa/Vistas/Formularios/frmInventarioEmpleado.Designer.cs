@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nudCantidadStockEmpleado = new System.Windows.Forms.NumericUpDown();
-            this.dtpFechaIngresoEmpleado = new System.Windows.Forms.DateTimePicker();
-            this.txtPrecioProducEmpleado = new System.Windows.Forms.TextBox();
-            this.txtNombreProducEmpleado = new System.Windows.Forms.TextBox();
             this.dgvInventarioEmpleado = new System.Windows.Forms.DataGridView();
             this.pblInfoInventario = new System.Windows.Forms.Panel();
             this.pnlProductos = new System.Windows.Forms.Panel();
@@ -50,19 +42,6 @@
             this.lblResultado_Ventas = new System.Windows.Forms.Label();
             this.pbVentas = new System.Windows.Forms.PictureBox();
             this.lblVentas = new System.Windows.Forms.Label();
-            this.btnEditarInventarioEmpleado = new System.Windows.Forms.Button();
-            this.btnAgregarInventarioEmpleado = new System.Windows.Forms.Button();
-            this.btnEliminarInventarioEmpleado = new System.Windows.Forms.Button();
-            this.pbEliminar = new System.Windows.Forms.PictureBox();
-            this.pbEditar = new System.Windows.Forms.PictureBox();
-            this.pbAgregar = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbProveedorEmpleado = new System.Windows.Forms.ComboBox();
-            this.cmbCategoriaProducEmpleado = new System.Windows.Forms.ComboBox();
-            this.txtCodigoBarrasEmpleado = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStockEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioEmpleado)).BeginInit();
             this.pblInfoInventario.SuspendLayout();
             this.pnlProductos.SuspendLayout();
@@ -71,74 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
             this.pnlVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(703, 371);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Fecha de Ingreso";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(703, 314);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 13);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Cantidad de Produtos en Stock";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(703, 263);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 13);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Precio del producto";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(703, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 13);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Ingrese el nombre del producto";
-            // 
-            // nudCantidadStockEmpleado
-            // 
-            this.nudCantidadStockEmpleado.Location = new System.Drawing.Point(706, 330);
-            this.nudCantidadStockEmpleado.Name = "nudCantidadStockEmpleado";
-            this.nudCantidadStockEmpleado.Size = new System.Drawing.Size(120, 20);
-            this.nudCantidadStockEmpleado.TabIndex = 44;
-            // 
-            // dtpFechaIngresoEmpleado
-            // 
-            this.dtpFechaIngresoEmpleado.Location = new System.Drawing.Point(706, 387);
-            this.dtpFechaIngresoEmpleado.Name = "dtpFechaIngresoEmpleado";
-            this.dtpFechaIngresoEmpleado.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaIngresoEmpleado.TabIndex = 43;
-            // 
-            // txtPrecioProducEmpleado
-            // 
-            this.txtPrecioProducEmpleado.Location = new System.Drawing.Point(706, 279);
-            this.txtPrecioProducEmpleado.Name = "txtPrecioProducEmpleado";
-            this.txtPrecioProducEmpleado.Size = new System.Drawing.Size(126, 20);
-            this.txtPrecioProducEmpleado.TabIndex = 42;
-            // 
-            // txtNombreProducEmpleado
-            // 
-            this.txtNombreProducEmpleado.Location = new System.Drawing.Point(709, 215);
-            this.txtNombreProducEmpleado.Name = "txtNombreProducEmpleado";
-            this.txtNombreProducEmpleado.Size = new System.Drawing.Size(123, 20);
-            this.txtNombreProducEmpleado.TabIndex = 41;
             // 
             // dgvInventarioEmpleado
             // 
@@ -146,11 +58,11 @@
             this.dgvInventarioEmpleado.AllowUserToDeleteRows = false;
             this.dgvInventarioEmpleado.BackgroundColor = System.Drawing.Color.White;
             this.dgvInventarioEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventarioEmpleado.Location = new System.Drawing.Point(12, 172);
+            this.dgvInventarioEmpleado.Location = new System.Drawing.Point(12, 182);
             this.dgvInventarioEmpleado.Name = "dgvInventarioEmpleado";
             this.dgvInventarioEmpleado.ReadOnly = true;
             this.dgvInventarioEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventarioEmpleado.Size = new System.Drawing.Size(678, 294);
+            this.dgvInventarioEmpleado.Size = new System.Drawing.Size(986, 355);
             this.dgvInventarioEmpleado.TabIndex = 40;
             // 
             // pblInfoInventario
@@ -295,164 +207,15 @@
             this.lblVentas.TabIndex = 5;
             this.lblVentas.Text = "Ventas";
             // 
-            // btnEditarInventarioEmpleado
-            // 
-            this.btnEditarInventarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEditarInventarioEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnEditarInventarioEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarInventarioEmpleado.Location = new System.Drawing.Point(435, 480);
-            this.btnEditarInventarioEmpleado.Name = "btnEditarInventarioEmpleado";
-            this.btnEditarInventarioEmpleado.Size = new System.Drawing.Size(108, 47);
-            this.btnEditarInventarioEmpleado.TabIndex = 35;
-            this.btnEditarInventarioEmpleado.Text = "Editar";
-            this.btnEditarInventarioEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarInventarioEmpleado.UseVisualStyleBackColor = false;
-            this.btnEditarInventarioEmpleado.Click += new System.EventHandler(this.btnEditarInventarioEmpleado_Click);
-            // 
-            // btnAgregarInventarioEmpleado
-            // 
-            this.btnAgregarInventarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAgregarInventarioEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnAgregarInventarioEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarInventarioEmpleado.Location = new System.Drawing.Point(295, 480);
-            this.btnAgregarInventarioEmpleado.Name = "btnAgregarInventarioEmpleado";
-            this.btnAgregarInventarioEmpleado.Size = new System.Drawing.Size(117, 47);
-            this.btnAgregarInventarioEmpleado.TabIndex = 34;
-            this.btnAgregarInventarioEmpleado.Text = "Agregar";
-            this.btnAgregarInventarioEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarInventarioEmpleado.UseVisualStyleBackColor = false;
-            this.btnAgregarInventarioEmpleado.Click += new System.EventHandler(this.btnAgregarInventarioEmpleado_Click);
-            // 
-            // btnEliminarInventarioEmpleado
-            // 
-            this.btnEliminarInventarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEliminarInventarioEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnEliminarInventarioEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarInventarioEmpleado.Location = new System.Drawing.Point(561, 480);
-            this.btnEliminarInventarioEmpleado.Name = "btnEliminarInventarioEmpleado";
-            this.btnEliminarInventarioEmpleado.Size = new System.Drawing.Size(104, 47);
-            this.btnEliminarInventarioEmpleado.TabIndex = 36;
-            this.btnEliminarInventarioEmpleado.Text = "Eliminar";
-            this.btnEliminarInventarioEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarInventarioEmpleado.UseVisualStyleBackColor = false;
-            this.btnEliminarInventarioEmpleado.Click += new System.EventHandler(this.btnEliminarInventarioEmpleado_Click);
-            // 
-            // pbEliminar
-            // 
-            this.pbEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEliminar.Image = global::Vistas.Properties.Resources.seo_social_web_network_internet_262_icon_icons1;
-            this.pbEliminar.Location = new System.Drawing.Point(619, 487);
-            this.pbEliminar.Name = "pbEliminar";
-            this.pbEliminar.Size = new System.Drawing.Size(34, 26);
-            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEliminar.TabIndex = 39;
-            this.pbEliminar.TabStop = false;
-            // 
-            // pbEditar
-            // 
-            this.pbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pbEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEditar.Image = global::Vistas.Properties.Resources.edit_icon_128873;
-            this.pbEditar.Location = new System.Drawing.Point(496, 487);
-            this.pbEditar.Name = "pbEditar";
-            this.pbEditar.Size = new System.Drawing.Size(34, 26);
-            this.pbEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEditar.TabIndex = 38;
-            this.pbEditar.TabStop = false;
-            // 
-            // pbAgregar
-            // 
-            this.pbAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAgregar.Image = global::Vistas.Properties.Resources._1904677_add_addition_calculate_charge_create_new_plus_122527;
-            this.pbAgregar.Location = new System.Drawing.Point(364, 487);
-            this.pbAgregar.Name = "pbAgregar";
-            this.pbAgregar.Size = new System.Drawing.Size(34, 26);
-            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAgregar.TabIndex = 37;
-            this.pbAgregar.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(879, 254);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 54;
-            this.label6.Text = "Proveedor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(879, 305);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 13);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Categoria del producto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(879, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Codigo de barras";
-            // 
-            // cmbProveedorEmpleado
-            // 
-            this.cmbProveedorEmpleado.FormattingEnabled = true;
-            this.cmbProveedorEmpleado.Location = new System.Drawing.Point(878, 270);
-            this.cmbProveedorEmpleado.Name = "cmbProveedorEmpleado";
-            this.cmbProveedorEmpleado.Size = new System.Drawing.Size(121, 21);
-            this.cmbProveedorEmpleado.TabIndex = 51;
-            // 
-            // cmbCategoriaProducEmpleado
-            // 
-            this.cmbCategoriaProducEmpleado.FormattingEnabled = true;
-            this.cmbCategoriaProducEmpleado.Location = new System.Drawing.Point(878, 321);
-            this.cmbCategoriaProducEmpleado.Name = "cmbCategoriaProducEmpleado";
-            this.cmbCategoriaProducEmpleado.Size = new System.Drawing.Size(121, 21);
-            this.cmbCategoriaProducEmpleado.TabIndex = 50;
-            // 
-            // txtCodigoBarrasEmpleado
-            // 
-            this.txtCodigoBarrasEmpleado.Location = new System.Drawing.Point(878, 215);
-            this.txtCodigoBarrasEmpleado.Name = "txtCodigoBarrasEmpleado";
-            this.txtCodigoBarrasEmpleado.Size = new System.Drawing.Size(118, 20);
-            this.txtCodigoBarrasEmpleado.TabIndex = 49;
-            // 
             // frmInventarioEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 549);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbProveedorEmpleado);
-            this.Controls.Add(this.cmbCategoriaProducEmpleado);
-            this.Controls.Add(this.txtCodigoBarrasEmpleado);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.nudCantidadStockEmpleado);
-            this.Controls.Add(this.dtpFechaIngresoEmpleado);
-            this.Controls.Add(this.txtPrecioProducEmpleado);
-            this.Controls.Add(this.txtNombreProducEmpleado);
             this.Controls.Add(this.dgvInventarioEmpleado);
-            this.Controls.Add(this.pbEliminar);
-            this.Controls.Add(this.pbEditar);
-            this.Controls.Add(this.pbAgregar);
             this.Controls.Add(this.pblInfoInventario);
-            this.Controls.Add(this.btnEditarInventarioEmpleado);
-            this.Controls.Add(this.btnAgregarInventarioEmpleado);
-            this.Controls.Add(this.btnEliminarInventarioEmpleado);
             this.Name = "frmInventarioEmpleado";
             this.Text = "frmInventarioEmpleado";
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStockEmpleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioEmpleado)).EndInit();
             this.pblInfoInventario.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
@@ -464,28 +227,12 @@
             this.pnlVentas.ResumeLayout(false);
             this.pnlVentas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown nudCantidadStockEmpleado;
-        private System.Windows.Forms.DateTimePicker dtpFechaIngresoEmpleado;
-        private System.Windows.Forms.TextBox txtPrecioProducEmpleado;
-        private System.Windows.Forms.TextBox txtNombreProducEmpleado;
         private System.Windows.Forms.DataGridView dgvInventarioEmpleado;
-        private System.Windows.Forms.PictureBox pbEliminar;
-        private System.Windows.Forms.PictureBox pbEditar;
-        private System.Windows.Forms.PictureBox pbAgregar;
         private System.Windows.Forms.Panel pblInfoInventario;
         private System.Windows.Forms.Panel pnlProductos;
         private System.Windows.Forms.PictureBox pbProductos;
@@ -499,14 +246,5 @@
         private System.Windows.Forms.Label lblResultado_Ventas;
         private System.Windows.Forms.PictureBox pbVentas;
         private System.Windows.Forms.Label lblVentas;
-        private System.Windows.Forms.Button btnEditarInventarioEmpleado;
-        private System.Windows.Forms.Button btnAgregarInventarioEmpleado;
-        private System.Windows.Forms.Button btnEliminarInventarioEmpleado;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbProveedorEmpleado;
-        private System.Windows.Forms.ComboBox cmbCategoriaProducEmpleado;
-        private System.Windows.Forms.TextBox txtCodigoBarrasEmpleado;
     }
 }

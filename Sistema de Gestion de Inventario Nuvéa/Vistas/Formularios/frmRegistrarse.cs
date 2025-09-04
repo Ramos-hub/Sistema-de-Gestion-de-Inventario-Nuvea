@@ -19,6 +19,15 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
             string claveHash = Rol.EncriptarContra(txtRegistrarseContra.Text);
+            txtNumTel.KeyPress += (s, ev) =>
+            {
+                if (!char.IsControl(ev.KeyChar) && !char.IsDigit(ev.KeyChar))
+                    ev.Handled = true;
+            };
+            txtNombreUsuarioRegis.ShortcutsEnabled = false;
+            txtCorreoRegis.ShortcutsEnabled = false;
+            txtRegistrarseContra.ShortcutsEnabled = false;
+            txtNumTel.ShortcutsEnabled = false;
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -57,8 +66,7 @@ namespace Vistas.Formularios
             string usuarioEncri = txtNombreUsuarioRegis.Text.Trim();
             string correoEncri = txtCorreoRegis.Text.Trim();
             string claveEncri = txtRegistrarseContra.Text; 
-
-
+            string numTel = txtNumTel.Text.Trim();
             string hash = Seguridad.CrearHash(clave);
 
             string sql = "INSERT INTO Usuario (idRol, nombre, clave, correo, telefono) " +
@@ -70,7 +78,8 @@ namespace Vistas.Formularios
                 cmd.Parameters.AddWithValue("@rol", 2);           
                 cmd.Parameters.AddWithValue("@nombre", usuario);
                 cmd.Parameters.AddWithValue("@clave", hash);
-                cmd.Parameters.AddWithValue("@correo", correo);     
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@tel", numTel);
                 cmd.ExecuteNonQuery();
             }
 

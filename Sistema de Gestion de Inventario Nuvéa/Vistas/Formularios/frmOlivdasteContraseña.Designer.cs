@@ -80,6 +80,7 @@
             // 
             this.txtCorreoRecu.Location = new System.Drawing.Point(287, 206);
             this.txtCorreoRecu.Name = "txtCorreoRecu";
+            this.txtCorreoRecu.ShortcutsEnabled = false;
             this.txtCorreoRecu.Size = new System.Drawing.Size(147, 20);
             this.txtCorreoRecu.TabIndex = 5;
             // 

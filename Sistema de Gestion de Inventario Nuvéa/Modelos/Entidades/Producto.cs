@@ -44,7 +44,10 @@ namespace Modelos.Entidades
         public bool ActualizarDatosInventario()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("sp_producto_actualizar", conexion))
+            using (var cmd = new SqlCommand("spProd_Editar" +
+                "" +
+                "" +
+                "", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idProducto", IdProducto);
@@ -62,7 +65,7 @@ namespace Modelos.Entidades
         public bool Eliminar()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("sp_producto_eliminar", conexion))
+            using (var cmd = new SqlCommand("spProd_Eliminar", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idProducto", IdProducto);
@@ -73,7 +76,7 @@ namespace Modelos.Entidades
         public bool Insertar()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("sp_producto_insertar", conexion))
+            using (var cmd = new SqlCommand("spProd_Agregar", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombreProduc", NombreProduc);

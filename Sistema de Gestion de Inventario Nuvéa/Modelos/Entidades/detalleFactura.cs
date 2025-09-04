@@ -52,7 +52,7 @@ namespace Modelos.Entidades
         public bool Insertar()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("sp_detallefactura_insert", conexion))
+            using (var cmd = new SqlCommand("spFac_AgregarDetalle", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@subtotal", SubTotal);
@@ -68,7 +68,7 @@ namespace Modelos.Entidades
         public bool Actualizar()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("sp_detallefactura_update", conexion))
+            using (var cmd = new SqlCommand("spFac_EditarDetalle", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idDetalleFactura", IdDetalleFactura);
@@ -85,7 +85,7 @@ namespace Modelos.Entidades
         public bool Eliminar()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("sp_detallefactura_delete", conexion))
+            using (var cmd = new SqlCommand("spFac_EliminarDetalle", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idDetalleFactura", IdDetalleFactura);
