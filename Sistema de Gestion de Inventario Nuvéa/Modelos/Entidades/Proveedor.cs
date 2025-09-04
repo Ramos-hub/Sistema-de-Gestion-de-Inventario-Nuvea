@@ -32,6 +32,68 @@ namespace Modelos.Entidades
             add.Fill(tablaVirtual);
             return tablaVirtual;
         }
+        public static DataTable MostrarProveedores()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            using (SqlDataAdapter da = new SqlDataAdapter(
+                @"select idProveedor as ID,
+                         nombreProveedor as Proveedor,
+                         nombreTrabajador as Trabajador,
+                         telefono as Telefono,
+                         direccion as Direccion
+                  from Proveedor
+                  order by nombreProveedor", conexion))
+            {
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
 
+        public bool Insertar()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            using (SqlCommand cmd = new SqlCommand(
+                @"insert into Proveedor(nombreProveedor, nombreTrabajador, telefono, direccion)
+                  values(@p, @t, @tel, @dir)", conexion))
+            {
+                cmd.Parameters.AddWithValue("@p", NombreProveedor);
+                cmd.Parameters.AddWithValue("@t", NombreTrabajador);
+                cmd.Parameters.AddWithValue("@tel", Telefono);
+                cmd.Parameters.AddWithValue("@dir", Direccion);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public bool Actualizar()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            using (SqlCommand cmd = new SqlCommand(
+                @"update Proveedor
+                  set nombreProveedor=@prove, nombreTrabajador=@trabajador, telefono=@tel, direccion=@dir
+                  where idProveedor=@id", conexion))
+            {
+                cmd.Parameters.AddWithValue("@prove", NombreProveedor);
+                cmd.Parameters.AddWithValue("@trabajador", NombreTrabajador);
+                cmd.Parameters.AddWithValue("@tel", Telefono);
+                cmd.Parameters.AddWithValue("@dir", Direccion);
+                cmd.Parameters.AddWithValue("@id", IdProveedor);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public bool Eliminar()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            using (SqlCommand cmd = new SqlCommand(
+                "delete from Proveedor where idProveedor=@id", conexion))
+            {
+                cmd.Parameters.AddWithValue("@id", IdProveedor);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }

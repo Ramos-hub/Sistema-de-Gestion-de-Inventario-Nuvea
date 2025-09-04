@@ -62,6 +62,8 @@
             this.txtPrecioProduc = new System.Windows.Forms.TextBox();
             this.txtCodigoBarras = new System.Windows.Forms.TextBox();
             this.txtNombreProduc = new System.Windows.Forms.TextBox();
+            this.btnLimpiarInven = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pblInfoInventario.SuspendLayout();
             this.pnlProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pblInfoInventario
@@ -230,6 +233,7 @@
             this.btnAgregar_Inventario.Text = "Agregar";
             this.btnAgregar_Inventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar_Inventario.UseVisualStyleBackColor = false;
+            this.btnAgregar_Inventario.Click += new System.EventHandler(this.btnAgregar_Inventario_Click_1);
             // 
             // btnEditar_Inventario
             // 
@@ -422,12 +426,35 @@
             this.txtNombreProduc.Size = new System.Drawing.Size(123, 20);
             this.txtNombreProduc.TabIndex = 19;
             // 
+            // btnLimpiarInven
+            // 
+            this.btnLimpiarInven.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiarInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarInven.Location = new System.Drawing.Point(255, 515);
+            this.btnLimpiarInven.Name = "btnLimpiarInven";
+            this.btnLimpiarInven.Size = new System.Drawing.Size(126, 47);
+            this.btnLimpiarInven.TabIndex = 33;
+            this.btnLimpiarInven.Text = "Limpiar";
+            this.btnLimpiarInven.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiarInven.UseVisualStyleBackColor = false;
+
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(318, 527);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 21);
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(202)))));
             this.ClientSize = new System.Drawing.Size(1114, 560);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnLimpiarInven);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -468,6 +495,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,5 +536,7 @@
         private System.Windows.Forms.TextBox txtPrecioProduc;
         private System.Windows.Forms.TextBox txtCodigoBarras;
         private System.Windows.Forms.TextBox txtNombreProduc;
+        private System.Windows.Forms.Button btnLimpiarInven;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

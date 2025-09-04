@@ -45,36 +45,47 @@ namespace Modelos.Entidades
         {
             SqlConnection conexion = ConexionDB.Conectar();
             using (var cmd = new SqlCommand("sp_producto_actualizar", conexion))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@idProducto", IdProducto);
-                    cmd.Parameters.AddWithValue("@nombreProduc", NombreProduc);
-                    cmd.Parameters.AddWithValue("@fechaIngreso", FechaIngreso);
-                    cmd.Parameters.AddWithValue("@estado", Estado ? 1 : 0);
-                    cmd.Parameters.AddWithValue("@cantidadStock", CantidadStock);
-                    cmd.Parameters.AddWithValue("@codigoBarras", CodigoBarras);
-                    cmd.Parameters.AddWithValue("@precioProduc", PrecioProduc);
-                    cmd.Parameters.AddWithValue("@idCategoria", IdCategoria);
-                    cmd.Parameters.AddWithValue("@idProveedor", IdProveedor);
-
-                var filas = Convert.ToInt32(cmd.ExecuteScalar());
-                return filas > 0;
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idProducto", IdProducto);
+                cmd.Parameters.AddWithValue("@nombreProduc", NombreProduc);
+                cmd.Parameters.AddWithValue("@fechaIngreso", FechaIngreso);
+                cmd.Parameters.AddWithValue("@estado", Estado ? 1 : 0);
+                cmd.Parameters.AddWithValue("@cantidadStock", CantidadStock);
+                cmd.Parameters.AddWithValue("@codigoBarras", CodigoBarras);
+                cmd.Parameters.AddWithValue("@precioProduc", PrecioProduc);
+                cmd.Parameters.AddWithValue("@idCategoria", IdCategoria);
+                cmd.Parameters.AddWithValue("@idProveedor", IdProveedor);
+                return cmd.ExecuteNonQuery() > 0;
             }
         }
         public bool Eliminar()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-                using (var cmd = new SqlCommand("sp_producto_eliminar", conexion))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@idProducto", IdProducto);
+            using (var cmd = new SqlCommand("sp_producto_eliminar", conexion))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idProducto", IdProducto);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
 
-                    // leemos @@ROWCOUNT que devuelve el SP
-                    var res = cmd.ExecuteScalar();
-                    int filas = (res == null || res == DBNull.Value) ? 0 : Convert.ToInt32(res);
-                    return filas > 0;
-                }
+        public bool Insertar()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            using (var cmd = new SqlCommand("sp_producto_insertar", conexion))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombreProduc", NombreProduc);
+                cmd.Parameters.AddWithValue("@fechaIngreso", FechaIngreso);
+                cmd.Parameters.AddWithValue("@estado", Estado ? 1 : 0);
+                cmd.Parameters.AddWithValue("@cantidadStock", CantidadStock);
+                cmd.Parameters.AddWithValue("@codigoBarras", CodigoBarras);
+                cmd.Parameters.AddWithValue("@precioProduc", PrecioProduc);
+                cmd.Parameters.AddWithValue("@idCategoria", IdCategoria);
+                cmd.Parameters.AddWithValue("@idProveedor", IdProveedor);
+                return cmd.ExecuteNonQuery() > 0;
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
             this.Load += frmInventario_Load;
-            this.dgvInventario.CellClick += dgvInventario_CellDoubleClick;
+            this.dgvInventario.CellDoubleClick += dgvInventario_CellDoubleClick;
 
         }
 
@@ -107,7 +107,7 @@ namespace Vistas.Formularios
 
         private void dgvInventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvInventario.CurrentRow == null) return;
+            if (e.RowIndex < 0 || dgvInventario.CurrentRow == null) return;
             var r = dgvInventario.CurrentRow;
 
             txtNombreProduc.Text = r.Cells["Producto"].Value?.ToString();
@@ -116,7 +116,6 @@ namespace Vistas.Formularios
             txtCodigoBarras.Text = r.Cells["codigoBarras"].Value?.ToString();
             txtPrecioProduc.Text = r.Cells["Precio"].Value?.ToString();
 
-            // Selección por ID (vista debe traer estas columnas)
             if (r.Cells["idCategoria"]?.Value != DBNull.Value)
                 cmbCategoriaProduc.SelectedValue = Convert.ToInt32(r.Cells["idCategoria"].Value);
             if (r.Cells["idProveedor"]?.Value != DBNull.Value)
@@ -168,12 +167,16 @@ namespace Vistas.Formularios
                     return;
                 }
 
-                var ok = p.ActualizarDatosInventario();
-
-                // recarga SIEMPRE para ver los cambios
+                if (p.ActualizarDatosInventario())
+                {
+                    MessageBox.Show("Producto actualizado correctamente.");
+                }
+                else 
+                {
+                MessageBox.Show("No se pudo actualizar.");
+                }
                 CargarProductos();
-
-                MessageBox.Show("Producto actualizado.");
+                LimpiarFormulario();
             }
             catch (Exception ex)
             {
@@ -191,47 +194,77 @@ namespace Vistas.Formularios
                     return;
                 }
 
-                var nombre = dgvInventario.CurrentRow.Cells["Producto"]?.Value?.ToString();
-                var respuesta = MessageBox.Show(
-                    $"¿Seguro que deseas eliminar el producto:\n\n{nombre}?",
-                    "Confirmar eliminación",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning);
-
-                if (respuesta != DialogResult.Yes) return;
-
                 int id = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProducto"].Value);
+                Producto p = new Producto { IdProducto = id };
 
-                var p = new Modelos.Entidades.Producto { IdProducto = id };
-
-                bool ok = false;
-                try
-                {
-                    ok = p.Eliminar();
-                }
-                catch (SqlException ex) when (ex.Number == 547) // violación de FK
-                {
-                    MessageBox.Show(
-                        "No se puede eliminar el producto porque está relacionado con otras tablas (por ejemplo, compras o detalle de factura).",
-                        "Operación no permitida",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (ok)
+                if (p.Eliminar())
                 {
                     MessageBox.Show("Producto eliminado correctamente.");
-                    CargarProductos(); // refresca el grid
                 }
                 else
                 {
-                    MessageBox.Show("No se eliminó ninguna fila (verifica el idProducto).");
+                    MessageBox.Show("No se pudo eliminar.");
                 }
+
+                CargarProductos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
+        }
+
+        private void btnAgregar_Inventario_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!TryLeerProductoDesdeUI(out var p, out var error))
+                {
+                    MessageBox.Show(error, "Validación");
+                    return;
+                }
+
+                if (p.Insertar())
+                {
+                    MessageBox.Show("Producto agregado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo agregar.");
+                }
+
+                CargarProductos();
+                LimpiarFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar: " + ex.Message);
+            }
+        }
+        private void LimpiarFormulario()
+        {
+            txtNombreProduc.Clear();
+            dtpFechaIngreso.Value = DateTime.Today;
+            nudCantidadStock.Value = 0;
+            txtCodigoBarras.Clear();
+            txtPrecioProduc.Clear();
+
+            if (cmbCategoriaProduc.Items.Count > 0) cmbCategoriaProduc.SelectedIndex = 0;
+            if (cmbProveedor.Items.Count > 0) cmbProveedor.SelectedIndex = 0;
+
+            txtNombreProduc.Focus();
+        }
+
+        private void btnLimpiarInven_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LimpiarFormulario();
+                MessageBox.Show("Formulario limpio, listo para ingresar un nuevo producto.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al limpiar: " + ex.Message);
             }
         }
     }

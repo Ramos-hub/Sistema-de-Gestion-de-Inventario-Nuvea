@@ -129,14 +129,17 @@ subtotal decimal(10,2),
 cantidadProduct int,
 idCompra int,
 idProducto int,
+idCliente int,
+estado bit,
+fecha date,
 foreign key (idCompra) references Compra (idCompra),
 foreign key (idProducto) references Producto (idProducto)
 );
 go
-insert into detallefactura (subtotal, cantidadproduct, idcompra, idproducto) values(19.98, 2, 1, 1),
-(14.50, 1, 2, 2),(11.97, 3, 3, 3),(27.00, 4, 4, 4),(23.98, 2, 5, 5),(27.00, 2, 6, 6),
-(5.75, 1, 7, 7),(24.00, 2, 8, 8),(21.75, 3, 9, 9),(31.60, 2, 10, 10),(8.90, 1, 11, 11),
-(30.00, 3, 12, 12),(19.35, 3, 13, 13),(23.96, 4, 14, 14),(9.00, 2, 15, 15);
+insert into detalleFactura (subtotal, cantidadProduct, idCompra, idProducto, idCliente, estado, fecha) values
+(19.98, 2, 1, 1,1, 1,'2024-01-09'),(14.50, 1, 2, 2, 2, 1, '2024-02-25'),(11.97, 3, 3, 3, 3, 1, '2024-01-05'),(27.00, 4, 4, 4, 4, 1, '2024-01-11'),(23.98, 2, 5, 5, 5, 1, '2025-02-20'),
+(27.00, 2, 6, 6, 6, 1,'2024-01-01'),(5.75, 1, 7, 7, 7, 1,'2025-11-25'),(24.00, 2, 8, 8, 8, 1,'2024-01-20'),(21.75, 3, 9, 9, 9, 1,'2024-02-25'),(31.60, 2, 10, 10, 10, 1, '2024-04-25'),
+(8.90, 1, 11, 11, 11, 1, '2024-10-25'),(30.00, 3, 12, 12, 12, 1, '2024-09-25'),(19.35, 3, 13, 13, 13, 1, '2024-08-25'),(23.96, 4, 14, 14, 14, 1, '2024-07-25'),(9.00, 2, 15, 15, 15, 1, '2024-05-25');
 
 
 select*from Rol
@@ -155,10 +158,28 @@ create or alter view vw_Inventario as select p.idProducto, p.nombreProduc as Pro
     p.fechaIngreso as FechaIngreso, p.cantidadStock as Stock, p.codigoBarras,
     p.precioProduc as Precio, c.idCategoria, c.nombreCat as Categoria,
     pr.idProveedor, pr.nombreProveedor as Proveedor
-from Producto p
-inner join Categoria c on p.idCategoria = c.idCategoria
-inner join Proveedor pr on p.idProveedor = pr.idProveedor;
+    from Producto p
+    inner join Categoria c on p.idCategoria = c.idCategoria
+    inner join Proveedor pr on p.idProveedor = pr.idProveedor;
 
-select *from vw_Inventario;
+select *from vw_Inventario
 
-drop view vw_Inventario
+------------**************---------------------
+
+create or alter view vw_facturas_simple as
+select
+  c.nombreCliente                         as Cliente,
+  p.nombreProduc                          as Producto,
+  df.fecha                                as FechaFacturacion,
+  df.subtotal                             as Subtotal,
+  case when df.estado=1 then 'Pagada' else 'Pendiente' end as Estado,
+  -- IDs para trabajar en C#
+  df.idDetalleFactura,
+  df.idCliente,
+  df.idProducto,
+  df.idCompra
+from dbo.detalleFactura df
+inner join dbo.Cliente  c on c.idCliente  = df.idCliente
+inner join dbo.Producto p on p.idProducto = df.idProducto;
+go
+    select *from vw_facturas_simple

@@ -31,17 +31,17 @@
             this.lblHistorialFacturas = new System.Windows.Forms.Label();
             this.pnlFiltrosHistorialFacturas = new System.Windows.Forms.Panel();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
-            this.dtpRangoFactu = new System.Windows.Forms.DateTimePicker();
-            this.cbEstadoHistorial = new System.Windows.Forms.ComboBox();
+            this.dtpRangoHistorial = new System.Windows.Forms.DateTimePicker();
+            this.cmbEstadoHistorial = new System.Windows.Forms.ComboBox();
             this.txtClienteHistorial = new System.Windows.Forms.TextBox();
             this.lblClienteHistorial = new System.Windows.Forms.Label();
             this.lblEstadoHistorial = new System.Windows.Forms.Label();
             this.lblRangoFacturas = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMostrarHistorialFacturas = new System.Windows.Forms.DataGridView();
             this.pnlFiltrosHistorialFacturas.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarHistorialFacturas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHistorialFacturas
@@ -59,8 +59,8 @@
             // 
             this.pnlFiltrosHistorialFacturas.BackColor = System.Drawing.Color.White;
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.btnAplicarFiltros);
-            this.pnlFiltrosHistorialFacturas.Controls.Add(this.dtpRangoFactu);
-            this.pnlFiltrosHistorialFacturas.Controls.Add(this.cbEstadoHistorial);
+            this.pnlFiltrosHistorialFacturas.Controls.Add(this.dtpRangoHistorial);
+            this.pnlFiltrosHistorialFacturas.Controls.Add(this.cmbEstadoHistorial);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.txtClienteHistorial);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.lblClienteHistorial);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.lblEstadoHistorial);
@@ -84,24 +84,25 @@
             this.btnAplicarFiltros.TabIndex = 7;
             this.btnAplicarFiltros.Text = "Aplicar Filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
+            this.btnAplicarFiltros.Click += new System.EventHandler(this.btnAplicarFiltros_Click);
             // 
-            // dtpRangoFactu
+            // dtpRangoHistorial
             // 
-            this.dtpRangoFactu.Location = new System.Drawing.Point(12, 52);
-            this.dtpRangoFactu.Name = "dtpRangoFactu";
-            this.dtpRangoFactu.Size = new System.Drawing.Size(200, 20);
-            this.dtpRangoFactu.TabIndex = 6;
+            this.dtpRangoHistorial.Location = new System.Drawing.Point(12, 52);
+            this.dtpRangoHistorial.Name = "dtpRangoHistorial";
+            this.dtpRangoHistorial.Size = new System.Drawing.Size(200, 20);
+            this.dtpRangoHistorial.TabIndex = 6;
             // 
-            // cbEstadoHistorial
+            // cmbEstadoHistorial
             // 
-            this.cbEstadoHistorial.FormattingEnabled = true;
-            this.cbEstadoHistorial.Items.AddRange(new object[] {
+            this.cmbEstadoHistorial.FormattingEnabled = true;
+            this.cmbEstadoHistorial.Items.AddRange(new object[] {
             "Pagada ",
             "Pendiente"});
-            this.cbEstadoHistorial.Location = new System.Drawing.Point(241, 51);
-            this.cbEstadoHistorial.Name = "cbEstadoHistorial";
-            this.cbEstadoHistorial.Size = new System.Drawing.Size(141, 21);
-            this.cbEstadoHistorial.TabIndex = 5;
+            this.cmbEstadoHistorial.Location = new System.Drawing.Point(241, 51);
+            this.cmbEstadoHistorial.Name = "cmbEstadoHistorial";
+            this.cmbEstadoHistorial.Size = new System.Drawing.Size(141, 21);
+            this.cmbEstadoHistorial.TabIndex = 5;
             // 
             // txtClienteHistorial
             // 
@@ -143,19 +144,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvMostrarHistorialFacturas);
             this.panel1.Location = new System.Drawing.Point(13, 162);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 276);
             this.panel1.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvMostrarHistorialFacturas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 251);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvMostrarHistorialFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarHistorialFacturas.Location = new System.Drawing.Point(14, 12);
+            this.dgvMostrarHistorialFacturas.Name = "dgvMostrarHistorialFacturas";
+            this.dgvMostrarHistorialFacturas.Size = new System.Drawing.Size(750, 251);
+            this.dgvMostrarHistorialFacturas.TabIndex = 0;
             // 
             // frmHistorialFacturas
             // 
@@ -168,10 +169,11 @@
             this.Controls.Add(this.lblHistorialFacturas);
             this.Name = "frmHistorialFacturas";
             this.Text = "frmHistorialFacturas";
+            this.Load += new System.EventHandler(this.frmHistorialFacturas_Load);
             this.pnlFiltrosHistorialFacturas.ResumeLayout(false);
             this.pnlFiltrosHistorialFacturas.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarHistorialFacturas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,11 +186,11 @@
         private System.Windows.Forms.Label lblClienteHistorial;
         private System.Windows.Forms.Label lblEstadoHistorial;
         private System.Windows.Forms.Label lblRangoFacturas;
-        private System.Windows.Forms.DateTimePicker dtpRangoFactu;
-        private System.Windows.Forms.ComboBox cbEstadoHistorial;
+        private System.Windows.Forms.DateTimePicker dtpRangoHistorial;
+        private System.Windows.Forms.ComboBox cmbEstadoHistorial;
         private System.Windows.Forms.TextBox txtClienteHistorial;
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMostrarHistorialFacturas;
     }
 }
