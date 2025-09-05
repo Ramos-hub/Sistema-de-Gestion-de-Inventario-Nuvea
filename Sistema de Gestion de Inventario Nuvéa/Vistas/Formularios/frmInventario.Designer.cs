@@ -404,6 +404,7 @@
             this.btnLimpiarInven.Text = "Limpiar";
             this.btnLimpiarInven.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiarInven.UseVisualStyleBackColor = false;
+            this.btnLimpiarInven.Click += new System.EventHandler(this.btnLimpiarInven_Click);
             // 
             // pictureBox1
             // 
@@ -479,6 +480,10 @@
             this.Controls.Add(this.btnEditar_Inventario);
             this.Controls.Add(this.btnAgregar_Inventario);
             this.Controls.Add(this.btnEliminar_Inventario);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1130, 599);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1130, 599);
             this.Name = "frmInventario";
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);

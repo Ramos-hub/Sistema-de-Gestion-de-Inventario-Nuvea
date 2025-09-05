@@ -21,8 +21,6 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
 
-            txtClave.ShortcutsEnabled = false;
-            txtUsuario.ShortcutsEnabled = false;
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {

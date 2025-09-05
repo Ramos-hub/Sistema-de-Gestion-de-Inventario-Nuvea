@@ -150,7 +150,6 @@
             this.txtNumTel.ShortcutsEnabled = false;
             this.txtNumTel.Size = new System.Drawing.Size(284, 20);
             this.txtNumTel.TabIndex = 22;
-            this.txtNumTel.UseSystemPasswordChar = true;
             // 
             // label1
             // 

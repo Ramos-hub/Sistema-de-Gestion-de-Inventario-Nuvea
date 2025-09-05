@@ -30,14 +30,12 @@
         {
             this.pnlCentralEmpleado = new System.Windows.Forms.Panel();
             this.pnlPerfilInventario = new System.Windows.Forms.Panel();
-            this.btnPerfilInventario = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlBotonesMenu = new System.Windows.Forms.Panel();
             this.btnInventarioEmpleado = new System.Windows.Forms.Button();
             this.btnFacturacionEmpleado = new System.Windows.Forms.Button();
             this.btnInicioEmpleado = new System.Windows.Forms.Button();
             this.lblLogoFacturacion = new System.Windows.Forms.Label();
-            this.pnlPerfilInventario.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlBotonesMenu.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +52,6 @@
             // 
             this.pnlPerfilInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(202)))));
             this.pnlPerfilInventario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPerfilInventario.Controls.Add(this.btnPerfilInventario);
             this.pnlPerfilInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPerfilInventario.Location = new System.Drawing.Point(138, 0);
             this.pnlPerfilInventario.Margin = new System.Windows.Forms.Padding(0);
@@ -62,17 +59,6 @@
             this.pnlPerfilInventario.Padding = new System.Windows.Forms.Padding(10);
             this.pnlPerfilInventario.Size = new System.Drawing.Size(662, 45);
             this.pnlPerfilInventario.TabIndex = 14;
-            // 
-            // btnPerfilInventario
-            // 
-            this.btnPerfilInventario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPerfilInventario.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfilInventario.Location = new System.Drawing.Point(536, 10);
-            this.btnPerfilInventario.Name = "btnPerfilInventario";
-            this.btnPerfilInventario.Size = new System.Drawing.Size(114, 23);
-            this.btnPerfilInventario.TabIndex = 0;
-            this.btnPerfilInventario.Text = "Administrador";
-            this.btnPerfilInventario.UseVisualStyleBackColor = true;
             // 
             // pnlMenu
             // 
@@ -161,7 +147,6 @@
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmPrincipalEmpleado";
             this.Text = "frmPrincipalEmpleado";
-            this.pnlPerfilInventario.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             this.pnlBotonesMenu.ResumeLayout(false);
@@ -173,7 +158,6 @@
 
         public System.Windows.Forms.Panel pnlCentralEmpleado;
         private System.Windows.Forms.Panel pnlPerfilInventario;
-        private System.Windows.Forms.Button btnPerfilInventario;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlBotonesMenu;
         private System.Windows.Forms.Button btnInventarioEmpleado;

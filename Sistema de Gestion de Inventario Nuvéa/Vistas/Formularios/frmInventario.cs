@@ -274,11 +274,12 @@ namespace Vistas.Formularios
             try
             {
                 LimpiarFormulario();
-                MessageBox.Show("Formulario limpio, listo para ingresar un nuevo producto.");
+                MessageBox.Show("Limpio 😁", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al limpiar: " + ex.Message);
+                MessageBox.Show("Error al limpiar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }
