@@ -32,6 +32,7 @@
             this.dgvMostrarListaFacturas = new System.Windows.Forms.DataGridView();
             this.lblFacturacion = new System.Windows.Forms.Label();
             this.gbCrearFactura = new System.Windows.Forms.GroupBox();
+            this.cmbProductosFactu = new System.Windows.Forms.ComboBox();
             this.btnGuardarFactura = new System.Windows.Forms.Button();
             this.txtTotalCrearFactura = new System.Windows.Forms.TextBox();
             this.cmbEstadoFacturaCrearFactura = new System.Windows.Forms.ComboBox();
@@ -44,7 +45,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditarFactura = new System.Windows.Forms.Button();
             this.btnEliminarFacturacion = new System.Windows.Forms.Button();
-            this.cmbProductosFactu = new System.Windows.Forms.ComboBox();
             this.gbListaFactura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarListaFacturas)).BeginInit();
             this.gbCrearFactura.SuspendLayout();
@@ -98,6 +98,14 @@
             this.gbCrearFactura.TabStop = false;
             this.gbCrearFactura.Text = "Crear Factura";
             // 
+            // cmbProductosFactu
+            // 
+            this.cmbProductosFactu.FormattingEnabled = true;
+            this.cmbProductosFactu.Location = new System.Drawing.Point(8, 180);
+            this.cmbProductosFactu.Name = "cmbProductosFactu";
+            this.cmbProductosFactu.Size = new System.Drawing.Size(198, 21);
+            this.cmbProductosFactu.TabIndex = 11;
+            // 
             // btnGuardarFactura
             // 
             this.btnGuardarFactura.Location = new System.Drawing.Point(56, 344);
@@ -112,6 +120,7 @@
             // 
             this.txtTotalCrearFactura.Location = new System.Drawing.Point(7, 290);
             this.txtTotalCrearFactura.Name = "txtTotalCrearFactura";
+            this.txtTotalCrearFactura.ShortcutsEnabled = false;
             this.txtTotalCrearFactura.Size = new System.Drawing.Size(199, 20);
             this.txtTotalCrearFactura.TabIndex = 9;
             // 
@@ -173,6 +182,7 @@
             // 
             this.txtNombreClienteCrearFactura.Location = new System.Drawing.Point(8, 41);
             this.txtNombreClienteCrearFactura.Name = "txtNombreClienteCrearFactura";
+            this.txtNombreClienteCrearFactura.ShortcutsEnabled = false;
             this.txtNombreClienteCrearFactura.Size = new System.Drawing.Size(200, 20);
             this.txtNombreClienteCrearFactura.TabIndex = 1;
             // 
@@ -208,14 +218,6 @@
             this.btnEliminarFacturacion.Text = "Eliminar";
             this.btnEliminarFacturacion.UseVisualStyleBackColor = false;
             this.btnEliminarFacturacion.Click += new System.EventHandler(this.btnEliminarFacturacion_Click);
-            // 
-            // cmbProductosFactu
-            // 
-            this.cmbProductosFactu.FormattingEnabled = true;
-            this.cmbProductosFactu.Location = new System.Drawing.Point(8, 180);
-            this.cmbProductosFactu.Name = "cmbProductosFactu";
-            this.cmbProductosFactu.Size = new System.Drawing.Size(198, 21);
-            this.cmbProductosFactu.TabIndex = 11;
             // 
             // frmFacturacion
             // 

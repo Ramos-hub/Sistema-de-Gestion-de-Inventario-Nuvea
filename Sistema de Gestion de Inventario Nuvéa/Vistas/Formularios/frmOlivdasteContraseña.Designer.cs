@@ -80,6 +80,7 @@
             // 
             this.txtCorreoRecu.Location = new System.Drawing.Point(287, 206);
             this.txtCorreoRecu.Name = "txtCorreoRecu";
+            this.txtCorreoRecu.ShortcutsEnabled = false;
             this.txtCorreoRecu.Size = new System.Drawing.Size(147, 20);
             this.txtCorreoRecu.TabIndex = 5;
             // 
@@ -115,6 +116,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbLogoLogin);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmOlivdasteContraseña";
             this.Text = "frmOlivdasteContraseña";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).EndInit();

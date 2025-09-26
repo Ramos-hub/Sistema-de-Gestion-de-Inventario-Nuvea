@@ -38,11 +38,9 @@
             this.btnIniciInventario = new System.Windows.Forms.Button();
             this.lblLogoFacturacion = new System.Windows.Forms.Label();
             this.pnlPerfilInventario = new System.Windows.Forms.Panel();
-            this.btnPerfilInventario = new System.Windows.Forms.Button();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlBotonesMenu.SuspendLayout();
-            this.pnlPerfilInventario.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -84,7 +82,6 @@
             this.btnGanancias.TabIndex = 4;
             this.btnGanancias.Text = "Ganancias";
             this.btnGanancias.UseVisualStyleBackColor = false;
-            this.btnGanancias.Click += new System.EventHandler(this.btnGanancias_Click);
             // 
             // btnInventarioHistorial
             // 
@@ -168,7 +165,6 @@
             // 
             this.pnlPerfilInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(202)))));
             this.pnlPerfilInventario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPerfilInventario.Controls.Add(this.btnPerfilInventario);
             this.pnlPerfilInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPerfilInventario.Location = new System.Drawing.Point(138, 0);
             this.pnlPerfilInventario.Margin = new System.Windows.Forms.Padding(0);
@@ -176,17 +172,6 @@
             this.pnlPerfilInventario.Padding = new System.Windows.Forms.Padding(10);
             this.pnlPerfilInventario.Size = new System.Drawing.Size(662, 45);
             this.pnlPerfilInventario.TabIndex = 11;
-            // 
-            // btnPerfilInventario
-            // 
-            this.btnPerfilInventario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPerfilInventario.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfilInventario.Location = new System.Drawing.Point(536, 10);
-            this.btnPerfilInventario.Name = "btnPerfilInventario";
-            this.btnPerfilInventario.Size = new System.Drawing.Size(114, 23);
-            this.btnPerfilInventario.TabIndex = 0;
-            this.btnPerfilInventario.Text = "Administrador";
-            this.btnPerfilInventario.UseVisualStyleBackColor = true;
             // 
             // pnlCentral
             // 
@@ -209,7 +194,6 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             this.pnlBotonesMenu.ResumeLayout(false);
-            this.pnlPerfilInventario.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -224,7 +208,6 @@
         private System.Windows.Forms.Button btnIniciInventario;
         private System.Windows.Forms.Label lblLogoFacturacion;
         private System.Windows.Forms.Panel pnlPerfilInventario;
-        private System.Windows.Forms.Button btnPerfilInventario;
         private System.Windows.Forms.Panel pnlMenu;
         public System.Windows.Forms.Panel pnlCentral;
     }

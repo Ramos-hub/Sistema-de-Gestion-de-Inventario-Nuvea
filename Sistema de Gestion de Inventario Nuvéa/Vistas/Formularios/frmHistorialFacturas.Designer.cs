@@ -108,6 +108,7 @@
             // 
             this.txtClienteHistorial.Location = new System.Drawing.Point(429, 52);
             this.txtClienteHistorial.Name = "txtClienteHistorial";
+            this.txtClienteHistorial.ShortcutsEnabled = false;
             this.txtClienteHistorial.Size = new System.Drawing.Size(141, 20);
             this.txtClienteHistorial.TabIndex = 4;
             // 

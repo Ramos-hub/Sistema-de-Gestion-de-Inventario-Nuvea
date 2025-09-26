@@ -59,11 +59,11 @@ namespace Vistas.Formularios
             if (!string.IsNullOrWhiteSpace(txtClienteHistorial.Text))
                 sql += " and Cliente like '%" + txtClienteHistorial.Text + "%'";
 
-            // estado (Pagada / Pendiente). si está vacío, no filtra
+            // estado (Pagada / Pendiente)
             if (!string.IsNullOrWhiteSpace(cmbEstadoHistorial.Text))
                 sql += " and Estado = '" + cmbEstadoHistorial.Text + "'";
 
-            // fecha exacta del único DateTimePicker (si quieres que siempre filtre por la fecha, deja esta línea)
+            // fecha exacta del date time
             DateTime f = dtpRangoHistorial.Value.Date;
             sql += " and FechaFacturacion = '" + f.ToString("yyyy-MM-dd") + "'";
 

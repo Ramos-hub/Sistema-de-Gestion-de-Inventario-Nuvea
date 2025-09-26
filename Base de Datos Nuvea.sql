@@ -4,7 +4,7 @@ use Nuvea
 go
 create table Rol(
 idRol int identity (1,1) primary key,
-nombreRol varchar(25)
+nombreRol varchar(50)
 );
 go
 insert into Rol values ('Administrador'),('Usuario'),('Usuario'),
@@ -17,9 +17,9 @@ go
 Create table Usuario(
 idUsuario int identity (1,1) primary key,
 idRol int,
-nombre varchar(50),
-clave varchar (20),
-correo varchar(50),
+nombre varchar(100),
+clave varchar (100),
+correo varchar(100),
 telefono varchar(8),
 foreign key (idRol) references Rol (idRol)
 );
@@ -36,10 +36,10 @@ go
 
 Create table Proveedor(
 idProveedor int identity(1,1) primary key,
-nombreProveedor varchar (50),
-nombreTrabajador varchar (50),
+nombreProveedor varchar (100),
+nombreTrabajador varchar (100),
 telefono varchar (8),
-direccion varchar(50)
+direccion varchar(100)
 );
 go
 insert into Proveedor values ('Laboratorios Nuvéa', 'María Rivera','71234567', 'Av. Primavera #10'),
@@ -55,7 +55,7 @@ go
 
 create table Categoria (
 idCategoria int identity (1,1) primary key,
-nombreCat varchar(25),
+nombreCat varchar(50),
 );
 go
 insert into Categoria values ('Cremas'),('Perfumes'),('Jabones'),('Shampoo'),('Maquillaje'),
@@ -64,10 +64,10 @@ insert into Categoria values ('Cremas'),('Perfumes'),('Jabones'),('Shampoo'),('M
 go
 create table Cliente(
 idCliente int identity (1,1) primary key,
-nombreCliente varchar (40),
+nombreCliente varchar (60),
 dui char(10)unique,
 telefono varchar (8),
-correo varchar (50),
+correo varchar (100),
 fechaRegistro date
 );
 go
@@ -83,13 +83,13 @@ go
 
 create table Producto(
 idProducto int identity (1,1) primary key,
-nombreProduc varchar(40),
+nombreProduc varchar(60),
 fechaIngreso date, 
 --bit solo almacena 0, 1
 estado bit, 
 cantidadStock int,
 --un comando que permite guardar informacion de valores entero muy grandes
-codigoBarras bigint,
+codigoBarras bigint unique,
 precioProduc decimal (5,2),
 idCategoria int,
 idProveedor int,
@@ -183,3 +183,4 @@ inner join dbo.Cliente  c on c.idCliente  = df.idCliente
 inner join dbo.Producto p on p.idProducto = df.idProducto;
 go
     select *from vw_facturas_simple
+

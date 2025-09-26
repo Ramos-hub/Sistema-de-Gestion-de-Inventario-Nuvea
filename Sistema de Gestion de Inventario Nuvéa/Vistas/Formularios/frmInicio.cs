@@ -49,9 +49,6 @@ namespace Vistas.Formularios
             fr.pnlCentral.Controls.Add(formularioPintar);
             formularioPintar.BringToFront();
             formularioPintar.Show();
-
-
-
         }
 
         private void btnIrInventario_Click(object sender, EventArgs e)

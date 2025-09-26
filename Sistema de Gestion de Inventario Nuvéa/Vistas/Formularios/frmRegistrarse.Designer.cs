@@ -38,6 +38,8 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.txtNumTel = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +47,7 @@
             // 
             this.btnCrearCuenta.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(310, 325);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(306, 340);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(188, 56);
             this.btnCrearCuenta.TabIndex = 17;
@@ -55,15 +57,17 @@
             // 
             // txtCorreoRegis
             // 
-            this.txtCorreoRegis.Location = new System.Drawing.Point(260, 233);
+            this.txtCorreoRegis.Location = new System.Drawing.Point(260, 199);
             this.txtCorreoRegis.Name = "txtCorreoRegis";
+            this.txtCorreoRegis.ShortcutsEnabled = false;
             this.txtCorreoRegis.Size = new System.Drawing.Size(284, 20);
             this.txtCorreoRegis.TabIndex = 16;
             // 
             // txtNombreUsuarioRegis
             // 
-            this.txtNombreUsuarioRegis.Location = new System.Drawing.Point(260, 182);
+            this.txtNombreUsuarioRegis.Location = new System.Drawing.Point(260, 148);
             this.txtNombreUsuarioRegis.Name = "txtNombreUsuarioRegis";
+            this.txtNombreUsuarioRegis.ShortcutsEnabled = false;
             this.txtNombreUsuarioRegis.Size = new System.Drawing.Size(284, 20);
             this.txtNombreUsuarioRegis.TabIndex = 15;
             // 
@@ -71,7 +75,7 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(257, 214);
+            this.lblCorreo.Location = new System.Drawing.Point(257, 180);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(104, 16);
             this.lblCorreo.TabIndex = 13;
@@ -81,7 +85,7 @@
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(257, 163);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(257, 129);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(109, 16);
             this.lblNombreUsuario.TabIndex = 12;
@@ -91,7 +95,7 @@
             // 
             this.lblRegistrarse.AutoSize = true;
             this.lblRegistrarse.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrarse.Location = new System.Drawing.Point(327, 116);
+            this.lblRegistrarse.Location = new System.Drawing.Point(327, 89);
             this.lblRegistrarse.Name = "lblRegistrarse";
             this.lblRegistrarse.Size = new System.Drawing.Size(141, 31);
             this.lblRegistrarse.TabIndex = 11;
@@ -99,16 +103,18 @@
             // 
             // txtRegistrarseContra
             // 
-            this.txtRegistrarseContra.Location = new System.Drawing.Point(260, 284);
+            this.txtRegistrarseContra.Location = new System.Drawing.Point(260, 250);
             this.txtRegistrarseContra.Name = "txtRegistrarseContra";
+            this.txtRegistrarseContra.ShortcutsEnabled = false;
             this.txtRegistrarseContra.Size = new System.Drawing.Size(284, 20);
             this.txtRegistrarseContra.TabIndex = 19;
+            this.txtRegistrarseContra.UseSystemPasswordChar = true;
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(257, 265);
+            this.lblContraseña.Location = new System.Drawing.Point(257, 231);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(66, 16);
             this.lblContraseña.TabIndex = 18;
@@ -119,7 +125,7 @@
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(473, 387);
+            this.btnVolver.Location = new System.Drawing.Point(484, 402);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(116, 36);
             this.btnVolver.TabIndex = 20;
@@ -130,18 +136,38 @@
             // pbLogo
             // 
             this.pbLogo.Image = global::Vistas.Properties.Resources.Logo_Nuvéa;
-            this.pbLogo.Location = new System.Drawing.Point(260, 22);
+            this.pbLogo.Location = new System.Drawing.Point(260, -5);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(253, 91);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 10;
             this.pbLogo.TabStop = false;
             // 
+            // txtNumTel
+            // 
+            this.txtNumTel.Location = new System.Drawing.Point(260, 301);
+            this.txtNumTel.Name = "txtNumTel";
+            this.txtNumTel.ShortcutsEnabled = false;
+            this.txtNumTel.Size = new System.Drawing.Size(284, 20);
+            this.txtNumTel.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(257, 282);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Num.Teléfono";
+            // 
             // frmRegistrarse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNumTel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.txtRegistrarseContra);
             this.Controls.Add(this.lblContraseña);
@@ -172,5 +198,7 @@
         private System.Windows.Forms.TextBox txtRegistrarseContra;
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.TextBox txtNumTel;
+        private System.Windows.Forms.Label label1;
     }
 }

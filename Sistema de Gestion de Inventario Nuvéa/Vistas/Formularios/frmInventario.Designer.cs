@@ -45,9 +45,6 @@
             this.btnEditar_Inventario = new System.Windows.Forms.Button();
             this.btnEliminar_Inventario = new System.Windows.Forms.Button();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.pbEliminar = new System.Windows.Forms.PictureBox();
-            this.pbEditar = new System.Windows.Forms.PictureBox();
-            this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,6 +61,9 @@
             this.txtNombreProduc = new System.Windows.Forms.TextBox();
             this.btnLimpiarInven = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbEliminar = new System.Windows.Forms.PictureBox();
+            this.pbEditar = new System.Windows.Forms.PictureBox();
+            this.pbAgregar = new System.Windows.Forms.PictureBox();
             this.pblInfoInventario.SuspendLayout();
             this.pnlProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProductos)).BeginInit();
@@ -72,11 +72,11 @@
             this.pnlVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pblInfoInventario
@@ -269,48 +269,12 @@
             this.dgvInventario.AllowUserToDeleteRows = false;
             this.dgvInventario.BackgroundColor = System.Drawing.Color.White;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Location = new System.Drawing.Point(12, 202);
+            this.dgvInventario.Location = new System.Drawing.Point(-28, 192);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(776, 294);
             this.dgvInventario.TabIndex = 18;
-            // 
-            // pbEliminar
-            // 
-            this.pbEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pbEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEliminar.Image = global::Vistas.Properties.Resources.seo_social_web_network_internet_262_icon_icons1;
-            this.pbEliminar.Location = new System.Drawing.Point(730, 522);
-            this.pbEliminar.Name = "pbEliminar";
-            this.pbEliminar.Size = new System.Drawing.Size(34, 26);
-            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEliminar.TabIndex = 17;
-            this.pbEliminar.TabStop = false;
-            // 
-            // pbEditar
-            // 
-            this.pbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pbEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEditar.Image = global::Vistas.Properties.Resources.edit_icon_128873;
-            this.pbEditar.Location = new System.Drawing.Point(607, 522);
-            this.pbEditar.Name = "pbEditar";
-            this.pbEditar.Size = new System.Drawing.Size(34, 26);
-            this.pbEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEditar.TabIndex = 16;
-            this.pbEditar.TabStop = false;
-            // 
-            // pbAgregar
-            // 
-            this.pbAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAgregar.Image = global::Vistas.Properties.Resources._1904677_add_addition_calculate_charge_create_new_plus_122527;
-            this.pbAgregar.Location = new System.Drawing.Point(475, 522);
-            this.pbAgregar.Name = "pbAgregar";
-            this.pbAgregar.Size = new System.Drawing.Size(34, 26);
-            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAgregar.TabIndex = 15;
-            this.pbAgregar.TabStop = false;
             // 
             // label7
             // 
@@ -409,6 +373,7 @@
             // 
             this.txtPrecioProduc.Location = new System.Drawing.Point(812, 273);
             this.txtPrecioProduc.Name = "txtPrecioProduc";
+            this.txtPrecioProduc.ShortcutsEnabled = false;
             this.txtPrecioProduc.Size = new System.Drawing.Size(126, 20);
             this.txtPrecioProduc.TabIndex = 21;
             // 
@@ -416,6 +381,7 @@
             // 
             this.txtCodigoBarras.Location = new System.Drawing.Point(984, 218);
             this.txtCodigoBarras.Name = "txtCodigoBarras";
+            this.txtCodigoBarras.ShortcutsEnabled = false;
             this.txtCodigoBarras.Size = new System.Drawing.Size(118, 20);
             this.txtCodigoBarras.TabIndex = 20;
             // 
@@ -423,6 +389,7 @@
             // 
             this.txtNombreProduc.Location = new System.Drawing.Point(812, 218);
             this.txtNombreProduc.Name = "txtNombreProduc";
+            this.txtNombreProduc.ShortcutsEnabled = false;
             this.txtNombreProduc.Size = new System.Drawing.Size(123, 20);
             this.txtNombreProduc.TabIndex = 19;
             // 
@@ -437,7 +404,7 @@
             this.btnLimpiarInven.Text = "Limpiar";
             this.btnLimpiarInven.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiarInven.UseVisualStyleBackColor = false;
-
+            this.btnLimpiarInven.Click += new System.EventHandler(this.btnLimpiarInven_Click);
             // 
             // pictureBox1
             // 
@@ -446,6 +413,42 @@
             this.pictureBox1.Size = new System.Drawing.Size(51, 21);
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
+            // 
+            // pbEliminar
+            // 
+            this.pbEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pbEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbEliminar.Image = global::Vistas.Properties.Resources.seo_social_web_network_internet_262_icon_icons1;
+            this.pbEliminar.Location = new System.Drawing.Point(730, 522);
+            this.pbEliminar.Name = "pbEliminar";
+            this.pbEliminar.Size = new System.Drawing.Size(34, 26);
+            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEliminar.TabIndex = 17;
+            this.pbEliminar.TabStop = false;
+            // 
+            // pbEditar
+            // 
+            this.pbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pbEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbEditar.Image = global::Vistas.Properties.Resources.edit_icon_128873;
+            this.pbEditar.Location = new System.Drawing.Point(607, 522);
+            this.pbEditar.Name = "pbEditar";
+            this.pbEditar.Size = new System.Drawing.Size(34, 26);
+            this.pbEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEditar.TabIndex = 16;
+            this.pbEditar.TabStop = false;
+            // 
+            // pbAgregar
+            // 
+            this.pbAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbAgregar.Image = global::Vistas.Properties.Resources._1904677_add_addition_calculate_charge_create_new_plus_122527;
+            this.pbAgregar.Location = new System.Drawing.Point(475, 522);
+            this.pbAgregar.Name = "pbAgregar";
+            this.pbAgregar.Size = new System.Drawing.Size(34, 26);
+            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAgregar.TabIndex = 15;
+            this.pbAgregar.TabStop = false;
             // 
             // frmInventario
             // 
@@ -477,6 +480,10 @@
             this.Controls.Add(this.btnEditar_Inventario);
             this.Controls.Add(this.btnAgregar_Inventario);
             this.Controls.Add(this.btnEliminar_Inventario);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1130, 599);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1130, 599);
             this.Name = "frmInventario";
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);
@@ -491,11 +498,11 @@
             this.pnlVentas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadStock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
