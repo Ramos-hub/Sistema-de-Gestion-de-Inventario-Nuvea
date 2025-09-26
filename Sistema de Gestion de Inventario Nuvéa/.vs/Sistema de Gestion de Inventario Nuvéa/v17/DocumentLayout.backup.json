@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\",
+  "WorkspaceRootPath": "E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\modelos\\entidades\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|e:\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmganacias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmganacias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuv-a-ptc-2025-\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmganacias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmganacias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmganacias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmganacias.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmganacias.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,49 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmGanacias.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmGanacias.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vistas\\Formularios\\frmGanacias.cs [Dise\u00F1o]",
+              "Title": "frmGanacias.Designer.cs",
+              "DocumentMoniker": "E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.Designer.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmGanacias.Designer.cs",
+              "ToolTip": "E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.Designer.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmGanacias.Designer.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAjwIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T02:22:00.354Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmProveedores.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmProveedores.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmProveedores.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmProveedores.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmProveedores.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwHQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T00:29:00.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T03:19:16.381Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Proveedor.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\Proveedor.cs",
-              "RelativeDocumentMoniker": "Modelos\\Entidades\\Proveedor.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\Proveedor.cs",
-              "RelativeToolTip": "Modelos\\Entidades\\Proveedor.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowEkAAABKAAAAAAAAAA==",
+              "Title": "frmGanacias.cs",
+              "DocumentMoniker": "E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmGanacias.cs",
+              "ToolTip": "E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmGanacias.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAQwHoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T00:05:18.574Z",
+              "WhenOpened": "2025-09-04T03:18:57.334Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmGanacias.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmGanacias.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuv-a-PTC-2025-\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmGanacias.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T02:22:00.354Z"
             }
           ]
         }
