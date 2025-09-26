@@ -4,7 +4,7 @@ use Nuvea
 go
 create table Rol(
 idRol int identity (1,1) primary key,
-nombreRol varchar(50)
+nombreRol varchar(25)
 );
 go
 insert into Rol values ('Administrador'),('Usuario'),('Usuario'),
@@ -55,7 +55,7 @@ go
 
 create table Categoria (
 idCategoria int identity (1,1) primary key,
-nombreCat varchar(50),
+nombreCat varchar(60),
 );
 go
 insert into Categoria values ('Cremas'),('Perfumes'),('Jabones'),('Shampoo'),('Maquillaje'),
@@ -64,7 +64,7 @@ insert into Categoria values ('Cremas'),('Perfumes'),('Jabones'),('Shampoo'),('M
 go
 create table Cliente(
 idCliente int identity (1,1) primary key,
-nombreCliente varchar (60),
+nombreCliente varchar (100),
 dui char(10)unique,
 telefono varchar (8),
 correo varchar (100),
@@ -89,7 +89,7 @@ fechaIngreso date,
 estado bit, 
 cantidadStock int,
 --un comando que permite guardar informacion de valores entero muy grandes
-codigoBarras bigint unique,
+codigoBarras bigint,
 precioProduc decimal (5,2),
 idCategoria int,
 idProveedor int,
@@ -140,7 +140,7 @@ insert into detalleFactura (subtotal, cantidadProduct, idCompra, idProducto, idC
 (19.98, 2, 1, 1,1, 1,'2024-01-09'),(14.50, 1, 2, 2, 2, 1, '2024-02-25'),(11.97, 3, 3, 3, 3, 1, '2024-01-05'),(27.00, 4, 4, 4, 4, 1, '2024-01-11'),(23.98, 2, 5, 5, 5, 1, '2025-02-20'),
 (27.00, 2, 6, 6, 6, 1,'2024-01-01'),(5.75, 1, 7, 7, 7, 1,'2025-11-25'),(24.00, 2, 8, 8, 8, 1,'2024-01-20'),(21.75, 3, 9, 9, 9, 1,'2024-02-25'),(31.60, 2, 10, 10, 10, 1, '2024-04-25'),
 (8.90, 1, 11, 11, 11, 1, '2024-10-25'),(30.00, 3, 12, 12, 12, 1, '2024-09-25'),(19.35, 3, 13, 13, 13, 1, '2024-08-25'),(23.96, 4, 14, 14, 14, 1, '2024-07-25'),(9.00, 2, 15, 15, 15, 1, '2024-05-25');
-
+go
 
 select*from Rol
 select*from Usuario
@@ -150,10 +150,10 @@ select*from Categoria
 select*from Compra
 select*from detalleFactura
 select*from Cliente
-
+go
 SELECT ISNULL(SUM(subtotal), 0) AS total_vendido
 FROM detalleFactura;
-
+go
 create or alter view vw_Inventario as select p.idProducto, p.nombreProduc as Producto,
     p.fechaIngreso as FechaIngreso, p.cantidadStock as Stock, p.codigoBarras,
     p.precioProduc as Precio, c.idCategoria, c.nombreCat as Categoria,
@@ -161,11 +161,11 @@ create or alter view vw_Inventario as select p.idProducto, p.nombreProduc as Pro
     from Producto p
     inner join Categoria c on p.idCategoria = c.idCategoria
     inner join Proveedor pr on p.idProveedor = pr.idProveedor;
-
+	go
 select *from vw_Inventario
 
 ------------**************---------------------
-
+go
 create or alter view vw_facturas_simple as
 select
   c.nombreCliente                         as Cliente,
@@ -183,4 +183,138 @@ inner join dbo.Cliente  c on c.idCliente  = df.idCliente
 inner join dbo.Producto p on p.idProducto = df.idProducto;
 go
     select *from vw_facturas_simple
+
+go
+CREATE OR ALTER PROCEDURE spFac_EliminarDetalle
+ @idDetalleFactura INT
+AS
+BEGIN
+  -- guardamos lo que se va a borrar para devolver stock
+  DECLARE @p INT, @c INT;
+  SELECT @p = idProducto, @c = cantidadProduct
+  FROM detalleFactura
+  WHERE idDetalleFactura = @idDetalleFactura;
+
+  -- borramos el detalle
+  DELETE FROM detalleFactura
+  WHERE idDetalleFactura = @idDetalleFactura;
+
+  -- devolvemos el stock
+  UPDATE Producto
+     SET cantidadStock = cantidadStock + @c
+   WHERE idProducto = @p;
+END
+go
+
+CREATE OR ALTER PROCEDURE spFac_EditarDetalle
+ @idDetalleFactura INT,
+ @subtotal        DECIMAL(10,2),
+ @cantidadProduct INT,
+ @idCompra        INT,
+ @idProducto      INT,
+ @idCliente       INT,
+ @estado          BIT,
+ @fecha           DATE
+AS
+BEGIN
+  -- 1) agarramos lo que tenía antes (para devolver stock viejo)
+  DECLARE @oldCant INT, @oldProd INT;
+  SELECT @oldCant = cantidadProduct,
+         @oldProd = idProducto
+  FROM detalleFactura
+  WHERE idDetalleFactura = @idDetalleFactura;
+
+  -- 2) devolver al stock del producto anterior
+  UPDATE Producto
+     SET cantidadStock = cantidadStock + @oldCant
+   WHERE idProducto = @oldProd;
+
+  -- 3) descontar del producto nuevo la cantidad nueva
+  UPDATE Producto
+     SET cantidadStock = cantidadStock - @cantidadProduct
+   WHERE idProducto = @idProducto;
+
+  -- 4) actualizar el registro con lo que vino del form
+  UPDATE detalleFactura
+     SET subtotal        = @subtotal,
+         cantidadProduct = @cantidadProduct,
+         idCompra        = @idCompra,
+         idProducto      = @idProducto,
+         idCliente       = @idCliente,
+         estado          = @estado,
+         fecha           = @fecha
+   WHERE idDetalleFactura = @idDetalleFactura;
+END
+go
+
+CREATE OR ALTER PROCEDURE spFac_Listar
+AS
+BEGIN
+  SELECT * FROM vw_facturas_simple ORDER BY FechaFacturacion DESC;
+END
+go
+
+CREATE OR ALTER PROCEDURE spFac_AgregarDetalle
+ @subtotal        DECIMAL(10,2),
+ @cantidadProduct INT,
+ @idCompra        INT,
+ @idProducto      INT,
+ @idCliente       INT,
+ @estado          BIT,
+ @fecha           DATE
+AS
+BEGIN
+  -- insertamos el detalle con los datos que vienen del form
+  INSERT INTO detalleFactura (subtotal, cantidadProduct, idCompra, idProducto, idCliente, estado, fecha)
+  VALUES (@subtotal, @cantidadProduct, @idCompra, @idProducto, @idCliente, @estado, @fecha);
+
+  -- bajamos el stock del producto que se vendió
+  UPDATE Producto
+     SET cantidadStock = cantidadStock - @cantidadProduct
+   WHERE idProducto = @idProducto;
+END
+go
+
+CREATE OR ALTER PROCEDURE spProd_Editar
+ @idProducto    INT,
+ @nombreProduc  VARCHAR(40),
+ @fechaIngreso  DATE,
+ @estado        BIT,
+ @cantidadStock INT,
+ @codigoBarras  BIGINT,
+ @precioProduc  DECIMAL(5,2),
+ @idCategoria   INT,
+ @idProveedor   INT
+AS
+BEGIN
+  UPDATE Producto
+    SET nombreProduc  = @nombreProduc,
+        fechaIngreso  = @fechaIngreso,
+        estado        = @estado,
+        cantidadStock = @cantidadStock,
+        codigoBarras  = @codigoBarras,
+        precioProduc  = @precioProduc,
+        idCategoria   = @idCategoria,
+        idProveedor   = @idProveedor
+  WHERE idProducto = @idProducto;
+END
+go
+
+CREATE OR ALTER PROCEDURE spProd_Agregar
+ @nombreProduc  VARCHAR(40),
+ @fechaIngreso  DATE,
+ @estado        BIT,
+ @cantidadStock INT,
+ @codigoBarras  BIGINT,
+ @precioProduc  DECIMAL(5,2),
+ @idCategoria   INT,
+ @idProveedor   INT
+AS
+BEGIN
+  INSERT INTO Producto(nombreProduc,fechaIngreso,estado,cantidadStock,codigoBarras,precioProduc,idCategoria,idProveedor)
+  VALUES(@nombreProduc,@fechaIngreso,@estado,@cantidadStock,@codigoBarras,@precioProduc,@idCategoria,@idProveedor);
+
+  -- si quieres leer el id creado desde C#, puedes hacer ExecuteScalar con este SELECT:
+  SELECT CAST(SCOPE_IDENTITY() AS INT) AS idCreado;
+END
 
