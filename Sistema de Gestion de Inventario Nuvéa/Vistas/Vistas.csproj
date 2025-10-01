@@ -51,6 +51,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +74,12 @@
     </Compile>
     <Compile Include="Formularios\frmFacturaEmpleado.Designer.cs">
       <DependentUpon>frmFacturaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGanancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGanancias.Designer.cs">
+      <DependentUpon>frmGanancias.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmHistorialFacturas.cs">
       <SubType>Form</SubType>
@@ -147,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFacturaEmpleado.resx">
       <DependentUpon>frmFacturaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGanancias.resx">
+      <DependentUpon>frmGanancias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmHistorialFacturas.resx">
       <DependentUpon>frmHistorialFacturas.cs</DependentUpon>

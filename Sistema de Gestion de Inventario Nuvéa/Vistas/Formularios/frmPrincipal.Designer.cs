@@ -82,6 +82,7 @@
             this.btnGanancias.TabIndex = 4;
             this.btnGanancias.Text = "Ganancias";
             this.btnGanancias.UseVisualStyleBackColor = false;
+            this.btnGanancias.Click += new System.EventHandler(this.btnGanancias_Click);
             // 
             // btnInventarioHistorial
             // 

@@ -63,5 +63,9 @@ namespace Vistas.Formularios
             abrirForm(new frmHistorialFacturas());
         }
 
+        private void btnGanancias_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmGanancias());
+        }
     }
 }
