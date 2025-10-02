@@ -43,6 +43,12 @@ namespace Vistas.Formularios
 
                     using (SqlDataReader rd = cmd.ExecuteReader())
                     {
+                        if (!VerificarValidacion(out var u, out var error))
+                        {
+                            MessageBox.Show(error, "Validación");
+                            return;
+                        }
+
                         if (!rd.Read())
                         {
                             MessageBox.Show("Usuario o contraseña incorrectos");
@@ -81,7 +87,6 @@ namespace Vistas.Formularios
                             return;
                         }
 
-                        
                         MessageBox.Show("Bienvenido al Sistema ❤", "Bienvenido",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -119,6 +124,19 @@ namespace Vistas.Formularios
             frmOlivdasteContraseña olviContra = new frmOlivdasteContraseña();
             olviContra.Show();
             this.Hide();
+        }
+        private bool VerificarValidacion(out Usuario u, out string error)
+        {
+            u = null;
+            error = "";
+
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            { error = "Ingrese su Usuario"; return false; }
+
+            if (string.IsNullOrWhiteSpace(txtClave.Text))
+            { error = "Ingrese su Contraseña"; return false; }
+
+            return true;
         }
 
     }

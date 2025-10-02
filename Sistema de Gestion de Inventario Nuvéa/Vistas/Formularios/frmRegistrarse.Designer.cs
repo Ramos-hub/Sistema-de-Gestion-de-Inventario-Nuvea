@@ -72,6 +72,7 @@
             this.txtNombreUsuarioRegis.ShortcutsEnabled = false;
             this.txtNombreUsuarioRegis.Size = new System.Drawing.Size(284, 20);
             this.txtNombreUsuarioRegis.TabIndex = 15;
+            this.txtNombreUsuarioRegis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreUsuarioRegis_KeyPress);
             // 
             // lblCorreo
             // 
@@ -154,6 +155,7 @@
             this.txtNumTel.ShortcutsEnabled = false;
             this.txtNumTel.Size = new System.Drawing.Size(284, 20);
             this.txtNumTel.TabIndex = 22;
+            this.txtNumTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumTel_KeyPress);
             // 
             // label1
             // 
