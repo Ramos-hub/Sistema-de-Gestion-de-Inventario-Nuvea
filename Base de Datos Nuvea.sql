@@ -24,7 +24,7 @@ telefono varchar(8),
 foreign key (idRol) references Rol (idRol)
 );
 go
-insert into Usuario values (1, 'Carlos Ramirez', 'Xy8d$3Lz', 'carlos.ramirez@nuvea.com', '70110001'),
+insert into Usuario values (1, 'Carlos Ramirez', 'Xy8d$3Lz', 'antodie96884@gmail.com', '70110001'),
 (2, 'Ana Lopez', 'qP9#Km72', 'ana.lopez@nuvea.com', '70110002'),(2, 'Luis Martinez', 'Uv3@pl09', 'luis.martinez@nuvea.com', '70110003'),
 (2, 'Sofia Hernandez', 'bN1!xT63', 'sofia.hernandez@nuvea.com', '70110004'),(2, 'Javier Gomez', 'Zn2&wr88', 'javier.gomez@nuvea.com', '70110005'),
 (2, 'Maria Castro', 'dT4^lk17', 'maria.castro@nuvea.com', '70110006'),(2, 'Andres Perez', 'kV6@me44', 'andres.perez@nuvea.com', '70110007'),

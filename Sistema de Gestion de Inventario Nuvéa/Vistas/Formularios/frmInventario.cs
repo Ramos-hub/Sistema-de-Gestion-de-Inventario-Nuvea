@@ -28,6 +28,7 @@ namespace Vistas.Formularios
             CargarProductos();
             CargarProveedores();
             CargarCategorias();
+            CargarDatos();
         }
         private void CargarProductos()
         {
@@ -280,6 +281,34 @@ namespace Vistas.Formularios
             {
                 MessageBox.Show("Error al limpiar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        private void CargarDatos()
+        {
+            using (SqlConnection conexion = ConexionDB.Conectar())
+            {
+                try
+                {
+                    // Total Usuarios
+                    SqlCommand cmdUsuarios = new SqlCommand("SELECT COUNT(*) FROM Usuario", conexion);
+                    int totalUsuarios = (int)cmdUsuarios.ExecuteScalar();
+                    lblResultado_Usuarios.Text = totalUsuarios.ToString();
+
+                    // Total Productos
+                    SqlCommand cmdProductos = new SqlCommand("SELECT COUNT(*) FROM Producto", conexion);
+                    int totalProductos = (int)cmdProductos.ExecuteScalar();
+                    lblResultado_Productos.Text = totalProductos.ToString();
+
+                    // Total Ventas (suma de compras)
+                    SqlCommand cmdVentas = new SqlCommand("SELECT SUM(total) FROM Compra", conexion);
+                    object ventas = cmdVentas.ExecuteScalar();
+                    lblResultado_Ventas.Text = ventas != DBNull.Value ? ventas.ToString() : "0";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error cargando datos: " + ex.Message);
+                }
             }
         }
     }

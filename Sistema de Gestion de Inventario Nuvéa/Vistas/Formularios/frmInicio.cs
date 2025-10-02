@@ -22,6 +22,7 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
             this.Load += new EventHandler(frmInicio_Load);
+            this.Load += frmInicio_Load; // por si no lo tenías
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
@@ -110,7 +111,7 @@ namespace Vistas.Formularios
                     //ISNULL(SUM(subtotal), 0) asegura que, en lugar de NULL, devuelva 0.
                     string consulta = "select isnull(sum(subtotal), 0) from detalleFactura";
                     SqlCommand cmd = new SqlCommand(consulta, conexion);
-                    { 
+                    {
                     decimal total = Convert.ToDecimal(cmd.ExecuteScalar());
                         lblResultadoVentasIni.Text = total.ToString("0.00");
         
@@ -161,6 +162,13 @@ namespace Vistas.Formularios
                 MessageBox.Show("Error al obtener el total de proveedores: " + ex.Message);
             }
         
+        }
+
+        private void btnVerProveedores_Click(object sender, EventArgs e)
+        {
+            frmProveedores irProveedores = new frmProveedores();
+            irProveedores.Show();
+            this.Hide();
         }
     }
 }

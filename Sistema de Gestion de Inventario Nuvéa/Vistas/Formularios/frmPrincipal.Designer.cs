@@ -191,6 +191,7 @@
             this.Controls.Add(this.pnlPerfilInventario);
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();

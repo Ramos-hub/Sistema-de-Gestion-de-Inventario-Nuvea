@@ -100,6 +100,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(249, 188);
+            this.txtUsuario.MaxLength = 50;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(292, 20);
             this.txtUsuario.TabIndex = 7;
@@ -107,6 +108,7 @@
             // txtClave
             // 
             this.txtClave.Location = new System.Drawing.Point(249, 261);
+            this.txtClave.MaxLength = 50;
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(292, 20);
             this.txtClave.TabIndex = 8;
@@ -154,6 +156,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).EndInit();
             this.ResumeLayout(false);

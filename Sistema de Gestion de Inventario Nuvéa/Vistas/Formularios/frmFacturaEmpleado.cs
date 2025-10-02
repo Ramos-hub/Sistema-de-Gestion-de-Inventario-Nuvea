@@ -21,12 +21,7 @@ namespace Vistas.Formularios
 
         private void frmFacturaEmpleado_Load(object sender, EventArgs e)
         {
-            cmbEstadoHistorialEmpleado.Items.Add("Pagada");
-            cmbEstadoHistorialEmpleado.Items.Add("Pendiente");
-            cmbEstadoHistorialEmpleado.Items.Add("");
-
             dtpRangoHistorialEmpleado.Value = DateTime.Today;
-
             CargarFacturas();
         }
         private void CargarFacturas()
@@ -48,50 +43,48 @@ namespace Vistas.Formularios
 
             conexion.Close();
         }
-
-        private void BuscarFacturas()
-        {
-            SqlConnection conexion = ConexionDB.Conectar();
-
-            string sql = @"select Cliente, Producto, FechaFacturacion, Estado, Subtotal, idDetalleFactura
-                   from vw_facturas_simple
-                   where 1=1";
-
-            // cliente
-            if (!string.IsNullOrWhiteSpace(txtClienteHistorialEmpleado.Text))
-                sql += " and Cliente like '%" + txtClienteHistorialEmpleado.Text + "%'";
-
-            // estado (Pagada / Pendiente)
-            if (!string.IsNullOrWhiteSpace(cmbEstadoHistorialEmpleado.Text))
-                sql += " and Estado = '" + cmbEstadoHistorialEmpleado.Text + "'";
-
-            // fecha exacta del date time
-            DateTime f = dtpRangoHistorialEmpleado.Value.Date;
-            sql += " and FechaFacturacion = '" + f.ToString("yyyy-MM-dd") + "'";
-
-            SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            dgvMostrarHistorialFacturasEmpleado.DataSource = dt;
-            dgvMostrarHistorialFacturasEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            if (dgvMostrarHistorialFacturasEmpleado.Columns.Contains("idDetalleFactura"))
-                dgvMostrarHistorialFacturasEmpleado.Columns["idDetalleFactura"].Visible = false;
-
-            conexion.Close();
-        }
         private void LimpiarCampos()
         {
-            txtClienteHistorialEmpleado.Text = "";
-            cmbEstadoHistorialEmpleado.SelectedIndex = -1; // quita selección
-            cmbEstadoHistorialEmpleado.Text = ""; // por si acaso
             dtpRangoHistorialEmpleado.Value = DateTime.Today; // vuelve a hoy
         }
 
         private void btnAplicarFiltrosEmpleado_Click(object sender, EventArgs e)
         {
-            BuscarFacturas();
+            DateTime dia = dtpRangoHistorialEmpleado.Value.Date;
+            DateTime diaSiguiente = dia.AddDays(1);
+
+            string sql = @"SELECT df.idDetalleFactura AS Id, df.fecha AS Fecha,
+               c.nombreCliente AS Cliente, p.nombreProduc AS Producto,
+               df.cantidadProduct AS Cantidad, df.subtotal AS Subtotal
+        FROM detalleFactura df
+        inner join Producto p ON p.idProducto = df.idProducto
+        inner join Cliente  c ON c.idCliente  = df.idCliente
+        where df.estado = 1
+          and df.fecha >= @d
+          and df.fecha <  @dSig
+        ORDER BY df.fecha DESC, df.idDetalleFactura DESC;";
+
+            try
+            {
+                SqlConnection conexion = ConexionDB.Conectar();
+                using (SqlCommand cmd = new SqlCommand(sql, conexion))
+                {
+                    cmd.Parameters.Add("@d", SqlDbType.Date).Value = dia;
+                    cmd.Parameters.Add("@dSig", SqlDbType.Date).Value = diaSiguiente;
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvMostrarHistorialFacturasEmpleado.DataSource = dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar historial: " + ex.Message);
+            }
+            LimpiarCampos();
             LimpiarCampos();
         }
     }

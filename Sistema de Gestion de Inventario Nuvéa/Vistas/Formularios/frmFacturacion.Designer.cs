@@ -119,6 +119,7 @@
             // txtTotalCrearFactura
             // 
             this.txtTotalCrearFactura.Location = new System.Drawing.Point(7, 290);
+            this.txtTotalCrearFactura.MaxLength = 50;
             this.txtTotalCrearFactura.Name = "txtTotalCrearFactura";
             this.txtTotalCrearFactura.ShortcutsEnabled = false;
             this.txtTotalCrearFactura.Size = new System.Drawing.Size(199, 20);
@@ -181,6 +182,7 @@
             // txtNombreClienteCrearFactura
             // 
             this.txtNombreClienteCrearFactura.Location = new System.Drawing.Point(8, 41);
+            this.txtNombreClienteCrearFactura.MaxLength = 50;
             this.txtNombreClienteCrearFactura.Name = "txtNombreClienteCrearFactura";
             this.txtNombreClienteCrearFactura.ShortcutsEnabled = false;
             this.txtNombreClienteCrearFactura.Size = new System.Drawing.Size(200, 20);

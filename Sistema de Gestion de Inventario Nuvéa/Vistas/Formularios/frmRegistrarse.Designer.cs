@@ -58,6 +58,7 @@
             // txtCorreoRegis
             // 
             this.txtCorreoRegis.Location = new System.Drawing.Point(260, 199);
+            this.txtCorreoRegis.MaxLength = 100;
             this.txtCorreoRegis.Name = "txtCorreoRegis";
             this.txtCorreoRegis.ShortcutsEnabled = false;
             this.txtCorreoRegis.Size = new System.Drawing.Size(284, 20);
@@ -66,6 +67,7 @@
             // txtNombreUsuarioRegis
             // 
             this.txtNombreUsuarioRegis.Location = new System.Drawing.Point(260, 148);
+            this.txtNombreUsuarioRegis.MaxLength = 50;
             this.txtNombreUsuarioRegis.Name = "txtNombreUsuarioRegis";
             this.txtNombreUsuarioRegis.ShortcutsEnabled = false;
             this.txtNombreUsuarioRegis.Size = new System.Drawing.Size(284, 20);
@@ -104,6 +106,7 @@
             // txtRegistrarseContra
             // 
             this.txtRegistrarseContra.Location = new System.Drawing.Point(260, 250);
+            this.txtRegistrarseContra.MaxLength = 50;
             this.txtRegistrarseContra.Name = "txtRegistrarseContra";
             this.txtRegistrarseContra.ShortcutsEnabled = false;
             this.txtRegistrarseContra.Size = new System.Drawing.Size(284, 20);
@@ -146,6 +149,7 @@
             // txtNumTel
             // 
             this.txtNumTel.Location = new System.Drawing.Point(260, 301);
+            this.txtNumTel.MaxLength = 8;
             this.txtNumTel.Name = "txtNumTel";
             this.txtNumTel.ShortcutsEnabled = false;
             this.txtNumTel.Size = new System.Drawing.Size(284, 20);
@@ -179,6 +183,7 @@
             this.Controls.Add(this.lblRegistrarse);
             this.Controls.Add(this.pbLogo);
             this.Name = "frmRegistrarse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarse";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);

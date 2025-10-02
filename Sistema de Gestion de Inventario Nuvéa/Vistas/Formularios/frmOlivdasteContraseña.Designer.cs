@@ -33,8 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.txtCorreoRecu = new System.Windows.Forms.TextBox();
-            this.btnBuscarCorreo = new System.Windows.Forms.Button();
+            this.btnEnviarCorreo = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,20 +80,21 @@
             // txtCorreoRecu
             // 
             this.txtCorreoRecu.Location = new System.Drawing.Point(287, 206);
+            this.txtCorreoRecu.MaxLength = 100;
             this.txtCorreoRecu.Name = "txtCorreoRecu";
             this.txtCorreoRecu.ShortcutsEnabled = false;
             this.txtCorreoRecu.Size = new System.Drawing.Size(147, 20);
             this.txtCorreoRecu.TabIndex = 5;
             // 
-            // btnBuscarCorreo
+            // btnEnviarCorreo
             // 
-            this.btnBuscarCorreo.Location = new System.Drawing.Point(287, 241);
-            this.btnBuscarCorreo.Name = "btnBuscarCorreo";
-            this.btnBuscarCorreo.Size = new System.Drawing.Size(133, 35);
-            this.btnBuscarCorreo.TabIndex = 6;
-            this.btnBuscarCorreo.Text = "Buscar";
-            this.btnBuscarCorreo.UseVisualStyleBackColor = true;
-            this.btnBuscarCorreo.Click += new System.EventHandler(this.btnBuscarCorreo_Click);
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(287, 241);
+            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(133, 35);
+            this.btnEnviarCorreo.TabIndex = 6;
+            this.btnEnviarCorreo.Text = "Enviar Correo";
+            this.btnEnviarCorreo.UseVisualStyleBackColor = true;
+            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
             // 
             // btnVolver
             // 
@@ -104,13 +106,24 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(424, 334);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(15, 24);
+            this.lblInfo.TabIndex = 8;
+            this.lblInfo.Text = ".";
+            // 
             // frmOlivdasteContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnBuscarCorreo);
+            this.Controls.Add(this.btnEnviarCorreo);
             this.Controls.Add(this.txtCorreoRecu);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.label2);
@@ -135,7 +148,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.TextBox txtCorreoRecu;
-        private System.Windows.Forms.Button btnBuscarCorreo;
+        private System.Windows.Forms.Button btnEnviarCorreo;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblInfo;
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="Entidades\detalleFactura.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\RecuperacionService.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Seguridad.cs" />
     <Compile Include="Entidades\Usuario.cs" />

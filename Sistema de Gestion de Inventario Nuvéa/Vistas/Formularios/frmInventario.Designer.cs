@@ -372,6 +372,7 @@
             // txtPrecioProduc
             // 
             this.txtPrecioProduc.Location = new System.Drawing.Point(812, 273);
+            this.txtPrecioProduc.MaxLength = 50;
             this.txtPrecioProduc.Name = "txtPrecioProduc";
             this.txtPrecioProduc.ShortcutsEnabled = false;
             this.txtPrecioProduc.Size = new System.Drawing.Size(126, 20);
@@ -380,6 +381,7 @@
             // txtCodigoBarras
             // 
             this.txtCodigoBarras.Location = new System.Drawing.Point(984, 218);
+            this.txtCodigoBarras.MaxLength = 100;
             this.txtCodigoBarras.Name = "txtCodigoBarras";
             this.txtCodigoBarras.ShortcutsEnabled = false;
             this.txtCodigoBarras.Size = new System.Drawing.Size(118, 20);
@@ -388,6 +390,7 @@
             // txtNombreProduc
             // 
             this.txtNombreProduc.Location = new System.Drawing.Point(812, 218);
+            this.txtNombreProduc.MaxLength = 50;
             this.txtNombreProduc.Name = "txtNombreProduc";
             this.txtNombreProduc.ShortcutsEnabled = false;
             this.txtNombreProduc.Size = new System.Drawing.Size(123, 20);
@@ -485,6 +488,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1130, 599);
             this.Name = "frmInventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);
             this.pblInfoInventario.ResumeLayout(false);

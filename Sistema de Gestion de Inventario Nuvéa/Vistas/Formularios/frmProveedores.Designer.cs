@@ -103,6 +103,7 @@
             // txtNombreProveedor
             // 
             this.txtNombreProveedor.Location = new System.Drawing.Point(11, 42);
+            this.txtNombreProveedor.MaxLength = 50;
             this.txtNombreProveedor.Name = "txtNombreProveedor";
             this.txtNombreProveedor.Size = new System.Drawing.Size(154, 20);
             this.txtNombreProveedor.TabIndex = 14;
@@ -126,6 +127,7 @@
             // txtDireccionProveedor
             // 
             this.txtDireccionProveedor.Location = new System.Drawing.Point(11, 205);
+            this.txtDireccionProveedor.MaxLength = 100;
             this.txtDireccionProveedor.Name = "txtDireccionProveedor";
             this.txtDireccionProveedor.Size = new System.Drawing.Size(157, 20);
             this.txtDireccionProveedor.TabIndex = 20;
@@ -133,6 +135,7 @@
             // txtTelefonoProveedor
             // 
             this.txtTelefonoProveedor.Location = new System.Drawing.Point(11, 154);
+            this.txtTelefonoProveedor.MaxLength = 8;
             this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
             this.txtTelefonoProveedor.Size = new System.Drawing.Size(160, 20);
             this.txtTelefonoProveedor.TabIndex = 19;
@@ -140,6 +143,7 @@
             // txtNombreTrabajador
             // 
             this.txtNombreTrabajador.Location = new System.Drawing.Point(11, 98);
+            this.txtNombreTrabajador.MaxLength = 50;
             this.txtNombreTrabajador.Name = "txtNombreTrabajador";
             this.txtNombreTrabajador.Size = new System.Drawing.Size(157, 20);
             this.txtNombreTrabajador.TabIndex = 18;
@@ -218,6 +222,7 @@
             this.Controls.Add(this.btnAgregarProveedor);
             this.Controls.Add(this.lblProveedores);
             this.Name = "frmProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);
             this.panel1.ResumeLayout(false);

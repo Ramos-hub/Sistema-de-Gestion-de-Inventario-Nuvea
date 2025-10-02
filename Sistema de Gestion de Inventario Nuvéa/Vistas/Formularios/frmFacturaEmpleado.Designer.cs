@@ -33,10 +33,6 @@
             this.pnlFiltrosHistorialFacturas = new System.Windows.Forms.Panel();
             this.btnAplicarFiltrosEmpleado = new System.Windows.Forms.Button();
             this.dtpRangoHistorialEmpleado = new System.Windows.Forms.DateTimePicker();
-            this.cmbEstadoHistorialEmpleado = new System.Windows.Forms.ComboBox();
-            this.txtClienteHistorialEmpleado = new System.Windows.Forms.TextBox();
-            this.lblClienteHistorial = new System.Windows.Forms.Label();
-            this.lblEstadoHistorial = new System.Windows.Forms.Label();
             this.lblRangoFacturas = new System.Windows.Forms.Label();
             this.lblHistorialFacturas = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -66,10 +62,6 @@
             this.pnlFiltrosHistorialFacturas.BackColor = System.Drawing.Color.White;
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.btnAplicarFiltrosEmpleado);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.dtpRangoHistorialEmpleado);
-            this.pnlFiltrosHistorialFacturas.Controls.Add(this.cmbEstadoHistorialEmpleado);
-            this.pnlFiltrosHistorialFacturas.Controls.Add(this.txtClienteHistorialEmpleado);
-            this.pnlFiltrosHistorialFacturas.Controls.Add(this.lblClienteHistorial);
-            this.pnlFiltrosHistorialFacturas.Controls.Add(this.lblEstadoHistorial);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.lblRangoFacturas);
             this.pnlFiltrosHistorialFacturas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFiltrosHistorialFacturas.Location = new System.Drawing.Point(0, 28);
@@ -98,44 +90,6 @@
             this.dtpRangoHistorialEmpleado.Name = "dtpRangoHistorialEmpleado";
             this.dtpRangoHistorialEmpleado.Size = new System.Drawing.Size(200, 20);
             this.dtpRangoHistorialEmpleado.TabIndex = 6;
-            // 
-            // cmbEstadoHistorialEmpleado
-            // 
-            this.cmbEstadoHistorialEmpleado.FormattingEnabled = true;
-            this.cmbEstadoHistorialEmpleado.Items.AddRange(new object[] {
-            "Pagada ",
-            "Pendiente"});
-            this.cmbEstadoHistorialEmpleado.Location = new System.Drawing.Point(241, 51);
-            this.cmbEstadoHistorialEmpleado.Name = "cmbEstadoHistorialEmpleado";
-            this.cmbEstadoHistorialEmpleado.Size = new System.Drawing.Size(141, 21);
-            this.cmbEstadoHistorialEmpleado.TabIndex = 5;
-            // 
-            // txtClienteHistorialEmpleado
-            // 
-            this.txtClienteHistorialEmpleado.Location = new System.Drawing.Point(429, 52);
-            this.txtClienteHistorialEmpleado.Name = "txtClienteHistorialEmpleado";
-            this.txtClienteHistorialEmpleado.Size = new System.Drawing.Size(141, 20);
-            this.txtClienteHistorialEmpleado.TabIndex = 4;
-            // 
-            // lblClienteHistorial
-            // 
-            this.lblClienteHistorial.AutoSize = true;
-            this.lblClienteHistorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClienteHistorial.Location = new System.Drawing.Point(439, 12);
-            this.lblClienteHistorial.Name = "lblClienteHistorial";
-            this.lblClienteHistorial.Size = new System.Drawing.Size(51, 17);
-            this.lblClienteHistorial.TabIndex = 2;
-            this.lblClienteHistorial.Text = "Cliente";
-            // 
-            // lblEstadoHistorial
-            // 
-            this.lblEstadoHistorial.AutoSize = true;
-            this.lblEstadoHistorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoHistorial.Location = new System.Drawing.Point(253, 12);
-            this.lblEstadoHistorial.Name = "lblEstadoHistorial";
-            this.lblEstadoHistorial.Size = new System.Drawing.Size(49, 17);
-            this.lblEstadoHistorial.TabIndex = 1;
-            this.lblEstadoHistorial.Text = "Estado";
             // 
             // lblRangoFacturas
             // 
@@ -167,6 +121,7 @@
             this.Controls.Add(this.pnlFiltrosHistorialFacturas);
             this.Controls.Add(this.lblHistorialFacturas);
             this.Name = "frmFacturaEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFacturaEmpleado";
             this.Load += new System.EventHandler(this.frmFacturaEmpleado_Load);
             this.panel1.ResumeLayout(false);
@@ -185,10 +140,6 @@
         private System.Windows.Forms.Panel pnlFiltrosHistorialFacturas;
         private System.Windows.Forms.Button btnAplicarFiltrosEmpleado;
         private System.Windows.Forms.DateTimePicker dtpRangoHistorialEmpleado;
-        private System.Windows.Forms.ComboBox cmbEstadoHistorialEmpleado;
-        private System.Windows.Forms.TextBox txtClienteHistorialEmpleado;
-        private System.Windows.Forms.Label lblClienteHistorial;
-        private System.Windows.Forms.Label lblEstadoHistorial;
         private System.Windows.Forms.Label lblRangoFacturas;
         private System.Windows.Forms.Label lblHistorialFacturas;
     }

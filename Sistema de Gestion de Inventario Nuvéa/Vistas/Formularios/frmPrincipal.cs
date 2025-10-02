@@ -16,6 +16,7 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
         #region "Metodo para activar Formularios"
 
         private Form activarForm = null;
@@ -37,6 +38,7 @@ namespace Vistas.Formularios
 
 
         #endregion
+
 
         private void btnIniciInventario_Click(object sender, EventArgs e)
         {

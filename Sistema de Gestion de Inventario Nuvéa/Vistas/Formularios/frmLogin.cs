@@ -32,13 +32,12 @@ namespace Vistas.Formularios
         SELECT u.clave, r.nombreRol
         FROM Usuario u
         INNER JOIN Rol r ON u.idRol = r.idRol
-        WHERE u.nombre = @usuario;
-    ";
+        WHERE u.nombre = @usuario;";
 
             try
             {
-                using (SqlConnection cn = ConexionDB.Conectar())
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                SqlConnection conexion = ConexionDB.Conectar();
+                using (SqlCommand cmd = new SqlCommand(sql, conexion))
                 {
                     cmd.Parameters.AddWithValue("@usuario", usuario);
 
@@ -67,7 +66,7 @@ namespace Vistas.Formularios
                                 rd.Close();
                                 string nuevoHash = Seguridad.CrearHash(clave);
                                 using (var upd = new SqlCommand(
-                                    "UPDATE Usuario SET clave=@c WHERE nombre=@u", cn))
+                                    "UPDATE Usuario SET clave=@c WHERE nombre=@u", conexion))
                                 {
                                     upd.Parameters.AddWithValue("@c", nuevoHash);
                                     upd.Parameters.AddWithValue("@u", usuario);
@@ -98,6 +97,14 @@ namespace Vistas.Formularios
             {
                 MessageBox.Show("Error en login: " + ex.Message);
             }
+
+            // acá ponés el nombre que sacás de tu BD
+            string nombreUsuario = "Carlos Ramírez"; // TODO: reemplazar por el nombre real
+
+            frmPrincipal p = new frmPrincipal();
+            p.Tag = nombreUsuario; // mando el nombre por Tag
+            p.Show();
+            this.Hide();
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
