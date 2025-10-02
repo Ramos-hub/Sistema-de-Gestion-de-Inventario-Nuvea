@@ -53,5 +53,6 @@ namespace Vistas.Formularios
         {
             abrirFormEmpleado(new frmInventarioEmpleado());
         }
+
     }
 }

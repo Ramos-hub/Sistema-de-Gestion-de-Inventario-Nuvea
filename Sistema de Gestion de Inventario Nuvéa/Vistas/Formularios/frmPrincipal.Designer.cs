@@ -45,7 +45,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.pnlMenu.Controls.Add(this.pnlBotonesMenu);
             this.pnlMenu.Controls.Add(this.lblLogoFacturacion);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -73,7 +73,7 @@
             // 
             // btnGanancias
             // 
-            this.btnGanancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnGanancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnGanancias.FlatAppearance.BorderSize = 0;
             this.btnGanancias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGanancias.Location = new System.Drawing.Point(0, 284);
@@ -86,7 +86,7 @@
             // 
             // btnInventarioHistorial
             // 
-            this.btnInventarioHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnInventarioHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnInventarioHistorial.FlatAppearance.BorderSize = 0;
             this.btnInventarioHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventarioHistorial.Location = new System.Drawing.Point(0, 220);
@@ -99,7 +99,7 @@
             // 
             // btnInventarioProveedores
             // 
-            this.btnInventarioProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnInventarioProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnInventarioProveedores.FlatAppearance.BorderSize = 0;
             this.btnInventarioProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventarioProveedores.Location = new System.Drawing.Point(0, 168);
@@ -112,7 +112,7 @@
             // 
             // btn_Inventario
             // 
-            this.btn_Inventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btn_Inventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btn_Inventario.FlatAppearance.BorderSize = 0;
             this.btn_Inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Inventario.Location = new System.Drawing.Point(0, 112);
@@ -125,7 +125,7 @@
             // 
             // btnFacturacionInventario
             // 
-            this.btnFacturacionInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnFacturacionInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnFacturacionInventario.FlatAppearance.BorderSize = 0;
             this.btnFacturacionInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturacionInventario.Location = new System.Drawing.Point(0, 52);
@@ -138,7 +138,7 @@
             // 
             // btnIniciInventario
             // 
-            this.btnIniciInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnIniciInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnIniciInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnIniciInventario.FlatAppearance.BorderSize = 0;
             this.btnIniciInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

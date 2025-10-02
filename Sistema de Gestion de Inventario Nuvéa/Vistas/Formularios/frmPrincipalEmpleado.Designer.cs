@@ -62,7 +62,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.pnlMenu.Controls.Add(this.pnlBotonesMenu);
             this.pnlMenu.Controls.Add(this.lblLogoFacturacion);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,6 +75,7 @@
             // 
             // pnlBotonesMenu
             // 
+            this.pnlBotonesMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.pnlBotonesMenu.Controls.Add(this.btnInventarioEmpleado);
             this.pnlBotonesMenu.Controls.Add(this.btnFacturacionEmpleado);
             this.pnlBotonesMenu.Controls.Add(this.btnInicioEmpleado);
@@ -87,7 +88,7 @@
             // 
             // btnInventarioEmpleado
             // 
-            this.btnInventarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnInventarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnInventarioEmpleado.FlatAppearance.BorderSize = 0;
             this.btnInventarioEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventarioEmpleado.Location = new System.Drawing.Point(0, 147);
@@ -100,7 +101,7 @@
             // 
             // btnFacturacionEmpleado
             // 
-            this.btnFacturacionEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnFacturacionEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnFacturacionEmpleado.FlatAppearance.BorderSize = 0;
             this.btnFacturacionEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturacionEmpleado.Location = new System.Drawing.Point(0, 72);
@@ -113,7 +114,7 @@
             // 
             // btnInicioEmpleado
             // 
-            this.btnInicioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.btnInicioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnInicioEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInicioEmpleado.FlatAppearance.BorderSize = 0;
             this.btnInicioEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
