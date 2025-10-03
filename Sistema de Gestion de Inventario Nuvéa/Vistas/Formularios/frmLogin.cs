@@ -102,14 +102,6 @@ namespace Vistas.Formularios
             {
                 MessageBox.Show("Error en login: " + ex.Message);
             }
-
-            // acá ponés el nombre que sacás de tu BD
-            string nombreUsuario = "Carlos Ramírez"; // TODO: reemplazar por el nombre real
-
-            frmPrincipal p = new frmPrincipal();
-            p.Tag = nombreUsuario; // mando el nombre por Tag
-            p.Show();
-            this.Hide();
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)

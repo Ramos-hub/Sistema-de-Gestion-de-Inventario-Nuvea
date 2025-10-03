@@ -377,6 +377,7 @@
             this.txtPrecioProduc.ShortcutsEnabled = false;
             this.txtPrecioProduc.Size = new System.Drawing.Size(126, 20);
             this.txtPrecioProduc.TabIndex = 21;
+            this.txtPrecioProduc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioProduc_KeyPress);
             // 
             // txtCodigoBarras
             // 

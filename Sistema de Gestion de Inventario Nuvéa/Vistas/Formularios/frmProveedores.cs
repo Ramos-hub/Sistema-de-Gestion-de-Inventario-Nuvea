@@ -63,13 +63,13 @@ namespace Vistas.Formularios
 
             if (exigirId && idSeleccionado == null)
             {
-                error = "Selecciona un proveedor (doble clic en la tabla).";
+                error = "Selecciona un p (doble clic en la tabla).";
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtNombreProveedor.Text))
             {
-                error = "El nombre del proveedor es obligatorio.";
+                error = "El nombre del p es obligatorio.";
                 return false;
             }
 
@@ -107,7 +107,7 @@ namespace Vistas.Formularios
                 }
                 else
                 {
-                    MessageBox.Show("No se agregó el proveedor.");
+                    MessageBox.Show("No se agregó el p.");
                 }
             }
             catch (Exception ex)
@@ -146,7 +146,7 @@ namespace Vistas.Formularios
                 }
                 else
                 {
-                    MessageBox.Show("No se actualizó el proveedor.");
+                    MessageBox.Show("No se actualizó el p.");
                 }
             }
             catch (Exception ex)
@@ -154,41 +154,23 @@ namespace Vistas.Formularios
                 MessageBox.Show("Error al actualizar: " + ex.Message);
             }
         }
-
-        private void btnEliminarProveedor_Click(object sender, EventArgs e)
-        {
-            if (idSeleccionado == null)
-            {
-                MessageBox.Show("Selecciona un proveedor (doble clic en la tabla).");
-                return;
-            }
-
-            if (MessageBox.Show("¿Eliminar este proveedor?", "Confirmar", MessageBoxButtons.YesNo) != DialogResult.Yes)
-                return;
-
-            try
-            {
-                var p = new Proveedor { IdProveedor = idSeleccionado.Value };
-                if (p.Eliminar())
-                {
-                    MessageBox.Show("Proveedor eliminado.");
-                    CargarTabla();
-                    Limpiar();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo eliminar.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
-            }
-        }
-
         private void btnLimpiarProveedor_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void btnEliminarProveedor_Click(object sender, EventArgs e)
+        {
+            if (dgvMostrarProveedores.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dgvMostrarProveedores.SelectedRows[0].Cells[0].Value);
+                Proveedor p = new Proveedor();
+                p.IdProveedor = id;
+                if (p.eliminarProveedor())
+                {
+                    MessageBox.Show("Proveedor Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

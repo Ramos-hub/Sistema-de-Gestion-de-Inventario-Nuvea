@@ -23,7 +23,7 @@ namespace Modelos.Entidades
         public string Telefono { get => telefono; set => telefono = value; }
         public string Direccion { get => direccion; set => direccion = value; }
 
-        public static DataTable chargeProveedor()
+        public static DataTable cargarProveedor()
         {
             SqlConnection conexion = ConexionDB.Conectar();
             string consultaQuery = "select nombreProveedor, nombreTrabajador, telefono, direccion from Proveedor";
@@ -83,8 +83,7 @@ namespace Modelos.Entidades
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
-
-        public bool Eliminar()
+        public bool eliminarProveedor()
         {
             SqlConnection conexion = ConexionDB.Conectar();
             using (SqlCommand cmd = new SqlCommand(
