@@ -32,7 +32,7 @@ namespace Modelos.Entidades
         public int IdCategoria { get => idCategoria; set => idCategoria = value; }
         public int IdProveedor { get => idProveedor; set => idProveedor = value; }
 
-        public static DataTable chargeProducto()
+        public static DataTable CargarProducto()
         {
             SqlConnection conexion = ConexionDB.Conectar();
             string consultaQuery = "select idProducto, nombreProduc, fechaIngreso, estado, cantidadStock, codigoBarras, precioProduc, idCategoria, idProveedor From Producto";
@@ -62,14 +62,15 @@ namespace Modelos.Entidades
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
-        public bool Eliminar()
+        public bool EliminarProdcto()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (var cmd = new SqlCommand("spProd_Eliminar", conexion))
+            using (SqlCommand cmd = new SqlCommand("spProducto_Eliminar", conexion))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idProducto", IdProducto);
-                return cmd.ExecuteNonQuery() > 0;
+                cmd.ExecuteNonQuery();
+                return true;
             }
         }
 

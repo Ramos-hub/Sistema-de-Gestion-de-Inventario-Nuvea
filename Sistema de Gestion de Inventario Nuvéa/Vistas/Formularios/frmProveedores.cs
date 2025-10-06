@@ -161,15 +161,49 @@ namespace Vistas.Formularios
 
         private void btnEliminarProveedor_Click(object sender, EventArgs e)
         {
-            if (dgvMostrarProveedores.SelectedRows.Count > 0)
+            if (dgvMostrarProveedores.CurrentRow == null)
             {
-                int id = Convert.ToInt32(dgvMostrarProveedores.SelectedRows[0].Cells[0].Value);
-                Proveedor p = new Proveedor();
-                p.IdProveedor = id;
-                if (p.eliminarProveedor())
-                {
-                    MessageBox.Show("Proveedor Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Selecciona un Proveedor.");
+                return;
+            }
+            int idProveedor = Convert.ToInt32(dgvMostrarProveedores.CurrentRow.Cells["ID"].Value);
+
+            var r = MessageBox.Show("¿Seguro que quieres eliminar a este Proveedor ?",
+                                    "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r != DialogResult.Yes) return;
+
+            try
+            {
+                // --- aquí va la llamada a la entidad ---
+                var pr = new Proveedor { IdProveedor = idProveedor };
+                pr.EliminarProveedor();
+
+                MessageBox.Show("Proveedor eliminado.");
+                CargarTabla(); // refresca el datagrid
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
+        }
+
+        private void txtNombreProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtNombreTrabajador_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
     }

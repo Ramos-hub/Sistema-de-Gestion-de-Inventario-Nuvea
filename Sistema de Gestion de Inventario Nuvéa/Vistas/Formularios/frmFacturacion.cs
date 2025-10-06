@@ -152,6 +152,8 @@ namespace Vistas.Formularios
             if (e.RowIndex < 0 || dgvMostrarListaFacturas.CurrentRow == null) return;
             var r = dgvMostrarListaFacturas.CurrentRow;
 
+            txtTotalCrearFactura.ReadOnly = true;
+
             txtNombreClienteCrearFactura.Text = r.Cells["Cliente"].Value?.ToString();
             cmbProductosFactu.Text = r.Cells["Producto"].Value?.ToString(); // set por texto
             dtpFechaCrearFactura.Value = Convert.ToDateTime(r.Cells["FechaFacturacion"].Value);
@@ -235,6 +237,37 @@ namespace Vistas.Formularios
 
             dgvMostrarListaFacturas.Tag = null;
             dgvMostrarListaFacturas.ClearSelection();
+        }
+
+        private void txtNombreClienteCrearFactura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+        private void LimpiarFormulario()
+        {
+            txtNombreClienteCrearFactura.Clear();
+            dtpFechaCrearFactura.Value = DateTime.Today;
+            cmbEstadoFacturaCrearFactura.SelectedIndex = -1;
+            txtTotalCrearFactura.Clear();
+            cmbProductosFactu.SelectedIndex = -1;
+        }
+
+        private void btnLimpiarFactu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LimpiarFormulario();
+                MessageBox.Show("Limpio 😁", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al limpiar: " + ex.Message);
+            }
         }
     }
 }

@@ -83,15 +83,15 @@ namespace Modelos.Entidades
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
-        public bool eliminarProveedor()
+        public bool EliminarProveedor()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            using (SqlCommand cmd = new SqlCommand(
-                "delete from Proveedor where idProveedor=@id", conexion))
+            using (SqlCommand cmd = new SqlCommand("spProveedor_Eliminar", conexion))
             {
-                cmd.Parameters.AddWithValue("@id", IdProveedor);
-
-                return cmd.ExecuteNonQuery() > 0;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idProveedor", idProveedor);
+                cmd.ExecuteNonQuery();
+                return true;
             }
         }
     }

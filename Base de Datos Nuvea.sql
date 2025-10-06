@@ -206,6 +206,7 @@ BEGIN
 END
 go
 
+--PA de Editar detalleFactura--
 CREATE OR ALTER PROCEDURE spFac_EditarDetalle
  @idDetalleFactura INT,
  @subtotal        DECIMAL(10,2),
@@ -247,6 +248,7 @@ BEGIN
 END
 go
 
+--PA Listar Facturas--
 CREATE OR ALTER PROCEDURE spFac_Listar
 AS
 BEGIN
@@ -254,6 +256,7 @@ BEGIN
 END
 go
 
+--PA Agregar detalleFactura--
 CREATE OR ALTER PROCEDURE spFac_AgregarDetalle
  @subtotal        DECIMAL(10,2),
  @cantidadProduct INT,
@@ -275,6 +278,7 @@ BEGIN
 END
 go
 
+--PA Editar Productos--
 CREATE OR ALTER PROCEDURE spProd_Editar
  @idProducto    INT,
  @nombreProduc  VARCHAR(40),
@@ -298,8 +302,9 @@ BEGIN
         idProveedor   = @idProveedor
   WHERE idProducto = @idProducto;
 END
-go
+GO
 
+--PA Agregar Productos--
 CREATE OR ALTER PROCEDURE spProd_Agregar
  @nombreProduc  VARCHAR(40),
  @fechaIngreso  DATE,
@@ -317,4 +322,60 @@ BEGIN
   -- si quieres leer el id creado desde C#, puedes hacer ExecuteScalar con este SELECT:
   SELECT CAST(SCOPE_IDENTITY() AS INT) AS idCreado;
 END
+GO
 
+---Procedimiento almacenado para elimiar un producto---
+CREATE OR ALTER PROCEDURE spProducto_Eliminar
+    @idProducto INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    BEGIN TRY
+        BEGIN TRAN;
+
+        -- si hay detalle/compra del producto, se borra primero
+        DELETE FROM detalleFactura WHERE idProducto = @idProducto;
+        DELETE FROM Compra        WHERE idProducto = @idProducto;
+
+        -- ahora sí, el producto
+        DELETE FROM Producto      WHERE idProducto = @idProducto;
+
+        COMMIT;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        THROW; -- deja que C# muestre el error si algo pasa
+    END CATCH
+END;
+GO
+
+---Procedimiento Almacenado para eliminar proveedores---
+CREATE OR ALTER PROCEDURE spProveedor_Eliminar
+    @idProveedor INT
+AS
+BEGIN
+    -- 1) Borrar detalles de facturas de los productos de este proveedor
+    DELETE FROM detalleFactura
+    WHERE idProducto IN (
+        SELECT idProducto FROM Producto
+        WHERE idProveedor = @idProveedor
+    );
+
+    -- 2) Borrar compras de esos productos
+    DELETE FROM Compra
+    WHERE idProducto IN --Lo que hace es:Buscar todos los idProducto de los productos que pertenecen al proveedor que quieres borrar.
+    --Y eliminar de detalleFactura solamente los registros que tengan un idProducto dentro de esa lista.--
+    (
+        SELECT idProducto FROM Producto
+        WHERE idProveedor = @idProveedor
+    );
+
+    -- 3) Borrar los productos del proveedor
+    DELETE FROM Producto
+    WHERE idProveedor = @idProveedor;
+
+    -- 4) Borrar el proveedor
+    DELETE FROM Proveedor
+    WHERE idProveedor = @idProveedor;
+END
+GO

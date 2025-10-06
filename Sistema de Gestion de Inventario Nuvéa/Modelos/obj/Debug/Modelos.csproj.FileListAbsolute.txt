@@ -95,3 +95,20 @@ C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Ge
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.Up2Date
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.dll
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.pdb
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\Modelos.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\Modelos.pdb
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Buffers.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Memory.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Buffers.xml
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Memory.xml
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.csproj.Up2Date
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.dll
+C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Modelos\obj\Debug\Modelos.pdb

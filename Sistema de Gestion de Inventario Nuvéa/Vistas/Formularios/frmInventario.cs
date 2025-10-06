@@ -67,7 +67,6 @@ namespace Vistas.Formularios
                 cmbCategoriaProduc.DisplayMember = "nombreCat";
                 cmbCategoriaProduc.ValueMember = "idCategoria";
             conexion.Close();
-     
         }
         private void btnAgregar_Inventario_Click(object sender, EventArgs e)
         {
@@ -178,7 +177,7 @@ namespace Vistas.Formularios
                 }
                 CargarProductos();
                 LimpiarFormulario();
-            }
+            }       
             catch (Exception ex)
             {
                 MessageBox.Show("Error al actualizar: " + ex.Message);
@@ -188,47 +187,30 @@ namespace Vistas.Formularios
         private void btnEliminar_Inventario_Click(object sender, EventArgs e)
         {
             if (dgvInventario.CurrentRow == null)
-            { MessageBox.Show("Selecciona un producto."); return; }
+            {
+                MessageBox.Show("Selecciona un producto.");
+                return;
+            }
+            int idProducto = Convert.ToInt32(dgvInventario.CurrentRow.Cells["idProducto"].Value);
 
-            object val = dgvInventario.CurrentRow.Cells["idProducto"].Value;
-            if (val == null || !int.TryParse(val.ToString(), out int id))
-            { MessageBox.Show("No se pudo obtener el idProducto."); return; }
-
-            var r = MessageBox.Show("¿Eliminar este producto?", "Confirmar",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var r = MessageBox.Show("¿Eliminar este producto ?",
+                                    "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (r != DialogResult.Yes) return;
 
             try
             {
-                using (var cn = ConexionDB.Conectar())
-                {
-                    try
-                    {
-                        using (var cmd = new SqlCommand("DELETE FROM Producto WHERE idProducto=@id", cn))
-                        {
-                            cmd.Parameters.AddWithValue("@id", id);
-                            int filas = cmd.ExecuteNonQuery();
-                            MessageBox.Show(filas == 1 ? "Producto eliminado." : "No se pudo eliminar.");
-                        }
-                    }
-                    catch (SqlException ex) when (ex.Number == 547) 
-                    {
-                        using (var up = new SqlCommand("UPDATE Producto SET estado=0 WHERE idProducto=@id", cn))
-                        {
-                            up.Parameters.AddWithValue("@id", id);
-                            int filas = up.ExecuteNonQuery();
-                            MessageBox.Show(filas == 1 ? "Producto Eliminado" : "No se pudo desactivar.");
-                        }
-                    }
-                }
-                CargarProductos(); 
+                // --- aquí va la llamada a tu entidad ---
+                var p = new Producto { IdProducto = idProducto };
+                p.EliminarProdcto();
+
+                MessageBox.Show("Producto eliminado.");
+                CargarProductos(); // refresca el datagrid
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar: " + ex.Message);
             }
         }
-
         private void btnAgregar_Inventario_Click_1(object sender, EventArgs e)
         {
             try
@@ -280,14 +262,12 @@ namespace Vistas.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error al limpiar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
         private void CargarDatos()
         {
-            using (SqlConnection conexion = ConexionDB.Conectar())
-            {
+            SqlConnection conexion = ConexionDB.Conectar();
                 try
                 {
                     // Total Usuarios
@@ -309,7 +289,6 @@ namespace Vistas.Formularios
                 {
                     MessageBox.Show("Error cargando datos: " + ex.Message);
                 }
-            }
         }
         private void txtPrecioProduc_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -322,5 +301,3 @@ namespace Vistas.Formularios
         }
     }
 }
-
-    
