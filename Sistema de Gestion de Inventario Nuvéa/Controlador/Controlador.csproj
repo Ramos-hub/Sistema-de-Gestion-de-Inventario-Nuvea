@@ -62,7 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrimerUsoControler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecuperacionService.cs" />
     <Compile Include="Seguridad.cs" />
@@ -89,10 +88,6 @@
     <ProjectReference Include="..\Modelos\Modelos.csproj">
       <Project>{869fd04f-c9bf-449f-ac77-d885ed9d992e}</Project>
       <Name>Modelos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vistas\Vistas.csproj">
-      <Project>{6f1d0871-849e-4ceb-a847-d36bffb8ac35}</Project>
-      <Name>Vistas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

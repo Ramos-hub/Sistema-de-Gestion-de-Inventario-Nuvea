@@ -22,7 +22,7 @@ namespace Modelos
             catch (Exception)
             {
 
-                throw;
+                return false;
             }
         }
     }

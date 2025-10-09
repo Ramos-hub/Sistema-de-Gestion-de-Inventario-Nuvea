@@ -153,7 +153,7 @@ direccionEmpresa varchar(100)
 insert into Empresas 
 values('Hector', 01234567-8, 19900515-3-123-456-7, 'Residencial Altos del Escorial, Pasaje B #12, Antiguo Cuscatlán,
 La Libertad, El Salvador.');
-
+go
 select*from Rol
 select*from Usuario
 select*from Producto
