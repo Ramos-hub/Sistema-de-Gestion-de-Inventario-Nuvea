@@ -133,13 +133,16 @@
   <data name="dollar-symbol_icon-icons.com_73598" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dollar-symbol_icon-icons.com_73598.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo.Nuvéa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.Nuvéa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profile_picture_user_icon_153847" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile_picture_user_icon_153847.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_icon_128873" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_icon_128873.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo.Nuvéa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.Nuvéa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1499345621-contact_85338" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1499345621-contact_85338.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

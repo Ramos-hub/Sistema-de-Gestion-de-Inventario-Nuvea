@@ -142,6 +142,18 @@ insert into detalleFactura (subtotal, cantidadProduct, idCompra, idProducto, idC
 (8.90, 1, 11, 11, 11, 1, '2024-10-25'),(30.00, 3, 12, 12, 12, 1, '2024-09-25'),(19.35, 3, 13, 13, 13, 1, '2024-08-25'),(23.96, 4, 14, 14, 14, 1, '2024-07-25'),(9.00, 2, 15, 15, 15, 1, '2024-05-25');
 go
 
+create table Empresas(
+idEmpresa int identity (1,1) primary key,
+nombreRepresentante varchar(100),
+duiRepresentante int unique,
+NIT int,
+direccionEmpresa varchar(100)
+);
+
+insert into Empresas 
+values('Hector', 01234567-8, 19900515-3-123-456-7, 'Residencial Altos del Escorial, Pasaje B #12, Antiguo Cuscatlán,
+La Libertad, El Salvador.');
+
 select*from Rol
 select*from Usuario
 select*from Producto
@@ -150,6 +162,7 @@ select*from Categoria
 select*from Compra
 select*from detalleFactura
 select*from Cliente
+select *from Empresas
 go
 SELECT ISNULL(SUM(subtotal), 0) AS total_vendido
 FROM detalleFactura;

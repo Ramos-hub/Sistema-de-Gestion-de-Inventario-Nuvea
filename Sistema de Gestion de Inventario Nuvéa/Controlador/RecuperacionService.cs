@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Modelo.Conexion;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Net.Mail;
 using System.Net;
-using Modelo.Conexion; 
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Modelos.Entidades
+namespace Controlador
 {
     public class RecuperacionService
     {
@@ -47,8 +47,8 @@ namespace Modelos.Entidades
         // mandar correo por Gmail
         public void EnviarCorreo(string para, string claveNueva)
         {
-            string user = "sistemadeinventarionuvea@gmail.com";      
-            string pass = "pqqh ejie fukv mvsq";         
+            string user = "sistemadeinventarionuvea@gmail.com";
+            string pass = "pqqh ejie fukv mvsq";
 
             MailMessage mail = new MailMessage();
             mail.From = new MailAddress(user, "Soporte Nuvéa");

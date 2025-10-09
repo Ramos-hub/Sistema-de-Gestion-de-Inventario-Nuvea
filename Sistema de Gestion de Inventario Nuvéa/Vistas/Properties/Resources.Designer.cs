@@ -63,6 +63,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1499345621_contact_85338 {
+            get {
+                object obj = ResourceManager.GetObject("1499345621-contact_85338", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1904677_add_addition_calculate_charge_create_new_plus_122527 {
             get {
                 object obj = ResourceManager.GetObject("1904677-add-addition-calculate-charge-create-new-plus_122527", resourceCulture);
