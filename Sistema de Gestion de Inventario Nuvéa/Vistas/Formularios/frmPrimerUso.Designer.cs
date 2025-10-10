@@ -28,199 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombreEmpresa = new System.Windows.Forms.Label();
-            this.lblNombreRepresentante = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNombreEmpresa = new System.Windows.Forms.TextBox();
-            this.txtNumeroTelefono = new System.Windows.Forms.TextBox();
-            this.txtDuiRepresentante = new System.Windows.Forms.TextBox();
-            this.txtDireccionEmpresa = new System.Windows.Forms.TextBox();
-            this.txtNombreRepresentante = new System.Windows.Forms.TextBox();
-            this.btnExaminarUso = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardarContinuar = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pbLogoUso = new System.Windows.Forms.PictureBox();
-            this.txtNumeroIdentificacion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoUso)).BeginInit();
+            this.txtPrimerCorreo = new System.Windows.Forms.TextBox();
+            this.txtPrimerClave = new System.Windows.Forms.TextBox();
+            this.txtPrimerTelefono = new System.Windows.Forms.TextBox();
+            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNombreRepresentante = new System.Windows.Forms.Label();
+            this.lblNombreEmpresa = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblNombreEmpresa
+            // pictureBox1
             // 
-            this.lblNombreEmpresa.AutoSize = true;
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(51, 41);
-            this.lblNombreEmpresa.Name = "lblNombreEmpresa";
-            this.lblNombreEmpresa.Size = new System.Drawing.Size(117, 13);
-            this.lblNombreEmpresa.TabIndex = 0;
-            this.lblNombreEmpresa.Text = "Nombre de la Empresa:";
-            // 
-            // lblNombreRepresentante
-            // 
-            this.lblNombreRepresentante.AutoSize = true;
-            this.lblNombreRepresentante.Location = new System.Drawing.Point(51, 126);
-            this.lblNombreRepresentante.Name = "lblNombreRepresentante";
-            this.lblNombreRepresentante.Size = new System.Drawing.Size(137, 13);
-            this.lblNombreRepresentante.TabIndex = 1;
-            this.lblNombreRepresentante.Text = "Nombre del Representante:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Número Telefónico:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 308);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "DUI del Representante:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 478);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Direccion de la Empresa:";
-            // 
-            // txtNombreEmpresa
-            // 
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(54, 75);
-            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(734, 20);
-            this.txtNombreEmpresa.TabIndex = 5;
-            // 
-            // txtNumeroTelefono
-            // 
-            this.txtNumeroTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNumeroTelefono.Location = new System.Drawing.Point(54, 243);
-            this.txtNumeroTelefono.Name = "txtNumeroTelefono";
-            this.txtNumeroTelefono.Size = new System.Drawing.Size(734, 20);
-            this.txtNumeroTelefono.TabIndex = 6;
-            // 
-            // txtDuiRepresentante
-            // 
-            this.txtDuiRepresentante.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtDuiRepresentante.Location = new System.Drawing.Point(54, 345);
-            this.txtDuiRepresentante.Name = "txtDuiRepresentante";
-            this.txtDuiRepresentante.Size = new System.Drawing.Size(734, 20);
-            this.txtDuiRepresentante.TabIndex = 7;
-            // 
-            // txtDireccionEmpresa
-            // 
-            this.txtDireccionEmpresa.Location = new System.Drawing.Point(54, 512);
-            this.txtDireccionEmpresa.Multiline = true;
-            this.txtDireccionEmpresa.Name = "txtDireccionEmpresa";
-            this.txtDireccionEmpresa.Size = new System.Drawing.Size(734, 130);
-            this.txtDireccionEmpresa.TabIndex = 8;
-            // 
-            // txtNombreRepresentante
-            // 
-            this.txtNombreRepresentante.Location = new System.Drawing.Point(54, 156);
-            this.txtNombreRepresentante.Name = "txtNombreRepresentante";
-            this.txtNombreRepresentante.Size = new System.Drawing.Size(734, 20);
-            this.txtNombreRepresentante.TabIndex = 9;
-            // 
-            // btnExaminarUso
-            // 
-            this.btnExaminarUso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExaminarUso.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnExaminarUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExaminarUso.Location = new System.Drawing.Point(1083, 401);
-            this.btnExaminarUso.Name = "btnExaminarUso";
-            this.btnExaminarUso.Size = new System.Drawing.Size(163, 60);
-            this.btnExaminarUso.TabIndex = 11;
-            this.btnExaminarUso.Text = "Examinar";
-            this.btnExaminarUso.UseVisualStyleBackColor = false;
-            this.btnExaminarUso.Click += new System.EventHandler(this.btnExaminarUso_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.Rules_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(830, 566);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnGuardarContinuar
             // 
             this.btnGuardarContinuar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardarContinuar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGuardarContinuar.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnGuardarContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarContinuar.Location = new System.Drawing.Point(1083, 490);
+            this.btnGuardarContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarContinuar.Location = new System.Drawing.Point(319, 353);
             this.btnGuardarContinuar.Name = "btnGuardarContinuar";
-            this.btnGuardarContinuar.Size = new System.Drawing.Size(163, 62);
-            this.btnGuardarContinuar.TabIndex = 12;
+            this.btnGuardarContinuar.Size = new System.Drawing.Size(185, 95);
+            this.btnGuardarContinuar.TabIndex = 41;
             this.btnGuardarContinuar.Text = "Guardar y Continuar";
             this.btnGuardarContinuar.UseVisualStyleBackColor = false;
+            this.btnGuardarContinuar.Click += new System.EventHandler(this.btnGuardarContinuar_Click);
             // 
-            // openFileDialog1
+            // txtPrimerCorreo
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.txtPrimerCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrimerCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrimerCorreo.Location = new System.Drawing.Point(143, 121);
+            this.txtPrimerCorreo.Name = "txtPrimerCorreo";
+            this.txtPrimerCorreo.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerCorreo.TabIndex = 40;
             // 
-            // pbLogoUso
+            // txtPrimerClave
             // 
-            this.pbLogoUso.Location = new System.Drawing.Point(1046, 87);
-            this.pbLogoUso.Name = "pbLogoUso";
-            this.pbLogoUso.Size = new System.Drawing.Size(227, 278);
-            this.pbLogoUso.TabIndex = 13;
-            this.pbLogoUso.TabStop = false;
+            this.txtPrimerClave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrimerClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrimerClave.Location = new System.Drawing.Point(143, 269);
+            this.txtPrimerClave.Name = "txtPrimerClave";
+            this.txtPrimerClave.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerClave.TabIndex = 38;
             // 
-            // txtNumeroIdentificacion
+            // txtPrimerTelefono
             // 
-            this.txtNumeroIdentificacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNumeroIdentificacion.Location = new System.Drawing.Point(54, 438);
-            this.txtNumeroIdentificacion.Name = "txtNumeroIdentificacion";
-            this.txtNumeroIdentificacion.Size = new System.Drawing.Size(734, 20);
-            this.txtNumeroIdentificacion.TabIndex = 15;
+            this.txtPrimerTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrimerTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrimerTelefono.Location = new System.Drawing.Point(143, 193);
+            this.txtPrimerTelefono.Name = "txtPrimerTelefono";
+            this.txtPrimerTelefono.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerTelefono.TabIndex = 37;
             // 
-            // label1
+            // txtPrimerNombre
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 401);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Número de Identificación Tributario:";
+            this.txtPrimerNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrimerNombre.Location = new System.Drawing.Point(143, 56);
+            this.txtPrimerNombre.Name = "txtPrimerNombre";
+            this.txtPrimerNombre.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerNombre.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(409, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Clave:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(376, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 13);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Número Telefónico:";
+            // 
+            // lblNombreRepresentante
+            // 
+            this.lblNombreRepresentante.AutoSize = true;
+            this.lblNombreRepresentante.Location = new System.Drawing.Point(409, 93);
+            this.lblNombreRepresentante.Name = "lblNombreRepresentante";
+            this.lblNombreRepresentante.Size = new System.Drawing.Size(41, 13);
+            this.lblNombreRepresentante.TabIndex = 32;
+            this.lblNombreRepresentante.Text = "Correo:";
+            // 
+            // lblNombreEmpresa
+            // 
+            this.lblNombreEmpresa.AutoSize = true;
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(409, 24);
+            this.lblNombreEmpresa.Name = "lblNombreEmpresa";
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreEmpresa.TabIndex = 31;
+            this.lblNombreEmpresa.Text = "Nombre:";
             // 
             // frmPrimerUso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1410, 666);
-            this.Controls.Add(this.txtNumeroIdentificacion);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbLogoUso);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(830, 566);
             this.Controls.Add(this.btnGuardarContinuar);
-            this.Controls.Add(this.btnExaminarUso);
-            this.Controls.Add(this.txtNombreRepresentante);
-            this.Controls.Add(this.txtDireccionEmpresa);
-            this.Controls.Add(this.txtDuiRepresentante);
-            this.Controls.Add(this.txtNumeroTelefono);
-            this.Controls.Add(this.txtNombreEmpresa);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPrimerCorreo);
+            this.Controls.Add(this.txtPrimerClave);
+            this.Controls.Add(this.txtPrimerTelefono);
+            this.Controls.Add(this.txtPrimerNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNombreRepresentante);
             this.Controls.Add(this.lblNombreEmpresa);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "frmPrimerUso";
             this.Text = "frmPrimerUso";
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoUso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,21 +171,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNombreEmpresa;
-        private System.Windows.Forms.Label lblNombreRepresentante;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombreEmpresa;
-        private System.Windows.Forms.TextBox txtNumeroTelefono;
-        private System.Windows.Forms.TextBox txtDuiRepresentante;
-        private System.Windows.Forms.TextBox txtDireccionEmpresa;
-        private System.Windows.Forms.TextBox txtNombreRepresentante;
-        private System.Windows.Forms.Button btnExaminarUso;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnGuardarContinuar;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pbLogoUso;
-        private System.Windows.Forms.TextBox txtNumeroIdentificacion;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPrimerCorreo;
+        private System.Windows.Forms.TextBox txtPrimerClave;
+        private System.Windows.Forms.TextBox txtPrimerTelefono;
+        private System.Windows.Forms.TextBox txtPrimerNombre;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNombreRepresentante;
+        private System.Windows.Forms.Label lblNombreEmpresa;
     }
 }

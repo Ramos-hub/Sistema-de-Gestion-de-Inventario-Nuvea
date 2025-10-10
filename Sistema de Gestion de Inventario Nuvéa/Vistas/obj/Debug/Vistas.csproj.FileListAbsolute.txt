@@ -258,3 +258,5 @@ C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema 
 C:\Users\LENOVO\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea Original\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.pdb
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrimerUso.resources
 C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmBienvenida.resources
+C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmBienvenida.resources
+C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrimerUso.resources

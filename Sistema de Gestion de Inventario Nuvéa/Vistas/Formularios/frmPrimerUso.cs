@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Modelo.Conexion;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.Formularios;
 
 namespace Vistas.Formularios
 {
@@ -17,24 +21,24 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
-        private void btnExaminarUso_Click(object sender, EventArgs e)
+        private void btnGuardarContinuar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtPrimerClave.SelectedText == null || txtPrimerCorreo.SelectedText == null ||
+                txtPrimerNombre.SelectedText == null || txtPrimerTelefono.SelectedText == null)
             {
-                //Definimos los tipos de archivo que se colocaran en el sistema
-                openFileDialog1.Filter = "Archivos de Imagen .jpg | *.jpg | Archivos de imagen .png |*.png| Archivos de imagen .jpeg |*.jpeg| Todos los archivos |*.*";
-                //Mostramos cuadro de dialogo
-                DialogResult resultado = openFileDialog1.ShowDialog();
-                //Cuando se de click en OK o abrir en el cuadro de Dialogo la imagen seleccionada se colocara sobre el pictureBox llamado pbLogoUso
-                if (resultado == DialogResult.OK)
-                {
-                    pbLogoUso.Image = Image.FromFile(openFileDialog1.FileName);
-                }
+                MessageBox.Show("Rellena los campos solicitados.");
+                return;
             }
-            catch (Exception)
+            using (SqlConnection conexion = ConexionDB.Conectar())
             {
-                //error al cargar la imagen
-                MessageBox.Show("Ocurrio un erro al cargar la imagen, verifique el nombre de extensión del archivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                string nombre = txtPrimerNombre.Text;
+                string telefono = txtPrimerTelefono.Text;
+                string correo = txtPrimerCorreo.Text;
+
+                ModeloPrimerUsuario.CrearAdmin(nombre, telefono, correo);
+
+                MessageBox.Show("Cuenta Administrador creada con exito");
+
             }
         }
     }

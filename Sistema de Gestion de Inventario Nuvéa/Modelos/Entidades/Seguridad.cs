@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Controlador
+namespace Modelos.Entidades
 {
     public static class Seguridad
     {

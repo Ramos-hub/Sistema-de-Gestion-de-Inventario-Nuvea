@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Net.Mail;
 using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlador
+namespace Modelos.Entidades
 {
     public class RecuperacionService
     {

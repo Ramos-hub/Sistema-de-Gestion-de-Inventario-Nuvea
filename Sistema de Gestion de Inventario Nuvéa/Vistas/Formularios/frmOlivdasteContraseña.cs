@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using Modelo.Conexion;
 using Modelos.Entidades;
 using System.Configuration;
-
 namespace Vistas.Formularios
 {
     public partial class frmOlivdasteContraseña : Form

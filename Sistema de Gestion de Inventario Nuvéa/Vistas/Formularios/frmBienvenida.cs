@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelos;
 using Modelos.Entidades;
 
 
@@ -21,26 +22,30 @@ namespace Vistas.Formularios
         }
         private void frmBienvenida_Load(object sender, EventArgs e)
         {
-            //Verificar si existen empresas registradas
-            PrimerUsoControler objprimer = new PrimerUsoControler();
-            bool respuesta = objprimer.VerificarEmpresa();
+            
+        }
+
+        private void btnPrimerUso_Click(object sender, EventArgs e)
+        {
+            bool respuesta = ModeloPrimerUsuario.VerificacionEmpleados();
             if (respuesta == true)
             {
-
-                //si no existen 
-                //abrir formulario frmPrimerUso
-                //si existe empresa
-                //Verificar si existen usuarios
-                //si existen muestra FrmLogin
-                //No existen muestra formulario primer usuario
+                frmLogin frm = new frmLogin();
+                frm.Show();
+                this.Hide();
             }
             else
             {
-                frmPrimerUso nextForm = new frmPrimerUso();
-                nextForm.Show();
+                frmPrimerUso frm = new frmPrimerUso();
+                frm.Show();
                 this.Hide();
             }
-
         }
+        //else
+        //{
+        //    //frmPrimerUso nextForm = new frmPrimerUso();
+        //    //nextForm.Show();
+        //    //this.Hide();
+        //}
     }
 }

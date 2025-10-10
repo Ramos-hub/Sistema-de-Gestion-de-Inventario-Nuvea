@@ -37,11 +37,12 @@
             // 
             // btnPrimerUso
             // 
+            this.btnPrimerUso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrimerUso.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnPrimerUso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrimerUso.FlatAppearance.BorderSize = 0;
             this.btnPrimerUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrimerUso.ForeColor = System.Drawing.Color.White;
             this.btnPrimerUso.Location = new System.Drawing.Point(303, 84);
             this.btnPrimerUso.Name = "btnPrimerUso";
@@ -50,9 +51,11 @@
             this.btnPrimerUso.Text = "Primer Uso";
             this.btnPrimerUso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPrimerUso.UseVisualStyleBackColor = false;
+            this.btnPrimerUso.Click += new System.EventHandler(this.btnPrimerUso_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(329, 45);
@@ -63,6 +66,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.DodgerBlue;
             this.pictureBox1.Image = global::Vistas.Properties.Resources._1499345621_contact_85338;
             this.pictureBox1.Location = new System.Drawing.Point(332, 124);
@@ -74,18 +78,20 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(166, 338);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(496, 18);
+            this.label2.Size = new System.Drawing.Size(504, 18);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Bienvenido al sistema Nuvea, empecmos con la configuración del sistema";
+            this.label2.Text = "Bienvenido al sistema Nuvea, empecemos con la configuración del sistema";
             // 
             // frmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

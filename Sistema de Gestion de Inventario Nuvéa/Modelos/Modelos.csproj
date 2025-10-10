@@ -49,6 +49,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,10 +63,11 @@
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Compra.cs" />
     <Compile Include="Entidades\detalleFactura.cs" />
-    <Compile Include="Entidades\PrimerUsoControler.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\RecuperacionService.cs" />
     <Compile Include="Entidades\Rol.cs" />
+    <Compile Include="Entidades\Seguridad.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="ModeloPrimerUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

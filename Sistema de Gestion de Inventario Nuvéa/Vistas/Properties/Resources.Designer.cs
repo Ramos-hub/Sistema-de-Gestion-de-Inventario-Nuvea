@@ -133,6 +133,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rules_ {
+            get {
+                object obj = ResourceManager.GetObject("Rules_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_social_web_network_internet_262_icon_icons_com_61518 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_262_icon-icons.com_61518", resourceCulture);
