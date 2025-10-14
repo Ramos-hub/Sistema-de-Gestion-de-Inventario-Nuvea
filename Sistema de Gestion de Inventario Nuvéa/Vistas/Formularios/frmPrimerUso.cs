@@ -21,24 +21,46 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
-        private void btnGuardarContinuar_Click(object sender, EventArgs e)
+        private void btnGuardarPrimerUso_Click(object sender, EventArgs e)
         {
-            if (txtPrimerClave.SelectedText == null || txtPrimerCorreo.SelectedText == null ||
-                txtPrimerNombre.SelectedText == null || txtPrimerTelefono.SelectedText == null)
+            string nombre = txtPrimerNombre.Text;
+            string telefono = txtPrimerTelefono.Text;
+            string correo = txtPrimerCorreo.Text;
+
+            if (string.IsNullOrWhiteSpace(nombre) ||
+                string.IsNullOrWhiteSpace(telefono) ||
+                string.IsNullOrWhiteSpace(correo))
             {
                 MessageBox.Show("Rellena los campos solicitados.");
                 return;
             }
-            using (SqlConnection conexion = ConexionDB.Conectar())
+
+            string contrasenaGenerada = ModeloPrimerUsuario.CrearAdmin(nombre, telefono, correo);
+
+            if (contrasenaGenerada != null)
             {
-                string nombre = txtPrimerNombre.Text;
-                string telefono = txtPrimerTelefono.Text;
-                string correo = txtPrimerCorreo.Text;
+                lblGenerarContrasena.Text = $"Contraseña generada: {contrasenaGenerada}";
+                // No mostramos mensaje aquí, solo el label
+            }
+            else
+            {
+                MessageBox.Show("No se pudo crear la cuenta. Intenta de nuevo.");
+            }
 
-                ModeloPrimerUsuario.CrearAdmin(nombre, telefono, correo);
+        }
 
-                MessageBox.Show("Cuenta Administrador creada con exito");
-
+        private void btnContinuarPrimerUso_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(lblGenerarContrasena.Text))
+            {
+                MessageBox.Show("Cuenta Administrador creada con éxito.");
+                frmLogin log = new frmLogin();
+                log.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Primero guarda la cuenta para generar la contraseña.");
             }
         }
     }

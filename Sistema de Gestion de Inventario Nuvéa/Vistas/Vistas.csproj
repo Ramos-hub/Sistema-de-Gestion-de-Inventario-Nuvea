@@ -168,11 +168,11 @@
     <Compile Include="Formularios\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmRegistrarse.cs">
+    <Compile Include="Formularios\frmCrearEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmRegistrarse.Designer.cs">
-      <DependentUpon>frmRegistrarse.cs</DependentUpon>
+    <Compile Include="Formularios\frmCrearEmpleado.Designer.cs">
+      <DependentUpon>frmCrearEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -221,8 +221,8 @@
     <EmbeddedResource Include="Formularios\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmRegistrarse.resx">
-      <DependentUpon>frmRegistrarse.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmCrearEmpleado.resx">
+      <DependentUpon>frmCrearEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

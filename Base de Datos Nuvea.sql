@@ -392,3 +392,4 @@ BEGIN
     WHERE idProveedor = @idProveedor;
 END
 GO
+

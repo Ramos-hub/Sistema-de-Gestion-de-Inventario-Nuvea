@@ -11,12 +11,12 @@ namespace Modelos.Entidades
 {
      public class Usuario
     {
-        private int idUsuario;
-        private int idRol;
-        private string nombre;
-        private string clave;
-        private string correo;
-        private string telefono;
+        public int idUsuario;
+        public int idRol;
+        public string nombre;
+        public string clave;
+        public string correo;
+        public string telefono;
 
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
         public int IdRol { get => idRol; set => idRol = value; }
@@ -25,7 +25,7 @@ namespace Modelos.Entidades
         public string Correo { get => correo; set => correo = value; }
         public string Telefono { get => telefono; set => telefono = value; }
 
-        public static DataTable chargeUsuario()
+        public static DataTable cargarUsuario()
         {
             SqlConnection conexion = ConexionDB.Conectar();
             string consultaQuery = "select nombre, nombreRol, clave, Correo, Telefono From Usuario";

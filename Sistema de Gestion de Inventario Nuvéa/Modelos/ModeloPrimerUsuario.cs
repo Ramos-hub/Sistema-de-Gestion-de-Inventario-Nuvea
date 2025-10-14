@@ -67,6 +67,41 @@ namespace Modelos
                 return null;
             }
         }
+        public static string CrearEmpleado(string nombre, string telefono, string correo)
+        {
+            try
+            {
+                string autoContrasena = GenerarContrasena(nombre);
+                using (SqlConnection conexion = ConexionDB.Conectar())
+                {
+                    if (conexion != null)
+                    {
+                        string query = @"INSERT INTO Usuario (nombre, clave, correo, telefono, idRol)
+                 VALUES (@nombre, @clave, @correo, @telefono, )";
+                        // Valor por defecto 1= administrador
+                        SqlCommand cmd = new SqlCommand(query, conexion);
+                        cmd.Parameters.AddWithValue("@nombre", nombre);
+                        cmd.Parameters.AddWithValue("@clave", BCrypt.Net.BCrypt.HashPassword(autoContrasena));
+                        cmd.Parameters.AddWithValue("@correo", correo);
+                        cmd.Parameters.AddWithValue("@telefono", telefono);
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+                        if (filasAfectadas > 0)
+                        {
+                            //retorna la contraseña que se genero
+                            return autoContrasena;
+
+                        }
+                    }
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al Crear: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
         private static string GenerarContrasena(string nombreUsuario)
         {
             string nombreCorto = new string(nombreUsuario.Where(char.IsLetter).Take(4).ToArray());

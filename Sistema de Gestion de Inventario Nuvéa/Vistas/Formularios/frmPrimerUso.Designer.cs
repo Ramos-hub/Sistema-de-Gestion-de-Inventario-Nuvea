@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnGuardarContinuar = new System.Windows.Forms.Button();
+            this.btnGuardarPrimerUso = new System.Windows.Forms.Button();
             this.txtPrimerCorreo = new System.Windows.Forms.TextBox();
-            this.txtPrimerClave = new System.Windows.Forms.TextBox();
             this.txtPrimerTelefono = new System.Windows.Forms.TextBox();
             this.txtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNombreRepresentante = new System.Windows.Forms.Label();
             this.lblNombreEmpresa = new System.Windows.Forms.Label();
+            this.btnContinuarPrimerUso = new System.Windows.Forms.Button();
+            this.lblGenerarContrasena = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,20 +53,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnGuardarContinuar
+            // btnGuardarPrimerUso
             // 
-            this.btnGuardarContinuar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnGuardarPrimerUso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardarContinuar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnGuardarContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarContinuar.Location = new System.Drawing.Point(319, 353);
-            this.btnGuardarContinuar.Name = "btnGuardarContinuar";
-            this.btnGuardarContinuar.Size = new System.Drawing.Size(185, 95);
-            this.btnGuardarContinuar.TabIndex = 41;
-            this.btnGuardarContinuar.Text = "Guardar y Continuar";
-            this.btnGuardarContinuar.UseVisualStyleBackColor = false;
-            this.btnGuardarContinuar.Click += new System.EventHandler(this.btnGuardarContinuar_Click);
+            this.btnGuardarPrimerUso.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnGuardarPrimerUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPrimerUso.Location = new System.Drawing.Point(206, 337);
+            this.btnGuardarPrimerUso.Name = "btnGuardarPrimerUso";
+            this.btnGuardarPrimerUso.Size = new System.Drawing.Size(185, 95);
+            this.btnGuardarPrimerUso.TabIndex = 41;
+            this.btnGuardarPrimerUso.Text = "Guardar ";
+            this.btnGuardarPrimerUso.UseVisualStyleBackColor = false;
+            this.btnGuardarPrimerUso.Click += new System.EventHandler(this.btnGuardarPrimerUso_Click);
             // 
             // txtPrimerCorreo
             // 
@@ -77,16 +77,6 @@
             this.txtPrimerCorreo.Name = "txtPrimerCorreo";
             this.txtPrimerCorreo.Size = new System.Drawing.Size(563, 20);
             this.txtPrimerCorreo.TabIndex = 40;
-            // 
-            // txtPrimerClave
-            // 
-            this.txtPrimerClave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrimerClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrimerClave.Location = new System.Drawing.Point(143, 269);
-            this.txtPrimerClave.Name = "txtPrimerClave";
-            this.txtPrimerClave.Size = new System.Drawing.Size(563, 20);
-            this.txtPrimerClave.TabIndex = 38;
             // 
             // txtPrimerTelefono
             // 
@@ -107,15 +97,6 @@
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(563, 20);
             this.txtPrimerNombre.TabIndex = 36;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(409, 237);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Clave:";
             // 
             // label3
             // 
@@ -144,6 +125,31 @@
             this.lblNombreEmpresa.TabIndex = 31;
             this.lblNombreEmpresa.Text = "Nombre:";
             // 
+            // btnContinuarPrimerUso
+            // 
+            this.btnContinuarPrimerUso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnContinuarPrimerUso.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnContinuarPrimerUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinuarPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuarPrimerUso.Location = new System.Drawing.Point(471, 337);
+            this.btnContinuarPrimerUso.Name = "btnContinuarPrimerUso";
+            this.btnContinuarPrimerUso.Size = new System.Drawing.Size(185, 95);
+            this.btnContinuarPrimerUso.TabIndex = 44;
+            this.btnContinuarPrimerUso.Text = "Continuar";
+            this.btnContinuarPrimerUso.UseVisualStyleBackColor = false;
+            this.btnContinuarPrimerUso.Click += new System.EventHandler(this.btnContinuarPrimerUso_Click);
+            // 
+            // lblGenerarContrasena
+            // 
+            this.lblGenerarContrasena.AutoSize = true;
+            this.lblGenerarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenerarContrasena.Location = new System.Drawing.Point(322, 261);
+            this.lblGenerarContrasena.Name = "lblGenerarContrasena";
+            this.lblGenerarContrasena.Size = new System.Drawing.Size(198, 20);
+            this.lblGenerarContrasena.TabIndex = 45;
+            this.lblGenerarContrasena.Text = "Contrasena Automatica";
+            // 
             // frmPrimerUso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,12 +157,12 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(830, 566);
-            this.Controls.Add(this.btnGuardarContinuar);
+            this.Controls.Add(this.lblGenerarContrasena);
+            this.Controls.Add(this.btnContinuarPrimerUso);
+            this.Controls.Add(this.btnGuardarPrimerUso);
             this.Controls.Add(this.txtPrimerCorreo);
-            this.Controls.Add(this.txtPrimerClave);
             this.Controls.Add(this.txtPrimerTelefono);
             this.Controls.Add(this.txtPrimerNombre);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNombreRepresentante);
             this.Controls.Add(this.lblNombreEmpresa);
@@ -172,14 +178,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnGuardarContinuar;
+        private System.Windows.Forms.Button btnGuardarPrimerUso;
         private System.Windows.Forms.TextBox txtPrimerCorreo;
-        private System.Windows.Forms.TextBox txtPrimerClave;
         private System.Windows.Forms.TextBox txtPrimerTelefono;
         private System.Windows.Forms.TextBox txtPrimerNombre;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNombreRepresentante;
         private System.Windows.Forms.Label lblNombreEmpresa;
+        private System.Windows.Forms.Button btnContinuarPrimerUso;
+        private System.Windows.Forms.Label lblGenerarContrasena;
     }
 }

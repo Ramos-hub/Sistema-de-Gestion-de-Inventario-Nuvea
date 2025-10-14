@@ -69,5 +69,10 @@ namespace Vistas.Formularios
         {
             abrirForm(new frmGanancias());
         }
+
+        private void btnCrearEmpleadoPrincipal_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmCrearEmpleado());
+        }
     }
 }

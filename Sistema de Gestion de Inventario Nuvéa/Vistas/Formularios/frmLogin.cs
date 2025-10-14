@@ -104,12 +104,6 @@ namespace Vistas.Formularios
             }
         }
 
-        private void btnRegistrarse_Click(object sender, EventArgs e)
-        {
-            frmRegistrarse registro = new frmRegistrarse();
-            registro.Show();
-            this.Hide();
-        }
 
         private void btnOlvidasteContraseña_Click(object sender, EventArgs e)
         {

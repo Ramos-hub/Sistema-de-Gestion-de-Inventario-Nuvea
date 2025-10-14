@@ -39,6 +39,7 @@
             this.lblLogoFacturacion = new System.Windows.Forms.Label();
             this.pnlPerfilInventario = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.btnCrearEmpleadoPrincipal = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlBotonesMenu.SuspendLayout();
             this.SuspendLayout();
@@ -53,11 +54,12 @@
             this.pnlMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(138, 450);
+            this.pnlMenu.Size = new System.Drawing.Size(138, 507);
             this.pnlMenu.TabIndex = 6;
             // 
             // pnlBotonesMenu
             // 
+            this.pnlBotonesMenu.Controls.Add(this.btnCrearEmpleadoPrincipal);
             this.pnlBotonesMenu.Controls.Add(this.btnGanancias);
             this.pnlBotonesMenu.Controls.Add(this.btnInventarioHistorial);
             this.pnlBotonesMenu.Controls.Add(this.btnInventarioProveedores);
@@ -179,14 +181,27 @@
             this.pnlCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentral.Location = new System.Drawing.Point(138, 45);
             this.pnlCentral.Name = "pnlCentral";
-            this.pnlCentral.Size = new System.Drawing.Size(662, 405);
+            this.pnlCentral.Size = new System.Drawing.Size(662, 462);
             this.pnlCentral.TabIndex = 12;
+            // 
+            // btnCrearEmpleadoPrincipal
+            // 
+            this.btnCrearEmpleadoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
+            this.btnCrearEmpleadoPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnCrearEmpleadoPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearEmpleadoPrincipal.Location = new System.Drawing.Point(0, 319);
+            this.btnCrearEmpleadoPrincipal.Name = "btnCrearEmpleadoPrincipal";
+            this.btnCrearEmpleadoPrincipal.Size = new System.Drawing.Size(138, 29);
+            this.btnCrearEmpleadoPrincipal.TabIndex = 5;
+            this.btnCrearEmpleadoPrincipal.Text = "Crear Empleado";
+            this.btnCrearEmpleadoPrincipal.UseVisualStyleBackColor = false;
+            this.btnCrearEmpleadoPrincipal.Click += new System.EventHandler(this.btnCrearEmpleadoPrincipal_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 507);
             this.Controls.Add(this.pnlCentral);
             this.Controls.Add(this.pnlPerfilInventario);
             this.Controls.Add(this.pnlMenu);
@@ -212,5 +227,6 @@
         private System.Windows.Forms.Panel pnlPerfilInventario;
         private System.Windows.Forms.Panel pnlMenu;
         public System.Windows.Forms.Panel pnlCentral;
+        private System.Windows.Forms.Button btnCrearEmpleadoPrincipal;
     }
 }
