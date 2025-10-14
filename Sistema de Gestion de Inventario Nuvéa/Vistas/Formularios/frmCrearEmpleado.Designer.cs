@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgVerEmpleadosCreados = new System.Windows.Forms.DataGridView();
+            this.dgvVerEmpleadosCreados = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtClaveCrearEmpleado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnEditarEmpleado = new System.Windows.Forms.Button();
             this.btnLimpiarCrearEmpleado = new System.Windows.Forms.Button();
             this.btnEliminarEmpleado = new System.Windows.Forms.Button();
             this.txtNumTelCrearU = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblContrasenaAuto = new System.Windows.Forms.Label();
-            this.btnCrearCuenta = new System.Windows.Forms.Button();
+            this.btnAñadirCuenta = new System.Windows.Forms.Button();
             this.txtCorreoRegisCrearU = new System.Windows.Forms.TextBox();
             this.txtNombreUsuarioRegisCrearU = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.txtClaveCrearEmpleado = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgVerEmpleadosCreados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpleadosCreados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgVerEmpleadosCreados
+            // dgvVerEmpleadosCreados
             // 
-            this.dgVerEmpleadosCreados.BackgroundColor = System.Drawing.Color.White;
-            this.dgVerEmpleadosCreados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgVerEmpleadosCreados.Location = new System.Drawing.Point(12, 26);
-            this.dgVerEmpleadosCreados.Name = "dgVerEmpleadosCreados";
-            this.dgVerEmpleadosCreados.Size = new System.Drawing.Size(458, 412);
-            this.dgVerEmpleadosCreados.TabIndex = 23;
+            this.dgvVerEmpleadosCreados.BackgroundColor = System.Drawing.Color.White;
+            this.dgvVerEmpleadosCreados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerEmpleadosCreados.Location = new System.Drawing.Point(12, 26);
+            this.dgvVerEmpleadosCreados.Name = "dgvVerEmpleadosCreados";
+            this.dgvVerEmpleadosCreados.Size = new System.Drawing.Size(458, 412);
+            this.dgvVerEmpleadosCreados.TabIndex = 23;
+            this.dgvVerEmpleadosCreados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVerEmpleadosCreados_CellDoubleClick);
             // 
             // label2
             // 
@@ -75,7 +76,7 @@
             this.groupBox1.Controls.Add(this.txtNumTelCrearU);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblContrasenaAuto);
-            this.groupBox1.Controls.Add(this.btnCrearCuenta);
+            this.groupBox1.Controls.Add(this.btnAñadirCuenta);
             this.groupBox1.Controls.Add(this.txtCorreoRegisCrearU);
             this.groupBox1.Controls.Add(this.txtNombreUsuarioRegisCrearU);
             this.groupBox1.Controls.Add(this.lblCorreo);
@@ -86,6 +87,25 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del empleado";
+            // 
+            // txtClaveCrearEmpleado
+            // 
+            this.txtClaveCrearEmpleado.Location = new System.Drawing.Point(9, 233);
+            this.txtClaveCrearEmpleado.MaxLength = 8;
+            this.txtClaveCrearEmpleado.Name = "txtClaveCrearEmpleado";
+            this.txtClaveCrearEmpleado.ShortcutsEnabled = false;
+            this.txtClaveCrearEmpleado.Size = new System.Drawing.Size(284, 20);
+            this.txtClaveCrearEmpleado.TabIndex = 39;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 214);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 16);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Clave:";
             // 
             // btnEditarEmpleado
             // 
@@ -121,6 +141,7 @@
             this.btnEliminarEmpleado.TabIndex = 35;
             this.btnEliminarEmpleado.Text = "Eliminar Empleado";
             this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminarEmpleado_Click);
             // 
             // txtNumTelCrearU
             // 
@@ -150,16 +171,17 @@
             this.lblContrasenaAuto.Size = new System.Drawing.Size(0, 20);
             this.lblContrasenaAuto.TabIndex = 32;
             // 
-            // btnCrearCuenta
+            // btnAñadirCuenta
             // 
-            this.btnCrearCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(42, 272);
-            this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(97, 50);
-            this.btnCrearCuenta.TabIndex = 31;
-            this.btnCrearCuenta.Text = "Crear Cuenta";
-            this.btnCrearCuenta.UseVisualStyleBackColor = false;
+            this.btnAñadirCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAñadirCuenta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirCuenta.Location = new System.Drawing.Point(42, 272);
+            this.btnAñadirCuenta.Name = "btnAñadirCuenta";
+            this.btnAñadirCuenta.Size = new System.Drawing.Size(97, 50);
+            this.btnAñadirCuenta.TabIndex = 31;
+            this.btnAñadirCuenta.Text = "Añadir Cuenta";
+            this.btnAñadirCuenta.UseVisualStyleBackColor = false;
+            this.btnAñadirCuenta.Click += new System.EventHandler(this.btnAñadirCuenta_Click);
             // 
             // txtCorreoRegisCrearU
             // 
@@ -199,25 +221,6 @@
             this.lblNombreUsuario.TabIndex = 27;
             this.lblNombreUsuario.Text = "Nombre de Usuario";
             // 
-            // txtClaveCrearEmpleado
-            // 
-            this.txtClaveCrearEmpleado.Location = new System.Drawing.Point(9, 233);
-            this.txtClaveCrearEmpleado.MaxLength = 8;
-            this.txtClaveCrearEmpleado.Name = "txtClaveCrearEmpleado";
-            this.txtClaveCrearEmpleado.ShortcutsEnabled = false;
-            this.txtClaveCrearEmpleado.Size = new System.Drawing.Size(284, 20);
-            this.txtClaveCrearEmpleado.TabIndex = 39;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 214);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 16);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Clave:";
-            // 
             // frmCrearEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,11 +229,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgVerEmpleadosCreados);
+            this.Controls.Add(this.dgvVerEmpleadosCreados);
             this.Name = "frmCrearEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearEmpleado";
-            ((System.ComponentModel.ISupportInitialize)(this.dgVerEmpleadosCreados)).EndInit();
+            this.Load += new System.EventHandler(this.frmCrearEmpleado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpleadosCreados)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -239,7 +243,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgVerEmpleadosCreados;
+        private System.Windows.Forms.DataGridView dgvVerEmpleadosCreados;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnEditarEmpleado;
@@ -248,7 +252,7 @@
         private System.Windows.Forms.TextBox txtNumTelCrearU;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblContrasenaAuto;
-        private System.Windows.Forms.Button btnCrearCuenta;
+        private System.Windows.Forms.Button btnAñadirCuenta;
         private System.Windows.Forms.TextBox txtCorreoRegisCrearU;
         private System.Windows.Forms.TextBox txtNombreUsuarioRegisCrearU;
         private System.Windows.Forms.Label lblCorreo;

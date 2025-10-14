@@ -139,7 +139,6 @@ C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion 
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrincipal.resources
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrincipalEmpleado.resources
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmProveedores.resources
-C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmRegistrarse.resources
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Properties.Resources.resources
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
@@ -260,3 +259,6 @@ C:\Users\Estudiante\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Ge
 C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmBienvenida.resources
 C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrimerUso.resources
 C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmCrearEmpleado.resources
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmBienvenida.resources
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrimerUso.resources
+C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmCrearEmpleado.resources

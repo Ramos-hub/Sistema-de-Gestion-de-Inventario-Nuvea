@@ -28,7 +28,7 @@ insert into Usuario values (1, 'Carlos Ramirez', 'Xy8d$3Lz', 'antodie96884@gmail
 (2, 'Ana Lopez', 'qP9#Km72', 'ana.lopez@nuvea.com', '70110002'),(2, 'Luis Martinez', 'Uv3@pl09', 'luis.martinez@nuvea.com', '70110003'),
 (2, 'Sofia Hernandez', 'bN1!xT63', 'sofia.hernandez@nuvea.com', '70110004'),(2, 'Javier Gomez', 'Zn2&wr88', 'javier.gomez@nuvea.com', '70110005'),
 (2, 'Maria Castro', 'dT4^lk17', 'maria.castro@nuvea.com', '70110006'),(2, 'Andres Perez', 'kV6@me44', 'andres.perez@nuvea.com', '70110007'),
-(2, 'Laura Diaz', 'tY1#op38', 'laura.diaz@nuvea.com', '70110008'),(1, 'Diego Reyes', 'xJ3!ns56', 'diego.reyes@nuvea.com', '70110009'),
+(2, 'Laura Diaz', 'tY1#op38', 'laura.diaz@nuvea.com', '70110008'),(2, 'Diego Reyes', 'xJ3!ns56', 'diego.reyes@nuvea.com', '70110009'),
 (2, 'Valeria Flores', 'hM9$cv21', 'valeria.flores@nuvea.com', '70110010'),(2, 'Fernando Ruiz', 'pA5%jk77', 'fernando.ruiz@nuvea.com', '70110011'),
 (2, 'Gabriela Torres', 'nW7&da02', 'gabriela.torres@nuvea.com', '70110012'),(2, 'Ricardo Mendez', 'uS8!lp94', 'ricardo.mendez@nuvea.com', '70110013'),
 (2, 'Camila Navarro', 'mQ4@tz66', 'camila.navarro@nuvea.com', '70110014'),(2, 'Daniel Ortega', 'eB6#qm35', 'daniel.ortega@nuvea.com', '70110015');
@@ -390,6 +390,29 @@ BEGIN
     -- 4) Borrar el proveedor
     DELETE FROM Proveedor
     WHERE idProveedor = @idProveedor;
+END
+GO
+
+---Procedimiento Almacenado para eliminar usuario---
+CREATE PROCEDURE sp_EliminarUsuario
+    @idUsuario INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    BEGIN TRAN
+
+    DELETE df
+    FROM detalleFactura df
+    INNER JOIN Compra c ON c.idCompra = df.idCompra
+    WHERE c.idUsuario = @idUsuario;
+
+    DELETE FROM Compra
+    WHERE idUsuario = @idUsuario;
+
+    DELETE FROM Usuario
+    WHERE idUsuario = @idUsuario;
+
+    COMMIT TRAN
 END
 GO
 
