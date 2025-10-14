@@ -23,17 +23,31 @@ namespace Vistas.Formularios
         //Metodo que me permitira activar los formularios
         private void abrirForm(Form formularioPintar)
         {
-            if (activarForm != null)
+            try
             {
-                activarForm.Close();
+                if (activarForm != null && !activarForm.IsDisposed)
+                {
+                    activarForm.Close();
+                }
+
+                pnlCentral.Controls.Clear();
+                pnlCentral.Padding = new Padding(0);
+                pnlCentral.Margin = new Padding(0);
+                pnlCentral.AutoScroll = false;
+
+                activarForm = formularioPintar;
+                activarForm.TopLevel = false;
+                activarForm.FormBorderStyle = FormBorderStyle.None;
+                activarForm.Dock = DockStyle.Fill;
+
+                pnlCentral.Controls.Add(activarForm);
+                activarForm.BringToFront();
+                activarForm.Show();
             }
-            activarForm = formularioPintar;
-            formularioPintar.TopLevel = false;
-            formularioPintar.FormBorderStyle = FormBorderStyle.None;
-            formularioPintar.Dock = DockStyle.Fill;
-            pnlCentral.Controls.Add(formularioPintar);
-            formularioPintar.BringToFront();
-            formularioPintar.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo abrir el formulario: " + ex.Message);
+            }
         }
 
 
@@ -73,6 +87,11 @@ namespace Vistas.Formularios
         private void btnCrearEmpleadoPrincipal_Click(object sender, EventArgs e)
         {
             abrirForm(new frmCrearEmpleado());
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            abrirForm(new frmIndex());
         }
     }
 }

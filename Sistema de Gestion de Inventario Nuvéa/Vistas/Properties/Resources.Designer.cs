@@ -103,6 +103,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_configuración_del_administrador_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-configuración-del-administrador-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Nuvéa {
             get {
                 object obj = ResourceManager.GetObject("Logo.Nuvéa", resourceCulture);
