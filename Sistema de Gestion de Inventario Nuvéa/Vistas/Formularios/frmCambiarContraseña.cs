@@ -23,7 +23,7 @@ namespace Vistas.Formularios
         public frmCambiarContraseña(int idUsuario)
         {
             InitializeComponent();
-            this.idUsuario = idUsuario; // ← ¡IMPORTANTE! asignar el id recibido
+            this.idUsuario = idUsuario;
 
         }
 

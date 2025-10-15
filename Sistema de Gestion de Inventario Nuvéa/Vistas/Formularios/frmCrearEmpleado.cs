@@ -77,6 +77,7 @@ namespace Vistas.Formularios
                     MessageBox.Show("Rellena todos los campos.");
                     return false;
                 }
+                
 
                 Usuario nuevo = new Usuario();
                 nuevo.IdRol = 2;

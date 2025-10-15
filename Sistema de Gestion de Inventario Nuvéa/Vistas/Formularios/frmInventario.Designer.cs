@@ -341,6 +341,7 @@
             // 
             // cmbProveedor
             // 
+            this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProveedor.FormattingEnabled = true;
             this.cmbProveedor.Location = new System.Drawing.Point(984, 273);
             this.cmbProveedor.Name = "cmbProveedor";
@@ -349,6 +350,7 @@
             // 
             // cmbCategoriaProduc
             // 
+            this.cmbCategoriaProduc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriaProduc.FormattingEnabled = true;
             this.cmbCategoriaProduc.Location = new System.Drawing.Point(984, 324);
             this.cmbCategoriaProduc.Name = "cmbCategoriaProduc";
@@ -387,6 +389,7 @@
             this.txtCodigoBarras.ShortcutsEnabled = false;
             this.txtCodigoBarras.Size = new System.Drawing.Size(118, 20);
             this.txtCodigoBarras.TabIndex = 20;
+            this.txtCodigoBarras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoBarras_KeyPress);
             // 
             // txtNombreProduc
             // 
@@ -396,6 +399,7 @@
             this.txtNombreProduc.ShortcutsEnabled = false;
             this.txtNombreProduc.Size = new System.Drawing.Size(123, 20);
             this.txtNombreProduc.TabIndex = 19;
+            this.txtNombreProduc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProduc_KeyPress);
             // 
             // btnLimpiarInven
             // 

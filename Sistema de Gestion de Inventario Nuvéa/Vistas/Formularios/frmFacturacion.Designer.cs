@@ -54,11 +54,9 @@
             // gbListaFactura
             // 
             this.gbListaFactura.Controls.Add(this.dgvMostrarListaFacturas);
-            this.gbListaFactura.Location = new System.Drawing.Point(36, 78);
-            this.gbListaFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.gbListaFactura.Location = new System.Drawing.Point(27, 63);
             this.gbListaFactura.Name = "gbListaFactura";
-            this.gbListaFactura.Padding = new System.Windows.Forms.Padding(4);
-            this.gbListaFactura.Size = new System.Drawing.Size(709, 353);
+            this.gbListaFactura.Size = new System.Drawing.Size(532, 287);
             this.gbListaFactura.TabIndex = 5;
             this.gbListaFactura.TabStop = false;
             this.gbListaFactura.Text = "Lista de Facturas";
@@ -66,21 +64,19 @@
             // dgvMostrarListaFacturas
             // 
             this.dgvMostrarListaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarListaFacturas.Location = new System.Drawing.Point(12, 28);
-            this.dgvMostrarListaFacturas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMostrarListaFacturas.Location = new System.Drawing.Point(9, 23);
             this.dgvMostrarListaFacturas.Name = "dgvMostrarListaFacturas";
             this.dgvMostrarListaFacturas.RowHeadersWidth = 51;
-            this.dgvMostrarListaFacturas.Size = new System.Drawing.Size(689, 318);
+            this.dgvMostrarListaFacturas.Size = new System.Drawing.Size(517, 258);
             this.dgvMostrarListaFacturas.TabIndex = 0;
             // 
             // lblFacturacion
             // 
             this.lblFacturacion.AutoSize = true;
             this.lblFacturacion.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacturacion.Location = new System.Drawing.Point(41, 23);
-            this.lblFacturacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFacturacion.Location = new System.Drawing.Point(31, 19);
             this.lblFacturacion.Name = "lblFacturacion";
-            this.lblFacturacion.Size = new System.Drawing.Size(146, 31);
+            this.lblFacturacion.Size = new System.Drawing.Size(119, 25);
             this.lblFacturacion.TabIndex = 6;
             this.lblFacturacion.Text = "Facturacion";
             // 
@@ -97,11 +93,9 @@
             this.gbCrearFactura.Controls.Add(this.label2);
             this.gbCrearFactura.Controls.Add(this.txtNombreClienteCrearFactura);
             this.gbCrearFactura.Controls.Add(this.lblNombre);
-            this.gbCrearFactura.Location = new System.Drawing.Point(765, 78);
-            this.gbCrearFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.gbCrearFactura.Location = new System.Drawing.Point(574, 63);
             this.gbCrearFactura.Name = "gbCrearFactura";
-            this.gbCrearFactura.Padding = new System.Windows.Forms.Padding(4);
-            this.gbCrearFactura.Size = new System.Drawing.Size(285, 490);
+            this.gbCrearFactura.Size = new System.Drawing.Size(214, 398);
             this.gbCrearFactura.TabIndex = 7;
             this.gbCrearFactura.TabStop = false;
             this.gbCrearFactura.Text = "Crear Factura";
@@ -110,18 +104,16 @@
             // 
             this.cmbProductosFactu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductosFactu.FormattingEnabled = true;
-            this.cmbProductosFactu.Location = new System.Drawing.Point(11, 222);
-            this.cmbProductosFactu.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbProductosFactu.Location = new System.Drawing.Point(8, 180);
             this.cmbProductosFactu.Name = "cmbProductosFactu";
-            this.cmbProductosFactu.Size = new System.Drawing.Size(263, 24);
+            this.cmbProductosFactu.Size = new System.Drawing.Size(198, 21);
             this.cmbProductosFactu.TabIndex = 11;
             // 
             // btnGuardarFactura
             // 
-            this.btnGuardarFactura.Location = new System.Drawing.Point(75, 423);
-            this.btnGuardarFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarFactura.Location = new System.Drawing.Point(56, 344);
             this.btnGuardarFactura.Name = "btnGuardarFactura";
-            this.btnGuardarFactura.Size = new System.Drawing.Size(141, 42);
+            this.btnGuardarFactura.Size = new System.Drawing.Size(106, 34);
             this.btnGuardarFactura.TabIndex = 10;
             this.btnGuardarFactura.Text = "Guardar";
             this.btnGuardarFactura.UseVisualStyleBackColor = true;
@@ -129,12 +121,11 @@
             // 
             // txtTotalCrearFactura
             // 
-            this.txtTotalCrearFactura.Location = new System.Drawing.Point(9, 357);
-            this.txtTotalCrearFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalCrearFactura.Location = new System.Drawing.Point(7, 290);
             this.txtTotalCrearFactura.MaxLength = 50;
             this.txtTotalCrearFactura.Name = "txtTotalCrearFactura";
             this.txtTotalCrearFactura.ShortcutsEnabled = false;
-            this.txtTotalCrearFactura.Size = new System.Drawing.Size(264, 22);
+            this.txtTotalCrearFactura.Size = new System.Drawing.Size(199, 20);
             this.txtTotalCrearFactura.TabIndex = 9;
             // 
             // cmbEstadoFacturaCrearFactura
@@ -144,78 +135,70 @@
             this.cmbEstadoFacturaCrearFactura.Items.AddRange(new object[] {
             "Pagada",
             "Pendiente"});
-            this.cmbEstadoFacturaCrearFactura.Location = new System.Drawing.Point(11, 289);
-            this.cmbEstadoFacturaCrearFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEstadoFacturaCrearFactura.Location = new System.Drawing.Point(8, 235);
             this.cmbEstadoFacturaCrearFactura.Name = "cmbEstadoFacturaCrearFactura";
-            this.cmbEstadoFacturaCrearFactura.Size = new System.Drawing.Size(264, 24);
+            this.cmbEstadoFacturaCrearFactura.Size = new System.Drawing.Size(199, 21);
             this.cmbEstadoFacturaCrearFactura.TabIndex = 8;
             // 
             // dtpFechaCrearFactura
             // 
-            this.dtpFechaCrearFactura.Location = new System.Drawing.Point(9, 130);
-            this.dtpFechaCrearFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaCrearFactura.Location = new System.Drawing.Point(7, 106);
             this.dtpFechaCrearFactura.Name = "dtpFechaCrearFactura";
-            this.dtpFechaCrearFactura.Size = new System.Drawing.Size(265, 22);
+            this.dtpFechaCrearFactura.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaCrearFactura.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 337);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 274);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 16);
+            this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Total";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 270);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(5, 219);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 16);
+            this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Estado de la factura";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 191);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(5, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 16);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nombre Producto";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 111);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(5, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 16);
+            this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Fecha de facturacion";
             // 
             // txtNombreClienteCrearFactura
             // 
-            this.txtNombreClienteCrearFactura.Location = new System.Drawing.Point(11, 50);
-            this.txtNombreClienteCrearFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreClienteCrearFactura.Location = new System.Drawing.Point(8, 41);
             this.txtNombreClienteCrearFactura.MaxLength = 50;
             this.txtNombreClienteCrearFactura.Name = "txtNombreClienteCrearFactura";
             this.txtNombreClienteCrearFactura.ShortcutsEnabled = false;
-            this.txtNombreClienteCrearFactura.Size = new System.Drawing.Size(265, 22);
+            this.txtNombreClienteCrearFactura.Size = new System.Drawing.Size(200, 20);
             this.txtNombreClienteCrearFactura.TabIndex = 1;
             this.txtNombreClienteCrearFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreClienteCrearFactura_KeyPress);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(8, 31);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(6, 25);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(100, 16);
+            this.lblNombre.Size = new System.Drawing.Size(79, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre Cliente";
             // 
@@ -223,10 +206,9 @@
             // 
             this.btnEditarFactura.BackColor = System.Drawing.Color.Salmon;
             this.btnEditarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarFactura.Location = new System.Drawing.Point(583, 453);
-            this.btnEditarFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarFactura.Location = new System.Drawing.Point(437, 368);
             this.btnEditarFactura.Name = "btnEditarFactura";
-            this.btnEditarFactura.Size = new System.Drawing.Size(163, 59);
+            this.btnEditarFactura.Size = new System.Drawing.Size(122, 48);
             this.btnEditarFactura.TabIndex = 8;
             this.btnEditarFactura.Text = "Editar";
             this.btnEditarFactura.UseVisualStyleBackColor = false;
@@ -236,10 +218,9 @@
             // 
             this.btnEliminarFacturacion.BackColor = System.Drawing.Color.Green;
             this.btnEliminarFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarFacturacion.Location = new System.Drawing.Point(387, 453);
-            this.btnEliminarFacturacion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarFacturacion.Location = new System.Drawing.Point(290, 368);
             this.btnEliminarFacturacion.Name = "btnEliminarFacturacion";
-            this.btnEliminarFacturacion.Size = new System.Drawing.Size(163, 59);
+            this.btnEliminarFacturacion.Size = new System.Drawing.Size(122, 48);
             this.btnEliminarFacturacion.TabIndex = 9;
             this.btnEliminarFacturacion.Text = "Eliminar";
             this.btnEliminarFacturacion.UseVisualStyleBackColor = false;
@@ -249,9 +230,10 @@
             // 
             this.btnLimpiarFactu.BackColor = System.Drawing.Color.Orchid;
             this.btnLimpiarFactu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarFactu.Location = new System.Drawing.Point(194, 453);
+            this.btnLimpiarFactu.Location = new System.Drawing.Point(146, 368);
+            this.btnLimpiarFactu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarFactu.Name = "btnLimpiarFactu";
-            this.btnLimpiarFactu.Size = new System.Drawing.Size(163, 59);
+            this.btnLimpiarFactu.Size = new System.Drawing.Size(122, 48);
             this.btnLimpiarFactu.TabIndex = 10;
             this.btnLimpiarFactu.Text = "Limpiar";
             this.btnLimpiarFactu.UseVisualStyleBackColor = false;
@@ -259,17 +241,16 @@
             // 
             // frmFacturacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.ClientSize = new System.Drawing.Size(1067, 603);
+            this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.btnLimpiarFactu);
             this.Controls.Add(this.btnEliminarFacturacion);
             this.Controls.Add(this.btnEditarFactura);
             this.Controls.Add(this.gbCrearFactura);
             this.Controls.Add(this.lblFacturacion);
             this.Controls.Add(this.gbListaFactura);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmFacturacion";
             this.Text = "frmFacturacion";
             this.Load += new System.EventHandler(this.frmFacturacion_Load);

@@ -91,7 +91,7 @@
             // txtClaveCrearEmpleado
             // 
             this.txtClaveCrearEmpleado.Location = new System.Drawing.Point(9, 233);
-            this.txtClaveCrearEmpleado.MaxLength = 8;
+            this.txtClaveCrearEmpleado.MaxLength = 50;
             this.txtClaveCrearEmpleado.Name = "txtClaveCrearEmpleado";
             this.txtClaveCrearEmpleado.ShortcutsEnabled = false;
             this.txtClaveCrearEmpleado.Size = new System.Drawing.Size(284, 20);
@@ -179,7 +179,7 @@
             this.btnAñadirCuenta.Name = "btnAñadirCuenta";
             this.btnAñadirCuenta.Size = new System.Drawing.Size(97, 50);
             this.btnAñadirCuenta.TabIndex = 31;
-            this.btnAñadirCuenta.Text = "Añadir Cuenta";
+            this.btnAñadirCuenta.Text = "Añadir Empleado";
             this.btnAñadirCuenta.UseVisualStyleBackColor = false;
             this.btnAñadirCuenta.Click += new System.EventHandler(this.btnAñadirCuenta_Click);
             // 

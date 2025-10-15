@@ -60,7 +60,6 @@
             this.dgvInventarioEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventarioEmpleado.Location = new System.Drawing.Point(12, 182);
             this.dgvInventarioEmpleado.Name = "dgvInventarioEmpleado";
-            this.dgvInventarioEmpleado.ReadOnly = true;
             this.dgvInventarioEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventarioEmpleado.Size = new System.Drawing.Size(986, 355);
             this.dgvInventarioEmpleado.TabIndex = 40;
