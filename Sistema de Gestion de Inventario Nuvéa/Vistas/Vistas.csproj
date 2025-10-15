@@ -84,6 +84,12 @@
     <Compile Include="Formularios\frmBienvenida.Designer.cs">
       <DependentUpon>frmBienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmFacturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,10 +180,19 @@
     <Compile Include="Formularios\frmCrearEmpleado.Designer.cs">
       <DependentUpon>frmCrearEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmSoporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSoporte.Designer.cs">
+      <DependentUpon>frmSoporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmBienvenida.resx">
       <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
@@ -224,6 +239,9 @@
     <EmbeddedResource Include="Formularios\frmCrearEmpleado.resx">
       <DependentUpon>frmCrearEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSoporte.resx">
+      <DependentUpon>frmSoporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -234,6 +252,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Content Include="Manuales\Manual_de_Usuario_Nuvea.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manuales\Manual_Tecnico_Nuvea.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

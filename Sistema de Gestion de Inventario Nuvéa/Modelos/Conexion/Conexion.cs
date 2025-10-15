@@ -10,7 +10,7 @@ namespace Modelo.Conexion
     public class ConexionDB
     {
         //Comenzamos con la conexion, conectamos nuestra base de datos con el formulario de c#
-        private static string servidor = "DESKTOP-NRIRATE\\SQLEXPRESS01";
+        private static string servidor = "LAPTOP-QV3OA50B\\SQLEXPRESS";
         private static string basededatos = "Nuvea";
 
         public static SqlConnection Conectar()

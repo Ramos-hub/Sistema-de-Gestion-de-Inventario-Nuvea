@@ -30,6 +30,7 @@
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlBotonesMenu = new System.Windows.Forms.Panel();
+            this.btnCambiarContraseñaP = new System.Windows.Forms.Button();
             this.btnCrearEmpleadoPrincipal = new System.Windows.Forms.Button();
             this.btnGanancias = new System.Windows.Forms.Button();
             this.btnInventarioHistorial = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.lblLogoFacturacion = new System.Windows.Forms.Label();
             this.pnlPerfilInventario = new System.Windows.Forms.Panel();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.btnSoporteP = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlBotonesMenu.SuspendLayout();
             this.SuspendLayout();
@@ -54,11 +56,13 @@
             this.pnlMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(138, 507);
+            this.pnlMenu.Size = new System.Drawing.Size(138, 603);
             this.pnlMenu.TabIndex = 6;
             // 
             // pnlBotonesMenu
             // 
+            this.pnlBotonesMenu.Controls.Add(this.btnSoporteP);
+            this.pnlBotonesMenu.Controls.Add(this.btnCambiarContraseñaP);
             this.pnlBotonesMenu.Controls.Add(this.btnCrearEmpleadoPrincipal);
             this.pnlBotonesMenu.Controls.Add(this.btnGanancias);
             this.pnlBotonesMenu.Controls.Add(this.btnInventarioHistorial);
@@ -70,15 +74,28 @@
             this.pnlBotonesMenu.Location = new System.Drawing.Point(0, 102);
             this.pnlBotonesMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBotonesMenu.Name = "pnlBotonesMenu";
-            this.pnlBotonesMenu.Size = new System.Drawing.Size(138, 458);
+            this.pnlBotonesMenu.Size = new System.Drawing.Size(138, 501);
             this.pnlBotonesMenu.TabIndex = 3;
+            // 
+            // btnCambiarContraseñaP
+            // 
+            this.btnCambiarContraseñaP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
+            this.btnCambiarContraseñaP.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseñaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseñaP.Location = new System.Drawing.Point(0, 364);
+            this.btnCambiarContraseñaP.Name = "btnCambiarContraseñaP";
+            this.btnCambiarContraseñaP.Size = new System.Drawing.Size(138, 55);
+            this.btnCambiarContraseñaP.TabIndex = 6;
+            this.btnCambiarContraseñaP.Text = "Cambiar Contraseña";
+            this.btnCambiarContraseñaP.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseñaP.Click += new System.EventHandler(this.btnCambiarContraseñaP_Click);
             // 
             // btnCrearEmpleadoPrincipal
             // 
             this.btnCrearEmpleadoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnCrearEmpleadoPrincipal.FlatAppearance.BorderSize = 0;
             this.btnCrearEmpleadoPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearEmpleadoPrincipal.Location = new System.Drawing.Point(0, 319);
+            this.btnCrearEmpleadoPrincipal.Location = new System.Drawing.Point(0, 328);
             this.btnCrearEmpleadoPrincipal.Name = "btnCrearEmpleadoPrincipal";
             this.btnCrearEmpleadoPrincipal.Size = new System.Drawing.Size(138, 29);
             this.btnCrearEmpleadoPrincipal.TabIndex = 5;
@@ -104,7 +121,7 @@
             this.btnInventarioHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
             this.btnInventarioHistorial.FlatAppearance.BorderSize = 0;
             this.btnInventarioHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventarioHistorial.Location = new System.Drawing.Point(0, 220);
+            this.btnInventarioHistorial.Location = new System.Drawing.Point(0, 217);
             this.btnInventarioHistorial.Name = "btnInventarioHistorial";
             this.btnInventarioHistorial.Size = new System.Drawing.Size(138, 48);
             this.btnInventarioHistorial.TabIndex = 3;
@@ -195,14 +212,27 @@
             this.pnlCentral.Location = new System.Drawing.Point(138, 45);
             this.pnlCentral.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCentral.Name = "pnlCentral";
-            this.pnlCentral.Size = new System.Drawing.Size(662, 462);
+            this.pnlCentral.Size = new System.Drawing.Size(662, 558);
             this.pnlCentral.TabIndex = 12;
+            // 
+            // btnSoporteP
+            // 
+            this.btnSoporteP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(54)))));
+            this.btnSoporteP.FlatAppearance.BorderSize = 0;
+            this.btnSoporteP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSoporteP.Location = new System.Drawing.Point(0, 425);
+            this.btnSoporteP.Name = "btnSoporteP";
+            this.btnSoporteP.Size = new System.Drawing.Size(138, 29);
+            this.btnSoporteP.TabIndex = 7;
+            this.btnSoporteP.Text = "Soporte";
+            this.btnSoporteP.UseVisualStyleBackColor = false;
+            this.btnSoporteP.Click += new System.EventHandler(this.btnSoporteP_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 507);
+            this.ClientSize = new System.Drawing.Size(800, 603);
             this.Controls.Add(this.pnlCentral);
             this.Controls.Add(this.pnlPerfilInventario);
             this.Controls.Add(this.pnlMenu);
@@ -230,5 +260,7 @@
         private System.Windows.Forms.Panel pnlMenu;
         public System.Windows.Forms.Panel pnlCentral;
         private System.Windows.Forms.Button btnCrearEmpleadoPrincipal;
+        private System.Windows.Forms.Button btnCambiarContraseñaP;
+        private System.Windows.Forms.Button btnSoporteP;
     }
 }

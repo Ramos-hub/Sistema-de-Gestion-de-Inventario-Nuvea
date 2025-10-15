@@ -87,7 +87,7 @@ namespace Vistas.Formularios
                             return;
                         }
 
-                        MessageBox.Show("Bienvenido al Sistema ❤", "Bienvenido",
+                        MessageBox.Show("Bienvenido al Sistema", "Bienvenido",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         

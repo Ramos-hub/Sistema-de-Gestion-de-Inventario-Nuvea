@@ -93,5 +93,15 @@ namespace Vistas.Formularios
         {
             abrirForm(new frmIndex());
         }
+
+        private void btnCambiarContraseñaP_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmCambiarContraseña(1));
+        }
+
+        private void btnSoporteP_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmSoporte());
+        }
     }
 }

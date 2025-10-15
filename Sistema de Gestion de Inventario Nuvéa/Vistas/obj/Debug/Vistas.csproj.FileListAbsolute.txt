@@ -262,3 +262,7 @@ C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmBienvenida.resources
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmPrimerUso.resources
 C:\Users\USER\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmCrearEmpleado.resources
+C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmCambiarContraseña.resources
+C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\bin\Debug\Manuales\Manual_de_Usuario_Nuvea.pdf
+C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\bin\Debug\Manuales\Manual_Tecnico_Nuvea.pdf
+C:\Users\Diego\Desktop\Sistema-de-Gestion-de-Inventario-Nuvea\Sistema de Gestion de Inventario Nuvéa\Vistas\obj\Debug\Vistas.Formularios.frmSoporte.resources
