@@ -20,7 +20,7 @@ namespace Vistas.Formularios
         // flag para controlar si ya se está enviando
         private bool enviando = false;
 
-        public frmOlivdasteContraseña()
+        public frmOlivdasteContraseña()                                    
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace Vistas.Formularios
 
             if (string.IsNullOrEmpty(correo))
             {
-                MessageBox.Show("Poné tu correo primero 😅", "Recuperar");
+                MessageBox.Show("Poné tu correo primero ", "Recuperar");
                 enviando = false;
                 btnEnviarCorreo.Enabled = true;
                 return;
@@ -53,7 +53,7 @@ namespace Vistas.Formularios
                 // primero reviso si ese correo existe en la base de datos
                 if (!rec.ExisteCorreo(correo))
                 {
-                    MessageBox.Show("Si el correo está registrado, te mandaremos una nueva clave 😉", "Recuperar");
+                    MessageBox.Show("Si el correo está registrado, te mandaremos una nueva clave ", "Recuperar");
                     return;
                 }
 
@@ -67,7 +67,7 @@ namespace Vistas.Formularios
                 rec.EnviarCorreo(correo, nuevaClave);
 
                 // aviso en la pantalla
-                lblInfo.Text = "¡Listo! revisa tu correo 📧";
+                lblInfo.Text = "¡Listo! revisa tu correo ";
                 MessageBox.Show("Te mandamos la nueva clave a tu correo ✨", "Recuperar");
             }
             catch (Exception ex)

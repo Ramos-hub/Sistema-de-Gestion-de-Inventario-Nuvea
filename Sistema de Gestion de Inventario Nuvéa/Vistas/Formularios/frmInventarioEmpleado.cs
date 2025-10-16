@@ -25,6 +25,7 @@ namespace Vistas.Formularios
         private void frmInventarioEmpleado_Load(object sender, EventArgs e)
         {
             CargarProductosEmpleado();
+            CargarDatos();
         }
 
         private void CargarProductosEmpleado()

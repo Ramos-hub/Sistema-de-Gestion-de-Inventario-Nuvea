@@ -401,6 +401,16 @@ namespace Vistas.Formularios
             if (dgvMostrarListaFacturas.Columns.Contains("idDetalleFactura"))
                 dgvMostrarListaFacturas.Tag = r.Cells["idDetalleFactura"].Value;
         }
+
+        private void txtTotalCrearFactura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 251 && e.KeyChar <= 255) || (e.KeyChar >= 58 && e.KeyChar <= 249))
+            {
+                MessageBox.Show("Solo numeros postivos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }
 

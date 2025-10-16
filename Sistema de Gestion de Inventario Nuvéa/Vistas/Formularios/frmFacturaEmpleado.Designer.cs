@@ -51,10 +51,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.dgvMostrarHistorialFacturas);
-            this.panel1.Location = new System.Drawing.Point(20, 258);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(13, 168);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1162, 425);
+            this.panel1.Size = new System.Drawing.Size(775, 276);
             this.panel1.TabIndex = 5;
             // 
             // dgvMostrarHistorialFacturas
@@ -63,11 +62,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarHistorialFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarHistorialFacturas.Location = new System.Drawing.Point(21, 18);
-            this.dgvMostrarHistorialFacturas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvMostrarHistorialFacturas.Location = new System.Drawing.Point(14, 12);
             this.dgvMostrarHistorialFacturas.Name = "dgvMostrarHistorialFacturas";
+            this.dgvMostrarHistorialFacturas.ReadOnly = true;
             this.dgvMostrarHistorialFacturas.RowHeadersWidth = 51;
-            this.dgvMostrarHistorialFacturas.Size = new System.Drawing.Size(1125, 386);
+            this.dgvMostrarHistorialFacturas.Size = new System.Drawing.Size(750, 251);
             this.dgvMostrarHistorialFacturas.TabIndex = 0;
             // 
             // pnlFiltrosHistorialFacturas
@@ -82,10 +81,9 @@
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.btnAplicarFiltros);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.dtpRangoHistorialDesde);
             this.pnlFiltrosHistorialFacturas.Controls.Add(this.lblRangoFacturas);
-            this.pnlFiltrosHistorialFacturas.Location = new System.Drawing.Point(0, 54);
-            this.pnlFiltrosHistorialFacturas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlFiltrosHistorialFacturas.Location = new System.Drawing.Point(0, 35);
             this.pnlFiltrosHistorialFacturas.Name = "pnlFiltrosHistorialFacturas";
-            this.pnlFiltrosHistorialFacturas.Size = new System.Drawing.Size(1200, 157);
+            this.pnlFiltrosHistorialFacturas.Size = new System.Drawing.Size(800, 102);
             this.pnlFiltrosHistorialFacturas.TabIndex = 4;
             // 
             // btnRecargarFacturas
@@ -96,10 +94,9 @@
             this.btnRecargarFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecargarFacturas.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecargarFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnRecargarFacturas.Location = new System.Drawing.Point(734, 65);
-            this.btnRecargarFacturas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRecargarFacturas.Location = new System.Drawing.Point(489, 42);
             this.btnRecargarFacturas.Name = "btnRecargarFacturas";
-            this.btnRecargarFacturas.Size = new System.Drawing.Size(212, 57);
+            this.btnRecargarFacturas.Size = new System.Drawing.Size(141, 37);
             this.btnRecargarFacturas.TabIndex = 11;
             this.btnRecargarFacturas.Text = "Cargar Facturas";
             this.btnRecargarFacturas.UseVisualStyleBackColor = false;
@@ -109,9 +106,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(399, 65);
+            this.label2.Location = new System.Drawing.Point(266, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "Hasta:";
             // 
@@ -119,19 +117,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 65);
+            this.label1.Location = new System.Drawing.Point(10, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 22);
+            this.label1.Size = new System.Drawing.Size(46, 15);
             this.label1.TabIndex = 9;
             this.label1.Text = "Desde:";
             // 
             // dtpRangoHistorialHasta
             // 
             this.dtpRangoHistorialHasta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dtpRangoHistorialHasta.Location = new System.Drawing.Point(402, 106);
-            this.dtpRangoHistorialHasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpRangoHistorialHasta.Location = new System.Drawing.Point(268, 69);
             this.dtpRangoHistorialHasta.Name = "dtpRangoHistorialHasta";
-            this.dtpRangoHistorialHasta.Size = new System.Drawing.Size(298, 26);
+            this.dtpRangoHistorialHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpRangoHistorialHasta.TabIndex = 8;
             // 
             // btnAplicarFiltros
@@ -142,20 +140,18 @@
             this.btnAplicarFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAplicarFiltros.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAplicarFiltros.ForeColor = System.Drawing.Color.White;
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(954, 65);
-            this.btnAplicarFiltros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(636, 42);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
-            this.btnAplicarFiltros.Size = new System.Drawing.Size(212, 57);
+            this.btnAplicarFiltros.Size = new System.Drawing.Size(141, 37);
             this.btnAplicarFiltros.TabIndex = 7;
             this.btnAplicarFiltros.Text = "Aplicar Filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
             // 
             // dtpRangoHistorialDesde
             // 
-            this.dtpRangoHistorialDesde.Location = new System.Drawing.Point(20, 106);
-            this.dtpRangoHistorialDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpRangoHistorialDesde.Location = new System.Drawing.Point(13, 69);
             this.dtpRangoHistorialDesde.Name = "dtpRangoHistorialDesde";
-            this.dtpRangoHistorialDesde.Size = new System.Drawing.Size(298, 26);
+            this.dtpRangoHistorialDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpRangoHistorialDesde.TabIndex = 6;
             // 
             // lblRangoFacturas
@@ -165,10 +161,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRangoFacturas.AutoSize = true;
             this.lblRangoFacturas.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRangoFacturas.Location = new System.Drawing.Point(36, 18);
-            this.lblRangoFacturas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRangoFacturas.Location = new System.Drawing.Point(24, 12);
             this.lblRangoFacturas.Name = "lblRangoFacturas";
-            this.lblRangoFacturas.Size = new System.Drawing.Size(163, 25);
+            this.lblRangoFacturas.Size = new System.Drawing.Size(111, 17);
             this.lblRangoFacturas.TabIndex = 0;
             this.lblRangoFacturas.Text = "Rango de Fechas";
             // 
@@ -178,22 +173,20 @@
             this.lblHistorialFacturas.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblHistorialFacturas.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHistorialFacturas.Location = new System.Drawing.Point(0, 0);
-            this.lblHistorialFacturas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHistorialFacturas.Name = "lblHistorialFacturas";
-            this.lblHistorialFacturas.Size = new System.Drawing.Size(348, 42);
+            this.lblHistorialFacturas.Size = new System.Drawing.Size(228, 28);
             this.lblHistorialFacturas.TabIndex = 3;
             this.lblHistorialFacturas.Text = "Historial de Facturas";
             // 
             // frmFacturaEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(171)))), ((int)(((byte)(184)))));
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlFiltrosHistorialFacturas);
             this.Controls.Add(this.lblHistorialFacturas);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmFacturaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFacturaEmpleado";

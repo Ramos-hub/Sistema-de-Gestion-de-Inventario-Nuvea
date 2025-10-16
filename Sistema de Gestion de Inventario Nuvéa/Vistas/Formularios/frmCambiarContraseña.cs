@@ -125,5 +125,9 @@ namespace Vistas.Formularios
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+        private void btnOlvidasteContraseña_Click(object sender, EventArgs e)
+        {
+            new frmOlivdasteContraseña().Show();
+        }
     }
 }

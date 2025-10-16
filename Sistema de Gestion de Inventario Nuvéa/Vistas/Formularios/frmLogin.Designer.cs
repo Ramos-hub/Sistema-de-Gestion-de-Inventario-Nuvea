@@ -137,9 +137,6 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblIniciarSesion);
             this.Controls.Add(this.pbLogoLogin);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

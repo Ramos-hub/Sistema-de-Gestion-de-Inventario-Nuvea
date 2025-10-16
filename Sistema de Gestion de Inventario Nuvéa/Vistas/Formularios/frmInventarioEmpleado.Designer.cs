@@ -52,12 +52,12 @@
             this.dgvInventarioEmpleado.AllowUserToDeleteRows = false;
             this.dgvInventarioEmpleado.BackgroundColor = System.Drawing.Color.White;
             this.dgvInventarioEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventarioEmpleado.Location = new System.Drawing.Point(18, 280);
-            this.dgvInventarioEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvInventarioEmpleado.Location = new System.Drawing.Point(12, 182);
             this.dgvInventarioEmpleado.Name = "dgvInventarioEmpleado";
+            this.dgvInventarioEmpleado.ReadOnly = true;
             this.dgvInventarioEmpleado.RowHeadersWidth = 62;
             this.dgvInventarioEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventarioEmpleado.Size = new System.Drawing.Size(1479, 546);
+            this.dgvInventarioEmpleado.Size = new System.Drawing.Size(901, 355);
             this.dgvInventarioEmpleado.TabIndex = 40;
             // 
             // pblInfoInventario
@@ -68,9 +68,8 @@
             this.pblInfoInventario.Controls.Add(this.pnlVentas);
             this.pblInfoInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pblInfoInventario.Location = new System.Drawing.Point(0, 0);
-            this.pblInfoInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pblInfoInventario.Name = "pblInfoInventario";
-            this.pblInfoInventario.Size = new System.Drawing.Size(1515, 254);
+            this.pblInfoInventario.Size = new System.Drawing.Size(913, 166);
             this.pblInfoInventario.TabIndex = 33;
             // 
             // pnlProductos
@@ -81,10 +80,9 @@
             this.pnlProductos.Controls.Add(this.lblProductos);
             this.pnlProductos.Controls.Add(this.lblResultado_Productos);
             this.pnlProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlProductos.Location = new System.Drawing.Point(172, 41);
-            this.pnlProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlProductos.Location = new System.Drawing.Point(115, 27);
             this.pnlProductos.Name = "pnlProductos";
-            this.pnlProductos.Size = new System.Drawing.Size(258, 142);
+            this.pnlProductos.Size = new System.Drawing.Size(173, 93);
             this.pnlProductos.TabIndex = 2;
             // 
             // pbProductos
@@ -94,9 +92,8 @@
             this.pbProductos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbProductos.Image = global::Vistas.Properties.Resources.menu_hamburger_burger_icon_176431;
             this.pbProductos.Location = new System.Drawing.Point(0, 0);
-            this.pbProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbProductos.Name = "pbProductos";
-            this.pbProductos.Size = new System.Drawing.Size(104, 140);
+            this.pbProductos.Size = new System.Drawing.Size(70, 91);
             this.pbProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProductos.TabIndex = 0;
             this.pbProductos.TabStop = false;
@@ -104,20 +101,18 @@
             // lblProductos
             // 
             this.lblProductos.AutoSize = true;
-            this.lblProductos.Location = new System.Drawing.Point(114, 26);
-            this.lblProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductos.Location = new System.Drawing.Point(76, 17);
             this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(109, 25);
+            this.lblProductos.Size = new System.Drawing.Size(77, 16);
             this.lblProductos.TabIndex = 3;
             this.lblProductos.Text = "Productos";
             // 
             // lblResultado_Productos
             // 
             this.lblResultado_Productos.AutoSize = true;
-            this.lblResultado_Productos.Location = new System.Drawing.Point(114, 97);
-            this.lblResultado_Productos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResultado_Productos.Location = new System.Drawing.Point(76, 63);
             this.lblResultado_Productos.Name = "lblResultado_Productos";
-            this.lblResultado_Productos.Size = new System.Drawing.Size(108, 25);
+            this.lblResultado_Productos.Size = new System.Drawing.Size(78, 16);
             this.lblResultado_Productos.TabIndex = 4;
             this.lblResultado_Productos.Text = "Resultado";
             // 
@@ -129,19 +124,17 @@
             this.pnlVentas.Controls.Add(this.pbVentas);
             this.pnlVentas.Controls.Add(this.lblVentas);
             this.pnlVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlVentas.Location = new System.Drawing.Point(914, 42);
-            this.pnlVentas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlVentas.Location = new System.Drawing.Point(609, 27);
             this.pnlVentas.Name = "pnlVentas";
-            this.pnlVentas.Size = new System.Drawing.Size(258, 142);
+            this.pnlVentas.Size = new System.Drawing.Size(173, 93);
             this.pnlVentas.TabIndex = 1;
             // 
             // lblResultado_Ventas
             // 
             this.lblResultado_Ventas.AutoSize = true;
-            this.lblResultado_Ventas.Location = new System.Drawing.Point(120, 97);
-            this.lblResultado_Ventas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResultado_Ventas.Location = new System.Drawing.Point(80, 63);
             this.lblResultado_Ventas.Name = "lblResultado_Ventas";
-            this.lblResultado_Ventas.Size = new System.Drawing.Size(108, 25);
+            this.lblResultado_Ventas.Size = new System.Drawing.Size(78, 16);
             this.lblResultado_Ventas.TabIndex = 6;
             this.lblResultado_Ventas.Text = "Resultado";
             // 
@@ -152,9 +145,8 @@
             this.pbVentas.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbVentas.Image = global::Vistas.Properties.Resources.dollar_symbol_icon_icons_com_73598;
             this.pbVentas.Location = new System.Drawing.Point(0, 0);
-            this.pbVentas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbVentas.Name = "pbVentas";
-            this.pbVentas.Size = new System.Drawing.Size(104, 140);
+            this.pbVentas.Size = new System.Drawing.Size(70, 91);
             this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbVentas.TabIndex = 0;
             this.pbVentas.TabStop = false;
@@ -162,22 +154,20 @@
             // lblVentas
             // 
             this.lblVentas.AutoSize = true;
-            this.lblVentas.Location = new System.Drawing.Point(134, 26);
-            this.lblVentas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVentas.Location = new System.Drawing.Point(89, 17);
             this.lblVentas.Name = "lblVentas";
-            this.lblVentas.Size = new System.Drawing.Size(80, 25);
+            this.lblVentas.Size = new System.Drawing.Size(55, 16);
             this.lblVentas.TabIndex = 5;
             this.lblVentas.Text = "Ventas";
             // 
             // frmInventarioEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(171)))), ((int)(((byte)(184)))));
-            this.ClientSize = new System.Drawing.Size(1515, 845);
+            this.ClientSize = new System.Drawing.Size(913, 487);
             this.Controls.Add(this.dgvInventarioEmpleado);
             this.Controls.Add(this.pblInfoInventario);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmInventarioEmpleado";
             this.Text = "frmInventarioEmpleado";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioEmpleado)).EndInit();

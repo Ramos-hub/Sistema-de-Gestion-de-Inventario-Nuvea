@@ -103,7 +103,7 @@ namespace Vistas.Formularios
                 MessageBox.Show("Error en login: " + ex.Message);
             }
         }
-
+        public static string NombreEmpleadoActivo;
 
         private void btnOlvidasteContraseña_Click(object sender, EventArgs e)
         {

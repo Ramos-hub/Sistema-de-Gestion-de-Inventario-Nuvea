@@ -10,29 +10,38 @@ namespace Vistas.Formularios
 {
     public partial class frmIndexEmpleado : Form
     {
+        // Nombre recibido (por constructor) o tomado desde frmLogin.NombreEmpleadoActivo
+        private readonly string _nombreEmpleado;
+
+        // --- OPCIÓN A: usar lo guardado en frmLogin.NombreEmpleadoActivo ---
         public frmIndexEmpleado()
         {
             InitializeComponent();
 
-            // Config de encabezado como en Admin: anclajes y contención
-            if (pbEmpleado.Parent != gbInicioEmp)
-                gbInicioEmp.Controls.Add(pbEmpleado);
+            // si frmLogin expone el nombre, úsalo como predeterminado
+            _nombreEmpleado = TryGetNombreDesdeLogin();
 
-            gbInicioEmp.AutoSize = false;
-            gbInicioEmp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-
-            // Igual que admin: ambos centrables y sólo Top en la imagen
-            lblBienvenidosEmp.AutoSize = true;
-            lblBienvenidosEmp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-
-            pbEmpleado.Dock = DockStyle.None;
-            pbEmpleado.Anchor = AnchorStyles.Top;          // <<< SOLO Top (no Right)
-            pbEmpleado.SizeMode = PictureBoxSizeMode.Zoom;
-            pbEmpleado.Visible = true;
-
-            // Redibujo al cargar y al redimensionar
+            ConfigurarHeaderComoAdmin();
             this.Load += frmIndexEmpleado_Load;
             this.Resize += (_, __) => { AjustarHeaderInicioEmp(); AjustarLayout(); };
+        }
+
+        // --- OPCIÓN B: recibir el nombre por constructor ---
+        public frmIndexEmpleado(string nombreEmpleado) : this()
+        {
+            if (!string.IsNullOrWhiteSpace(nombreEmpleado))
+                _nombreEmpleado = nombreEmpleado;
+        }
+
+        private static string TryGetNombreDesdeLogin()
+        {
+            try
+            {
+                // Si no declaraste esta variable estática, puedes quitar esta línea.
+                // En frmLogin agrega: public static string NombreEmpleadoActivo;
+                return frmLogin.NombreEmpleadoActivo;
+            }
+            catch { return null; }
         }
 
         // ===================== CARGA =====================
@@ -55,6 +64,23 @@ namespace Vistas.Formularios
         }
 
         // ===================== HEADER (como Admin) =====================
+        private void ConfigurarHeaderComoAdmin()
+        {
+            if (pbEmpleado.Parent != gbInicioEmp)
+                gbInicioEmp.Controls.Add(pbEmpleado);
+
+            gbInicioEmp.AutoSize = false;
+            gbInicioEmp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            lblBienvenidosEmp.AutoSize = true;
+            lblBienvenidosEmp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            pbEmpleado.Dock = DockStyle.None;
+            pbEmpleado.Anchor = AnchorStyles.Top;   // centrado como en admin
+            pbEmpleado.SizeMode = PictureBoxSizeMode.Zoom;
+            pbEmpleado.Visible = true;
+        }
+
         private void AjustarHeaderInicioEmp()
         {
             try
@@ -62,26 +88,21 @@ namespace Vistas.Formularios
                 int margen = 16;
                 int W = this.ClientSize.Width;
 
-                // GroupBox ocupa todo el ancho con margen (igual que admin)
                 gbInicioEmp.Left = margen;
                 gbInicioEmp.Top = 16;
                 gbInicioEmp.Width = Math.Max(300, W - (margen * 2));
 
-                // Imagen centrada horizontalmente arriba
                 int topImg = 12;
                 pbEmpleado.Top = topImg;
                 pbEmpleado.Left = (gbInicioEmp.ClientSize.Width - pbEmpleado.Width) / 2;
 
-                // Label centrado debajo de la imagen
                 int topLbl = pbEmpleado.Bottom + 8;
                 lblBienvenidosEmp.Top = topLbl;
                 lblBienvenidosEmp.Left = (gbInicioEmp.ClientSize.Width - lblBienvenidosEmp.Width) / 2;
 
-                // Altura del groupbox en base a su contenido
                 int contenidoBottom = Math.Max(pbEmpleado.Bottom, lblBienvenidosEmp.Bottom);
                 gbInicioEmp.Height = contenidoBottom + 16;
 
-                // Z-Order por si acaso
                 pbEmpleado.BringToFront();
                 lblBienvenidosEmp.BringToFront();
             }
@@ -97,7 +118,7 @@ namespace Vistas.Formularios
 
             // fila de tarjetas (3)
             int topTarjetas = (gbInicioEmp != null ? gbInicioEmp.Bottom : 140) + m;
-            int anchoPanel = (W - (m * 4)) / 3; // 3 tarjetas
+            int anchoPanel = (W - (m * 4)) / 3;
             if (anchoPanel < 180) anchoPanel = 180;
             int altoPanel = 80;
 
@@ -122,21 +143,12 @@ namespace Vistas.Formularios
         // ===================== DATOS =====================
         private void CargarBienvenidaEmpleado()
         {
-            try
-            {
-                using (SqlConnection con = ConexionDB.Conectar())
-                using (SqlCommand cmd = new SqlCommand(
-                    "SELECT TOP 1 nombre FROM Usuario WHERE idRol <> 1 ORDER BY idUsuario DESC", con))
-                {
-                    object r = cmd.ExecuteScalar();
-                    string nombre = (r == null || r == DBNull.Value) ? "Empleado" : r.ToString();
-                    lblBienvenidosEmp.Text = $"Bienvenido {nombre} a Nuvéa";
-                }
-            }
-            catch
-            {
-                lblBienvenidosEmp.Text = "Bienvenido Empleado a Nuvéa";
-            }
+            // NO consultamos base de datos aquí; usamos el nombre real del login
+            string nombre = !string.IsNullOrWhiteSpace(_nombreEmpleado)
+                                ? _nombreEmpleado
+                                : "Empleado";
+
+            lblBienvenidosEmp.Text = $"Bienvenido {nombre} a Nuvéa";
 
             // Recentrar tras cambiar el texto (ancho del label cambia)
             AjustarHeaderInicioEmp();
@@ -248,7 +260,7 @@ namespace Vistas.Formularios
             {
                 MessageBox.Show("Error al cargar gráfico: " + ex.Message);
 
-                // datos de prueba si falla
+                // datos de respaldo si falla la DB
                 chartTopProductos.Series.Clear();
                 chartTopProductos.ChartAreas.Clear();
                 chartTopProductos.Titles.Clear();
@@ -278,7 +290,6 @@ namespace Vistas.Formularios
         }
     }
 }
-
 
 
 

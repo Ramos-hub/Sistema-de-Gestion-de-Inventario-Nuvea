@@ -30,7 +30,6 @@
         {
             this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
             this.txtNuevaContrasena = new System.Windows.Forms.TextBox();
-            this.btnOlvidasteContraseña = new System.Windows.Forms.Button();
             this.btnConfirmarContrasena = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,18 +55,6 @@
             this.txtNuevaContrasena.ShortcutsEnabled = false;
             this.txtNuevaContrasena.Size = new System.Drawing.Size(292, 20);
             this.txtNuevaContrasena.TabIndex = 15;
-            // 
-            // btnOlvidasteContraseña
-            // 
-            this.btnOlvidasteContraseña.FlatAppearance.BorderSize = 0;
-            this.btnOlvidasteContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOlvidasteContraseña.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOlvidasteContraseña.Location = new System.Drawing.Point(349, 418);
-            this.btnOlvidasteContraseña.Name = "btnOlvidasteContraseña";
-            this.btnOlvidasteContraseña.Size = new System.Drawing.Size(116, 20);
-            this.btnOlvidasteContraseña.TabIndex = 14;
-            this.btnOlvidasteContraseña.Text = "¿Olvidaste tu Contraseña?";
-            this.btnOlvidasteContraseña.UseVisualStyleBackColor = true;
             // 
             // btnConfirmarContrasena
             // 
@@ -131,7 +118,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtConfirmarContrasena);
             this.Controls.Add(this.txtNuevaContrasena);
-            this.Controls.Add(this.btnOlvidasteContraseña);
             this.Controls.Add(this.btnConfirmarContrasena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -149,7 +135,6 @@
 
         private System.Windows.Forms.TextBox txtConfirmarContrasena;
         private System.Windows.Forms.TextBox txtNuevaContrasena;
-        private System.Windows.Forms.Button btnOlvidasteContraseña;
         private System.Windows.Forms.Button btnConfirmarContrasena;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

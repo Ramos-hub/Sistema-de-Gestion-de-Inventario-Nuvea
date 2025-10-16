@@ -7,6 +7,7 @@ idRol int identity (1,1) primary key,
 nombreRol varchar(25)
 );
 go
+
 insert into Rol values ('Administrador'),('Usuario'),('Usuario'),
 ('Usuario'),('Usuario'),('Usuario'),
 ('Usuario'),('Usuario'),('Usuario'),

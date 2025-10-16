@@ -1,26 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\",
+  "WorkspaceRootPath": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\modelos\\entidades\\recuperacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869FD04F-C9BF-449F-AC77-D885ED9D992E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\recuperacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminventarioempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminventarioempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmolivdastecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmolivdastecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmindexempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmindexempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmolivdastecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmolivdastecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmcrearempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmcrearempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frmindexempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmindexempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\user\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|c:\\users\\diego\\desktop\\sistema-de-gestion-de-inventario-nuvea\\sistema de gestion de inventario nuv\u00E9a\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmfacturaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmfacturaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\vistas\\formularios\\frmhistorialfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6F1D0871-849E-4CEB-A847-D36BFFB8AC35}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmhistorialfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +74,206 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmInventario.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInventario.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInventario.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInventario.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmInventario.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAAAqwCMBAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RecuperacionService.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\RecuperacionService.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\RecuperacionService.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Modelos\\Entidades\\RecuperacionService.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\RecuperacionService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T05:30:29.802Z",
+              "WhenOpened": "2025-10-16T21:38:35.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmInventarioEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInventarioEmpleado.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInventarioEmpleado.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInventarioEmpleado.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmInventarioEmpleado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Title": "frmOlivdasteContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T05:30:24.019Z",
+              "WhenOpened": "2025-10-16T16:45:12.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Program.cs",
-              "RelativeDocumentMoniker": "Vistas\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Program.cs",
-              "RelativeToolTip": "Vistas\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Title": "frmOlivdasteContrase\u00F1a.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmOlivdasteContrase\u00F1a.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T05:27:46.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmInicio.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAswHcBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T05:27:17.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T16:54:44.423Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmInicio.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Program.cs",
+              "RelativeDocumentMoniker": "Vistas\\Program.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Program.cs",
+              "RelativeToolTip": "Vistas\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:24:02.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmIndexEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmIndexEmpleado.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmIndexEmpleado.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmIndexEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmIndexEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:23:51.36Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmCambiarContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAkwIEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:41:35.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:42:44.372Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:44:52.267Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmLogin.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmLogin.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowF4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:34:21.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmCrearEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmCrearEmpleado.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmCrearEmpleado.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmCrearEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmCrearEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:41:19.974Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAcwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:24:57.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T05:27:13.118Z",
+              "WhenOpened": "2025-10-16T15:24:55.818Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmIndexEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmIndexEmpleado.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmIndexEmpleado.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmIndexEmpleado.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmIndexEmpleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:23:53.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmFacturaEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmFacturaEmpleado.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmFacturaEmpleado.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmFacturaEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmFacturaEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:15:46.643Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmHistorialFacturas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmHistorialFacturas.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmHistorialFacturas.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmHistorialFacturas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmHistorialFacturas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:15:28.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmProveedores.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmProveedores.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmProveedores.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\Sistema-de-Gestion-de-Inventario-Nuvea\\Sistema de Gestion de Inventario Nuv\u00E9a\\Vistas\\Formularios\\frmProveedores.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmProveedores.cs",
+              "ViewState": "AgIAACUBAAAAAAAAAAAswDwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:14:43.807Z",
+              "EditorCaption": ""
             }
           ]
         }
