@@ -28,333 +28,271 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbProductosBajoStockEmpleados = new System.Windows.Forms.GroupBox();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chartTopProductos = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.gbBajoStockEmp = new System.Windows.Forms.GroupBox();
             this.dgvProductosBajoStockEmpleado = new System.Windows.Forms.DataGridView();
-            this.gbAccesoRapidoEmpleados = new System.Windows.Forms.GroupBox();
-            this.btnVerFacturasEmpleado = new System.Windows.Forms.Button();
-            this.btnVerProveedoresEmpleado = new System.Windows.Forms.Button();
-            this.btnIrInventarioEmpleado = new System.Windows.Forms.Button();
-            this.btnAgregarProductosIndexEmpleado = new System.Windows.Forms.Button();
-            this.pnlVentasDiariasEmpleados = new System.Windows.Forms.Panel();
-            this.lblResultadoVentasEmpleados = new System.Windows.Forms.Label();
+            this.pnlVentasEmp = new System.Windows.Forms.Panel();
+            this.lblVentasEmp = new System.Windows.Forms.Label();
             this.lblVentasHoy = new System.Windows.Forms.Label();
-            this.pnlCategoriasEmpleados = new System.Windows.Forms.Panel();
-            this.lblCategoriasEmpleado = new System.Windows.Forms.Label();
+            this.pnlCategoriasEmp = new System.Windows.Forms.Panel();
+            this.lblCategoriasEmp = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pnlProveedoresEmpleados = new System.Windows.Forms.Panel();
-            this.lblTotalProveedoresEmpleado = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pnlTotalProductosEmpleados = new System.Windows.Forms.Panel();
-            this.lblResultadoTotalEmpleados = new System.Windows.Forms.Label();
+            this.pnlTotalProductosEmp = new System.Windows.Forms.Panel();
+            this.lblTotalProdEmp = new System.Windows.Forms.Label();
             this.lblTotalProductos = new System.Windows.Forms.Label();
-            this.gbInicioEmpleados = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblBienvenidosEmpleados = new System.Windows.Forms.Label();
-            this.gbProductosBajoStockEmpleados.SuspendLayout();
+            this.gbInicioEmp = new System.Windows.Forms.GroupBox();
+            this.pbEmpleado = new System.Windows.Forms.PictureBox();
+            this.lblBienvenidosEmp = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTopProductos)).BeginInit();
+            this.gbBajoStockEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosBajoStockEmpleado)).BeginInit();
-            this.gbAccesoRapidoEmpleados.SuspendLayout();
-            this.pnlVentasDiariasEmpleados.SuspendLayout();
-            this.pnlCategoriasEmpleados.SuspendLayout();
-            this.pnlProveedoresEmpleados.SuspendLayout();
-            this.pnlTotalProductosEmpleados.SuspendLayout();
-            this.gbInicioEmpleados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlVentasEmp.SuspendLayout();
+            this.pnlCategoriasEmp.SuspendLayout();
+            this.pnlTotalProductosEmp.SuspendLayout();
+            this.gbInicioEmp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
-            // gbProductosBajoStockEmpleados
+            // chartTopProductos
             // 
-            this.gbProductosBajoStockEmpleados.Controls.Add(this.dgvProductosBajoStockEmpleado);
-            this.gbProductosBajoStockEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProductosBajoStockEmpleados.Location = new System.Drawing.Point(329, 272);
-            this.gbProductosBajoStockEmpleados.Name = "gbProductosBajoStockEmpleados";
-            this.gbProductosBajoStockEmpleados.Size = new System.Drawing.Size(452, 187);
-            this.gbProductosBajoStockEmpleados.TabIndex = 15;
-            this.gbProductosBajoStockEmpleados.TabStop = false;
-            this.gbProductosBajoStockEmpleados.Text = "Productos Bajo Stock";
+            this.chartTopProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.chartTopProductos.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartTopProductos.Legends.Add(legend2);
+            this.chartTopProductos.Location = new System.Drawing.Point(24, 484);
+            this.chartTopProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chartTopProductos.Name = "chartTopProductos";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartTopProductos.Series.Add(series2);
+            this.chartTopProductos.Size = new System.Drawing.Size(621, 480);
+            this.chartTopProductos.TabIndex = 16;
+            this.chartTopProductos.Text = "chart1";
+            // 
+            // gbBajoStockEmp
+            // 
+            this.gbBajoStockEmp.Controls.Add(this.dgvProductosBajoStockEmpleado);
+            this.gbBajoStockEmp.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBajoStockEmp.Location = new System.Drawing.Point(662, 484);
+            this.gbBajoStockEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbBajoStockEmp.Name = "gbBajoStockEmp";
+            this.gbBajoStockEmp.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbBajoStockEmp.Size = new System.Drawing.Size(796, 480);
+            this.gbBajoStockEmp.TabIndex = 15;
+            this.gbBajoStockEmp.TabStop = false;
+            this.gbBajoStockEmp.Text = "Productos Bajo Stock";
             // 
             // dgvProductosBajoStockEmpleado
             // 
             this.dgvProductosBajoStockEmpleado.AllowUserToAddRows = false;
             this.dgvProductosBajoStockEmpleado.AllowUserToDeleteRows = false;
+            this.dgvProductosBajoStockEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductosBajoStockEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductosBajoStockEmpleado.Location = new System.Drawing.Point(6, 28);
+            this.dgvProductosBajoStockEmpleado.Location = new System.Drawing.Point(9, 43);
+            this.dgvProductosBajoStockEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvProductosBajoStockEmpleado.Name = "dgvProductosBajoStockEmpleado";
             this.dgvProductosBajoStockEmpleado.ReadOnly = true;
+            this.dgvProductosBajoStockEmpleado.RowHeadersWidth = 62;
             this.dgvProductosBajoStockEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosBajoStockEmpleado.Size = new System.Drawing.Size(440, 153);
+            this.dgvProductosBajoStockEmpleado.Size = new System.Drawing.Size(778, 428);
             this.dgvProductosBajoStockEmpleado.TabIndex = 0;
             // 
-            // gbAccesoRapidoEmpleados
+            // pnlVentasEmp
             // 
-            this.gbAccesoRapidoEmpleados.Controls.Add(this.btnVerFacturasEmpleado);
-            this.gbAccesoRapidoEmpleados.Controls.Add(this.btnVerProveedoresEmpleado);
-            this.gbAccesoRapidoEmpleados.Controls.Add(this.btnIrInventarioEmpleado);
-            this.gbAccesoRapidoEmpleados.Controls.Add(this.btnAgregarProductosIndexEmpleado);
-            this.gbAccesoRapidoEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAccesoRapidoEmpleados.Location = new System.Drawing.Point(31, 272);
-            this.gbAccesoRapidoEmpleados.Name = "gbAccesoRapidoEmpleados";
-            this.gbAccesoRapidoEmpleados.Size = new System.Drawing.Size(267, 146);
-            this.gbAccesoRapidoEmpleados.TabIndex = 14;
-            this.gbAccesoRapidoEmpleados.TabStop = false;
-            this.gbAccesoRapidoEmpleados.Text = "Acceso Rápido";
+            this.pnlVentasEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(192)))), ((int)(((byte)(174)))));
+            this.pnlVentasEmp.Controls.Add(this.lblVentasEmp);
+            this.pnlVentasEmp.Controls.Add(this.lblVentasHoy);
+            this.pnlVentasEmp.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlVentasEmp.Location = new System.Drawing.Point(650, 325);
+            this.pnlVentasEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlVentasEmp.Name = "pnlVentasEmp";
+            this.pnlVentasEmp.Size = new System.Drawing.Size(216, 102);
+            this.pnlVentasEmp.TabIndex = 12;
             // 
-            // btnVerFacturasEmpleado
+            // lblVentasEmp
             // 
-            this.btnVerFacturasEmpleado.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerFacturasEmpleado.Location = new System.Drawing.Point(148, 99);
-            this.btnVerFacturasEmpleado.Name = "btnVerFacturasEmpleado";
-            this.btnVerFacturasEmpleado.Size = new System.Drawing.Size(84, 32);
-            this.btnVerFacturasEmpleado.TabIndex = 3;
-            this.btnVerFacturasEmpleado.Text = "Ver Facturas";
-            this.btnVerFacturasEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // btnVerProveedoresEmpleado
-            // 
-            this.btnVerProveedoresEmpleado.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerProveedoresEmpleado.Location = new System.Drawing.Point(17, 99);
-            this.btnVerProveedoresEmpleado.Name = "btnVerProveedoresEmpleado";
-            this.btnVerProveedoresEmpleado.Size = new System.Drawing.Size(88, 32);
-            this.btnVerProveedoresEmpleado.TabIndex = 2;
-            this.btnVerProveedoresEmpleado.Text = "Ver Proveedores";
-            this.btnVerProveedoresEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // btnIrInventarioEmpleado
-            // 
-            this.btnIrInventarioEmpleado.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrInventarioEmpleado.Location = new System.Drawing.Point(148, 38);
-            this.btnIrInventarioEmpleado.Name = "btnIrInventarioEmpleado";
-            this.btnIrInventarioEmpleado.Size = new System.Drawing.Size(84, 29);
-            this.btnIrInventarioEmpleado.TabIndex = 1;
-            this.btnIrInventarioEmpleado.Text = "Ir a Inventario";
-            this.btnIrInventarioEmpleado.UseVisualStyleBackColor = true;
-            this.btnIrInventarioEmpleado.Click += new System.EventHandler(this.btnIrInventarioEmpleado_Click);
-            // 
-            // btnAgregarProductosIndexEmpleado
-            // 
-            this.btnAgregarProductosIndexEmpleado.Font = new System.Drawing.Font("Microsoft YaHei", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProductosIndexEmpleado.Location = new System.Drawing.Point(17, 38);
-            this.btnAgregarProductosIndexEmpleado.Name = "btnAgregarProductosIndexEmpleado";
-            this.btnAgregarProductosIndexEmpleado.Size = new System.Drawing.Size(88, 29);
-            this.btnAgregarProductosIndexEmpleado.TabIndex = 0;
-            this.btnAgregarProductosIndexEmpleado.Text = "Agregar Productos";
-            this.btnAgregarProductosIndexEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // pnlVentasDiariasEmpleados
-            // 
-            this.pnlVentasDiariasEmpleados.Controls.Add(this.lblResultadoVentasEmpleados);
-            this.pnlVentasDiariasEmpleados.Controls.Add(this.lblVentasHoy);
-            this.pnlVentasDiariasEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlVentasDiariasEmpleados.Location = new System.Drawing.Point(218, 157);
-            this.pnlVentasDiariasEmpleados.Name = "pnlVentasDiariasEmpleados";
-            this.pnlVentasDiariasEmpleados.Size = new System.Drawing.Size(144, 66);
-            this.pnlVentasDiariasEmpleados.TabIndex = 11;
-            // 
-            // lblResultadoVentasEmpleados
-            // 
-            this.lblResultadoVentasEmpleados.AutoSize = true;
-            this.lblResultadoVentasEmpleados.Location = new System.Drawing.Point(82, 43);
-            this.lblResultadoVentasEmpleados.Name = "lblResultadoVentasEmpleados";
-            this.lblResultadoVentasEmpleados.Size = new System.Drawing.Size(59, 16);
-            this.lblResultadoVentasEmpleados.TabIndex = 3;
-            this.lblResultadoVentasEmpleados.Text = "Resultado";
+            this.lblVentasEmp.AutoSize = true;
+            this.lblVentasEmp.Location = new System.Drawing.Point(123, 66);
+            this.lblVentasEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVentasEmp.Name = "lblVentasEmp";
+            this.lblVentasEmp.Size = new System.Drawing.Size(91, 23);
+            this.lblVentasEmp.TabIndex = 3;
+            this.lblVentasEmp.Text = "Resultado";
             // 
             // lblVentasHoy
             // 
             this.lblVentasHoy.AutoSize = true;
-            this.lblVentasHoy.Location = new System.Drawing.Point(60, 16);
+            this.lblVentasHoy.Location = new System.Drawing.Point(90, 25);
+            this.lblVentasHoy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVentasHoy.Name = "lblVentasHoy";
-            this.lblVentasHoy.Size = new System.Drawing.Size(81, 16);
+            this.lblVentasHoy.Size = new System.Drawing.Size(126, 23);
             this.lblVentasHoy.TabIndex = 2;
             this.lblVentasHoy.Text = "Ventas de hoy";
             // 
-            // pnlCategoriasEmpleados
+            // pnlCategoriasEmp
             // 
-            this.pnlCategoriasEmpleados.Controls.Add(this.lblCategoriasEmpleado);
-            this.pnlCategoriasEmpleados.Controls.Add(this.label3);
-            this.pnlCategoriasEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlCategoriasEmpleados.Location = new System.Drawing.Point(415, 157);
-            this.pnlCategoriasEmpleados.Name = "pnlCategoriasEmpleados";
-            this.pnlCategoriasEmpleados.Size = new System.Drawing.Size(144, 66);
-            this.pnlCategoriasEmpleados.TabIndex = 12;
+            this.pnlCategoriasEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(192)))), ((int)(((byte)(174)))));
+            this.pnlCategoriasEmp.Controls.Add(this.lblCategoriasEmp);
+            this.pnlCategoriasEmp.Controls.Add(this.label3);
+            this.pnlCategoriasEmp.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlCategoriasEmp.Location = new System.Drawing.Point(1170, 325);
+            this.pnlCategoriasEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlCategoriasEmp.Name = "pnlCategoriasEmp";
+            this.pnlCategoriasEmp.Size = new System.Drawing.Size(216, 102);
+            this.pnlCategoriasEmp.TabIndex = 13;
             // 
-            // lblCategoriasEmpleado
+            // lblCategoriasEmp
             // 
-            this.lblCategoriasEmpleado.AutoSize = true;
-            this.lblCategoriasEmpleado.Location = new System.Drawing.Point(84, 43);
-            this.lblCategoriasEmpleado.Name = "lblCategoriasEmpleado";
-            this.lblCategoriasEmpleado.Size = new System.Drawing.Size(59, 16);
-            this.lblCategoriasEmpleado.TabIndex = 5;
-            this.lblCategoriasEmpleado.Text = "Resultado";
+            this.lblCategoriasEmp.AutoSize = true;
+            this.lblCategoriasEmp.Location = new System.Drawing.Point(126, 66);
+            this.lblCategoriasEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoriasEmp.Name = "lblCategoriasEmp";
+            this.lblCategoriasEmp.Size = new System.Drawing.Size(91, 23);
+            this.lblCategoriasEmp.TabIndex = 5;
+            this.lblCategoriasEmp.Text = "Resultado";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 16);
+            this.label3.Location = new System.Drawing.Point(116, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(96, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Categorias";
             // 
-            // pnlProveedoresEmpleados
+            // pnlTotalProductosEmp
             // 
-            this.pnlProveedoresEmpleados.Controls.Add(this.lblTotalProveedoresEmpleado);
-            this.pnlProveedoresEmpleados.Controls.Add(this.label5);
-            this.pnlProveedoresEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlProveedoresEmpleados.Location = new System.Drawing.Point(617, 157);
-            this.pnlProveedoresEmpleados.Name = "pnlProveedoresEmpleados";
-            this.pnlProveedoresEmpleados.Size = new System.Drawing.Size(144, 66);
-            this.pnlProveedoresEmpleados.TabIndex = 13;
+            this.pnlTotalProductosEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(192)))), ((int)(((byte)(174)))));
+            this.pnlTotalProductosEmp.Controls.Add(this.lblTotalProdEmp);
+            this.pnlTotalProductosEmp.Controls.Add(this.lblTotalProductos);
+            this.pnlTotalProductosEmp.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlTotalProductosEmp.Location = new System.Drawing.Point(155, 325);
+            this.pnlTotalProductosEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlTotalProductosEmp.Name = "pnlTotalProductosEmp";
+            this.pnlTotalProductosEmp.Size = new System.Drawing.Size(216, 102);
+            this.pnlTotalProductosEmp.TabIndex = 11;
             // 
-            // lblTotalProveedoresEmpleado
+            // lblTotalProdEmp
             // 
-            this.lblTotalProveedoresEmpleado.AutoSize = true;
-            this.lblTotalProveedoresEmpleado.Location = new System.Drawing.Point(82, 43);
-            this.lblTotalProveedoresEmpleado.Name = "lblTotalProveedoresEmpleado";
-            this.lblTotalProveedoresEmpleado.Size = new System.Drawing.Size(59, 16);
-            this.lblTotalProveedoresEmpleado.TabIndex = 6;
-            this.lblTotalProveedoresEmpleado.Text = "Resultado";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Proveedores";
-            // 
-            // pnlTotalProductosEmpleados
-            // 
-            this.pnlTotalProductosEmpleados.Controls.Add(this.lblResultadoTotalEmpleados);
-            this.pnlTotalProductosEmpleados.Controls.Add(this.lblTotalProductos);
-            this.pnlTotalProductosEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlTotalProductosEmpleados.Location = new System.Drawing.Point(31, 157);
-            this.pnlTotalProductosEmpleados.Name = "pnlTotalProductosEmpleados";
-            this.pnlTotalProductosEmpleados.Size = new System.Drawing.Size(144, 66);
-            this.pnlTotalProductosEmpleados.TabIndex = 10;
-            // 
-            // lblResultadoTotalEmpleados
-            // 
-            this.lblResultadoTotalEmpleados.AutoSize = true;
-            this.lblResultadoTotalEmpleados.Location = new System.Drawing.Point(67, 43);
-            this.lblResultadoTotalEmpleados.Name = "lblResultadoTotalEmpleados";
-            this.lblResultadoTotalEmpleados.Size = new System.Drawing.Size(59, 16);
-            this.lblResultadoTotalEmpleados.TabIndex = 4;
-            this.lblResultadoTotalEmpleados.Text = "Resultado";
+            this.lblTotalProdEmp.AutoSize = true;
+            this.lblTotalProdEmp.Location = new System.Drawing.Point(100, 66);
+            this.lblTotalProdEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalProdEmp.Name = "lblTotalProdEmp";
+            this.lblTotalProdEmp.Size = new System.Drawing.Size(91, 23);
+            this.lblTotalProdEmp.TabIndex = 4;
+            this.lblTotalProdEmp.Text = "Resultado";
             // 
             // lblTotalProductos
             // 
             this.lblTotalProductos.AutoSize = true;
-            this.lblTotalProductos.Location = new System.Drawing.Point(35, 16);
+            this.lblTotalProductos.Location = new System.Drawing.Point(27, 9);
+            this.lblTotalProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalProductos.Name = "lblTotalProductos";
-            this.lblTotalProductos.Size = new System.Drawing.Size(106, 16);
+            this.lblTotalProductos.Size = new System.Drawing.Size(164, 23);
             this.lblTotalProductos.TabIndex = 0;
             this.lblTotalProductos.Text = "Total de Productos";
             // 
-            // gbInicioEmpleados
+            // gbInicioEmp
             // 
-            this.gbInicioEmpleados.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.gbInicioEmpleados.Controls.Add(this.pictureBox1);
-            this.gbInicioEmpleados.Controls.Add(this.label1);
-            this.gbInicioEmpleados.Controls.Add(this.lblBienvenidosEmpleados);
-            this.gbInicioEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbInicioEmpleados.Location = new System.Drawing.Point(-7, -4);
-            this.gbInicioEmpleados.Name = "gbInicioEmpleados";
-            this.gbInicioEmpleados.Size = new System.Drawing.Size(826, 142);
-            this.gbInicioEmpleados.TabIndex = 9;
-            this.gbInicioEmpleados.TabStop = false;
-            this.gbInicioEmpleados.Text = "Inicio";
+            this.gbInicioEmp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbInicioEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(126)))), ((int)(((byte)(118)))));
+            this.gbInicioEmp.Controls.Add(this.pbEmpleado);
+            this.gbInicioEmp.Controls.Add(this.lblBienvenidosEmp);
+            this.gbInicioEmp.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbInicioEmp.Location = new System.Drawing.Point(2, 14);
+            this.gbInicioEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbInicioEmp.Name = "gbInicioEmp";
+            this.gbInicioEmp.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbInicioEmp.Size = new System.Drawing.Size(1491, 243);
+            this.gbInicioEmp.TabIndex = 10;
+            this.gbInicioEmp.TabStop = false;
+            this.gbInicioEmp.Text = "Inicio";
             // 
-            // pictureBox1
+            // pbEmpleado
             // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.profile_picture_user_icon_153847;
-            this.pictureBox1.Location = new System.Drawing.Point(654, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbEmpleado.Image = global::Vistas.Properties.Resources.icons8_usuario_100;
+            this.pbEmpleado.Location = new System.Drawing.Point(1199, 44);
+            this.pbEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbEmpleado.Name = "pbEmpleado";
+            this.pbEmpleado.Size = new System.Drawing.Size(248, 189);
+            this.pbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEmpleado.TabIndex = 2;
+            this.pbEmpleado.TabStop = false;
             // 
-            // label1
+            // lblBienvenidosEmp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "El mejor sistema de inventario";
-            // 
-            // lblBienvenidosEmpleados
-            // 
-            this.lblBienvenidosEmpleados.AutoSize = true;
-            this.lblBienvenidosEmpleados.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidosEmpleados.ForeColor = System.Drawing.Color.White;
-            this.lblBienvenidosEmpleados.Location = new System.Drawing.Point(3, 31);
-            this.lblBienvenidosEmpleados.Name = "lblBienvenidosEmpleados";
-            this.lblBienvenidosEmpleados.Size = new System.Drawing.Size(223, 28);
-            this.lblBienvenidosEmpleados.TabIndex = 0;
-            this.lblBienvenidosEmpleados.Text = "Bienvenidos a Nuvéa";
+            this.lblBienvenidosEmp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBienvenidosEmp.AutoSize = true;
+            this.lblBienvenidosEmp.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenidosEmp.ForeColor = System.Drawing.Color.White;
+            this.lblBienvenidosEmp.Location = new System.Drawing.Point(30, 120);
+            this.lblBienvenidosEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBienvenidosEmp.Name = "lblBienvenidosEmp";
+            this.lblBienvenidosEmp.Size = new System.Drawing.Size(339, 41);
+            this.lblBienvenidosEmp.TabIndex = 0;
+            this.lblBienvenidosEmp.Text = "Bienvenidos a Nuvéa";
             // 
             // frmIndexEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 475);
-            this.Controls.Add(this.gbProductosBajoStockEmpleados);
-            this.Controls.Add(this.gbAccesoRapidoEmpleados);
-            this.Controls.Add(this.pnlVentasDiariasEmpleados);
-            this.Controls.Add(this.pnlCategoriasEmpleados);
-            this.Controls.Add(this.pnlProveedoresEmpleados);
-            this.Controls.Add(this.pnlTotalProductosEmpleados);
-            this.Controls.Add(this.gbInicioEmpleados);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
+            this.ClientSize = new System.Drawing.Size(1491, 989);
+            this.Controls.Add(this.chartTopProductos);
+            this.Controls.Add(this.gbBajoStockEmp);
+            this.Controls.Add(this.pnlVentasEmp);
+            this.Controls.Add(this.pnlCategoriasEmp);
+            this.Controls.Add(this.pnlTotalProductosEmp);
+            this.Controls.Add(this.gbInicioEmp);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmIndexEmpleado";
             this.Text = "frmIndexEmpleado";
             this.Load += new System.EventHandler(this.frmIndexEmpleado_Load);
-            this.gbProductosBajoStockEmpleados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartTopProductos)).EndInit();
+            this.gbBajoStockEmp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosBajoStockEmpleado)).EndInit();
-            this.gbAccesoRapidoEmpleados.ResumeLayout(false);
-            this.pnlVentasDiariasEmpleados.ResumeLayout(false);
-            this.pnlVentasDiariasEmpleados.PerformLayout();
-            this.pnlCategoriasEmpleados.ResumeLayout(false);
-            this.pnlCategoriasEmpleados.PerformLayout();
-            this.pnlProveedoresEmpleados.ResumeLayout(false);
-            this.pnlProveedoresEmpleados.PerformLayout();
-            this.pnlTotalProductosEmpleados.ResumeLayout(false);
-            this.pnlTotalProductosEmpleados.PerformLayout();
-            this.gbInicioEmpleados.ResumeLayout(false);
-            this.gbInicioEmpleados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlVentasEmp.ResumeLayout(false);
+            this.pnlVentasEmp.PerformLayout();
+            this.pnlCategoriasEmp.ResumeLayout(false);
+            this.pnlCategoriasEmp.PerformLayout();
+            this.pnlTotalProductosEmp.ResumeLayout(false);
+            this.pnlTotalProductosEmp.PerformLayout();
+            this.gbInicioEmp.ResumeLayout(false);
+            this.gbInicioEmp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbProductosBajoStockEmpleados;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTopProductos;
+        private System.Windows.Forms.GroupBox gbBajoStockEmp;
         private System.Windows.Forms.DataGridView dgvProductosBajoStockEmpleado;
-        private System.Windows.Forms.GroupBox gbAccesoRapidoEmpleados;
-        private System.Windows.Forms.Button btnVerFacturasEmpleado;
-        private System.Windows.Forms.Button btnVerProveedoresEmpleado;
-        private System.Windows.Forms.Button btnIrInventarioEmpleado;
-        private System.Windows.Forms.Button btnAgregarProductosIndexEmpleado;
-        private System.Windows.Forms.Panel pnlVentasDiariasEmpleados;
-        private System.Windows.Forms.Label lblResultadoVentasEmpleados;
+        private System.Windows.Forms.Panel pnlVentasEmp;
+        private System.Windows.Forms.Label lblVentasEmp;
         private System.Windows.Forms.Label lblVentasHoy;
-        private System.Windows.Forms.Panel pnlCategoriasEmpleados;
-        private System.Windows.Forms.Label lblCategoriasEmpleado;
+        private System.Windows.Forms.Panel pnlCategoriasEmp;
+        private System.Windows.Forms.Label lblCategoriasEmp;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel pnlProveedoresEmpleados;
-        private System.Windows.Forms.Label lblTotalProveedoresEmpleado;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel pnlTotalProductosEmpleados;
-        private System.Windows.Forms.Label lblResultadoTotalEmpleados;
+        private System.Windows.Forms.Panel pnlTotalProductosEmp;
+        private System.Windows.Forms.Label lblTotalProdEmp;
         private System.Windows.Forms.Label lblTotalProductos;
-        private System.Windows.Forms.GroupBox gbInicioEmpleados;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblBienvenidosEmpleados;
+        private System.Windows.Forms.GroupBox gbInicioEmp;
+        private System.Windows.Forms.PictureBox pbEmpleado;
+        private System.Windows.Forms.Label lblBienvenidosEmp;
     }
 }

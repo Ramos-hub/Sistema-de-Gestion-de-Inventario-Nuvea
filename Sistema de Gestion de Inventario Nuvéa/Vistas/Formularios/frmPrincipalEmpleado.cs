@@ -54,5 +54,47 @@ namespace Vistas.Formularios
             abrirFormEmpleado(new frmInventarioEmpleado());
         }
 
+        private void btnSoporteEm_Click(object sender, EventArgs e)
+        {
+            abrirFormEmpleado(new frmSoporte());
+        }
+
+        private void btnCambiarContraseñaEm_Click(object sender, EventArgs e)
+        {
+            abrirFormEmpleado(new frmCambiarContraseña(1));
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            var r = MessageBox.Show("¿Seguro que deseas cerrar sesión?",
+                                    "Cerrar sesión",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question);
+
+            if (r != DialogResult.Yes) return;
+
+            try
+            {
+                if (activarForm != null)
+                {
+                    activarForm.Close();
+                    activarForm.Dispose();
+                    activarForm = null;
+                }
+                pnlCentralEmpleado.Controls.Clear();
+
+                var login = new frmLogin();
+                login.StartPosition = FormStartPosition.CenterScreen;
+
+                login.FormClosed += (_, __) => this.Close();
+
+                this.Hide();
+                login.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo cerrar sesión: " + ex.Message);
+            }
+        }
     }
 }

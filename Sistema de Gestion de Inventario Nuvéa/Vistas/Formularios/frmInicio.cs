@@ -253,64 +253,126 @@ namespace Vistas.Formularios
         {
             try
             {
-                SqlConnection conexion = ConexionDB.Conectar();
-
-                string consulta = @"SELECT u.nombre AS Empleado, SUM(c.total) AS TotalVentas
-                                    FROM Compra c
-                                    INNER JOIN Usuario u ON u.idUsuario = c.idUsuario
-                                    INNER JOIN Rol r ON r.idRol = u.idRol
-                                    WHERE r.nombreRol <> 'Administrador'
-                                    GROUP BY u.nombre
-                                    ORDER BY SUM(c.total) DESC";
-
-                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
-                DataTable tabla = new DataTable();
-                adaptador.Fill(tabla);
-
-                chartVentasUsuarios.Series.Clear();
-                chartVentasUsuarios.ChartAreas.Clear();
-                chartVentasUsuarios.Titles.Clear();
-
-                var area = new System.Windows.Forms.DataVisualization.Charting.ChartArea("Area1");
-                area.Area3DStyle.Enable3D = false; // plano para que no se vea raro
-                area.BackColor = Color.White;
-
-                area.AxisX.MajorGrid.Enabled = false;
-                area.AxisY.MajorGrid.LineColor = Color.LightGray;
-                area.AxisY.LabelStyle.Format = "C2";
-                area.AxisX.Interval = 1;
-                area.AxisX.LabelStyle.Angle = -30;
-
-                chartVentasUsuarios.ChartAreas.Add(area);
-
-                var serie = new System.Windows.Forms.DataVisualization.Charting.Series("Ventas");
-                serie.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-                serie.IsValueShownAsLabel = true;
-                serie.LabelFormat = "C2";
-                serie.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-                serie.Color = Color.FromArgb(77, 177, 253);
-                serie.BorderWidth = 2;
-
-                chartVentasUsuarios.Series.Add(serie);
-
-                for (int i = 0; i < tabla.Rows.Count; i++)
+                using (SqlConnection conexion = ConexionDB.Conectar())
+                using (SqlDataAdapter da = new SqlDataAdapter(@"
+            SELECT u.nombre AS Empleado, SUM(c.total) AS TotalVentas
+            FROM Compra c
+            INNER JOIN Usuario u ON u.idUsuario = c.idUsuario
+            INNER JOIN Rol r ON r.idRol = u.idRol
+            WHERE r.nombreRol <> 'Administrador'
+            GROUP BY u.nombre
+            ORDER BY SUM(c.total) DESC;", conexion))
                 {
-                    string empleado = tabla.Rows[i]["Empleado"].ToString();
-                    double total = 0;
-                    double.TryParse(tabla.Rows[i]["TotalVentas"].ToString(), out total);
-                    chartVentasUsuarios.Series["Ventas"].Points.AddXY(empleado, total);
+                    var dt = new DataTable();
+                    da.Fill(dt);
+
+                    // ---------- limpiar ----------
+                    chartVentasUsuarios.Series.Clear();
+                    chartVentasUsuarios.ChartAreas.Clear();
+                    chartVentasUsuarios.Titles.Clear();
+                    chartVentasUsuarios.Legends.Clear();
+
+                    chartVentasUsuarios.AntiAliasing = System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles.All;
+                    chartVentasUsuarios.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.High;
+
+                    // ---------- área ----------
+                    var area = new System.Windows.Forms.DataVisualization.Charting.ChartArea("Area");
+                    area.BackColor = Color.White;
+                    area.AxisX.MajorGrid.Enabled = false;
+                    area.AxisY.MajorGrid.LineColor = Color.Gainsboro;
+
+                    // Etiquetas del eje X legibles
+                    area.AxisX.Interval = 1;
+                    area.AxisX.IsLabelAutoFit = true;
+                    area.AxisX.LabelAutoFitStyle =
+                        System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont |
+                        System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels;
+                    area.AxisX.LabelAutoFitMaxFontSize = 10;
+                    area.AxisX.LabelAutoFitMinFontSize = 7;
+                    area.AxisX.LabelStyle.Angle = -60; // inclina
+                    area.AxisX.LabelStyle.Font = new Font("Segoe UI", 9f);
+
+                    area.AxisY.LabelStyle.Font = new Font("Segoe UI", 9f);
+                    area.AxisY.LabelStyle.Format = "C2";
+
+                    // Deja más aire abajo para las etiquetas
+                    area.Position.Auto = false;
+                    area.Position.X = 3;     // %
+                    area.Position.Y = 2;
+                    area.Position.Width = 94;
+                    area.Position.Height = 92;
+
+                    area.InnerPlotPosition.Auto = false;
+                    area.InnerPlotPosition.X = 5;   // %
+                    area.InnerPlotPosition.Y = 4;
+                    area.InnerPlotPosition.Width = 90;
+                    area.InnerPlotPosition.Height = 78; // <- más alto deja más base para labels
+
+                    chartVentasUsuarios.ChartAreas.Add(area);
+
+                    // ---------- serie ----------
+                    var serie = new System.Windows.Forms.DataVisualization.Charting.Series("Ventas")
+                    {
+                        ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column,
+                        IsValueShownAsLabel = true,
+                        LabelFormat = "C2",
+                        LabelForeColor = Color.DimGray,
+                        Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                        BorderWidth = 1
+                    };
+                    serie.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+                    serie["PointWidth"] = "0.65";
+                    serie.SmartLabelStyle.Enabled = true;
+
+                    chartVentasUsuarios.Series.Add(serie);
+
+                    // Limita a Top 12 para mantenerlo limpio
+                    int max = Math.Min(12, dt.Rows.Count);
+                    for (int i = 0; i < max; i++)
+                    {
+                        var nombreOriginal = Convert.ToString(dt.Rows[i]["Empleado"]);
+                        var label = FormatearNombreParaEtiqueta(nombreOriginal);
+                        double total = Convert.ToDouble(dt.Rows[i]["TotalVentas"]);
+                        serie.Points.AddXY(label, total);
+                    }
+
+                    // ---------- título + leyenda ----------
+                    chartVentasUsuarios.Titles.Add("Total de ventas por empleado ($)");
+                    chartVentasUsuarios.Titles[0].Font = new Font("Segoe UI Semibold", 13f);
+
+                    var legend = new System.Windows.Forms.DataVisualization.Charting.Legend("L")
+                    {
+                        Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Right,
+                        Font = new Font("Segoe UI", 9f)
+                    };
+                    chartVentasUsuarios.Legends.Add(legend);
+
+                    chartVentasUsuarios.BackColor = Color.WhiteSmoke;
                 }
-
-                chartVentasUsuarios.Titles.Add("Total de Ventas por Empleado ($)");
-                chartVentasUsuarios.Titles[0].Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                chartVentasUsuarios.BackColor = Color.WhiteSmoke;
-
-                conexion.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar el gráfico: " + ex.Message);
             }
+        }
+        private string FormatearNombreParaEtiqueta(string nombre)
+        {
+            if (string.IsNullOrWhiteSpace(nombre)) return nombre;
+
+            // Si ya es corto, devuélvelo tal cual
+            if (nombre.Length <= 14) return nombre;
+
+            // Intenta "Nombre Apellido1 Apellido2" -> "Nombre\nA. A."
+            var partes = nombre.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (partes.Length >= 2)
+            {
+                var nombreCorto = partes[0];
+                var apellidosAbrev = string.Join(" ", partes.Skip(1).Select(p => p.Length > 0 ? (p[0] + ".") : ""));
+                return nombreCorto + "\n" + apellidosAbrev;
+            }
+
+            // Si no hay espacios, corta y agrega "…"
+            return nombre.Substring(0, 12) + "…";
         }
     }
 }

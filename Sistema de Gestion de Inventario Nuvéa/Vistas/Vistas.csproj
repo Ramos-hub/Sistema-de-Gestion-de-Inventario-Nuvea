@@ -188,6 +188,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\icons8-usuario-100.png" />
     <EmbeddedResource Include="Formularios\frmBienvenida.resx">
       <DependentUpon>frmBienvenida.cs</DependentUpon>
     </EmbeddedResource>

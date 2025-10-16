@@ -47,8 +47,9 @@
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Vistas.Properties.Resources.Rules_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(830, 566);
+            this.pictureBox1.Size = new System.Drawing.Size(1245, 871);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -57,12 +58,13 @@
             // 
             this.btnGuardarPrimerUso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardarPrimerUso.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnGuardarPrimerUso.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGuardarPrimerUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPrimerUso.Location = new System.Drawing.Point(206, 337);
+            this.btnGuardarPrimerUso.Location = new System.Drawing.Point(309, 518);
+            this.btnGuardarPrimerUso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarPrimerUso.Name = "btnGuardarPrimerUso";
-            this.btnGuardarPrimerUso.Size = new System.Drawing.Size(185, 95);
+            this.btnGuardarPrimerUso.Size = new System.Drawing.Size(278, 146);
             this.btnGuardarPrimerUso.TabIndex = 41;
             this.btnGuardarPrimerUso.Text = "Guardar ";
             this.btnGuardarPrimerUso.UseVisualStyleBackColor = false;
@@ -73,9 +75,10 @@
             this.txtPrimerCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrimerCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrimerCorreo.Location = new System.Drawing.Point(143, 121);
+            this.txtPrimerCorreo.Location = new System.Drawing.Point(214, 186);
+            this.txtPrimerCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrimerCorreo.Name = "txtPrimerCorreo";
-            this.txtPrimerCorreo.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerCorreo.Size = new System.Drawing.Size(844, 26);
             this.txtPrimerCorreo.TabIndex = 40;
             // 
             // txtPrimerTelefono
@@ -83,9 +86,10 @@
             this.txtPrimerTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrimerTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrimerTelefono.Location = new System.Drawing.Point(143, 193);
+            this.txtPrimerTelefono.Location = new System.Drawing.Point(214, 297);
+            this.txtPrimerTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrimerTelefono.Name = "txtPrimerTelefono";
-            this.txtPrimerTelefono.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerTelefono.Size = new System.Drawing.Size(844, 26);
             this.txtPrimerTelefono.TabIndex = 37;
             // 
             // txtPrimerNombre
@@ -93,35 +97,39 @@
             this.txtPrimerNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrimerNombre.Location = new System.Drawing.Point(143, 56);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(214, 86);
+            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(563, 20);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(844, 26);
             this.txtPrimerNombre.TabIndex = 36;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(376, 162);
+            this.label3.Location = new System.Drawing.Point(564, 249);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 13);
+            this.label3.Size = new System.Drawing.Size(146, 20);
             this.label3.TabIndex = 33;
             this.label3.Text = "Número Telefónico:";
             // 
             // lblNombreRepresentante
             // 
             this.lblNombreRepresentante.AutoSize = true;
-            this.lblNombreRepresentante.Location = new System.Drawing.Point(409, 93);
+            this.lblNombreRepresentante.Location = new System.Drawing.Point(614, 143);
+            this.lblNombreRepresentante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreRepresentante.Name = "lblNombreRepresentante";
-            this.lblNombreRepresentante.Size = new System.Drawing.Size(41, 13);
+            this.lblNombreRepresentante.Size = new System.Drawing.Size(61, 20);
             this.lblNombreRepresentante.TabIndex = 32;
             this.lblNombreRepresentante.Text = "Correo:";
             // 
             // lblNombreEmpresa
             // 
             this.lblNombreEmpresa.AutoSize = true;
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(409, 24);
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(614, 37);
+            this.lblNombreEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
-            this.lblNombreEmpresa.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(69, 20);
             this.lblNombreEmpresa.TabIndex = 31;
             this.lblNombreEmpresa.Text = "Nombre:";
             // 
@@ -129,12 +137,13 @@
             // 
             this.btnContinuarPrimerUso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnContinuarPrimerUso.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnContinuarPrimerUso.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnContinuarPrimerUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuarPrimerUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuarPrimerUso.Location = new System.Drawing.Point(471, 337);
+            this.btnContinuarPrimerUso.Location = new System.Drawing.Point(706, 518);
+            this.btnContinuarPrimerUso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnContinuarPrimerUso.Name = "btnContinuarPrimerUso";
-            this.btnContinuarPrimerUso.Size = new System.Drawing.Size(185, 95);
+            this.btnContinuarPrimerUso.Size = new System.Drawing.Size(278, 146);
             this.btnContinuarPrimerUso.TabIndex = 44;
             this.btnContinuarPrimerUso.Text = "Continuar";
             this.btnContinuarPrimerUso.UseVisualStyleBackColor = false;
@@ -144,19 +153,20 @@
             // 
             this.lblGenerarContrasena.AutoSize = true;
             this.lblGenerarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerarContrasena.Location = new System.Drawing.Point(322, 261);
+            this.lblGenerarContrasena.Location = new System.Drawing.Point(483, 402);
+            this.lblGenerarContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenerarContrasena.Name = "lblGenerarContrasena";
-            this.lblGenerarContrasena.Size = new System.Drawing.Size(198, 20);
+            this.lblGenerarContrasena.Size = new System.Drawing.Size(281, 29);
             this.lblGenerarContrasena.TabIndex = 45;
             this.lblGenerarContrasena.Text = "Contrasena Automatica";
             // 
             // frmPrimerUso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(830, 566);
+            this.ClientSize = new System.Drawing.Size(1245, 871);
             this.Controls.Add(this.lblGenerarContrasena);
             this.Controls.Add(this.btnContinuarPrimerUso);
             this.Controls.Add(this.btnGuardarPrimerUso);
@@ -167,6 +177,7 @@
             this.Controls.Add(this.lblNombreRepresentante);
             this.Controls.Add(this.lblNombreEmpresa);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPrimerUso";
             this.Text = "frmPrimerUso";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

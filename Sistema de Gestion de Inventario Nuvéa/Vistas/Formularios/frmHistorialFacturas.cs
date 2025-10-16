@@ -13,24 +13,27 @@ using Modelo.Conexion;
 
 namespace Vistas.Formularios
 {
-    public partial class frmHistorialFacturas: Form
+    public partial class frmHistorialFacturas : Form
     {
         public frmHistorialFacturas()
         {
             InitializeComponent();
         }
+
         private void frmHistorialFacturas_Load(object sender, EventArgs e)
         {
-            dtpRangoHistorial.Value = DateTime.Today;
+            dtpRangoHistorialDesde.Value = DateTime.Today;
+            dtpRangoHistorialHasta.Value = DateTime.Today;  // Inicializa el nuevo DateTimePicker para "hasta"
 
-            CargarFacturas();
+            CargarFacturas();  // Carga inicial de facturas
         }
+
         private void CargarFacturas()
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            string sql = @"select Cliente, Producto, FechaFacturacion, Estado, Subtotal, idDetalleFactura
-                   from vw_facturas_simple
-                   order by FechaFacturacion desc";
+            string sql = @"SELECT Cliente, Producto, FechaFacturacion, Estado, Subtotal, idDetalleFactura
+                           FROM vw_facturas_simple
+                           ORDER BY FechaFacturacion DESC";
 
             SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
             DataTable dt = new DataTable();
@@ -47,18 +50,25 @@ namespace Vistas.Formularios
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            DateTime dia = dtpRangoHistorial.Value.Date;
-            DateTime diaSiguiente = dia.AddDays(1);
+            DateTime fechaDesde = dtpRangoHistorialDesde.Value.Date;
+            DateTime fechaHasta = dtpRangoHistorialHasta.Value.Date;
+
+            // Restricción: Verificar que fechaDesde no sea mayor que fechaHasta
+            if (fechaDesde > fechaHasta)
+            {
+                MessageBox.Show("La fecha 'desde' no puede ser mayor que la fecha 'hasta'. Por favor, corrige las fechas.");
+                return;  // Salir del método si no se cumple la restricción
+            }
 
             string sql = @"SELECT df.idDetalleFactura AS Id, df.fecha AS Fecha,
                c.nombreCliente AS Cliente, p.nombreProduc AS Producto,
                df.cantidadProduct AS Cantidad, df.subtotal AS Subtotal
         FROM detalleFactura df
-        inner join Producto p ON p.idProducto = df.idProducto
-        inner join Cliente  c ON c.idCliente  = df.idCliente
-        where df.estado = 1
-          and df.fecha >= @d
-          and df.fecha <  @dSig
+        INNER JOIN Producto p ON p.idProducto = df.idProducto
+        INNER JOIN Cliente c ON c.idCliente = df.idCliente
+        WHERE df.estado = 1
+          AND df.fecha >= @desde
+          AND df.fecha <= @hasta
         ORDER BY df.fecha DESC, df.idDetalleFactura DESC;";
 
             try
@@ -66,8 +76,8 @@ namespace Vistas.Formularios
                 SqlConnection conexion = ConexionDB.Conectar();
                 using (SqlCommand cmd = new SqlCommand(sql, conexion))
                 {
-                    cmd.Parameters.Add("@d", SqlDbType.Date).Value = dia;
-                    cmd.Parameters.Add("@dSig", SqlDbType.Date).Value = diaSiguiente;
+                    cmd.Parameters.Add("@desde", SqlDbType.Date).Value = fechaDesde;
+                    cmd.Parameters.Add("@hasta", SqlDbType.Date).Value = fechaHasta;
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
@@ -79,14 +89,20 @@ namespace Vistas.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar historial: " + ex.Message);
+                MessageBox.Show("Error al aplicar filtros: " + ex.Message);
             }
-            LimpiarCampos();
-        }
-        private void LimpiarCampos()
-        {
-            dtpRangoHistorial.Value = DateTime.Today; // vuelve a hoy
+            LimpiarCampos();  // Limpia los campos después de aplicar filtros
         }
 
+        private void LimpiarCampos()
+        {
+            dtpRangoHistorialDesde.Value = DateTime.Today;  // Vuelve a hoy
+            dtpRangoHistorialHasta.Value = DateTime.Today;  // Limpia el nuevo DateTimePicker también
+        }
+
+        private void btnRecargarFacturas_Click(object sender, EventArgs e)
+        {
+            CargarFacturas();
+        }
     }
 }

@@ -41,6 +41,24 @@ namespace Vistas.Formularios
                 if (dgvInventarioEmpleado.Columns.Contains(col)) dgvInventarioEmpleado.Columns[col].Visible = false;
 
             conexion.Close();
-        }       
+        }
+        private void CargarDatos()
+        {
+            SqlConnection conexion = ConexionDB.Conectar();
+            try
+            {
+                SqlCommand cmdProductos = new SqlCommand("SELECT COUNT(*) FROM Producto", conexion);
+                int totalProductos = (int)cmdProductos.ExecuteScalar();
+                lblResultado_Productos.Text = totalProductos.ToString();
+
+                SqlCommand cmdVentas = new SqlCommand("SELECT SUM(total) FROM Compra", conexion);
+                object ventas = cmdVentas.ExecuteScalar();
+                lblResultado_Ventas.Text = ventas != DBNull.Value ? ventas.ToString() : "0";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error cargando datos: " + ex.Message);
+            }
+        }
     }
 }

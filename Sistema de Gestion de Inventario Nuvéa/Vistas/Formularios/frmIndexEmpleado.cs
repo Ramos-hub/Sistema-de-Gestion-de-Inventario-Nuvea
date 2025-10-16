@@ -1,14 +1,10 @@
-﻿using Modelo.Conexion;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using Modelo.Conexion;
 
 namespace Vistas.Formularios
 {
@@ -17,146 +13,272 @@ namespace Vistas.Formularios
         public frmIndexEmpleado()
         {
             InitializeComponent();
-            this.Load += new EventHandler(frmIndexEmpleado_Load);
+
+            // Config de encabezado como en Admin: anclajes y contención
+            if (pbEmpleado.Parent != gbInicioEmp)
+                gbInicioEmp.Controls.Add(pbEmpleado);
+
+            gbInicioEmp.AutoSize = false;
+            gbInicioEmp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            // Igual que admin: ambos centrables y sólo Top en la imagen
+            lblBienvenidosEmp.AutoSize = true;
+            lblBienvenidosEmp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            pbEmpleado.Dock = DockStyle.None;
+            pbEmpleado.Anchor = AnchorStyles.Top;          // <<< SOLO Top (no Right)
+            pbEmpleado.SizeMode = PictureBoxSizeMode.Zoom;
+            pbEmpleado.Visible = true;
+
+            // Redibujo al cargar y al redimensionar
+            this.Load += frmIndexEmpleado_Load;
+            this.Resize += (_, __) => { AjustarHeaderInicioEmp(); AjustarLayout(); };
         }
 
+        // ===================== CARGA =====================
         private void frmIndexEmpleado_Load(object sender, EventArgs e)
         {
-            CargarlblProductosBajoStock();
-            CargarlblTotalProductosEmpleado();
-            CargarlblTotalVentasEmpleados();
-            CargarlblTotalProveedoresEmpleado();
-            CargarlblCategoriasEmpleado();
-        }
-
-        private Form activarForm = null;
-        //Este metodo permite activar los formularios
-        private void abrirForm(Form formularioPintar)
-        {
-            if (activarForm != null)
+            try
             {
-                activarForm.Close();
+                CargarBienvenidaEmpleado();
+                CargarProductosBajoStock();
+                CargarTotalesTarjetas();
+                CargarChartTopProductos();
+
+                AjustarHeaderInicioEmp();
+                AjustarLayout();
             }
-            frmPrincipal fr = new frmPrincipal();
-            activarForm = formularioPintar;
-            formularioPintar.TopLevel = false;
-            formularioPintar.FormBorderStyle = FormBorderStyle.None;
-            formularioPintar.Dock = DockStyle.Fill;
-
-            fr.pnlCentral.Controls.Add(formularioPintar);
-            formularioPintar.BringToFront();
-            formularioPintar.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al iniciar: " + ex.Message);
+            }
         }
 
-        private void btnIrInventarioEmpleado_Click(object sender, EventArgs e)
-        {
-            frmInventarioEmpleado verInv = new frmInventarioEmpleado();
-            verInv.Show();
-            this.Hide();
-        }
-        private void CargarlblProductosBajoStock()
-        {
-            SqlConnection conexion = ConexionDB.Conectar();
-            string consulta = @"select nombreProduc as Producto, fechaIngreso, estado, cantidadStock as Stock
-                            from Producto 
-                            where cantidadStock < 3";
-            SqlDataAdapter adap = new SqlDataAdapter(consulta, conexion);
-            DataTable tabla = new DataTable();
-            adap.Fill(tabla);
-            dgvProductosBajoStockEmpleado.DataSource = tabla;
-            conexion.Close();
-
-        }
-
-        private void CargarlblTotalProductosEmpleado()
+        // ===================== HEADER (como Admin) =====================
+        private void AjustarHeaderInicioEmp()
         {
             try
             {
-                SqlConnection conexion = ConexionDB.Conectar();
+                int margen = 16;
+                int W = this.ClientSize.Width;
+
+                // GroupBox ocupa todo el ancho con margen (igual que admin)
+                gbInicioEmp.Left = margen;
+                gbInicioEmp.Top = 16;
+                gbInicioEmp.Width = Math.Max(300, W - (margen * 2));
+
+                // Imagen centrada horizontalmente arriba
+                int topImg = 12;
+                pbEmpleado.Top = topImg;
+                pbEmpleado.Left = (gbInicioEmp.ClientSize.Width - pbEmpleado.Width) / 2;
+
+                // Label centrado debajo de la imagen
+                int topLbl = pbEmpleado.Bottom + 8;
+                lblBienvenidosEmp.Top = topLbl;
+                lblBienvenidosEmp.Left = (gbInicioEmp.ClientSize.Width - lblBienvenidosEmp.Width) / 2;
+
+                // Altura del groupbox en base a su contenido
+                int contenidoBottom = Math.Max(pbEmpleado.Bottom, lblBienvenidosEmp.Bottom);
+                gbInicioEmp.Height = contenidoBottom + 16;
+
+                // Z-Order por si acaso
+                pbEmpleado.BringToFront();
+                lblBienvenidosEmp.BringToFront();
+            }
+            catch { /* noop */ }
+        }
+
+        // ===================== LAYOUT GENERAL =====================
+        private void AjustarLayout()
+        {
+            int m = 16;
+            int H = this.ClientSize.Height;
+            int W = this.ClientSize.Width;
+
+            // fila de tarjetas (3)
+            int topTarjetas = (gbInicioEmp != null ? gbInicioEmp.Bottom : 140) + m;
+            int anchoPanel = (W - (m * 4)) / 3; // 3 tarjetas
+            if (anchoPanel < 180) anchoPanel = 180;
+            int altoPanel = 80;
+
+            pnlTotalProductosEmp.SetBounds(m, topTarjetas, anchoPanel, altoPanel);
+            pnlVentasEmp.SetBounds(pnlTotalProductosEmp.Right + m, topTarjetas, anchoPanel, altoPanel);
+            pnlCategoriasEmp.SetBounds(pnlVentasEmp.Right + m, topTarjetas, anchoPanel, altoPanel);
+
+            // parte de abajo (chart + bajo stock)
+            int topBloque = pnlTotalProductosEmp.Bottom + (m * 2);
+            int anchoCol = (W - (m * 3)) / 2;
+            int altoBloque = Math.Max(260, H - topBloque - m);
+
+            chartTopProductos.SetBounds(m, topBloque, anchoCol, altoBloque);
+            gbBajoStockEmp.SetBounds(chartTopProductos.Right + m, topBloque, anchoCol, altoBloque);
+
+            dgvProductosBajoStockEmpleado.Left = 10;
+            dgvProductosBajoStockEmpleado.Top = 25;
+            dgvProductosBajoStockEmpleado.Width = gbBajoStockEmp.ClientSize.Width - 20;
+            dgvProductosBajoStockEmpleado.Height = gbBajoStockEmp.ClientSize.Height - 35;
+        }
+
+        // ===================== DATOS =====================
+        private void CargarBienvenidaEmpleado()
+        {
+            try
+            {
+                using (SqlConnection con = ConexionDB.Conectar())
+                using (SqlCommand cmd = new SqlCommand(
+                    "SELECT TOP 1 nombre FROM Usuario WHERE idRol <> 1 ORDER BY idUsuario DESC", con))
                 {
-                    //count cuenta cuántas filas existen en la tabla.
-                    //* significa “todas las filas” sin importar el contenido de las columnas.
-                    string consulta = "select count(*) from Producto";
-                    SqlCommand cmd = new SqlCommand(consulta, conexion);
-                    {
-                        //El metodo .ExecuteScalar() ejecuta esa consulta y devuelve el valor del a primera fila y columna en modo objeto por eso hacemos la conversion a tipo entero
-                        // Ejemplo: si en la tabla hay 20 filas el resultado es una tablita con una sola columna y una sola fila agarra ese 20 directamente.
-                        // Así no tienes que recorrer filas ni columnas, ya te da el valor listo para usar.
-                        int total = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblResultadoTotalEmpleados.Text = total.ToString();
-                    }
-                    conexion.Close();
+                    object r = cmd.ExecuteScalar();
+                    string nombre = (r == null || r == DBNull.Value) ? "Empleado" : r.ToString();
+                    lblBienvenidosEmp.Text = $"Bienvenido {nombre} a Nuvéa";
+                }
+            }
+            catch
+            {
+                lblBienvenidosEmp.Text = "Bienvenido Empleado a Nuvéa";
+            }
+
+            // Recentrar tras cambiar el texto (ancho del label cambia)
+            AjustarHeaderInicioEmp();
+        }
+
+        private void CargarProductosBajoStock()
+        {
+            try
+            {
+                using (SqlConnection con = ConexionDB.Conectar())
+                using (SqlDataAdapter da = new SqlDataAdapter(
+                    @"SELECT nombreProduc AS Producto,
+                             cantidadStock AS Stock,
+                             CONVERT(varchar(10), fechaIngreso, 103) AS fechaIngreso
+                      FROM Producto
+                      WHERE cantidadStock < 3
+                      ORDER BY cantidadStock ASC, fechaIngreso ASC", con))
+                {
+                    var dt = new DataTable();
+                    da.Fill(dt);
+                    dgvProductosBajoStockEmpleado.DataSource = dt;
+                    dgvProductosBajoStockEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener total de productos: " + ex.Message);
+                MessageBox.Show("Error al cargar productos con bajo stock: " + ex.Message);
             }
         }
 
-        private void CargarlblTotalVentasEmpleados()
+        private void CargarTotalesTarjetas()
         {
             try
             {
-                SqlConnection conexion = ConexionDB.Conectar();
+                using (SqlConnection con = ConexionDB.Conectar())
                 {
-                    //ISNULL sirve para reemplazar un valor nulo(NULL) por otro.
-                    //Si SUM(subtotal) no encuentra nada(por ejemplo, si la tabla está vacía), el resultado sería NULL.
-                    //ISNULL(SUM(subtotal), 0) asegura que, en lugar de NULL, devuelva 0.
-                    string consulta = "select isnull(sum(subtotal), 0) from detalleFactura";
-                    SqlCommand cmd = new SqlCommand(consulta, conexion);
-                    {
-                        decimal total = Convert.ToDecimal(cmd.ExecuteScalar());
-                        lblResultadoVentasEmpleados.Text = total.ToString("0.00");
+                    using (var cmd = new SqlCommand("SELECT COUNT(*) FROM Producto", con))
+                        lblTotalProdEmp.Text = Convert.ToInt32(cmd.ExecuteScalar()).ToString();
 
-                    }
+                    using (var cmd = new SqlCommand("SELECT ISNULL(SUM(subtotal),0) FROM detalleFactura", con))
+                        lblVentasEmp.Text = Convert.ToDecimal(cmd.ExecuteScalar()).ToString("0.00");
+
+                    using (var cmd = new SqlCommand("SELECT COUNT(*) FROM Categoria", con))
+                        lblCategoriasEmp.Text = Convert.ToInt32(cmd.ExecuteScalar()).ToString();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener ventas de hoy: " + ex.Message);
+                MessageBox.Show("Error al cargar totales: " + ex.Message);
             }
         }
 
-        private void CargarlblCategoriasEmpleado()
+        // ===================== CHART (Top productos) =====================
+        private void CargarChartTopProductos()
         {
             try
             {
-                SqlConnection conexion = ConexionDB.Conectar();
+                using (SqlConnection con = ConexionDB.Conectar())
+                using (SqlDataAdapter da = new SqlDataAdapter(@"
+                    SELECT TOP 8 p.nombreProduc AS Producto,
+                           SUM(df.cantidadProduct) AS Cantidad
+                    FROM detalleFactura df
+                    INNER JOIN Producto p ON p.idProducto = df.idProducto
+                    WHERE df.estado = 1
+                    GROUP BY p.nombreProduc
+                    ORDER BY Cantidad DESC", con))
                 {
-                    string consulta = "select count(*) from Categoria";
-                    SqlCommand cmd = new SqlCommand(consulta, conexion);
+                    var dt = new DataTable();
+                    da.Fill(dt);
+
+                    chartTopProductos.Series.Clear();
+                    chartTopProductos.ChartAreas.Clear();
+                    chartTopProductos.Titles.Clear();
+                    chartTopProductos.Legends.Clear();
+
+                    var area = new ChartArea("Area");
+                    area.BackColor = Color.White;
+                    area.AxisX.MajorGrid.Enabled = false;
+                    area.AxisY.MajorGrid.LineColor = Color.Gainsboro;
+                    area.AxisX.LabelStyle.Font = new Font("Segoe UI", 9f);
+                    area.AxisY.LabelStyle.Font = new Font("Segoe UI", 9f);
+                    area.AxisX.Interval = 1;
+                    chartTopProductos.ChartAreas.Add(area);
+
+                    var serie = new Series("Top productos")
                     {
-                        int totalCate = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblCategoriasEmpleado.Text = totalCate.ToString();
+                        ChartType = SeriesChartType.Bar,
+                        IsValueShownAsLabel = true,
+                        LabelForeColor = Color.DimGray,
+                        Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                        BorderWidth = 1,
+                        Palette = ChartColorPalette.BrightPastel
+                    };
+                    serie["PointWidth"] = "0.6";
+                    chartTopProductos.Series.Add(serie);
+
+                    foreach (DataRow r in dt.Rows)
+                    {
+                        string prod = r["Producto"].ToString();
+                        double cant = Convert.ToDouble(r["Cantidad"]);
+                        chartTopProductos.Series[0].Points.AddXY(prod, cant);
                     }
+
+                    chartTopProductos.Titles.Add("Productos más vendidos");
+                    chartTopProductos.Titles[0].Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener total categorias: " + ex.Message);
-            }
-        }
+                MessageBox.Show("Error al cargar gráfico: " + ex.Message);
 
-        private void CargarlblTotalProveedoresEmpleado()
-        {
-            try
-            {
-                SqlConnection conexion = ConexionDB.Conectar();
+                // datos de prueba si falla
+                chartTopProductos.Series.Clear();
+                chartTopProductos.ChartAreas.Clear();
+                chartTopProductos.Titles.Clear();
+
+                var area = new ChartArea("Area");
+                area.BackColor = Color.White;
+                area.AxisX.MajorGrid.Enabled = false;
+                area.AxisY.MajorGrid.LineColor = Color.Gainsboro;
+                area.AxisX.Interval = 1;
+                chartTopProductos.ChartAreas.Add(area);
+
+                var s = new Series("Top productos")
                 {
-                    string consulta = "select count(*) from Proveedor";
-                    SqlCommand cmd = new SqlCommand(consulta, conexion);
-                    {
-                        int totalprove = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblTotalProveedoresEmpleado.Text = totalprove.ToString();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al obtener el total de proveedores: " + ex.Message);
-            }
+                    ChartType = SeriesChartType.Bar,
+                    IsValueShownAsLabel = true,
+                    Palette = ChartColorPalette.BrightPastel
+                };
+                s.Points.AddXY("Cremas", 30);
+                s.Points.AddXY("Shampoo", 24);
+                s.Points.AddXY("Jabón", 20);
+                s.Points.AddXY("Perfume", 15);
+                chartTopProductos.Series.Add(s);
 
+                chartTopProductos.Titles.Add("Productos más vendidos");
+                chartTopProductos.Titles[0].Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            }
         }
     }
 }
+
+
+
+

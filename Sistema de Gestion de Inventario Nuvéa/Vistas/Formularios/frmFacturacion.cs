@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.Conexion;
 using Modelos.Entidades;
@@ -22,21 +16,17 @@ namespace Vistas.Formularios
             this.Load += frmFacturacion_Load;
         }
 
-        // =============================
-        // EVENTOS DE CARGA Y RESPONSIVE
-        // =============================
-
         private void frmFacturacion_Load(object sender, EventArgs e)
         {
             try
             {
-                // Combo de estados
+                // Estados
                 cmbEstadoFacturaCrearFactura.Items.Clear();
                 cmbEstadoFacturaCrearFactura.Items.Add("Pagada");
                 cmbEstadoFacturaCrearFactura.Items.Add("Pendiente");
                 cmbEstadoFacturaCrearFactura.SelectedIndex = 0;
 
-                // Validación del total: números y un solo separador
+                // Validación del total
                 txtTotalCrearFactura.KeyPress += (s, ev) =>
                 {
                     if (!char.IsControl(ev.KeyChar) && !char.IsDigit(ev.KeyChar) && ev.KeyChar != '.' && ev.KeyChar != ',')
@@ -46,10 +36,8 @@ namespace Vistas.Formularios
                         ev.Handled = true;
                 };
 
-                // ANCLAS para funcionamiento responsive
+                // Anclas básicas
                 gbListaFactura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
-
-                // 🔥 importante: también anclar a Left para que “respire” con el form
                 gbCrearFactura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
 
                 dgvMostrarListaFacturas.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
@@ -57,6 +45,8 @@ namespace Vistas.Formularios
                 btnLimpiarFactu.Anchor = AnchorStyles.Bottom;
                 btnEliminarFacturacion.Anchor = AnchorStyles.Bottom;
                 btnEditarFactura.Anchor = AnchorStyles.Bottom;
+
+                // OJO: este anchor es dentro de su contenedor
                 btnGuardarFactura.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 
                 txtNombreClienteCrearFactura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -83,45 +73,39 @@ namespace Vistas.Formularios
             AjustarLayout();
         }
 
-        // =============================
-        // MÉTODO DE DISEÑO RESPONSIVE
-        // =============================
-
         private void AjustarLayout()
         {
             try
             {
-                int m = 16;                      // margen general
+                int m = 16;
                 int W = this.ClientSize.Width;
                 int H = this.ClientSize.Height;
+                if (H < 520) H = 520;
 
-                if (H < 520) H = 520;            // alto mínimo cómodo
-
-                // 🔥 Ancho del panel derecho proporcional (35%) con límites
+                // ancho del panel derecho (35%) con límites
                 int rightPanelWidth = Math.Max(280, Math.Min(520, (int)(W * 0.35)));
 
-                // ===== COLUMNA IZQUIERDA: Lista de facturas =====
+                // ===== izquierda: lista =====
                 gbListaFactura.Left = m;
-                gbListaFactura.Top = 60;       // deja espacio al título "Facturación"
+                gbListaFactura.Top = 60;
                 gbListaFactura.Width = W - rightPanelWidth - (m * 3);
                 if (gbListaFactura.Width < 380) gbListaFactura.Width = 380;
 
-                int altoZonaBotones = 60 + 60;   // alto botones + aire
+                int altoZonaBotones = 60 + 60;
                 gbListaFactura.Height = H - gbListaFactura.Top - altoZonaBotones;
 
-                // DGV llena el groupbox izquierdo
+                // DGV ocupa el groupbox
                 dgvMostrarListaFacturas.Left = 10;
                 dgvMostrarListaFacturas.Top = 25;
                 dgvMostrarListaFacturas.Width = gbListaFactura.ClientSize.Width - 20;
                 dgvMostrarListaFacturas.Height = gbListaFactura.ClientSize.Height - 35;
 
-                // ===== COLUMNA DERECHA: Crear Factura (responsive) =====
+                // ===== derecha: crear factura =====
                 gbCrearFactura.Width = rightPanelWidth;
-                gbCrearFactura.Left = W - m - gbCrearFactura.Width; // pegado al borde derecho
+                gbCrearFactura.Left = W - m - gbCrearFactura.Width;
                 gbCrearFactura.Top = gbListaFactura.Top;
                 gbCrearFactura.Height = gbListaFactura.Height;
 
-                // Inputs internos: ocupar ancho útil del groupbox derecho
                 int inLeft = 12;
                 int inWidth = gbCrearFactura.ClientSize.Width - (inLeft * 2);
                 txtNombreClienteCrearFactura.Width = inWidth;
@@ -130,38 +114,48 @@ namespace Vistas.Formularios
                 cmbEstadoFacturaCrearFactura.Width = inWidth;
                 txtTotalCrearFactura.Width = inWidth;
 
-                // ===== Botones inferiores =====
-                int btnW = 140;
-                int btnH = 40;
-                int espacio = 20;
-
-                // Tres botones centrados bajo la lista (izquierda)
+                // ===== botones izquierdos (debajo de la lista) =====
+                int btnW = 140, btnH = 40, espacio = 20;
                 int totalRowWidth = (btnW * 3) + (espacio * 2);
                 int startX = gbListaFactura.Left + (gbListaFactura.Width - totalRowWidth) / 2;
                 if (startX < m) startX = m;
-
                 int yBotones = gbListaFactura.Bottom + 15;
 
                 btnLimpiarFactu.SetBounds(startX, yBotones, btnW, btnH);
                 btnEliminarFacturacion.SetBounds(btnLimpiarFactu.Right + espacio, yBotones, btnW, btnH);
                 btnEditarFactura.SetBounds(btnEliminarFacturacion.Right + espacio, yBotones, btnW, btnH);
 
-                // Guardar alineado al borde derecho del panel derecho
-                btnGuardarFactura.Width = 140;
-                btnGuardarFactura.Height = btnH;
-                btnGuardarFactura.Top = yBotones;
-                btnGuardarFactura.Left = gbCrearFactura.Right - btnGuardarFactura.Width;
+                // ===== botón Guardar =====
+                // Si el botón está DENTRO del groupbox derecho, se posiciona con coordenadas del groupbox.
+                // Si no, lo dejamos a la derecha en la misma línea de los 3 botones de la izquierda.
+                if (btnGuardarFactura.Parent == gbCrearFactura)
+                {
+                    int m2 = 12; // margen interno del groupbox
+                    btnGuardarFactura.SetBounds(
+                        gbCrearFactura.ClientSize.Width - m2 - btnW,
+                        gbCrearFactura.ClientSize.Height - m2 - btnH,
+                        btnW, btnH
+                    );
+                }
+                else
+                {
+                    // (fallback) por si el botón está en el form
+                    btnGuardarFactura.SetBounds(
+                        gbCrearFactura.Right - btnW,
+                        yBotones,
+                        btnW, btnH
+                    );
+                }
             }
             catch
             {
-                // estilo simple
+                // nada
             }
         }
 
         // =============================
-        // MÉTODOS DE CARGA DE DATOS
+        // Carga de datos
         // =============================
-
         private void CargarProductos()
         {
             SqlConnection conexion = ConexionDB.Conectar();
@@ -181,7 +175,6 @@ namespace Vistas.Formularios
             dgvMostrarListaFacturas.DataSource = detalleFactura.ListarDesdeVista();
             dgvMostrarListaFacturas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Oculta posibles IDs si vienen en la vista
             foreach (var col in new[] { "idDetalleFactura", "idCliente", "idProducto", "idCompra" })
                 if (dgvMostrarListaFacturas.Columns.Contains(col))
                     dgvMostrarListaFacturas.Columns[col].Visible = false;
@@ -236,9 +229,8 @@ namespace Vistas.Formularios
         }
 
         // =============================
-        // BOTONES CRUD
+        // Botones CRUD
         // =============================
-
         private void btnGuardarFactura_Click(object sender, EventArgs e)
         {
             try
@@ -266,7 +258,7 @@ namespace Vistas.Formularios
                     FechaFactura = dtpFechaCrearFactura.Value
                 };
 
-                bool ok = d.Insertar();
+                d.Insertar();
                 MessageBox.Show("Factura agregada.");
                 CargarFacturas();
                 Limpiar();
@@ -308,7 +300,7 @@ namespace Vistas.Formularios
                     FechaFactura = dtpFechaCrearFactura.Value
                 };
 
-                bool ok = d.Actualizar();
+                d.Actualizar();
                 MessageBox.Show("Factura actualizada.");
                 CargarFacturas();
                 Limpiar();
@@ -331,7 +323,7 @@ namespace Vistas.Formularios
                 }
 
                 var d = new detalleFactura { IdDetalleFactura = Convert.ToInt32(dgvMostrarListaFacturas.Tag) };
-                bool ok = d.Eliminar();
+                d.Eliminar();
                 MessageBox.Show("Factura eliminada.");
                 CargarFacturas();
                 Limpiar();
@@ -344,9 +336,8 @@ namespace Vistas.Formularios
         }
 
         // =============================
-        // LIMPIAR Y VALIDACIONES
+        // Utilidades
         // =============================
-
         private void Limpiar()
         {
             txtTotalCrearFactura.ReadOnly = true;
@@ -405,11 +396,11 @@ namespace Vistas.Formularios
             cmbProductosFactu.Text = r.Cells["Producto"].Value?.ToString();
             dtpFechaCrearFactura.Value = Convert.ToDateTime(r.Cells["FechaFacturacion"].Value);
             txtTotalCrearFactura.Text = r.Cells["Subtotal"].Value?.ToString();
-            cmbEstadoFacturaCrearFactura.SelectedItem =
-                (r.Cells["Estado"].Value?.ToString() == "Pagada") ? "Pagada" : "Pendiente";
+            cmbEstadoFacturaCrearFactura.SelectedItem = (r.Cells["Estado"].Value?.ToString() == "Pagada") ? "Pagada" : "Pendiente";
 
             if (dgvMostrarListaFacturas.Columns.Contains("idDetalleFactura"))
                 dgvMostrarListaFacturas.Tag = r.Cells["idDetalleFactura"].Value;
         }
     }
 }
+
